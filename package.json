@@ -1,0 +1,50 @@
+{
+  "name": "marine-chariot-vtuber-analytics",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Marine Chariot VTuber analytics dashboard with YouTube CSV and X social signal analysis.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "fetch:x": "node scripts/fetch-x-data.mjs --username MarineChariot --out public/data/marine-x-posts.json",
+    "fetch:x:optional": "node scripts/fetch-x-data.mjs --optional --username MarineChariot --out public/data/marine-x-posts.json",
+    "build": "tsc && vite build",
+    "build:vercel": "npm run fetch:x:optional && tsc && vite build",
+    "check": "tsc --noEmit",
+    "deploy:preview": "vercel",
+    "deploy:prod": "vercel --prod",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/hammerjs": "^2.0.46",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "playwright": "^1.60.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
+    "@tailwindcss/vite": "^4.3.1",
+    "chart.js": "^4.5.1",
+    "chartjs-plugin-annotation": "^3.1.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "chartjs-plugin-zoom": "^2.2.0",
+    "daisyui": "^5.5.23",
+    "date-fns": "^4.4.0",
+    "framer-motion": "^12.40.0",
+    "hammerjs": "^2.0.8",
+    "lucide-react": "^1.18.0",
+    "papaparse": "^5.5.3",
+    "react": "^19.2.7",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.7",
+    "react-hook-form": "^7.79.0",
+    "recharts": "^3.8.1",
+    "tailwindcss": "^4.3.1",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
+  }
+}

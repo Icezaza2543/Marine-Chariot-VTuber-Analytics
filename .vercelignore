@@ -1,0 +1,5 @@
+docs/design/
+*.log
+dev-server*.log
+dist/
+node_modules/

@@ -1,0 +1,103 @@
+import { ArrowDown, ArrowUp, ExternalLink, Trophy } from 'lucide-react'
+import { compactNumber, percent } from '../lib/format'
+import { metricLabel, retentionLabel } from '../lib/analytics'
+import { useDashboardStore } from '../store/useDashboardStore'
+import type { AnalyticsBundle, TableSort } from '../types'
+import { SectionInsight } from './SectionInsight'
+
+interface TopVideosTableProps {
+  analytics: AnalyticsBundle
+}
+
+const columns: Array<{ key: TableSort['key']; label: string; className?: string }> = [
+  { key: 'title', label: 'Video', className: 'min-w-[280px]' },
+  { key: 'contentType', label: 'Type' },
+  { key: 'publishedAt', label: 'Date' },
+  { key: 'views', label: 'Views' },
+  { key: 'engagementRate', label: 'Eng.' },
+  { key: 'viralScore', label: 'Viral' },
+  { key: 'retentionScore', label: 'Retention' },
+]
+
+export function TopVideosTable({ analytics }: TopVideosTableProps) {
+  const topLimit = useDashboardStore((state) => state.topLimit)
+  const setTopLimit = useDashboardStore((state) => state.setTopLimit)
+  const tableSort = useDashboardStore((state) => state.tableSort)
+  const setTableSort = useDashboardStore((state) => state.setTableSort)
+
+  const toggleSort = (key: TableSort['key']) => {
+    const direction = tableSort.key === key && tableSort.direction === 'desc' ? 'asc' : 'desc'
+    setTableSort({ key, direction })
+  }
+
+  return (
+    <article className="chart-panel">
+      <div className="panel-heading">
+        <div>
+          <h2>Top Videos</h2>
+          <p>Sortable by performance and viral potential</p>
+        </div>
+        <div className="segmented-control small">
+          {[10, 20].map((limit) => (
+            <button
+              className={topLimit === limit ? 'is-active' : ''}
+              key={limit}
+              type="button"
+              onClick={() => setTopLimit(limit as 10 | 20)}
+            >
+              Top {limit}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="table-wrap">
+        <table className="video-table">
+          <thead>
+            <tr>
+              {columns.map((column) => (
+                <th className={column.className} key={column.key}>
+                  <button type="button" onClick={() => toggleSort(column.key)}>
+                    {column.label}
+                    {tableSort.key === column.key ? (
+                      tableSort.direction === 'desc' ? (
+                        <ArrowDown className="h-3.5 w-3.5" />
+                      ) : (
+                        <ArrowUp className="h-3.5 w-3.5" />
+                      )
+                    ) : null}
+                  </button>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {analytics.topVideos.map((video, index) => (
+              <tr key={video.id}>
+                <td>
+                  <div className="video-title-cell">
+                    <span className="rank-medal">
+                      {index < 3 ? <Trophy className="h-3.5 w-3.5" /> : index + 1}
+                    </span>
+                    <a href={video.url} rel="noreferrer" target="_blank">
+                      {video.title}
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </div>
+                </td>
+                <td><span className="type-badge">{video.contentType}</span></td>
+                <td>{video.publishedDate}</td>
+                <td>{compactNumber(video.views)}</td>
+                <td>{percent(video.engagementRate)}</td>
+                <td>{video.viralScore.toFixed(1)}</td>
+                <td>{retentionLabel(video)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <SectionInsight>{analytics.sectionInsights.videos} · sorted by {metricLabel(tableSort.key)}</SectionInsight>
+    </article>
+  )
+}
