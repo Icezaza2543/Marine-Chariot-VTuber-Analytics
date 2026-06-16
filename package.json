@@ -2,6 +2,7 @@
   "name": "marine-chariot-vtuber-analytics",
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
   "description": "Marine Chariot VTuber analytics dashboard with YouTube CSV and X social signal analysis.",
   "type": "module",
   "scripts": {
