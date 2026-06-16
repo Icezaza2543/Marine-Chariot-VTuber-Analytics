@@ -22,7 +22,7 @@ export function AppShell({ analytics, children }: AppShellProps) {
           <div className="min-w-0">
             <h1 className="truncate text-lg font-bold text-white sm:text-xl">Marine Chariot Analytics</h1>
             <p className="truncate text-xs text-[var(--mc-muted)]">
-              VTuber Growth Command Center · {firstDate} to {lastDate}
+              ศูนย์วิเคราะห์การเติบโต VTuber · {firstDate} ถึง {lastDate}
             </p>
           </div>
         </div>

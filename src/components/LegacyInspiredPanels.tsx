@@ -25,12 +25,12 @@ interface AnalyticsPanelProps {
   analytics: AnalyticsBundle
 }
 
-const palette = ['#ff6b4a', '#2dd4a8', '#4da6ff', '#a78bfa', '#f472b6', '#fbbf24', '#86efac', '#64748b']
+const palette = ['#e44878', '#0891b2', '#2563eb', '#7c3aed', '#db2777', '#b45309', '#047857', '#64748b']
 const tooltipStyle = {
-  background: 'rgba(18, 19, 26, 0.96)',
-  border: '1px solid rgba(255, 255, 255, 0.1)',
+  background: 'rgba(255, 255, 255, 0.98)',
+  border: '1px solid rgba(124, 58, 237, 0.22)',
   borderRadius: 10,
-  color: '#e8e6f0',
+  color: '#20283a',
 }
 
 export function MonthlyUploadPanel({ analytics }: AnalyticsPanelProps) {
@@ -45,7 +45,7 @@ export function MonthlyUploadPanel({ analytics }: AnalyticsPanelProps) {
     <article className="chart-panel">
       <div className="panel-heading">
         <div>
-          <h2>Monthly Views & Upload Frequency</h2>
+          <h2>ยอดวิวรายเดือนและความถี่อัปโหลด</h2>
           <p>ยอดวิวรายเดือนเทียบกับจำนวนวิดีโอที่อัปโหลด</p>
         </div>
         <div className="panel-badge">
@@ -57,26 +57,26 @@ export function MonthlyUploadPanel({ analytics }: AnalyticsPanelProps) {
       <div className="chart-box-lg">
         <ResponsiveContainer height="100%" initialDimension={{ width: 960, height: 320 }} minWidth={0} width="100%">
           <ComposedChart data={data}>
-            <CartesianGrid stroke="rgba(255,255,255,0.055)" vertical={false} />
-            <XAxis dataKey="label" stroke="#8f93a3" tickLine={false} />
+            <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
+            <XAxis dataKey="label" stroke="#475569" tickLine={false} />
             <YAxis
-              stroke="#8f93a3"
+              stroke="#475569"
               tickFormatter={(value) => compactNumber(Number(value))}
               tickLine={false}
               yAxisId="views"
             />
-            <YAxis orientation="right" stroke="#ff6b4a" tickLine={false} yAxisId="videos" />
+            <YAxis orientation="right" stroke="#e44878" tickLine={false} yAxisId="videos" />
             <Tooltip contentStyle={tooltipStyle} />
             <Legend />
-            <Bar dataKey="views" fill="#4da6ff" name="Views" radius={[5, 5, 0, 0]} yAxisId="views" />
-            <Line dataKey="videos" dot={false} name="Uploads" stroke="#ff6b4a" strokeWidth={2.4} yAxisId="videos" />
+            <Bar dataKey="views" fill="#2563eb" name="ยอดวิว" radius={[5, 5, 0, 0]} yAxisId="views" />
+            <Line dataKey="videos" dot={false} name="จำนวนอัปโหลด" stroke="#e44878" strokeWidth={2.4} yAxisId="videos" />
           </ComposedChart>
         </ResponsiveContainer>
       </div>
 
       <SectionInsight>
         {peak
-          ? `${peak.label} เป็นเดือนที่ยอดวิวสูงสุด (${compactNumber(peak.views)}) จาก ${peak.videos} uploads; ใช้เทียบ cadence กับเดือนที่ลงบ่อยแต่ยอดเฉลี่ยต่ำได้ทันที`
+          ? `${peak.label} เป็นเดือนที่ยอดวิวสูงสุด (${compactNumber(peak.views)}) จาก ${peak.videos} อัปโหลด; ใช้เทียบความถี่กับเดือนที่ลงบ่อยแต่ยอดเฉลี่ยต่ำได้ทันที`
           : 'ยังไม่มีข้อมูลรายเดือนหลัง filter นี้'}
       </SectionInsight>
     </article>
@@ -93,12 +93,12 @@ export function ContentFormatPanel({ analytics }: AnalyticsPanelProps) {
     <article className="chart-panel">
       <div className="panel-heading">
         <div>
-          <h2>Video vs Content Talk</h2>
+          <h2>วิดีโอสั้น/เพลง vs คอนเทนต์พูดคุย</h2>
           <p>แยก Shorts / cover / เพลง ออกจากคอนเทนต์พูดคุยและไลฟ์</p>
         </div>
         <div className="panel-badge">
           <Sparkles className="h-3.5 w-3.5" />
-          format mix
+          สัดส่วนรูปแบบ
         </div>
       </div>
 
@@ -106,13 +106,13 @@ export function ContentFormatPanel({ analytics }: AnalyticsPanelProps) {
         <div className="chart-box-md">
           <ResponsiveContainer height="100%" initialDimension={{ width: 640, height: 280 }} minWidth={0} width="100%">
             <ComposedChart data={data}>
-              <CartesianGrid stroke="rgba(255,255,255,0.055)" vertical={false} />
-              <XAxis dataKey="label" stroke="#8f93a3" tickLine={false} />
-              <YAxis stroke="#8f93a3" tickFormatter={(value) => compactNumber(Number(value))} tickLine={false} />
+              <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
+              <XAxis dataKey="label" stroke="#475569" tickLine={false} />
+              <YAxis stroke="#475569" tickFormatter={(value) => compactNumber(Number(value))} tickLine={false} />
               <Tooltip contentStyle={tooltipStyle} />
               <Legend />
-              <Bar dataKey="videoViews" fill="#4da6ff" name="Video views" radius={[4, 4, 0, 0]} stackId="views" />
-              <Bar dataKey="talkViews" fill="#2dd4a8" name="Content Talk views" radius={[4, 4, 0, 0]} stackId="views" />
+              <Bar dataKey="videoViews" fill="#2563eb" name="วิวจากวิดีโอ" radius={[4, 4, 0, 0]} stackId="views" />
+              <Bar dataKey="talkViews" fill="#0891b2" name="วิวจากพูดคุย" radius={[4, 4, 0, 0]} stackId="views" />
             </ComposedChart>
           </ResponsiveContainer>
         </div>
@@ -129,7 +129,7 @@ export function ContentFormatPanel({ analytics }: AnalyticsPanelProps) {
                 paddingAngle={2}
               >
                 {formatTotals.map((item) => (
-                  <Cell fill={item.name === 'Video' ? '#4da6ff' : '#2dd4a8'} key={item.name} />
+                  <Cell fill={item.name === 'Video' ? '#2563eb' : '#0891b2'} key={item.name} />
                 ))}
               </Pie>
               <Tooltip contentStyle={tooltipStyle} formatter={(value) => compactNumber(Number(value))} />
@@ -140,14 +140,14 @@ export function ContentFormatPanel({ analytics }: AnalyticsPanelProps) {
       </div>
 
       <div className="format-stat-row">
-        <MiniStat label="Video Avg" value={video ? compactNumber(video.avgViews) : '-'} />
-        <MiniStat label="Talk Avg" value={talk ? compactNumber(talk.avgViews) : '-'} />
-        <MiniStat label="Video Share" value={video ? percent(video.views / Math.max(video.views + (talk?.views ?? 0), 1), 0) : '-'} />
+        <MiniStat label="วิวเฉลี่ยวิดีโอ" value={video ? compactNumber(video.avgViews) : '-'} />
+        <MiniStat label="วิวเฉลี่ยพูดคุย" value={talk ? compactNumber(talk.avgViews) : '-'} />
+        <MiniStat label="สัดส่วนวิดีโอ" value={video ? percent(video.views / Math.max(video.views + (talk?.views ?? 0), 1), 0) : '-'} />
       </div>
 
       <SectionInsight>
         {video && talk
-          ? `Video format มี avg views ${compactNumber(video.avgViews)} ต่อชิ้น เทียบกับ Content Talk ${compactNumber(talk.avgViews)}; ใช้ Shorts/cover เป็นตัวเปิด reach แล้วพาคนกลับไป long-form`
+          ? `รูปแบบวิดีโอมีวิวเฉลี่ย ${compactNumber(video.avgViews)} ต่อชิ้น เทียบกับคอนเทนต์พูดคุย ${compactNumber(talk.avgViews)}; ใช้ Shorts/cover เป็นตัวเปิด reach แล้วพาคนกลับไป long-form`
           : 'ยังไม่มีข้อมูล format เพียงพอหลัง filter นี้'}
       </SectionInsight>
     </article>
@@ -162,12 +162,12 @@ export function CategoryBreakdownPanel({ analytics }: AnalyticsPanelProps) {
     <article className="chart-panel">
       <div className="panel-heading">
         <div>
-          <h2>Content Categories Breakdown</h2>
+          <h2>สัดส่วนหมวดคอนเทนต์</h2>
           <p>สัดส่วนยอดวิวและประสิทธิภาพของแต่ละหมวด</p>
         </div>
         <div className="panel-badge">
           <Layers3 className="h-3.5 w-3.5" />
-          {categories.length} groups
+          {categories.length} กลุ่ม
         </div>
       </div>
 
@@ -176,7 +176,7 @@ export function CategoryBreakdownPanel({ analytics }: AnalyticsPanelProps) {
           <div className="category-card" key={category.contentType}>
             <span>{category.contentType}</span>
             <strong>{compactNumber(category.videos)}</strong>
-            <em>{compactNumber(category.avgViews)} avg views</em>
+            <em>{compactNumber(category.avgViews)} วิวเฉลี่ย</em>
           </div>
         ))}
       </div>
@@ -206,19 +206,19 @@ export function CategoryBreakdownPanel({ analytics }: AnalyticsPanelProps) {
         <div className="chart-box-md">
           <ResponsiveContainer height="100%" initialDimension={{ width: 540, height: 280 }} minWidth={0} width="100%">
             <ScatterChart>
-              <CartesianGrid stroke="rgba(255,255,255,0.055)" />
-              <XAxis dataKey="videos" name="Videos" stroke="#8f93a3" tickLine={false} type="number" />
+              <CartesianGrid stroke="rgba(71,85,105,0.16)" />
+              <XAxis dataKey="videos" name="จำนวนวิดีโอ" stroke="#475569" tickLine={false} type="number" />
               <YAxis
                 dataKey="avgViews"
-                name="Avg Views"
-                stroke="#8f93a3"
+                name="วิวเฉลี่ย"
+                stroke="#475569"
                 tickFormatter={(value) => compactNumber(Number(value))}
                 tickLine={false}
                 type="number"
               />
               <ZAxis dataKey="views" range={[80, 580]} />
               <Tooltip content={<CategoryTooltip />} cursor={{ strokeDasharray: '3 3' }} />
-              <Scatter data={categories} fill="#ff6b4a" name="Categories">
+              <Scatter data={categories} fill="#e44878" name="หมวดคอนเทนต์">
                 {categories.map((item, index) => (
                   <Cell fill={palette[index % palette.length]} key={item.contentType} />
                 ))}
@@ -230,7 +230,7 @@ export function CategoryBreakdownPanel({ analytics }: AnalyticsPanelProps) {
 
       <SectionInsight>
         {topCategory
-          ? `${topCategory.contentType} สร้างยอดวิวรวมสูงสุด ${compactNumber(topCategory.views)} จาก ${topCategory.videos} videos; bubble ช่วยดูพร้อมกันว่าอะไร “ใหญ่เพราะลงเยอะ” หรือ “แรงเพราะเฉลี่ยสูง”`
+          ? `${topCategory.contentType} สร้างยอดวิวรวมสูงสุด ${compactNumber(topCategory.views)} จาก ${topCategory.videos} วิดีโอ; bubble ช่วยดูพร้อมกันว่าอะไร “ใหญ่เพราะลงเยอะ” หรือ “แรงเพราะเฉลี่ยสูง”`
           : 'ยังไม่มี category หลัง filter นี้'}
       </SectionInsight>
     </article>
@@ -246,38 +246,38 @@ export function ShortsDeepDivePanel({ analytics }: AnalyticsPanelProps) {
     <article className="chart-panel">
       <div className="panel-heading">
         <div>
-          <h2>Shorts Deep Dive</h2>
+          <h2>วิเคราะห์ Shorts เชิงลึก</h2>
           <p>วิเคราะห์ Shorts แยกเป็น growth engine ของช่อง</p>
         </div>
         <div className="panel-badge">
           <Scissors className="h-3.5 w-3.5" />
-          {totalShorts.length} shorts
+          {totalShorts.length} Shorts
         </div>
       </div>
 
       <div className="chart-box-md">
         <ResponsiveContainer height="100%" initialDimension={{ width: 960, height: 280 }} minWidth={0} width="100%">
           <ComposedChart data={data}>
-            <CartesianGrid stroke="rgba(255,255,255,0.055)" vertical={false} />
-            <XAxis dataKey="label" stroke="#8f93a3" tickLine={false} />
+            <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
+            <XAxis dataKey="label" stroke="#475569" tickLine={false} />
             <YAxis
-              stroke="#8f93a3"
+              stroke="#475569"
               tickFormatter={(value) => compactNumber(Number(value))}
               tickLine={false}
               yAxisId="views"
             />
-            <YAxis orientation="right" stroke="#a78bfa" tickLine={false} yAxisId="count" />
+            <YAxis orientation="right" stroke="#7c3aed" tickLine={false} yAxisId="count" />
             <Tooltip contentStyle={tooltipStyle} />
             <Legend />
-            <Bar dataKey="views" fill="#ff6b4a" name="Shorts views" radius={[5, 5, 0, 0]} yAxisId="views" />
-            <Line dataKey="count" dot={false} name="Shorts count" stroke="#a78bfa" strokeWidth={2.4} yAxisId="count" />
+            <Bar dataKey="views" fill="#e44878" name="วิวจาก Shorts" radius={[5, 5, 0, 0]} yAxisId="views" />
+            <Line dataKey="count" dot={false} name="จำนวน Shorts" stroke="#7c3aed" strokeWidth={2.4} yAxisId="count" />
           </ComposedChart>
         </ResponsiveContainer>
       </div>
 
       <SectionInsight>
         {peak && totalShorts.length > 0
-          ? `${peak.label} คือ Shorts wave ที่แรงสุด (${compactNumber(peak.views)} views / ${peak.count} clips); ควรตัด long-form เป็น clips สั้นหลังไลฟ์หรือเพลงทุกครั้ง`
+          ? `${peak.label} คือ Shorts wave ที่แรงสุด (${compactNumber(peak.views)} วิว / ${peak.count} คลิป); ควรตัด long-form เป็นคลิปสั้นหลังไลฟ์หรือเพลงทุกครั้ง`
           : 'ยังไม่มี Shorts หลัง filter นี้'}
       </SectionInsight>
     </article>
@@ -295,11 +295,11 @@ export function ChannelSummaryPanel({ analytics }: AnalyticsPanelProps) {
       <div className="panel-heading">
         <div>
           <h2>สรุปภาพรวมและแนวโน้ม</h2>
-          <p>สรุปเชิง strategy จากข้อมูลที่ filter อยู่ตอนนี้</p>
+          <p>สรุปเชิงกลยุทธ์จากข้อมูลที่ filter อยู่ตอนนี้</p>
         </div>
         <div className="panel-badge">
           <Flame className="h-3.5 w-3.5" />
-          strategy
+          กลยุทธ์
         </div>
       </div>
 
@@ -308,7 +308,7 @@ export function ChannelSummaryPanel({ analytics }: AnalyticsPanelProps) {
           <h3>จุดแข็ง</h3>
           <p>
             {shorts
-              ? `Shorts ยังเป็น growth engine ชัดเจน: ${shorts.videos} videos, avg ${compactNumber(shorts.avgViews)} views. `
+              ? `Shorts ยังเป็น growth engine ชัดเจน: ${shorts.videos} วิดีโอ, วิวเฉลี่ย ${compactNumber(shorts.avgViews)}. `
               : ''}
             {topContent ? `${topContent.contentType} เป็นหมวดที่ควรใช้เป็นหัวหอกของเดือนถัดไป. ` : ''}
             Engagement เฉลี่ยของชุดข้อมูลนี้อยู่ที่ {percent(average(analytics.filteredRecords.map((record) => record.engagementRate)))} ซึ่งสะท้อนฐานแฟนที่ตอบสนองต่อคอนเทนต์ได้ดี
@@ -350,9 +350,9 @@ function CategoryTooltip({ active, payload }: { active?: boolean; payload?: Arra
   return (
     <div className="custom-tooltip">
       <strong>{data.contentType}</strong>
-      <span>{data.videos} videos</span>
-      <span>{compactNumber(data.avgViews)} avg views</span>
-      <span>{compactNumber(data.views)} total views</span>
+      <span>{data.videos} วิดีโอ</span>
+      <span>{compactNumber(data.avgViews)} วิวเฉลี่ย</span>
+      <span>{compactNumber(data.views)} วิวรวม</span>
     </div>
   )
 }

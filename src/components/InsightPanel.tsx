@@ -19,23 +19,23 @@ export function InsightPanel({ analytics, compact = false }: InsightPanelProps) 
     <div className="insight-panel">
       <div className="panel-heading">
         <div>
-          <h2>AI Insight Engine</h2>
-          <p>Thai strategic recommendations</p>
+          <h2>AI Insight ภาษาไทย</h2>
+          <p>คำแนะนำกลยุทธ์จากข้อมูลล่าสุด</p>
         </div>
         <div className="panel-badge">
           <BrainCircuit className="h-3.5 w-3.5" />
-          Live
+          สด
         </div>
       </div>
 
       <div className="recommend-card">
         <Megaphone className="h-5 w-5 text-[var(--mc-cyan)]" />
         <div>
-          <span>Next Content Bet</span>
+          <span>คอนเทนต์ที่ควรดันต่อ</span>
           <strong>{recommendation?.contentType ?? '-'}</strong>
           <p>
             {recommendation
-              ? `${compactNumber(recommendation.avgViews)} avg views · ${percent(recommendation.avgEngagementRate)} engagement`
+              ? `${compactNumber(recommendation.avgViews)} วิวเฉลี่ย · มีส่วนร่วม ${percent(recommendation.avgEngagementRate)}`
               : 'ไม่มีข้อมูลหลัง filter ปัจจุบัน'}
           </p>
         </div>
@@ -49,19 +49,19 @@ export function InsightPanel({ analytics, compact = false }: InsightPanelProps) 
 
       <div className="strategy-grid">
         <div>
-          <span>Optimal Frequency</span>
+          <span>ความถี่ที่เหมาะ</span>
           <strong>{analytics.optimalFrequency}</strong>
         </div>
         <div>
-          <span>Posting Slot</span>
+          <span>ช่วงเวลาลงคลิป</span>
           <strong>{bestSlot ? `${bestSlot.weekdayLabel} ${bestSlot.slot}` : '-'}</strong>
         </div>
         <div>
-          <span>Cross Promotion</span>
+          <span>โปรโมตข้ามแพลตฟอร์ม</span>
           <strong>{analytics.social.crossPromoPostCount > 0 ? 'X → YouTube' : 'Shorts → Long-form'}</strong>
         </div>
         <div>
-          <span>Projected Growth</span>
+          <span>เติบโตคาดการณ์</span>
           <strong>{analytics.projectedGrowthRate.toFixed(1)}%</strong>
         </div>
       </div>

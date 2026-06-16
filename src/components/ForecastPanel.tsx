@@ -30,7 +30,7 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
     <article className="chart-panel min-h-[390px]">
       <div className="panel-heading">
         <div>
-          <h2>Growth Forecast</h2>
+          <h2>คาดการณ์การเติบโต</h2>
           <p>Linear regression + exponential smoothing</p>
         </div>
         <div className="panel-badge">
@@ -42,21 +42,21 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
       <div className="h-[205px]">
         <ResponsiveContainer height="100%" initialDimension={{ width: 640, height: 205 }} minWidth={0} width="100%">
           <ComposedChart data={chartData}>
-            <CartesianGrid stroke="rgba(148,163,184,0.1)" vertical={false} />
-            <XAxis dataKey="label" stroke="#9aa4b2" tickLine={false} />
-            <YAxis stroke="#9aa4b2" tickFormatter={(value) => compactNumber(Number(value))} tickLine={false} />
+            <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
+            <XAxis dataKey="label" stroke="#475569" tickLine={false} />
+            <YAxis stroke="#475569" tickFormatter={(value) => compactNumber(Number(value))} tickLine={false} />
             <Tooltip
               contentStyle={{
-                background: 'rgba(12, 14, 24, 0.96)',
-                border: '1px solid rgba(167, 139, 250, 0.35)',
+                background: 'rgba(255, 255, 255, 0.98)',
+                border: '1px solid rgba(124, 58, 237, 0.22)',
                 borderRadius: 8,
-                color: '#fff',
+                color: '#20283a',
               }}
             />
             <Legend />
-            <Area dataKey="views" fill="rgba(103,232,249,0.16)" name="Forecast" stroke="#67e8f9" />
-            <Line dataKey="linear" dot={false} name="Linear" stroke="#ff6b9d" strokeDasharray="6 5" />
-            <Line dataKey="smoothing" dot={false} name="Smoothing" stroke="#a78bfa" strokeDasharray="2 4" />
+            <Area dataKey="views" fill="rgba(8,145,178,0.14)" name="คาดการณ์" stroke="#0891b2" />
+            <Line dataKey="linear" dot={false} name="Linear" stroke="#e44878" strokeDasharray="6 5" />
+            <Line dataKey="smoothing" dot={false} name="Smoothing" stroke="#7c3aed" strokeDasharray="2 4" />
           </ComposedChart>
         </ResponsiveContainer>
       </div>
@@ -75,7 +75,7 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
         <BrainCircuit className="h-4 w-4 shrink-0 text-[var(--mc-pink)]" />
         <p>
           คำแนะนำเดือนหน้า:{' '}
-          <strong>{analytics.nextContentRecommendation?.contentType ?? 'เลือกช่วงข้อมูลเพิ่ม'}</strong> · cadence{' '}
+          <strong>{analytics.nextContentRecommendation?.contentType ?? 'เลือกช่วงข้อมูลเพิ่ม'}</strong> · ความถี่{' '}
           <strong>{analytics.optimalFrequency}</strong>
         </p>
       </div>

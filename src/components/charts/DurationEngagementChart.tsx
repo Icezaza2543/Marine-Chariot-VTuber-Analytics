@@ -13,14 +13,14 @@ export function DurationEngagementChart({ analytics }: DurationEngagementChartPr
   const data: ChartData<'bubble'> = {
     datasets: [
       {
-        label: 'Videos',
+        label: 'วิดีโอ',
         data: analytics.scatterPoints.map((point) => ({
           x: point.x,
           y: point.y,
           r: point.r,
         })),
         backgroundColor: 'rgba(255, 107, 157, 0.42)',
-        borderColor: '#ff6b9d',
+        borderColor: '#e44878',
         borderWidth: 1,
       },
     ],
@@ -30,27 +30,29 @@ export function DurationEngagementChart({ analytics }: DurationEngagementChartPr
     maintainAspectRatio: false,
     scales: {
       x: {
-        title: { display: true, text: 'Duration (minutes)', color: '#9aa4b2' },
-        ticks: { color: '#9aa4b2' },
-        grid: { color: 'rgba(148,163,184,0.09)' },
+        title: { display: true, text: 'ความยาว (นาที)', color: '#475569' },
+        ticks: { color: '#475569' },
+        grid: { color: 'rgba(71,85,105,0.16)' },
       },
       y: {
-        title: { display: true, text: 'Engagement (%)', color: '#9aa4b2' },
-        ticks: { color: '#9aa4b2' },
-        grid: { color: 'rgba(148,163,184,0.09)' },
+        title: { display: true, text: 'การมีส่วนร่วม (%)', color: '#475569' },
+        ticks: { color: '#475569' },
+        grid: { color: 'rgba(71,85,105,0.16)' },
       },
     },
     plugins: {
       datalabels: { display: false },
       legend: { display: false },
       tooltip: {
-        backgroundColor: 'rgba(12, 14, 24, 0.96)',
-        borderColor: 'rgba(167, 139, 250, 0.35)',
+        backgroundColor: 'rgba(255, 255, 255, 0.98)',
+        titleColor: '#111827',
+        bodyColor: '#20283a',
+        borderColor: 'rgba(124, 58, 237, 0.22)',
         borderWidth: 1,
         callbacks: {
           label: (context) => {
             const point = analytics.scatterPoints[context.dataIndex]
-            return `${point.title}: ${compactNumber(point.views)} views · viral ${point.viralScore.toFixed(1)}`
+            return `${point.title}: ${compactNumber(point.views)} วิว · ไวรัล ${point.viralScore.toFixed(1)}`
           },
         },
       },
@@ -65,8 +67,8 @@ export function DurationEngagementChart({ analytics }: DurationEngagementChartPr
     <article className="chart-panel">
       <div className="panel-heading">
         <div>
-          <h2>Duration vs Engagement</h2>
-          <p>Bubble size follows view volume</p>
+          <h2>ความยาวคลิป vs Engagement</h2>
+          <p>ขนาด bubble แทนปริมาณยอดวิว</p>
         </div>
       </div>
 
@@ -78,7 +80,7 @@ export function DurationEngagementChart({ analytics }: DurationEngagementChartPr
         {analytics.durationMetrics.map((metric) => (
           <div className="duration-pill" key={metric.bucket}>
             <strong>{metric.bucket}</strong>
-            <span>{compactNumber(metric.avgViews)} avg · {metric.avgRetentionScore.toFixed(1)} retention</span>
+            <span>{compactNumber(metric.avgViews)} วิวเฉลี่ย · retention {metric.avgRetentionScore.toFixed(1)}</span>
           </div>
         ))}
       </div>

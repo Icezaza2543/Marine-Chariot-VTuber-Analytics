@@ -22,36 +22,36 @@ export function GrowthTrendChart({ analytics }: GrowthTrendChartProps) {
     labels,
     datasets: [
       {
-        label: 'Monthly Views',
+        label: 'ยอดวิวรายเดือน',
         data: [...actualViews, ...analytics.forecast.map(() => null)],
-        borderColor: '#ff6b9d',
+        borderColor: '#e44878',
         backgroundColor: 'rgba(255, 107, 157, 0.18)',
         fill: true,
-        pointBackgroundColor: '#ff6b9d',
+        pointBackgroundColor: '#e44878',
         pointRadius: 2,
         tension: 0.35,
       },
       {
-        label: 'Forecast Views',
+        label: 'ยอดวิวคาดการณ์',
         data: [
           ...analytics.monthlyMetrics.slice(0, -1).map(() => null),
           analytics.monthlyMetrics.at(-1)?.views ?? null,
           ...forecastViews,
         ],
-        borderColor: '#67e8f9',
+        borderColor: '#0891b2',
         backgroundColor: 'rgba(103, 232, 249, 0.08)',
         borderDash: [8, 6],
-        pointBackgroundColor: '#67e8f9',
+        pointBackgroundColor: '#0891b2',
         pointRadius: 2,
         tension: 0.35,
       },
       {
-        label: 'Cumulative Views',
+        label: 'ยอดวิวสะสม',
         data: [
           ...analytics.monthlyMetrics.map((metric) => metric.cumulativeViews),
           ...analytics.forecast.map(() => null),
         ],
-        borderColor: '#a78bfa',
+        borderColor: '#7c3aed',
         pointRadius: 0,
         yAxisID: 'y1',
         tension: 0.25,
@@ -67,20 +67,20 @@ export function GrowthTrendChart({ analytics }: GrowthTrendChartProps) {
     },
     scales: {
       x: {
-        ticks: { color: '#9aa4b2', maxRotation: 0 },
-        grid: { color: 'rgba(148, 163, 184, 0.08)' },
+        ticks: { color: '#475569', maxRotation: 0 },
+        grid: { color: 'rgba(71, 85, 105, 0.16)' },
       },
       y: {
         ticks: {
-          color: '#9aa4b2',
+          color: '#475569',
           callback: (value) => compactNumber(Number(value)),
         },
-        grid: { color: 'rgba(148, 163, 184, 0.1)' },
+        grid: { color: 'rgba(71, 85, 105, 0.16)' },
       },
       y1: {
         position: 'right',
         ticks: {
-          color: '#a78bfa',
+          color: '#7c3aed',
           callback: (value) => compactNumber(Number(value)),
         },
         grid: { drawOnChartArea: false },
@@ -89,11 +89,13 @@ export function GrowthTrendChart({ analytics }: GrowthTrendChartProps) {
     plugins: {
       datalabels: { display: false },
       legend: {
-        labels: { color: '#dfe7f4', boxWidth: 10, usePointStyle: true },
+        labels: { color: '#334155', boxWidth: 10, usePointStyle: true },
       },
       tooltip: {
-        backgroundColor: 'rgba(12, 14, 24, 0.96)',
-        borderColor: 'rgba(167, 139, 250, 0.35)',
+        backgroundColor: 'rgba(255, 255, 255, 0.98)',
+        titleColor: '#111827',
+        bodyColor: '#20283a',
+        borderColor: 'rgba(124, 58, 237, 0.22)',
         borderWidth: 1,
       },
       annotation: {
@@ -102,7 +104,7 @@ export function GrowthTrendChart({ analytics }: GrowthTrendChartProps) {
             type: 'line',
             yMin: averageViews,
             yMax: averageViews,
-            borderColor: 'rgba(255,255,255,0.22)',
+            borderColor: 'rgba(71,85,105,0.28)',
             borderDash: [4, 4],
             borderWidth: 1,
           },
@@ -119,8 +121,8 @@ export function GrowthTrendChart({ analytics }: GrowthTrendChartProps) {
     <article className="chart-panel min-h-[390px]">
       <div className="panel-heading">
         <div>
-          <h2>Cumulative & Growth Trend</h2>
-          <p>{analytics.filteredRecords.length} videos in current selection</p>
+          <h2>แนวโน้มยอดวิวสะสมและการเติบโต</h2>
+          <p>กำลังดูข้อมูล {analytics.filteredRecords.length} วิดีโอ</p>
         </div>
       </div>
       <div className="chart-frame panel-chart-fill">

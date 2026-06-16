@@ -25,6 +25,13 @@ interface FilterPanelProps {
   analytics: AnalyticsBundle
 }
 
+const granularityLabels: Record<Granularity, string> = {
+  year: 'ปี',
+  month: 'เดือน',
+  week: 'สัปดาห์',
+  day: 'วัน',
+}
+
 export function FilterPanel({ analytics }: FilterPanelProps) {
   const filters = useDashboardStore((state) => state.filters)
   const setFilters = useDashboardStore((state) => state.setFilters)
@@ -78,11 +85,11 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         <div className="flex items-center gap-2">
           <Filter className="h-4 w-4 text-[var(--mc-cyan)]" />
           <div>
-            <h2>Filters</h2>
-            <p>{analytics.filteredRecords.length} videos matched</p>
+            <h2>ตัวกรองข้อมูล</h2>
+            <p>ตรงเงื่อนไข {analytics.filteredRecords.length} วิดีโอ</p>
           </div>
         </div>
-        <button className="icon-btn" type="button" aria-label="Reset filters" onClick={resetAll}>
+        <button className="icon-btn" type="button" aria-label="รีเซ็ตตัวกรอง" onClick={resetAll}>
           <RotateCcw className="h-4 w-4" />
         </button>
       </div>
@@ -91,7 +98,7 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         <div className="filter-control date-control">
           <label className="filter-label">
             <CalendarDays className="h-3.5 w-3.5" />
-            Date Range
+            ช่วงวันที่
           </label>
           <div className="grid grid-cols-2 gap-2">
             <input className="input input-sm input-bordered filter-input" type="date" {...register('dateStart')} />
@@ -100,7 +107,7 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         </div>
 
         <div className="filter-control">
-          <span className="filter-label">Time Grain</span>
+          <span className="filter-label">ระดับเวลา</span>
           <div className="segmented-control">
             {(['year', 'month', 'week', 'day'] as const).map((item) => (
               <button
@@ -109,7 +116,7 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
                 type="button"
                 onClick={() => setGranularity(item)}
               >
-                {item}
+                {granularityLabels[item]}
               </button>
             ))}
           </div>
@@ -118,11 +125,11 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         <div className="filter-control">
           <label className="filter-label">
             <Search className="h-3.5 w-3.5" />
-            Search
+            ค้นหาชื่อคลิป
           </label>
           <input
             className="input input-sm input-bordered filter-input"
-            placeholder="title, game, keyword"
+            placeholder="ชื่อคลิป เกม หรือคำสำคัญ"
             type="search"
             {...register('search')}
           />
@@ -131,7 +138,7 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         <div className="filter-control">
           <label className="filter-label">
             <Tags className="h-3.5 w-3.5" />
-            Tag
+            แท็ก
           </label>
           <input
             className="input input-sm input-bordered filter-input"
@@ -142,9 +149,9 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         </div>
 
         <MultiSelectDropdown
-          label="Content Type"
+          label="ประเภทคอนเทนต์"
           selectedCount={selectedTypes.length}
-          selectedText={selectedTypes.length > 0 ? selectedTypes.slice(0, 2).join(', ') : 'All types'}
+          selectedText={selectedTypes.length > 0 ? selectedTypes.slice(0, 2).join(', ') : 'ทุกประเภท'}
         >
           {analytics.allContentTypes.map((type) => (
             <DropdownCheck
@@ -157,9 +164,9 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         </MultiSelectDropdown>
 
         <MultiSelectDropdown
-          label="Year"
+          label="ปี"
           selectedCount={selectedYears.length}
-          selectedText={selectedYears.length > 0 ? selectedYears.join(', ') : 'All years'}
+          selectedText={selectedYears.length > 0 ? selectedYears.join(', ') : 'ทุกปี'}
         >
           {analytics.allYears.map((year) => (
             <DropdownCheck
@@ -172,12 +179,12 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         </MultiSelectDropdown>
 
         <MultiSelectDropdown
-          label="Month"
+          label="เดือน"
           selectedCount={selectedMonths.length}
           selectedText={
             selectedMonths.length > 0
               ? selectedMonths.map((month) => thaiMonthLabel(month)).join(', ')
-              : 'All months'
+              : 'ทุกเดือน'
           }
         >
           {analytics.allMonths.map((month) => (
@@ -191,9 +198,9 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         </MultiSelectDropdown>
 
         <MultiSelectDropdown
-          label="Week"
+          label="สัปดาห์"
           selectedCount={selectedWeeks.length}
-          selectedText={selectedWeeks.length > 0 ? selectedWeeks.map((week) => `W${week}`).join(', ') : 'All weeks'}
+          selectedText={selectedWeeks.length > 0 ? selectedWeeks.map((week) => `W${week}`).join(', ') : 'ทุกสัปดาห์'}
         >
           <div className="dropdown-grid">
             {analytics.allWeeks.map((week) => (
@@ -210,7 +217,7 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
 
       <div className="filter-actions">
         <button className="btn btn-sm apply-btn" type="submit">
-          Apply Filters
+          ใช้ตัวกรอง
         </button>
       </div>
     </form>
@@ -233,7 +240,7 @@ interface MultiSelectDropdownProps {
 }
 
 function MultiSelectDropdown({ label, selectedCount, selectedText, children }: MultiSelectDropdownProps) {
-  const countLabel = selectedCount > 0 ? `${selectedCount} selected` : 'All'
+  const countLabel = selectedCount > 0 ? `เลือก ${selectedCount}` : 'ทั้งหมด'
 
   return (
     <details className="filter-dropdown">

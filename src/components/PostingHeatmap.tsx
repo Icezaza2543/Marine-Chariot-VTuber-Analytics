@@ -7,7 +7,7 @@ interface PostingHeatmapProps {
   analytics: AnalyticsBundle
 }
 
-const GITHUB_HEAT_LEVELS = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353']
+const GITHUB_HEAT_LEVELS = ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39']
 
 export function PostingHeatmap({ analytics }: PostingHeatmapProps) {
   const maxScore = Math.max(...analytics.heatmap.map((cell) => cell.score), 1)
@@ -18,8 +18,8 @@ export function PostingHeatmap({ analytics }: PostingHeatmapProps) {
     <article className="chart-panel">
       <div className="panel-heading">
         <div>
-          <h2>Upload Frequency Heatmap</h2>
-          <p>Weekday × estimated upload slot</p>
+          <h2>Heatmap ความถี่การลงคลิป</h2>
+          <p>วันในสัปดาห์ × ช่วงเวลาที่คาดว่าอัปโหลด</p>
         </div>
         <div className="panel-badge">
           <Clock3 className="h-3.5 w-3.5" />
@@ -44,17 +44,17 @@ export function PostingHeatmap({ analytics }: PostingHeatmapProps) {
         ))}
       </div>
       <div className="heatmap-legend" aria-label="Heatmap intensity">
-        <span>Low</span>
+        <span>ต่ำ</span>
         {GITHUB_HEAT_LEVELS.map((color, index) => (
           <i
             aria-hidden="true"
             className="heatmap-legend-card"
             key={color}
             style={{ backgroundColor: color }}
-            title={`Level ${index}`}
+            title={`ระดับ ${index}`}
           />
         ))}
-        <span>High</span>
+        <span>สูง</span>
       </div>
 
       <SectionInsight>{analytics.sectionInsights.timing}</SectionInsight>
@@ -82,7 +82,7 @@ function HeatmapRow({ slot, maxScore, cells }: HeatmapRowProps) {
             style={{ backgroundColor: GITHUB_HEAT_LEVELS[level] }}
             title={
               cell
-                ? `${cell.weekdayLabel} ${cell.slot}: ${cell.count} uploads, ${compactNumber(cell.viewsPerUpload)} avg, ${percent(cell.engagementRate)}`
+                ? `${cell.weekdayLabel} ${cell.slot}: ${cell.count} ครั้ง, ${compactNumber(cell.viewsPerUpload)} วิวเฉลี่ย, มีส่วนร่วม ${percent(cell.engagementRate)}`
                 : slot
             }
           >

@@ -32,8 +32,8 @@ export function YearlyComparisonPanel({ analytics }: YearlyComparisonPanelProps)
     <article className="chart-panel">
       <div className="panel-heading">
         <div>
-          <h2>Yearly Performance Comparison</h2>
-          <p>Views, avg views/video, engagement, and retention by year</p>
+          <h2>เปรียบเทียบผลงานรายปี</h2>
+          <p>ยอดวิว วิวเฉลี่ย/วิดีโอ engagement และ retention แยกตามปี</p>
         </div>
         <div className="panel-badge">
           <CalendarRange className="h-3.5 w-3.5" />
@@ -44,34 +44,34 @@ export function YearlyComparisonPanel({ analytics }: YearlyComparisonPanelProps)
       <div className="panel-chart-fill">
         <ResponsiveContainer height="100%" initialDimension={{ width: 960, height: 280 }} minWidth={0} width="100%">
           <ComposedChart data={chartData}>
-            <CartesianGrid stroke="rgba(148,163,184,0.1)" vertical={false} />
-            <XAxis dataKey="year" stroke="#9aa4b2" tickLine={false} />
+            <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
+            <XAxis dataKey="year" stroke="#475569" tickLine={false} />
             <YAxis
-              stroke="#9aa4b2"
+              stroke="#475569"
               tickFormatter={(value) => compactNumber(Number(value))}
               tickLine={false}
               yAxisId="views"
             />
             <YAxis
               orientation="right"
-              stroke="#67e8f9"
+              stroke="#0891b2"
               tickFormatter={(value) => `${value}%`}
               tickLine={false}
               yAxisId="rate"
             />
             <Tooltip
               contentStyle={{
-                background: 'rgba(12, 14, 24, 0.96)',
-                border: '1px solid rgba(167, 139, 250, 0.35)',
+                background: 'rgba(255, 255, 255, 0.98)',
+                border: '1px solid rgba(124, 58, 237, 0.22)',
                 borderRadius: 8,
-                color: '#fff',
+                color: '#20283a',
               }}
             />
             <Legend />
-            <Bar dataKey="views" fill="#ff6b9d" name="Views" radius={[6, 6, 0, 0]} yAxisId="views" />
-            <Line dataKey="avgViews" dot name="Avg Views" stroke="#a78bfa" strokeWidth={2} yAxisId="views" />
-            <Line dataKey="engagement" dot name="Engagement %" stroke="#67e8f9" strokeWidth={2} yAxisId="rate" />
-            <Line dataKey="retention" dot={false} name="Retention" stroke="#34d399" strokeDasharray="5 5" yAxisId="rate" />
+            <Bar dataKey="views" fill="#e44878" name="ยอดวิว" radius={[6, 6, 0, 0]} yAxisId="views" />
+            <Line dataKey="avgViews" dot name="วิวเฉลี่ย" stroke="#7c3aed" strokeWidth={2} yAxisId="views" />
+            <Line dataKey="engagement" dot name="Engagement %" stroke="#0891b2" strokeWidth={2} yAxisId="rate" />
+            <Line dataKey="retention" dot={false} name="Retention" stroke="#047857" strokeDasharray="5 5" yAxisId="rate" />
           </ComposedChart>
         </ResponsiveContainer>
       </div>

@@ -187,42 +187,42 @@ function buildKpis(records: VideoRecord[], previousRecords: VideoRecord[]): KpiV
 
   return [
     {
-      label: 'Total Views',
+      label: 'ยอดวิวรวม',
       value: compactNumber(current.views),
       rawValue: current.views,
       delta: deltaPercent(current.views, previous.views),
       tone: 'pink',
     },
     {
-      label: 'Likes',
+      label: 'ไลก์รวม',
       value: compactNumber(current.likes),
       rawValue: current.likes,
       delta: deltaPercent(current.likes, previous.likes),
       tone: 'violet',
     },
     {
-      label: 'Engagement',
+      label: 'อัตรามีส่วนร่วม',
       value: percent(current.avgEngagementRate),
       rawValue: current.avgEngagementRate,
       delta: deltaPercent(current.avgEngagementRate, previous.avgEngagementRate),
       tone: 'cyan',
     },
     {
-      label: 'Videos',
+      label: 'จำนวนวิดีโอ',
       value: compactNumber(current.videos),
       rawValue: current.videos,
       delta: deltaPercent(current.videos, previous.videos),
       tone: 'green',
     },
     {
-      label: 'Avg Views / Video',
+      label: 'วิวเฉลี่ย/วิดีโอ',
       value: compactNumber(current.avgViews),
       rawValue: current.avgViews,
       delta: deltaPercent(current.avgViews, previous.avgViews),
       tone: 'amber',
     },
     {
-      label: 'Retention Approx.',
+      label: 'การดูต่อโดยประมาณ',
       value: `${current.avgRetentionScore.toFixed(1)}`,
       rawValue: current.avgRetentionScore,
       delta: deltaPercent(current.avgRetentionScore, previous.avgRetentionScore),
@@ -477,26 +477,26 @@ function buildInsights(input: {
   const topVideo = [...input.filteredRecords].sort((a, b) => b.viralScore - a.viralScore)[0]
   const forecastText =
     firstForecast && latestMonth
-      ? `เดือนถัดไปคาดการณ์ ${compactNumber(firstForecast.views)} views จากโมเดล regression + smoothing เทียบเดือนล่าสุด ${compactNumber(latestMonth.views)} views`
-      : 'ต้องมีข้อมูลรายเดือนเพิ่มเพื่อให้ forecast แข็งแรงขึ้น'
+      ? `เดือนถัดไปคาดการณ์ ${compactNumber(firstForecast.views)} วิว จากโมเดล regression + smoothing เทียบเดือนล่าสุด ${compactNumber(latestMonth.views)} วิว`
+      : 'ต้องมีข้อมูลรายเดือนเพิ่มเพื่อให้การคาดการณ์แข็งแรงขึ้น'
 
   const insights: StrategyInsight[] = [
     {
-      title: 'Growth Pulse',
-      body: `${forecastText}; projected growth 3 เดือนอยู่ที่ ${input.projectedGrowthRate.toFixed(1)}%`,
+      title: 'ชีพจรการเติบโต',
+      body: `${forecastText}; การเติบโตคาดการณ์ 3 เดือนอยู่ที่ ${input.projectedGrowthRate.toFixed(1)}%`,
       confidence: 82,
       tone: 'pink',
     },
     {
-      title: 'Content Strategy',
+      title: 'กลยุทธ์คอนเทนต์',
       body: topContent
-        ? `เดือนถัดไปควรเน้น ${topContent.contentType} เพราะ avg views ${compactNumber(topContent.avgViews)} และ engagement ${percent(topContent.avgEngagementRate)} ยังเด่น`
+        ? `เดือนถัดไปควรเน้น ${topContent.contentType} เพราะวิวเฉลี่ย ${compactNumber(topContent.avgViews)} และอัตรามีส่วนร่วม ${percent(topContent.avgEngagementRate)} ยังเด่น`
         : 'ยังไม่มี content type ที่เด่นพอหลัง filter ปัจจุบัน',
       confidence: 86,
       tone: 'violet',
     },
     {
-      title: 'Retention Move',
+      title: 'แผนเพิ่ม Retention',
       body: bestDuration
         ? `กลุ่มความยาว ${bestDuration.bucket} ทำผลงานเฉลี่ยดีที่สุด ควรใช้เป็นแม่แบบ pacing และช่วง hook`
         : 'ยังไม่มีข้อมูล duration เพียงพอ',
@@ -504,17 +504,17 @@ function buildInsights(input: {
       tone: 'cyan',
     },
     {
-      title: 'Publishing Cadence',
+      title: 'จังหวะการลงคอนเทนต์',
       body: input.bestPostingSlot
-        ? `slot ที่ควรทดลองซ้ำคือ ${input.bestPostingSlot.weekdayLabel} ${input.bestPostingSlot.slot}; cadence ที่น่าเก็บต่อคือ ${input.optimalFrequency}`
-        : 'ยังหา slot ที่ชัดไม่ได้จาก filter นี้',
+        ? `ช่วงเวลาที่ควรทดลองซ้ำคือ ${input.bestPostingSlot.weekdayLabel} ${input.bestPostingSlot.slot}; ความถี่ที่น่าเก็บต่อคือ ${input.optimalFrequency}`
+        : 'ยังหาช่วงเวลาที่ชัดไม่ได้จาก filter นี้',
       confidence: 69,
       tone: 'green',
     },
     {
-      title: 'Viral Lever',
+      title: 'แรงส่งไวรัล',
       body: topVideo
-        ? `ใช้ ${topVideo.contentType} จากวิดีโอ viral score ${topVideo.viralScore.toFixed(1)} เป็นต้นแบบทำ Shorts cutdown แล้วพาคนกลับไป long-form`
+        ? `ใช้ ${topVideo.contentType} จากวิดีโอคะแนนไวรัล ${topVideo.viralScore.toFixed(1)} เป็นต้นแบบทำ Shorts cutdown แล้วพาคนกลับไป long-form`
         : 'ยังไม่มีวิดีโอในช่วงที่เลือก',
       confidence: 80,
       tone: 'amber',
@@ -522,10 +522,10 @@ function buildInsights(input: {
   ]
 
   insights.push({
-    title: 'X Signal',
+    title: 'สัญญาณจาก X',
     body:
       input.social.status === 'ready'
-        ? `X มี ${input.social.postCount} posts, engagement รวม ${compactNumber(input.social.totalEngagement)} และ cross-promo rate ${percent(input.social.crossPromoRate)}; ใช้ post ที่พูดถึงไลฟ์/YouTube เป็นตัวเร่ง traffic กลับคลิป`
+        ? `X มี ${input.social.postCount} โพสต์, engagement รวม ${compactNumber(input.social.totalEngagement)} และ cross-promo rate ${percent(input.social.crossPromoRate)}; ใช้โพสต์ที่พูดถึงไลฟ์/YouTube เป็นตัวเร่ง traffic กลับคลิป`
         : `ยังไม่มี X data สดใน cache; รัน npm run fetch:x พร้อม X_BEARER_TOKEN เพื่อเพิ่ม social signal จาก ${input.social.sourceUrl}`,
     confidence: input.social.status === 'ready' ? 78 : 54,
     tone: 'cyan',
@@ -578,7 +578,7 @@ function buildSocialAnalytics(records: VideoRecord[], xData?: XDataset): SocialA
       sourceUrl,
       fetchedAt: xData?.fetchedAt ?? null,
       status: 'empty',
-      statusMessage: xData?.meta?.message ?? 'No X posts loaded yet.',
+      statusMessage: xData?.meta?.message ?? 'ยังไม่มีโพสต์ X ใน cache',
       profile: xData?.profile ?? null,
       postCount: 0,
       totalEngagement: 0,
@@ -603,14 +603,14 @@ function buildSocialAnalytics(records: VideoRecord[], xData?: XDataset): SocialA
   const videoMatches = buildSocialVideoMatches(records, posts)
   const bestMatch = videoMatches[0]
   const strategicInsight = bestMatch
-    ? `X signal ชี้ว่าคลิป "${bestMatch.title}" มี social lift ${bestMatch.liftScore.toFixed(1)} จาก ${bestMatch.matchedPostCount} posts ควรใช้เป็นต้นแบบ cross-promo`
-    : `X มี ${posts.length} posts แต่ยังจับคู่กับวิดีโอใน filter นี้ได้น้อย ควรใส่ YouTube URL หรือ keyword ชื่อเกม/ซีรีส์ใน post ให้ชัดขึ้น`
+    ? `สัญญาณจาก X ชี้ว่าคลิป "${bestMatch.title}" มี social lift ${bestMatch.liftScore.toFixed(1)} จาก ${bestMatch.matchedPostCount} โพสต์ ควรใช้เป็นต้นแบบ cross-promo`
+    : `X มี ${posts.length} โพสต์ แต่ยังจับคู่กับวิดีโอใน filter นี้ได้น้อย ควรใส่ YouTube URL หรือ keyword ชื่อเกม/ซีรีส์ในโพสต์ให้ชัดขึ้น`
 
   return {
     sourceUrl,
     fetchedAt: xData?.fetchedAt ?? null,
     status: 'ready',
-    statusMessage: `${posts.length} X posts loaded`,
+    statusMessage: `โหลดโพสต์ X แล้ว ${posts.length} รายการ`,
     profile: xData?.profile ?? null,
     postCount: posts.length,
     totalEngagement,
@@ -935,15 +935,15 @@ function clamp(value: number, min: number, max: number) {
 
 export function metricLabel(key: MetricKey | 'publishedAt' | 'title' | 'contentType') {
   const labels: Record<string, string> = {
-    views: 'Views',
-    likes: 'Likes',
-    comments: 'Comments',
-    engagementRate: 'Engagement',
-    viralScore: 'Viral',
-    retentionScore: 'Retention',
-    publishedAt: 'Date',
-    title: 'Video',
-    contentType: 'Type',
+    views: 'ยอดวิว',
+    likes: 'ไลก์',
+    comments: 'คอมเมนต์',
+    engagementRate: 'อัตรามีส่วนร่วม',
+    viralScore: 'ศักยภาพไวรัล',
+    retentionScore: 'การดูต่อ',
+    publishedAt: 'วันที่',
+    title: 'วิดีโอ',
+    contentType: 'ประเภท',
   }
 
   return labels[key] ?? key
@@ -951,7 +951,7 @@ export function metricLabel(key: MetricKey | 'publishedAt' | 'title' | 'contentT
 
 export function durationInsight(metrics: DurationBucketMetric[]) {
   const top = [...metrics].sort((a, b) => b.avgViews - a.avgViews)[0]
-  return top ? `${top.bucket} / ${compactNumber(top.avgViews)} avg views` : '-'
+  return top ? `${top.bucket} / ${compactNumber(top.avgViews)} วิวเฉลี่ย` : '-'
 }
 
 export function retentionLabel(record: VideoRecord) {

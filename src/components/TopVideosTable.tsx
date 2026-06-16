@@ -10,13 +10,13 @@ interface TopVideosTableProps {
 }
 
 const columns: Array<{ key: TableSort['key']; label: string; className?: string }> = [
-  { key: 'title', label: 'Video', className: 'min-w-[280px]' },
-  { key: 'contentType', label: 'Type' },
-  { key: 'publishedAt', label: 'Date' },
-  { key: 'views', label: 'Views' },
-  { key: 'engagementRate', label: 'Eng.' },
-  { key: 'viralScore', label: 'Viral' },
-  { key: 'retentionScore', label: 'Retention' },
+  { key: 'title', label: 'วิดีโอ', className: 'min-w-[280px]' },
+  { key: 'contentType', label: 'ประเภท' },
+  { key: 'publishedAt', label: 'วันที่' },
+  { key: 'views', label: 'ยอดวิว' },
+  { key: 'engagementRate', label: 'มีส่วนร่วม' },
+  { key: 'viralScore', label: 'ไวรัล' },
+  { key: 'retentionScore', label: 'ดูต่อ' },
 ]
 
 export function TopVideosTable({ analytics }: TopVideosTableProps) {
@@ -34,8 +34,8 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
     <article className="chart-panel">
       <div className="panel-heading">
         <div>
-          <h2>Top Videos</h2>
-          <p>Sortable by performance and viral potential</p>
+          <h2>วิดีโอยอดนิยม</h2>
+          <p>เรียงตามผลงานและศักยภาพไวรัลได้</p>
         </div>
         <div className="segmented-control small">
           {[10, 20].map((limit) => (
@@ -45,7 +45,7 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
               type="button"
               onClick={() => setTopLimit(limit as 10 | 20)}
             >
-              Top {limit}
+              สูงสุด {limit}
             </button>
           ))}
         </div>
@@ -97,7 +97,7 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
         </table>
       </div>
 
-      <SectionInsight>{analytics.sectionInsights.videos} · sorted by {metricLabel(tableSort.key)}</SectionInsight>
+      <SectionInsight>{analytics.sectionInsights.videos} · เรียงตาม {metricLabel(tableSort.key)}</SectionInsight>
     </article>
   )
 }
