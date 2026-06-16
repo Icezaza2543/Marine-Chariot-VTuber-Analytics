@@ -9,7 +9,8 @@ interface TopVideosTableProps {
   analytics: AnalyticsBundle
 }
 
-const columns: Array<{ key: TableSort['key']; label: string; className?: string }> = [
+const columns: Array<{ key: TableSort['key'] | 'thumbnail'; label: string; className?: string }> = [
+  { key: 'thumbnail', label: 'Thumbnail', className: 'w-24 text-center' },
   { key: 'title', label: 'วิดีโอ', className: 'min-w-[280px]' },
   { key: 'contentType', label: 'ประเภท' },
   { key: 'publishedAt', label: 'วันที่' },
@@ -18,6 +19,11 @@ const columns: Array<{ key: TableSort['key']; label: string; className?: string 
   { key: 'viralScore', label: 'ไวรัล' },
   { key: 'retentionScore', label: 'ดูต่อ' },
 ]
+
+function getYouTubeId(url: string) {
+  const match = url.match(/[?&]v=([^&]+)/) || url.match(/youtu\.be\/([^?]+)/)
+  return match ? match[1] : ''
+}
 
 export function TopVideosTable({ analytics }: TopVideosTableProps) {
   const topLimit = useDashboardStore((state) => state.topLimit)
@@ -57,24 +63,44 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
             <tr>
               {columns.map((column) => (
                 <th className={column.className} key={column.key}>
-                  <button type="button" onClick={() => toggleSort(column.key)}>
-                    {column.label}
-                    {tableSort.key === column.key ? (
-                      tableSort.direction === 'desc' ? (
-                        <ArrowDown className="h-3.5 w-3.5" />
-                      ) : (
-                        <ArrowUp className="h-3.5 w-3.5" />
-                      )
-                    ) : null}
-                  </button>
+                  {column.key === 'thumbnail' ? (
+                    column.label
+                  ) : (
+                    <button type="button" onClick={() => toggleSort(column.key as TableSort['key'])}>
+                      {column.label}
+                      {tableSort.key === column.key ? (
+                        tableSort.direction === 'desc' ? (
+                          <ArrowDown className="h-3.5 w-3.5" />
+                        ) : (
+                          <ArrowUp className="h-3.5 w-3.5" />
+                        )
+                      ) : null}
+                    </button>
+                  )}
                 </th>
               ))}
+
             </tr>
           </thead>
           <tbody>
-            {analytics.topVideos.map((video, index) => (
-              <tr key={video.id}>
-                <td>
+            {analytics.topVideos.map((video, index) => {
+              const videoId = getYouTubeId(video.url)
+              
+              return (
+                <tr key={video.id}>
+                  <td>
+                    {videoId && (
+                      <div className="flex items-center justify-center">
+                        <img 
+                          alt="Thumbnail"
+                          className="w-16 h-auto rounded border border-[var(--mc-border)] shadow-sm object-cover" 
+                          loading="lazy" 
+                          src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
+                        />
+                      </div>
+                    )}
+                  </td>
+                  <td>
                   <div className="video-title-cell">
                     <span className="rank-medal">
                       {index < 3 ? <Trophy className="h-3.5 w-3.5" /> : index + 1}
@@ -92,7 +118,8 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
                 <td>{video.viralScore.toFixed(1)}</td>
                 <td>{retentionLabel(video)}</td>
               </tr>
-            ))}
+            )
+          })}
           </tbody>
         </table>
       </div>

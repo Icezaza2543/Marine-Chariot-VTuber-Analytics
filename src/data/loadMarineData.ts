@@ -59,6 +59,11 @@ function normalizeRow(row: RawMarineRow): VideoRecord | null {
   const minutes = parseNumeric(row.minute) || durationToMinutes(row.duration)
   const avgViewDurationRatio = parseNumeric(row['AVG View Duration'])
   const contentType = normalizeContentType(row.type, row['Video Name'])
+
+  if (contentType === 'ไม่ระบุ') {
+    return null
+  }
+
   const tags = extractTags(row['Video Name'], contentType)
   const retentionMinutes = minutes * avgViewDurationRatio
 
