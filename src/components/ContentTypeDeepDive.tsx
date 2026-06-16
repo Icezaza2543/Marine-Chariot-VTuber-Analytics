@@ -9,7 +9,7 @@ import {
   YAxis,
 } from 'recharts'
 import { Layers3 } from 'lucide-react'
-import { compactNumber, percent, signedPercent } from '../lib/format'
+import { compactNumber, percent } from '../lib/format'
 import type { AnalyticsBundle } from '../types'
 import { SectionInsight } from './SectionInsight'
 
@@ -24,7 +24,6 @@ export function ContentTypeDeepDive({ analytics }: ContentTypeDeepDiveProps) {
     name: metric.contentType,
     avgViews: Math.round(metric.avgViews),
     engagement: Number((metric.avgEngagementRate * 100).toFixed(1)),
-    growth: Number(metric.growthRate.toFixed(1)),
   }))
 
   return (
@@ -32,7 +31,7 @@ export function ContentTypeDeepDive({ analytics }: ContentTypeDeepDiveProps) {
       <div className="panel-heading">
         <div>
           <h2>วิเคราะห์ประเภทคอนเทนต์เชิงลึก</h2>
-          <p>ประสิทธิภาพ อัตราเติบโต และจังหวะตามฤดูกาล</p>
+          <p>ประสิทธิภาพ และจังหวะตามฤดูกาล</p>
         </div>
         <div className="panel-badge">
           <Layers3 className="h-3.5 w-3.5" />
@@ -75,7 +74,7 @@ export function ContentTypeDeepDive({ analytics }: ContentTypeDeepDiveProps) {
             </div>
             <div className="text-right">
               <strong>{compactNumber(metric.avgViews)}</strong>
-              <span>{percent(metric.avgEngagementRate)} · {signedPercent(metric.growthRate)}</span>
+              <span>{percent(metric.avgEngagementRate)}</span>
             </div>
           </div>
         ))}

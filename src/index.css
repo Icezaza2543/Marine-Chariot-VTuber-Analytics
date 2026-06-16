@@ -356,6 +356,9 @@ button {
   display: grid;
   gap: 12px;
   padding: 1.25rem;
+  position: relative;
+  /* Ensure dropdowns within float above sibling charts/panels below */
+  z-index: 50;
 }
 
 .panel-heading {
@@ -420,6 +423,10 @@ button {
 .filter-dropdown {
   position: relative;
   min-width: 0;
+}
+
+.filter-dropdown[open] {
+  z-index: 50;
 }
 
 .filter-dropdown summary {

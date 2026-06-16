@@ -65,7 +65,6 @@ export interface KpiValue {
   label: string
   value: string
   rawValue: number
-  delta: number
   tone: 'pink' | 'violet' | 'cyan' | 'green' | 'amber'
 }
 

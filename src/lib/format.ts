@@ -9,10 +9,6 @@ export function percent(value: number, digits = 1) {
   return `${(value * 100).toFixed(digits)}%`
 }
 
-export function signedPercent(value: number, digits = 1) {
-  const prefix = value > 0 ? '+' : ''
-  return `${prefix}${value.toFixed(digits)}%`
-}
 
 export function decimal(value: number, digits = 1) {
   return value.toFixed(digits)

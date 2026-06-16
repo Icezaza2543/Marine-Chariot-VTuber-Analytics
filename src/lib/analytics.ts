@@ -5,10 +5,8 @@ import {
   eachMonthOfInterval,
   format,
   getMonth,
-  isWithinInterval,
   parseISO,
   startOfMonth,
-  subDays,
 } from 'date-fns'
 import { compactNumber, minutesLabel, percent, thaiMonthLabel } from './format'
 import type {
@@ -48,8 +46,7 @@ export function buildAnalytics(
   const allMonths = Array.from({ length: 12 }, (_, index) => index + 1)
   const allWeeks = unique(records.map((record) => record.uploadWeek)).sort((a, b) => a - b)
   const filteredRecords = filterRecords(records, filters)
-  const previousRecords = getPreviousPeriodRecords(records, filters)
-  const kpis = buildKpis(filteredRecords, previousRecords)
+  const kpis = buildKpis(filteredRecords)
   const monthlyMetrics = buildMonthlyMetrics(filteredRecords)
   const forecast = buildForecast(monthlyMetrics)
   const contentMetrics = buildContentMetrics(filteredRecords)
@@ -150,82 +147,46 @@ export function filterRecords(records: VideoRecord[], filters: DashboardFilters)
   })
 }
 
-function getPreviousPeriodRecords(records: VideoRecord[], filters: DashboardFilters) {
-  const nonDateFilters = {
-    ...filters,
-    dateStart: '',
-    dateEnd: '',
-  }
-  const comparableRecords = filterRecords(records, nonDateFilters)
 
-  if (comparableRecords.length === 0) {
-    return []
-  }
 
-  const currentRecords = filterRecords(records, filters)
-  const currentStart = filters.dateStart
-    ? parseISO(filters.dateStart)
-    : currentRecords[0]?.publishedAt ?? comparableRecords[0].publishedAt
-  const currentEnd = filters.dateEnd
-    ? parseISO(filters.dateEnd)
-    : currentRecords.at(-1)?.publishedAt ?? comparableRecords.at(-1)!.publishedAt
-  const span = Math.max(differenceInCalendarDays(currentEnd, currentStart) + 1, 30)
-  const previousStart = subDays(currentStart, span)
-  const previousEnd = subDays(currentStart, 1)
-
-  return comparableRecords.filter((record) =>
-    isWithinInterval(record.publishedAt, {
-      start: previousStart,
-      end: previousEnd,
-    }),
-  )
-}
-
-function buildKpis(records: VideoRecord[], previousRecords: VideoRecord[]): KpiValue[] {
+function buildKpis(records: VideoRecord[]): KpiValue[] {
   const current = summarize(records)
-  const previous = summarize(previousRecords)
 
   return [
     {
       label: 'ยอดวิวรวม',
       value: compactNumber(current.views),
       rawValue: current.views,
-      delta: deltaPercent(current.views, previous.views),
       tone: 'pink',
     },
     {
       label: 'ไลก์รวม',
       value: compactNumber(current.likes),
       rawValue: current.likes,
-      delta: deltaPercent(current.likes, previous.likes),
       tone: 'violet',
     },
     {
       label: 'อัตรามีส่วนร่วม',
       value: percent(current.avgEngagementRate),
       rawValue: current.avgEngagementRate,
-      delta: deltaPercent(current.avgEngagementRate, previous.avgEngagementRate),
       tone: 'cyan',
     },
     {
       label: 'จำนวนวิดีโอ',
       value: compactNumber(current.videos),
       rawValue: current.videos,
-      delta: deltaPercent(current.videos, previous.videos),
       tone: 'green',
     },
     {
       label: 'วิวเฉลี่ย/วิดีโอ',
       value: compactNumber(current.avgViews),
       rawValue: current.avgViews,
-      delta: deltaPercent(current.avgViews, previous.avgViews),
       tone: 'amber',
     },
     {
       label: 'การดูต่อโดยประมาณ',
       value: `${current.avgRetentionScore.toFixed(1)}`,
       rawValue: current.avgRetentionScore,
-      delta: deltaPercent(current.avgRetentionScore, previous.avgRetentionScore),
       tone: 'violet',
     },
   ]
