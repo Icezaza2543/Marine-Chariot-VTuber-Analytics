@@ -23,11 +23,11 @@ export interface ChannelMeta {
 
 export const CHANNEL_META: ChannelMeta = {
   displayName: 'Marine Chariot',
-  tagline: 'Necromancer Lady · แฟนคลับ Yhoi',
-  debutDate: '2023-04-15',
-  genres: ['เกม', 'ฟรีทอร์ก', 'ร้องเพลง', 'วาดรูป', 'เล่าเรื่อง'],
+  tagline: 'I am a necromancer 🦋 independent Vtuber',
+  debutDate: '2022-09-22',
+  genres: ['เล่าเรื่อง', 'เล่นเกม', 'พูดคุย', 'วาดรูป'],
   youtubeSubscribers: 5690,
-  youtubeSubscribersAsOf: '2026-06-01',
+  youtubeSubscribersAsOf: '2026-06-16',
   links: [
     {
       id: 'youtube',
@@ -37,14 +37,38 @@ export const CHANNEL_META: ChannelMeta = {
     },
     {
       id: 'x',
-      label: 'X',
-      href: 'https://x.com/MarineChariot',
+      label: 'X (Twitter)',
+      href: 'https://twitter.com/MarineChariot',
       kind: 'x',
     },
     {
       id: 'website',
-      label: 'เว็บไซต์',
+      label: 'Website',
       href: 'https://secretgarden-artist.carrd.co',
+      kind: 'website',
+    },
+    {
+      id: 'pixiv',
+      label: 'Pixiv',
+      href: 'https://www.pixiv.net/en/users/49549782',
+      kind: 'website',
+    },
+    {
+      id: 'easydonate',
+      label: 'EasyDonate',
+      href: 'https://ezdn.app/marinechariot',
+      kind: 'website',
+    },
+    {
+      id: 'kofi',
+      label: 'Ko-fi',
+      href: 'https://ko-fi.com/K3K6T85JO',
+      kind: 'website',
+    },
+    {
+      id: 'vgen',
+      label: 'V-Gen',
+      href: 'https://vgen.co/Saraorigami',
       kind: 'website',
     },
     {
