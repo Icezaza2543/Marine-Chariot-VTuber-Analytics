@@ -123,7 +123,7 @@ export function GrowthTrendChart({ analytics }: GrowthTrendChartProps) {
           <p>{analytics.filteredRecords.length} videos in current selection</p>
         </div>
       </div>
-      <div className="chart-frame">
+      <div className="chart-frame panel-chart-fill">
         <Line data={data} options={options} />
       </div>
       <SectionInsight>{analytics.sectionInsights.growth}</SectionInsight>

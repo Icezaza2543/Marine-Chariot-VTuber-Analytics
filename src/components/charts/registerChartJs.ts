@@ -29,5 +29,6 @@ ChartJS.register(
 )
 
 ChartJS.defaults.font.family =
-  '"Sukhumvit Set", Sukhumvit, "Noto Sans Thai", "Leelawadee UI", "Segoe UI", sans-serif'
+  '"IBM Plex Sans Thai", "Noto Sans Thai", "Leelawadee UI", "Segoe UI", sans-serif'
+ChartJS.defaults.font.size = 13
 ChartJS.defaults.color = '#94a3b8'

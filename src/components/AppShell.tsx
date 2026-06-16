@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
-import { AtSign, BarChart3, Database, RefreshCw, Sparkles } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 import { STACK_ARCHITECTURE } from '../architecture'
-import { compactNumber } from '../lib/format'
 import type { AnalyticsBundle } from '../types'
 
 interface AppShellProps {
@@ -12,7 +11,6 @@ interface AppShellProps {
 export function AppShell({ analytics, children }: AppShellProps) {
   const firstDate = analytics.records[0]?.publishedDate ?? '-'
   const lastDate = analytics.records.at(-1)?.publishedDate ?? '-'
-  const totalViews = analytics.records.reduce((total, record) => total + record.views, 0)
 
   return (
     <div className="app-shell" data-stack={STACK_ARCHITECTURE.framework}>
@@ -30,26 +28,7 @@ export function AppShell({ analytics, children }: AppShellProps) {
         </div>
 
         <div className="header-metrics">
-          <div className="mini-stat">
-            <Database className="h-4 w-4 text-[var(--mc-cyan)]" />
-            <span>{analytics.records.length} videos</span>
-          </div>
-          <div className="mini-stat">
-            <BarChart3 className="h-4 w-4 text-[var(--mc-pink)]" />
-            <span>{compactNumber(totalViews)} views</span>
-          </div>
-          <div className="mini-stat">
-            <AtSign className="h-4 w-4 text-[var(--mc-violet)]" />
-            <span>{compactNumber(analytics.social.postCount)} X posts</span>
-          </div>
-          <button
-            className="icon-btn"
-            type="button"
-            aria-label="Reload dashboard"
-            onClick={() => window.location.reload()}
-          >
-            <RefreshCw className="h-4 w-4" />
-          </button>
+          <span className="report-badge">VTUBER TH</span>
         </div>
       </header>
 

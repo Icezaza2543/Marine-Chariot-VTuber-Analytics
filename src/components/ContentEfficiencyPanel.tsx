@@ -43,7 +43,7 @@ export function ContentEfficiencyPanel({ analytics }: ContentEfficiencyPanelProp
         </div>
       </div>
 
-      <div className="h-[300px]">
+      <div className="panel-chart-fill">
         <ResponsiveContainer height="100%" initialDimension={{ width: 640, height: 300 }} minWidth={0} width="100%">
           <ScatterChart>
             <CartesianGrid stroke="rgba(148,163,184,0.1)" />

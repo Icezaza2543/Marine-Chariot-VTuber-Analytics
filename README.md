@@ -6,10 +6,11 @@ Production-ready Vite + React + TypeScript dashboard for Marine Chariot VTuber a
 
 ## Features
 
-- 3-page dashboard: `Overview`, `Content & Timing`, `Prediction & Strategy`
+- Long-scroll analytics report inspired by the original single-page HTML dashboard
 - Compact filter bar with date range, search, tag, and dropdown multi-selects
-- KPI cards, growth trend, yearly comparison, content efficiency quadrant, engagement mix, duration vs engagement, upload heatmap, and sortable top videos
+- KPI cards, growth trend, monthly views/upload frequency, Video vs Content Talk split, category breakdown, yearly comparison, content efficiency quadrant, engagement mix, duration vs engagement, upload heatmap, Shorts deep dive, and sortable top videos
 - GitHub-style upload heatmap with square 1:1 cells and single-tone intensity scale
+- Dynamic Thai summary boxes for strengths and improvement opportunities
 - Forecasting with linear regression + exponential smoothing
 - X social signal layer: post engagement, reach proxy, cross-promotion rate, hashtags, and video/post matching
 - Thai AI Insight Engine for content, timing, retention, X promotion, and next-month strategy

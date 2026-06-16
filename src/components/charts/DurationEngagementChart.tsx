@@ -70,7 +70,7 @@ export function DurationEngagementChart({ analytics }: DurationEngagementChartPr
         </div>
       </div>
 
-      <div className="chart-frame h-[285px]">
+      <div className="chart-frame panel-chart-fill">
         <Bubble data={data} options={options} />
       </div>
 

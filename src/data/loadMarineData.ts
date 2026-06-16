@@ -7,13 +7,20 @@ const DATA_PATH = '/data/marine-ch-data.csv'
 const keywordTags: Array<[RegExp, string]> = [
   [/asmr/i, 'ASMR'],
   [/shorts?|shots?/i, 'Shorts'],
-  [/free\s*talk|freetalk/i, 'Freetalk'],
+  [/free\s*talk|freetalk|ฟรีทอร์ก|content talk/i, 'FreeTalk'],
   [/ร้อง|เพลง|sing|karaoke/i, 'ร้องเพลง'],
-  [/วาด|draw|illust/i, 'วาดรูป'],
+  [/วาด|draw|illust/i, 'Drawing'],
   [/collab|คอลแลบ|ร่วม/i, 'Collab'],
   [/game|gaming|【.+】/i, 'Gaming'],
   [/ผี|ghost|horror/i, 'เล่าเรื่องผี'],
   [/ประกาศ|event|อีเวนต์/i, 'ประกาศ/อีเวนต์'],
+]
+
+const contentTypeAliases: Array<[RegExp, string]> = [
+  [/^(shorts?|shots?)$/i, 'Shorts'],
+  [/^(gaming|game|เล่นเกม)$/i, 'Gaming'],
+  [/^(free\s*talk|freetalk|ฟรีทอร์ก|content talk)$/i, 'FreeTalk'],
+  [/^(drawing|draw|วาดรูป)$/i, 'Drawing'],
 ]
 
 export async function loadMarineData() {
@@ -110,12 +117,14 @@ function scoreVideos(records: VideoRecord[]) {
 function normalizeContentType(type: string, title: string) {
   const cleanType = type.trim()
 
-  if (/shots?/i.test(cleanType)) {
-    return 'Shorts'
-  }
-
   if (/asmr/i.test(title)) {
     return 'ASMR'
+  }
+
+  for (const [pattern, label] of contentTypeAliases) {
+    if (pattern.test(cleanType)) {
+      return label
+    }
   }
 
   return cleanType || 'ไม่ระบุ'

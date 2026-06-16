@@ -41,7 +41,7 @@ export function YearlyComparisonPanel({ analytics }: YearlyComparisonPanelProps)
         </div>
       </div>
 
-      <div className="h-[280px]">
+      <div className="panel-chart-fill">
         <ResponsiveContainer height="100%" initialDimension={{ width: 960, height: 280 }} minWidth={0} width="100%">
           <ComposedChart data={chartData}>
             <CartesianGrid stroke="rgba(148,163,184,0.1)" vertical={false} />

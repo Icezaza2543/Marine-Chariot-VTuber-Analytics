@@ -1,6 +1,6 @@
 import { format } from 'date-fns'
 import { useEffect, useMemo, useState } from 'react'
-import { Activity, AlertTriangle, BarChart3, BrainCircuit, Clock3 } from 'lucide-react'
+import { Activity, AlertTriangle } from 'lucide-react'
 import { buildAnalytics } from './lib/analytics'
 import { loadMarineData } from './data/loadMarineData'
 import { loadMarineXData } from './data/loadMarineXData'
@@ -20,34 +20,13 @@ import { SocialSignalPanel } from './components/SocialSignalPanel'
 import { YearlyComparisonPanel } from './components/YearlyComparisonPanel'
 import { ContentEfficiencyPanel } from './components/ContentEfficiencyPanel'
 import { EngagementMixPanel } from './components/EngagementMixPanel'
-
-type DashboardPage = 'overview' | 'content' | 'strategy'
-
-const dashboardPages: Array<{
-  id: DashboardPage
-  label: string
-  description: string
-  icon: typeof BarChart3
-}> = [
-  {
-    id: 'overview',
-    label: 'Overview',
-    description: 'KPI and growth pulse',
-    icon: BarChart3,
-  },
-  {
-    id: 'content',
-    label: 'Content & Timing',
-    description: 'Format, duration, upload slot',
-    icon: Clock3,
-  },
-  {
-    id: 'strategy',
-    label: 'Prediction & Strategy',
-    description: 'Forecast, videos, AI insights',
-    icon: BrainCircuit,
-  },
-]
+import {
+  CategoryBreakdownPanel,
+  ChannelSummaryPanel,
+  ContentFormatPanel,
+  MonthlyUploadPanel,
+  ShortsDeepDivePanel,
+} from './components/LegacyInspiredPanels'
 
 export default function App() {
   const [records, setRecords] = useState<VideoRecord[]>([])
@@ -55,7 +34,6 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [didInitDateRange, setDidInitDateRange] = useState(false)
-  const [activePage, setActivePage] = useState<DashboardPage>('overview')
   const filters = useDashboardStore((state) => state.filters)
   const topLimit = useDashboardStore((state) => state.topLimit)
   const tableSort = useDashboardStore((state) => state.tableSort)
@@ -138,75 +116,51 @@ export default function App() {
   return (
     <AppShell analytics={analytics}>
       <div className="dashboard-workspace">
+        <KpiDashboard kpis={analytics.kpis} />
         <FilterPanel analytics={analytics} />
 
-        <nav className="page-tabs" aria-label="Dashboard pages">
-          {dashboardPages.map((page) => {
-            const Icon = page.icon
+        <main className="dashboard-main long-scroll-main">
+          <section className="dashboard-section overview-grid">
+            <GrowthTrendChart analytics={analytics} />
+            <InsightPanel analytics={analytics} compact />
+          </section>
 
-            return (
-              <button
-                className={activePage === page.id ? 'page-tab is-active' : 'page-tab'}
-                key={page.id}
-                type="button"
-                onClick={() => {
-                  closeFilterDropdowns()
-                  setActivePage(page.id)
-                  window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'auto' }))
-                }}
-              >
-                <Icon className="h-4 w-4" />
-                <span>
-                  <strong>{page.label}</strong>
-                  <em>{page.description}</em>
-                </span>
-              </button>
-            )
-          })}
-        </nav>
+          <section className="dashboard-section">
+            <MonthlyUploadPanel analytics={analytics} />
+          </section>
 
-        <main className="dashboard-main">
-          {activePage === 'overview' ? (
-            <>
-              <KpiDashboard kpis={analytics.kpis} />
-              <section className="dashboard-section overview-grid">
-                <GrowthTrendChart analytics={analytics} />
-                <InsightPanel analytics={analytics} compact />
-              </section>
-              <section className="dashboard-section">
-                <YearlyComparisonPanel analytics={analytics} />
-              </section>
-            </>
-          ) : null}
+          <section className="dashboard-section">
+            <ContentFormatPanel analytics={analytics} />
+          </section>
 
-          {activePage === 'content' ? (
-            <section className="dashboard-section content-page-grid">
-              <ContentTypeDeepDive analytics={analytics} />
-              <ContentEfficiencyPanel analytics={analytics} />
-              <DurationEngagementChart analytics={analytics} />
-              <EngagementMixPanel analytics={analytics} />
-              <PostingHeatmap analytics={analytics} />
-            </section>
-          ) : null}
+          <section className="dashboard-section">
+            <CategoryBreakdownPanel analytics={analytics} />
+          </section>
 
-          {activePage === 'strategy' ? (
-            <section className="dashboard-section strategy-page-grid">
-              <ForecastPanel analytics={analytics} />
-              <InsightPanel analytics={analytics} />
-              <SocialSignalPanel analytics={analytics} />
-              <TopVideosTable analytics={analytics} />
-            </section>
-          ) : null}
+          <section className="dashboard-section content-page-grid">
+            <ContentTypeDeepDive analytics={analytics} />
+            <ContentEfficiencyPanel analytics={analytics} />
+            <YearlyComparisonPanel analytics={analytics} />
+            <DurationEngagementChart analytics={analytics} />
+            <EngagementMixPanel analytics={analytics} />
+            <PostingHeatmap analytics={analytics} />
+          </section>
+
+          <section className="dashboard-section">
+            <ShortsDeepDivePanel analytics={analytics} />
+          </section>
+
+          <section className="dashboard-section strategy-page-grid">
+            <ForecastPanel analytics={analytics} />
+            <SocialSignalPanel analytics={analytics} />
+            <TopVideosTable analytics={analytics} />
+          </section>
+
+          <section className="dashboard-section">
+            <ChannelSummaryPanel analytics={analytics} />
+          </section>
         </main>
       </div>
     </AppShell>
   )
-}
-
-function closeFilterDropdowns() {
-  document
-    .querySelectorAll<HTMLDetailsElement>('.filter-dropdown[open]')
-    .forEach((dropdown) => {
-      dropdown.open = false
-    })
 }
