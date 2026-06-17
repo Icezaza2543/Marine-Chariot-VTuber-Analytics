@@ -42,7 +42,10 @@ export function SiteFooter({ dataStartDate, dataEndDate, xFetchedAt }: SiteFoote
               {xFetchedAt ? ` · X cache ${formatThaiDate(xFetchedAt)}` : ' · X cache ยังไม่ถูก fetch'}
             </p>
             <p className="text-xs text-slate-500 opacity-80">
-              โปรเจกต์ fan-made ไม่เกี่ยวข้องกับเจ้าของช่องอย่างเป็นทางการ · แหล่งข้อมูล: YouTube export + X API
+              โปรเจกต์ fan-made ไม่เกี่ยวข้องกับเจ้าของช่องอย่างเป็นทางการ · เจ้าของข้อมูลและคอนเทนต์: Marine Chariot
+            </p>
+            <p className="text-xs text-slate-500 opacity-80">
+              โค้ดอยู่ภายใต้ MIT License; สิทธิ์นี้ไม่ครอบคลุมข้อมูลช่อง แบรนด์ วิดีโอ โพสต์ หรือสื่อของ Marine Chariot
             </p>
           </div>
 
@@ -55,7 +58,10 @@ export function SiteFooter({ dataStartDate, dataEndDate, xFetchedAt }: SiteFoote
                 Disclaimer
               </button>
               <a href={project.licenseUrl} rel="noreferrer" target="_blank" className="hover:text-[var(--mc-cyan)] transition-colors">
-                MIT License
+                Code License
+              </a>
+              <a href={project.noticeUrl} rel="noreferrer" target="_blank" className="hover:text-[var(--mc-cyan)] transition-colors">
+                Data Notice
               </a>
             </nav>
             <p className="text-xs px-3 py-1 rounded-full bg-[var(--mc-surface-hover)] border border-[var(--mc-border)] text-slate-400">

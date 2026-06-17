@@ -17,6 +17,7 @@ export interface ChannelMeta {
     author: string
     githubUrl: string
     licenseUrl: string
+    noticeUrl: string
     kind: 'fan-made'
   }
 }
@@ -82,6 +83,7 @@ export const CHANNEL_META: ChannelMeta = {
     author: 'Icezaza2543',
     githubUrl: 'https://github.com/Icezaza2543/Marine-Chariot-VTuber-Analytics',
     licenseUrl: 'https://github.com/Icezaza2543/Marine-Chariot-VTuber-Analytics/blob/master/LICENSE',
+    noticeUrl: 'https://github.com/Icezaza2543/Marine-Chariot-VTuber-Analytics/blob/master/NOTICE.md',
     kind: 'fan-made',
   },
 }

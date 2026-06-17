@@ -4,6 +4,17 @@ Repo name: `marine-chariot-vtuber-analytics`
 
 Production-ready Vite + React + TypeScript dashboard for Marine Chariot VTuber analytics. The app combines the supplied YouTube CSV dataset with optional X social signal data from `https://x.com/MarineChariot`.
 
+## License and Data Ownership
+
+This repository separates the code license from creator data ownership:
+
+- Source code and repository documentation created for this project are licensed under the MIT License. See [LICENSE](LICENSE).
+- Marine Chariot's channel data, public metrics, videos, thumbnails, posts, profile details, names, brand identity, likeness, artwork, and other creator-related materials are not covered by the MIT License.
+- Public web availability does not transfer ownership or grant permission to reuse, rehost, sell, sublicense, impersonate, or present the data as an official Marine Chariot product.
+- This project treats Marine Chariot as the owner of the creator data represented in the dashboard. See [NOTICE.md](NOTICE.md) for the full data ownership notice.
+
+This project is fan-made and is not official, endorsed, sponsored, or operated by Marine Chariot.
+
 ## Features
 
 - Long-scroll analytics report inspired by the original single-page HTML dashboard
