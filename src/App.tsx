@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Activity, AlertTriangle } from 'lucide-react'
 import { buildAnalytics } from './lib/analytics'
 import { loadMarineData } from './data/loadMarineData'
@@ -28,12 +28,15 @@ import {
   ShortsDeepDivePanel,
 } from './components/LegacyInspiredPanels'
 
+const DATA_REFRESH_INTERVAL_MS = 60_000
+
 export default function App() {
   const [records, setRecords] = useState<VideoRecord[]>([])
   const [xData, setXData] = useState<XDataset | undefined>(undefined)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [didInitDateRange, setDidInitDateRange] = useState(false)
+  const latestDataDateRef = useRef<string | null>(null)
   const filters = useDashboardStore((state) => state.filters)
   const topLimit = useDashboardStore((state) => state.topLimit)
   const tableSort = useDashboardStore((state) => state.tableSort)
@@ -42,24 +45,27 @@ export default function App() {
   useEffect(() => {
     let isMounted = true
 
-    Promise.all([loadMarineData(), loadMarineXData()])
-      .then(([data, socialData]) => {
+    async function loadInitialData() {
+      try {
+        const [data, socialData] = await Promise.all([loadMarineData(), loadMarineXData()])
+
         if (isMounted) {
           setRecords(data)
           setXData(socialData)
           setError(null)
         }
-      })
-      .catch((cause: Error) => {
+      } catch (cause) {
         if (isMounted) {
-          setError(cause.message)
+          setError(cause instanceof Error ? cause.message : String(cause))
         }
-      })
-      .finally(() => {
+      } finally {
         if (isMounted) {
           setIsLoading(false)
         }
-      })
+      }
+    }
+
+    void loadInitialData()
 
     return () => {
       isMounted = false
@@ -67,14 +73,56 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    if (records.length > 0 && !didInitDateRange) {
-      patchFilters({
-        dateStart: format(records[0].publishedAt, 'yyyy-MM-dd'),
-        dateEnd: format(records.at(-1)!.publishedAt, 'yyyy-MM-dd'),
-      })
-      setDidInitDateRange(true)
+    let isMounted = true
+
+    async function refreshMarineData() {
+      try {
+        const data = await loadMarineData()
+
+        if (isMounted) {
+          setRecords(data)
+          setError(null)
+        }
+      } catch (cause) {
+        console.warn('Marine Chariot CSV refresh failed', cause)
+      }
     }
-  }, [didInitDateRange, patchFilters, records])
+
+    const intervalId = window.setInterval(() => {
+      void refreshMarineData()
+    }, DATA_REFRESH_INTERVAL_MS)
+
+    return () => {
+      isMounted = false
+      window.clearInterval(intervalId)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (records.length > 0) {
+      const dateStart = format(records[0].publishedAt, 'yyyy-MM-dd')
+      const dateEnd = format(records.at(-1)!.publishedAt, 'yyyy-MM-dd')
+      const previousDateEnd = latestDataDateRef.current
+
+      if (!didInitDateRange) {
+        patchFilters({
+          dateStart,
+          dateEnd,
+        })
+        latestDataDateRef.current = dateEnd
+        setDidInitDateRange(true)
+        return
+      }
+
+      if (previousDateEnd && filters.dateEnd === previousDateEnd && dateEnd !== previousDateEnd) {
+        patchFilters({
+          dateEnd,
+        })
+      }
+
+      latestDataDateRef.current = dateEnd
+    }
+  }, [didInitDateRange, filters.dateEnd, patchFilters, records])
 
   const analytics = useMemo(
     () => buildAnalytics(records, filters, topLimit, tableSort, xData),

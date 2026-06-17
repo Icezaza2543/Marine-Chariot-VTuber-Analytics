@@ -2,7 +2,12 @@ import { getISOWeek, getMonth, getYear, parseISO } from 'date-fns'
 import Papa from 'papaparse'
 import type { RawMarineRow, VideoRecord } from '../types'
 
-const DATA_PATH = '/data/marine-ch-data.csv'
+const LOCAL_DATA_PATH = '/data/marine-ch-data.csv'
+const DEFAULT_GOOGLE_SHEET_CSV_URL =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vTyNpRUR1B4SDX_VKOIDndOfodMaEMuojtK7SYocFy6oz6bHtJ_uxmMDTvmipvu8H_7o7yNb5rgq0fq/pub?gid=0&single=true&output=csv'
+
+const DATA_PATH =
+  import.meta.env.VITE_MARINE_CSV_URL?.trim() || DEFAULT_GOOGLE_SHEET_CSV_URL
 
 const keywordTags: Array<[RegExp, string]> = [
   [/asmr/i, 'ASMR'],
@@ -24,13 +29,7 @@ const contentTypeAliases: Array<[RegExp, string]> = [
 ]
 
 export async function loadMarineData() {
-  const response = await fetch(DATA_PATH)
-
-  if (!response.ok) {
-    throw new Error(`Cannot load Marine Chariot CSV from ${DATA_PATH}`)
-  }
-
-  const csvText = await response.text()
+  const { csvText, sourcePath } = await loadCsvPayload(DATA_PATH)
   const parsed = Papa.parse<RawMarineRow>(csvText, {
     header: true,
     skipEmptyLines: true,
@@ -38,7 +37,11 @@ export async function loadMarineData() {
   })
 
   if (parsed.errors.length > 0) {
-    throw new Error(parsed.errors.map((error) => error.message).join(', '))
+    throw new Error(
+      `Cannot parse Marine Chariot CSV from ${sourcePath}: ${parsed.errors
+        .map((error) => error.message)
+        .join(', ')}`,
+    )
   }
 
   const records = parsed.data
@@ -47,6 +50,48 @@ export async function loadMarineData() {
     .sort((a, b) => a.publishedAt.getTime() - b.publishedAt.getTime())
 
   return scoreVideos(records)
+}
+
+async function loadCsvPayload(primaryPath: string) {
+  try {
+    return await fetchCsvPayload(primaryPath)
+  } catch (primaryError) {
+    if (primaryPath === LOCAL_DATA_PATH) {
+      throw primaryError
+    }
+
+    try {
+      return await fetchCsvPayload(LOCAL_DATA_PATH)
+    } catch (fallbackError) {
+      throw new Error(
+        `Cannot load Marine Chariot CSV. Primary source failed: ${describeError(
+          primaryError,
+        )}. Local fallback failed: ${describeError(fallbackError)}`,
+      )
+    }
+  }
+}
+
+async function fetchCsvPayload(sourcePath: string) {
+  const response = await fetch(addCacheBuster(sourcePath), { cache: 'no-store' })
+
+  if (!response.ok) {
+    throw new Error(`${sourcePath} returned HTTP ${response.status}`)
+  }
+
+  return {
+    csvText: await response.text(),
+    sourcePath,
+  }
+}
+
+function addCacheBuster(sourcePath: string) {
+  const separator = sourcePath.includes('?') ? '&' : '?'
+  return `${sourcePath}${separator}refresh=${Date.now()}`
+}
+
+function describeError(error: unknown) {
+  return error instanceof Error ? error.message : String(error)
 }
 
 function normalizeRow(row: RawMarineRow): VideoRecord | null {
