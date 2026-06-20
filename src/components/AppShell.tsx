@@ -58,7 +58,7 @@ export function AppShell({ analytics, children }: AppShellProps) {
 
           <div className="header-copy min-w-0">
             <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
-              <h1 className="truncate text-lg font-bold text-white sm:text-xl">
+              <h1 className="text-lg font-bold leading-tight text-white sm:text-xl">
                 {CHANNEL_META.displayName} 🦋『 SECRET' GARDEN 』
               </h1>
               <span className="text-sm font-medium text-[var(--mc-cyan)]">@MarineChariot</span>

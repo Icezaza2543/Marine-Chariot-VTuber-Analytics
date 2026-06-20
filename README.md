@@ -142,7 +142,9 @@ For Git integration, connect this repo to Vercel and push to the production bran
 
 ```bash
 npm run check
+npm run test
 npm run build
+npm run smoke
 ```
 
 Known build note: the bundle-size warning is expected because the dashboard intentionally ships Chart.js, Chart.js plugins, and Recharts together.

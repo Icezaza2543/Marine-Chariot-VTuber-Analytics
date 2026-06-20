@@ -1,4 +1,5 @@
 import { ArrowDown, ArrowUp, ExternalLink, Trophy } from 'lucide-react'
+import { useShallow } from 'zustand/react/shallow'
 import { compactNumber, percent } from '../lib/format'
 import { metricLabel, retentionLabel } from '../lib/analytics'
 import { useDashboardStore } from '../store/useDashboardStore'
@@ -26,10 +27,14 @@ function getYouTubeId(url: string) {
 }
 
 export function TopVideosTable({ analytics }: TopVideosTableProps) {
-  const topLimit = useDashboardStore((state) => state.topLimit)
-  const setTopLimit = useDashboardStore((state) => state.setTopLimit)
-  const tableSort = useDashboardStore((state) => state.tableSort)
-  const setTableSort = useDashboardStore((state) => state.setTableSort)
+  const { setTableSort, setTopLimit, tableSort, topLimit } = useDashboardStore(
+    useShallow((state) => ({
+      setTableSort: state.setTableSort,
+      setTopLimit: state.setTopLimit,
+      tableSort: state.tableSort,
+      topLimit: state.topLimit,
+    })),
+  )
 
   const toggleSort = (key: TableSort['key']) => {
     const direction = tableSort.key === key && tableSort.direction === 'desc' ? 'asc' : 'desc'

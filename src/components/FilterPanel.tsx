@@ -2,6 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { CalendarDays, ChevronDown, Filter, RotateCcw, Search, Tags } from 'lucide-react'
 import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
+import { useShallow } from 'zustand/react/shallow'
 import { z } from 'zod'
 import { thaiMonthLabel } from '../lib/format'
 import { DEFAULT_FILTERS, useDashboardStore } from '../store/useDashboardStore'
@@ -33,9 +34,13 @@ const granularityLabels: Record<Granularity, string> = {
 }
 
 export function FilterPanel({ analytics }: FilterPanelProps) {
-  const filters = useDashboardStore((state) => state.filters)
-  const setFilters = useDashboardStore((state) => state.setFilters)
-  const resetFilters = useDashboardStore((state) => state.resetFilters)
+  const { filters, resetFilters, setFilters } = useDashboardStore(
+    useShallow((state) => ({
+      filters: state.filters,
+      resetFilters: state.resetFilters,
+      setFilters: state.setFilters,
+    })),
+  )
   const { register, handleSubmit, reset, setValue, watch } = useForm<FilterFormValues>({
     resolver: zodResolver(filterSchema),
     defaultValues: filters,

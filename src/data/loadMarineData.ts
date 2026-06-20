@@ -1,5 +1,6 @@
 import { getISOWeek, getMonth, getYear, parseISO } from 'date-fns'
 import Papa from 'papaparse'
+import { z } from 'zod'
 import type { RawMarineRow, VideoRecord } from '../types'
 
 const LOCAL_DATA_PATH = '/data/marine-ch-data.csv'
@@ -8,6 +9,24 @@ const DEFAULT_GOOGLE_SHEET_CSV_URL =
 
 const DATA_PATH =
   import.meta.env.VITE_MARINE_CSV_URL?.trim() || DEFAULT_GOOGLE_SHEET_CSV_URL
+
+const marineCsvRowSchema = z.object({
+  No: z.string(),
+  Urls: z.string(),
+  'Video Name': z.string(),
+  View: z.string(),
+  Like: z.string(),
+  Comm: z.string(),
+  published_date: z.string(),
+  duration: z.string(),
+  minute: z.string(),
+  type: z.string(),
+  'Engagement Rate': z.string(),
+  'AVG View Duration': z.string(),
+  'Views to Likes Ratio': z.string(),
+}).passthrough()
+
+const REQUIRED_CSV_FIELDS = Object.keys(marineCsvRowSchema.shape) as Array<keyof RawMarineRow>
 
 const keywordTags: Array<[RegExp, string]> = [
   [/asmr/i, 'ASMR'],
@@ -44,12 +63,44 @@ export async function loadMarineData() {
     )
   }
 
-  const records = parsed.data
+  const rows = validateCsvRows(parsed.data, parsed.meta.fields ?? [], sourcePath)
+  const records = rows
     .map(normalizeRow)
     .filter((record): record is VideoRecord => record !== null)
     .sort((a, b) => a.publishedAt.getTime() - b.publishedAt.getTime())
 
   return scoreVideos(records)
+}
+
+function validateCsvRows(rows: RawMarineRow[], fields: string[], sourcePath: string): RawMarineRow[] {
+  const missingFields = REQUIRED_CSV_FIELDS.filter((field) => !fields.includes(field))
+
+  if (missingFields.length > 0) {
+    throw new Error(
+      `Marine Chariot CSV from ${sourcePath} is missing required CSV fields: ${missingFields.join(', ')}`,
+    )
+  }
+
+  return rows.map((row, index) => {
+    const result = marineCsvRowSchema.safeParse(row)
+
+    if (!result.success) {
+      throw new Error(
+        `Marine Chariot CSV from ${sourcePath} has invalid row ${index + 2}: ${formatZodIssues(result.error.issues)}`,
+      )
+    }
+
+    return result.data
+  })
+}
+
+function formatZodIssues(issues: z.core.$ZodIssue[]) {
+  return issues
+    .map((issue) => {
+      const path = issue.path.length > 0 ? issue.path.join('.') : 'row'
+      return `${path} ${issue.message}`
+    })
+    .join('; ')
 }
 
 async function loadCsvPayload(primaryPath: string) {

@@ -12,6 +12,9 @@
     "build": "tsc && vite build",
     "build:vercel": "npm run fetch:x:optional && tsc && vite build",
     "check": "tsc --noEmit",
+    "smoke": "node scripts/smoke-dashboard.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "deploy:preview": "vercel",
     "deploy:prod": "vercel --prod",
     "preview": "vite preview"
@@ -24,7 +27,8 @@
     "@vitejs/plugin-react": "^6.0.2",
     "playwright": "^1.60.0",
     "typescript": "~6.0.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "vitest": "^4.1.9"
   },
   "dependencies": {
     "@fontsource/ibm-plex-sans-thai": "^5.2.8",
