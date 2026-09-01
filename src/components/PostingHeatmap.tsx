@@ -30,17 +30,23 @@ export function PostingHeatmap({ analytics }: PostingHeatmapProps) {
       </div>
 
       <div
+        aria-colcount={weekdays.length + 1}
+        aria-label="ประสิทธิภาพวิดีโอตามวันและความยาว"
+        aria-rowcount={durationSegments.length + 1}
         className="heatmap-grid"
+        role="grid"
         style={{
           gridTemplateColumns: `112px repeat(${weekdays.length}, var(--heatmap-cell-size))`,
         }}
       >
-        <span />
-        {weekdays.map((weekday) => (
-          <span className="heatmap-axis" key={weekday}>
-            {weekday}
-          </span>
-        ))}
+        <div role="row" style={{ display: 'contents' }}>
+          <span aria-hidden="true" />
+          {weekdays.map((weekday) => (
+            <span className="heatmap-axis" key={weekday} role="columnheader">
+              {weekday}
+            </span>
+          ))}
+        </div>
         {durationSegments.map((durationSegment) => (
           <HeatmapRow
             key={durationSegment}
@@ -81,28 +87,32 @@ interface HeatmapRowProps {
 
 function HeatmapRow({ durationSegment, maxScore, cells }: HeatmapRowProps) {
   return (
-    <>
-      <span className="heatmap-slot">{durationSegment}</span>
+    <div role="row" style={{ display: 'contents' }}>
+      <span className="heatmap-slot" role="rowheader">
+        {durationSegment}
+      </span>
       {cells.map((cell, index) => {
         const level = getHeatLevel(cell, maxScore)
+        const accessibleLabel = cell
+          ? `${cell.weekdayLabel} ${cell.durationSegment}: ${cell.count} ครั้ง, ${compactNumber(cell.viewsPerUpload)} วิวเฉลี่ย, มีส่วนร่วม ${percent(cell.engagementRate)}`
+          : durationSegment
 
         return (
           <div
+            aria-label={accessibleLabel}
             className={`heatmap-cell heat-level-${level}`}
             key={`${durationSegment}-${index}`}
+            role="gridcell"
             style={{ backgroundColor: GITHUB_HEAT_LEVELS[level] }}
-            title={
-              cell
-                ? `${cell.weekdayLabel} ${cell.durationSegment}: ${cell.count} ครั้ง, ${compactNumber(cell.viewsPerUpload)} วิวเฉลี่ย, มีส่วนร่วม ${percent(cell.engagementRate)}`
-                : durationSegment
-            }
+            tabIndex={0}
+            title={accessibleLabel}
           >
             <strong>{cell?.count ?? 0}</strong>
             <span>{cell ? compactNumber(cell.viewsPerUpload) : '-'}</span>
           </div>
         )
       })}
-    </>
+    </div>
   )
 }
 

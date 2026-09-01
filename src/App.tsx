@@ -1,4 +1,4 @@
-import { lazy, Suspense, useMemo, type ReactNode } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { useShallow } from 'zustand/react/shallow'
 import { Activity, AlertTriangle } from 'lucide-react'
 import { buildAnalytics } from './lib/analytics'
@@ -84,12 +84,45 @@ const ChannelSummaryPanel = lazy(() =>
 )
 
 function DeferredSection({ children }: { children: ReactNode }) {
-  return <Suspense fallback={<SectionFallback />}>{children}</Suspense>
+  const supportsIntersectionObserver = typeof IntersectionObserver !== 'undefined'
+  const [shouldRender, setShouldRender] = useState(!supportsIntersectionObserver)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const container = containerRef.current
+
+    if (!supportsIntersectionObserver || !container) {
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldRender(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '800px 0px' },
+    )
+
+    observer.observe(container)
+    return () => observer.disconnect()
+  }, [supportsIntersectionObserver])
+
+  return (
+    <div className="deferred-section" ref={containerRef}>
+      {shouldRender ? (
+        <Suspense fallback={<SectionFallback />}>{children}</Suspense>
+      ) : (
+        <SectionFallback />
+      )}
+    </div>
+  )
 }
 
 function SectionFallback() {
   return (
-    <article aria-busy="true" className="chart-panel min-h-64">
+    <article aria-busy="true" aria-live="polite" className="chart-panel min-h-64" role="status">
       <div className="panel-heading">
         <div>
           <h2>Loading dashboard section</h2>
@@ -120,7 +153,7 @@ export default function App() {
     return (
       <div className="min-h-screen bg-[var(--mc-bg)] text-[var(--mc-text)]">
         <div className="mx-auto flex min-h-screen max-w-7xl items-center justify-center px-6">
-          <div className="glass-panel flex items-center gap-4 p-6">
+          <div aria-live="polite" className="glass-panel flex items-center gap-4 p-6" role="status">
             <Activity className="h-6 w-6 animate-pulse text-[var(--mc-cyan)]" />
             <div>
               <p className="text-sm font-semibold text-white">Loading Marine Chariot data</p>
@@ -138,7 +171,7 @@ export default function App() {
     return (
       <div className="min-h-screen bg-[var(--mc-bg)] text-[var(--mc-text)]">
         <div className="mx-auto flex min-h-screen max-w-4xl items-center justify-center px-6">
-          <div className="glass-panel border-red-400/40 p-6">
+          <div className="glass-panel border-red-400/40 p-6" role="alert">
             <div className="mb-4 flex items-center gap-3 text-red-200">
               <AlertTriangle className="h-6 w-6" />
               <h1 className="text-xl font-semibold">CSV load failed</h1>

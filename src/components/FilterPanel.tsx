@@ -100,7 +100,7 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
           </div>
         </div>
         <button className="icon-btn" type="button" aria-label="รีเซ็ตตัวกรอง" onClick={resetAll}>
-          <RotateCcw className="h-4 w-4" />
+          <RotateCcw aria-hidden="true" className="h-4 w-4" />
         </button>
       </div>
 
@@ -129,6 +129,7 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
           <div className="segmented-control">
             {(['year', 'month', 'week', 'day'] as const).map((item) => (
               <button
+                aria-pressed={granularity === item}
                 className={granularity === item ? 'is-active' : ''}
                 key={item}
                 type="button"
@@ -277,7 +278,7 @@ function MultiSelectDropdown({
           <em>{selectedText}</em>
         </span>
         <span className="dropdown-count">{countLabel}</span>
-        <ChevronDown className="h-4 w-4" />
+        <ChevronDown aria-hidden="true" className="h-4 w-4" />
       </summary>
       <div className="dropdown-menu-panel">{children}</div>
     </details>

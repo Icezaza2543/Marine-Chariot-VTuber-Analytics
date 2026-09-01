@@ -29,6 +29,7 @@ export function DisclaimerDialog({ open, onClose }: DisclaimerDialogProps) {
 
   return (
     <dialog
+      aria-labelledby={titleId}
       className="disclaimer-dialog"
       onCancel={onClose}
       onClick={(event) => {
@@ -42,7 +43,7 @@ export function DisclaimerDialog({ open, onClose }: DisclaimerDialogProps) {
         <header className="disclaimer-dialog__header">
           <h2 id={titleId}>ข้อจำกัดความรับผิดชอบ</h2>
           <button aria-label="ปิด" className="icon-btn" onClick={onClose} type="button">
-            <X className="h-4 w-4" />
+            <X aria-hidden="true" className="h-4 w-4" />
           </button>
         </header>
 

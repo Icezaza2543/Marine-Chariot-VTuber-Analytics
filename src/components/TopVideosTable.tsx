@@ -51,6 +51,7 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
         <div className="segmented-control small">
           {[10, 20].map((limit) => (
             <button
+              aria-pressed={topLimit === limit}
               className={topLimit === limit ? 'is-active' : ''}
               key={limit}
               type="button"
@@ -66,27 +67,46 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
         <table className="video-table">
           <thead>
             <tr>
-              {columns.map((column) => (
-                <th className={column.className} key={column.key}>
-                  {column.key === 'thumbnail' ? (
-                    column.label
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={() => toggleSort(column.key as TableSort['key'])}
-                    >
-                      {column.label}
-                      {tableSort.key === column.key ? (
-                        tableSort.direction === 'desc' ? (
-                          <ArrowDown className="h-3.5 w-3.5" />
-                        ) : (
-                          <ArrowUp className="h-3.5 w-3.5" />
-                        )
-                      ) : null}
-                    </button>
-                  )}
-                </th>
-              ))}
+              {columns.map((column) => {
+                const isSortable = column.key !== 'thumbnail'
+                const isSorted = tableSort.key === column.key
+                const nextDirection =
+                  isSorted && tableSort.direction === 'desc' ? 'น้อยไปมาก' : 'มากไปน้อย'
+
+                return (
+                  <th
+                    aria-sort={
+                      !isSortable || !isSorted
+                        ? undefined
+                        : tableSort.direction === 'asc'
+                          ? 'ascending'
+                          : 'descending'
+                    }
+                    className={column.className}
+                    key={column.key}
+                    scope="col"
+                  >
+                    {isSortable ? (
+                      <button
+                        aria-label={`เรียง${column.label}จาก${nextDirection}`}
+                        type="button"
+                        onClick={() => toggleSort(column.key as TableSort['key'])}
+                      >
+                        {column.label}
+                        {isSorted ? (
+                          tableSort.direction === 'desc' ? (
+                            <ArrowDown aria-hidden="true" className="h-3.5 w-3.5" />
+                          ) : (
+                            <ArrowUp aria-hidden="true" className="h-3.5 w-3.5" />
+                          )
+                        ) : null}
+                      </button>
+                    ) : (
+                      column.label
+                    )}
+                  </th>
+                )
+              })}
             </tr>
           </thead>
           <tbody>
@@ -96,25 +116,29 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
               return (
                 <tr key={video.id}>
                   <td>
-                    {videoId && (
+                    {videoId ? (
                       <div className="flex items-center justify-center">
                         <img
-                          alt="Thumbnail"
+                          alt=""
                           className="w-16 h-auto rounded border border-[var(--mc-border)] shadow-sm object-cover"
                           loading="lazy"
                           src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
                         />
                       </div>
-                    )}
+                    ) : null}
                   </td>
                   <td>
                     <div className="video-title-cell">
-                      <span className="rank-medal">
-                        {index < 3 ? <Trophy className="h-3.5 w-3.5" /> : index + 1}
+                      <span aria-label={`อันดับ ${index + 1}`} className="rank-medal" role="img">
+                        {index < 3 ? (
+                          <Trophy aria-hidden="true" className="h-3.5 w-3.5" />
+                        ) : (
+                          index + 1
+                        )}
                       </span>
                       <a href={video.url} rel="noreferrer" target="_blank">
                         {video.title}
-                        <ExternalLink className="h-3 w-3" />
+                        <ExternalLink aria-hidden="true" className="h-3 w-3" />
                       </a>
                     </div>
                   </td>

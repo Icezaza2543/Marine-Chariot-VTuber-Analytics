@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source(none);
+@source './';
 @plugin "daisyui" {
   themes: false;
 }
@@ -483,6 +484,17 @@ button {
 
 .dashboard-section {
   min-width: 0;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 420px;
+}
+
+.deferred-section {
+  min-width: 0;
+}
+
+.heatmap-cell:focus-visible {
+  outline: 2px solid var(--mc-violet);
+  outline-offset: 2px;
 }
 
 .overview-grid,
@@ -500,13 +512,14 @@ button {
   align-items: stretch;
 }
 
-.strategy-page-grid > .chart-panel:last-child {
+.strategy-page-grid > .deferred-section:last-child {
   grid-column: 1 / -1;
 }
 
-.overview-grid > .chart-panel,
-.overview-grid > .insight-panel,
-.content-page-grid > .chart-panel {
+.overview-grid > .deferred-section,
+.content-page-grid > .deferred-section,
+.overview-grid > .deferred-section > *,
+.content-page-grid > .deferred-section > * {
   height: 100%;
 }
 
@@ -2095,7 +2108,7 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .strategy-page-grid > .chart-panel:last-child {
+  .strategy-page-grid > .deferred-section:last-child {
     grid-column: auto;
   }
 }
