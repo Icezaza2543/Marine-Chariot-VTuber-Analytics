@@ -87,6 +87,8 @@ export interface ForecastPoint {
   views: number
   likes: number
   engagementRate: number
+  lowerViews: number
+  upperViews: number
   linearViews: number
   smoothedViews: number
 }
@@ -149,7 +151,7 @@ export interface ScatterPoint {
 export interface HeatmapCell {
   weekday: number
   weekdayLabel: string
-  slot: string
+  durationSegment: string
   count: number
   viewsPerUpload: number
   engagementRate: number
@@ -289,8 +291,9 @@ export interface AnalyticsBundle {
   allWeeks: number[]
   nextContentRecommendation: ContentTypeMetric | null
   optimalFrequency: string
-  bestPostingSlot: HeatmapCell | null
+  bestPublishingPattern: HeatmapCell | null
   projectedGrowthRate: number
+  forecastConfidence: number
   insights: StrategyInsight[]
   sectionInsights: {
     growth: string

@@ -6,7 +6,11 @@ import {
   startOfMonth,
 } from 'date-fns'
 import { compactNumber, percent, thaiMonthLabel } from './format'
-import { buildForecast, computeProjectedGrowth } from './analytics/forecast'
+import {
+  buildForecast,
+  computeForecastConfidence,
+  computeProjectedGrowth,
+} from './analytics/forecast'
 import { filterRecords } from './analytics/filtering'
 import { average, clamp, deltaPercent, groupBy, median, safeDivide, sum, unique } from './analytics/math'
 import { buildSocialAnalytics } from './analytics/social'
@@ -34,7 +38,12 @@ export { filterRecords } from './analytics/filtering'
 export { durationInsight, metricLabel, retentionLabel } from './analytics/labels'
 
 const WEEKDAY_LABELS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-const HEATMAP_SLOTS = ['12:00 Shorts', '18:00 Compact', '20:00 Prime', '22:00 Long']
+const DURATION_SEGMENTS = [
+  'Short ≤15 นาที',
+  'Compact 16–60 นาที',
+  'Long 61–130 นาที',
+  'Extended >130 นาที',
+]
 
 export function buildAnalytics(
   records: VideoRecord[],
@@ -60,21 +69,22 @@ export function buildAnalytics(
   const topVideos = sortVideos(filteredRecords, tableSort).slice(0, topLimit)
   const social = buildSocialAnalytics(filteredRecords, xData)
   const nextContentRecommendation = contentMetrics[0] ?? null
-  const bestPostingSlot = heatmap.reduce<HeatmapCell | null>(
+  const bestPublishingPattern = heatmap.reduce<HeatmapCell | null>(
     (best, cell) => (cell.score > (best?.score ?? -1) ? cell : best),
     null,
   )
   const projectedGrowthRate = computeProjectedGrowth(monthlyMetrics, forecast)
+  const forecastConfidence = computeForecastConfidence(monthlyMetrics)
   const optimalFrequency = buildOptimalFrequency(filteredRecords)
   const insights = buildInsights({
     filteredRecords,
-    monthlyMetrics,
     contentMetrics,
     durationMetrics,
     forecast,
-    bestPostingSlot,
+    bestPublishingPattern,
     nextContentRecommendation,
     projectedGrowthRate,
+    forecastConfidence,
     optimalFrequency,
     social,
   })
@@ -82,7 +92,7 @@ export function buildAnalytics(
     contentMetrics,
     durationMetrics,
     forecast,
-    bestPostingSlot,
+    bestPublishingPattern,
     topVideos,
     projectedGrowthRate,
     social,
@@ -108,8 +118,9 @@ export function buildAnalytics(
     allWeeks,
     nextContentRecommendation,
     optimalFrequency,
-    bestPostingSlot,
+    bestPublishingPattern,
     projectedGrowthRate,
+    forecastConfidence,
     insights,
     sectionInsights,
   }
@@ -297,27 +308,39 @@ function buildHeatmap(records: VideoRecord[]) {
   const cells: HeatmapCell[] = []
 
   for (let weekday = 0; weekday < 7; weekday += 1) {
-    for (const slot of HEATMAP_SLOTS) {
+    for (const durationSegment of DURATION_SEGMENTS) {
       const values = records.filter(
-        (record) => record.weekday === weekday && estimateSlot(record) === slot,
+        (record) =>
+          record.weekday === weekday && getDurationSegment(record) === durationSegment,
       )
       const summary = summarize(values)
-      const viewsPerUpload = summary.avgViews
-      const score = viewsPerUpload * 0.65 + summary.avgEngagementRate * 10_000 * 0.35
 
       cells.push({
         weekday,
         weekdayLabel: WEEKDAY_LABELS[weekday],
-        slot,
+        durationSegment,
         count: values.length,
-        viewsPerUpload,
+        viewsPerUpload: summary.avgViews,
         engagementRate: summary.avgEngagementRate,
-        score,
+        score: 0,
       })
     }
   }
 
-  return cells
+  const maxViews = Math.max(...cells.map((cell) => cell.viewsPerUpload), 1)
+  const maxEngagement = Math.max(...cells.map((cell) => cell.engagementRate), 0.01)
+  const maxCount = Math.max(...cells.map((cell) => cell.count), 1)
+
+  return cells.map((cell) => {
+    const sampleReliability = Math.sqrt(cell.count / maxCount)
+    const performanceScore =
+      (cell.viewsPerUpload / maxViews) * 65 + (cell.engagementRate / maxEngagement) * 35
+
+    return {
+      ...cell,
+      score: performanceScore * sampleReliability,
+    }
+  })
 }
 
 function buildOptimalFrequency(records: VideoRecord[]) {
@@ -325,7 +348,7 @@ function buildOptimalFrequency(records: VideoRecord[]) {
     return 'ต้องมีข้อมูลเพิ่มอีกเล็กน้อยก่อนคำนวณ cadence'
   }
 
-  const byWeek = groupBy(records, (record) => `${record.uploadYear}-W${record.uploadWeek}`)
+  const byWeek = groupBy(records, (record) => format(record.publishedAt, "RRRR-'W'II"))
   const weekSummaries = Array.from(byWeek.values()).map((values) => {
     const summary = summarize(values)
     return {
@@ -334,44 +357,54 @@ function buildOptimalFrequency(records: VideoRecord[]) {
       engagementRate: summary.avgEngagementRate,
     }
   })
-  const best = [...weekSummaries].sort(
-    (a, b) => b.avgViews * b.engagementRate - a.avgViews * a.engagementRate,
+  const byFrequency = groupBy(weekSummaries, (week) => String(week.count))
+  const frequencySummaries = Array.from(byFrequency.entries()).map(([count, weeks]) => ({
+    count: Number(count),
+    weeks: weeks.length,
+    avgViews: average(weeks.map((week) => week.avgViews)),
+    engagementRate: average(weeks.map((week) => week.engagementRate)),
+  }))
+  const repeatedFrequencies = frequencySummaries.filter((frequency) => frequency.weeks >= 2)
+  const candidates = repeatedFrequencies.length > 0 ? repeatedFrequencies : frequencySummaries
+  const best = [...candidates].sort(
+    (a, b) =>
+      b.avgViews * b.engagementRate * Math.min(b.weeks / 4, 1) -
+      a.avgViews * a.engagementRate * Math.min(a.weeks / 4, 1),
   )[0]
 
   if (!best) {
     return 'คง cadence ปัจจุบันไว้ก่อน'
   }
 
-  return `${best.count} วิดีโอ/สัปดาห์`
+  return `${best.count} วิดีโอ/สัปดาห์ (จาก ${best.weeks} สัปดาห์)`
 }
 
 function buildInsights(input: {
   filteredRecords: VideoRecord[]
-  monthlyMetrics: MonthlyMetric[]
   contentMetrics: ContentTypeMetric[]
   durationMetrics: DurationBucketMetric[]
   forecast: ForecastPoint[]
-  bestPostingSlot: HeatmapCell | null
+  bestPublishingPattern: HeatmapCell | null
   nextContentRecommendation: ContentTypeMetric | null
   projectedGrowthRate: number
+  forecastConfidence: number
   optimalFrequency: string
   social: SocialAnalytics
 }): StrategyInsight[] {
   const topContent = input.nextContentRecommendation
   const bestDuration = [...input.durationMetrics].sort((a, b) => b.avgViews - a.avgViews)[0]
   const firstForecast = input.forecast[0]
-  const latestMonth = input.monthlyMetrics.at(-1)
   const topVideo = [...input.filteredRecords].sort((a, b) => b.viralScore - a.viralScore)[0]
   const forecastText =
-    firstForecast && latestMonth
-      ? `เดือนถัดไปคาดการณ์ ${compactNumber(firstForecast.views)} วิว จากโมเดล regression + smoothing เทียบเดือนล่าสุด ${compactNumber(latestMonth.views)} วิว`
-      : 'ต้องมีข้อมูลรายเดือนเพิ่มเพื่อให้การคาดการณ์แข็งแรงขึ้น'
+    firstForecast
+      ? `เดือนถัดไปประมาณ ${compactNumber(firstForecast.views)} วิว (ช่วง ${compactNumber(firstForecast.lowerViews)}–${compactNumber(firstForecast.upperViews)}) จาก regression + smoothing ของเดือนที่จบแล้ว`
+      : 'ต้องมีข้อมูลรายเดือนที่จบแล้วอย่างน้อย 3 เดือนเพื่อสร้างการคาดการณ์'
 
   const insights: StrategyInsight[] = [
     {
       title: 'ชีพจรการเติบโต',
       body: `${forecastText}; การเติบโตคาดการณ์ 3 เดือนอยู่ที่ ${input.projectedGrowthRate.toFixed(1)}%`,
-      confidence: 82,
+      confidence: input.forecastConfidence,
       tone: 'pink',
     },
     {
@@ -379,7 +412,7 @@ function buildInsights(input: {
       body: topContent
         ? `เดือนถัดไปควรเน้น ${topContent.contentType} เพราะวิวเฉลี่ย ${compactNumber(topContent.avgViews)} และอัตรามีส่วนร่วม ${percent(topContent.avgEngagementRate)} ยังเด่น`
         : 'ยังไม่มี content type ที่เด่นพอหลัง filter ปัจจุบัน',
-      confidence: 86,
+      confidence: evidenceConfidence(topContent?.videos ?? 0, 20),
       tone: 'violet',
     },
     {
@@ -387,15 +420,15 @@ function buildInsights(input: {
       body: bestDuration
         ? `กลุ่มความยาว ${bestDuration.bucket} ทำผลงานเฉลี่ยดีที่สุด ควรใช้เป็นแม่แบบ pacing และช่วง hook`
         : 'ยังไม่มีข้อมูล duration เพียงพอ',
-      confidence: 76,
+      confidence: evidenceConfidence(bestDuration?.videos ?? 0, 20),
       tone: 'cyan',
     },
     {
       title: 'จังหวะการลงคอนเทนต์',
-      body: input.bestPostingSlot
-        ? `ช่วงเวลาที่ควรทดลองซ้ำคือ ${input.bestPostingSlot.weekdayLabel} ${input.bestPostingSlot.slot}; ความถี่ที่น่าเก็บต่อคือ ${input.optimalFrequency}`
-        : 'ยังหาช่วงเวลาที่ชัดไม่ได้จาก filter นี้',
-      confidence: 69,
+      body: input.bestPublishingPattern
+        ? `รูปแบบที่ทำผลงานเด่นคือวัน ${input.bestPublishingPattern.weekdayLabel} กับวิดีโอ ${input.bestPublishingPattern.durationSegment}; ความถี่ที่น่าเก็บต่อคือ ${input.optimalFrequency}`
+        : 'ยังหารูปแบบวันและความยาวที่ชัดไม่ได้จาก filter นี้',
+      confidence: evidenceConfidence(input.bestPublishingPattern?.count ?? 0, 12, 30, 85),
       tone: 'green',
     },
     {
@@ -403,7 +436,7 @@ function buildInsights(input: {
       body: topVideo
         ? `ใช้ ${topVideo.contentType} จากวิดีโอคะแนนไวรัล ${topVideo.viralScore.toFixed(1)} เป็นต้นแบบทำ Shorts cutdown แล้วพาคนกลับไป long-form`
         : 'ยังไม่มีวิดีโอในช่วงที่เลือก',
-      confidence: 80,
+      confidence: evidenceConfidence(input.filteredRecords.length, 30),
       tone: 'amber',
     },
   ]
@@ -414,7 +447,8 @@ function buildInsights(input: {
       input.social.status === 'ready'
         ? `X มี ${input.social.postCount} โพสต์, engagement รวม ${compactNumber(input.social.totalEngagement)} และ cross-promo rate ${percent(input.social.crossPromoRate)}; ใช้โพสต์ที่พูดถึงไลฟ์/YouTube เป็นตัวเร่ง traffic กลับคลิป`
         : `ยังไม่มี X data สดใน cache; รัน npm run fetch:x พร้อม X_BEARER_TOKEN เพื่อเพิ่ม social signal จาก ${input.social.sourceUrl}`,
-    confidence: input.social.status === 'ready' ? 78 : 54,
+    confidence:
+      input.social.status === 'ready' ? evidenceConfidence(input.social.postCount, 50) : 0,
     tone: 'cyan',
   })
 
@@ -425,7 +459,7 @@ function buildSectionInsights(input: {
   contentMetrics: ContentTypeMetric[]
   durationMetrics: DurationBucketMetric[]
   forecast: ForecastPoint[]
-  bestPostingSlot: HeatmapCell | null
+  bestPublishingPattern: HeatmapCell | null
   topVideos: VideoRecord[]
   projectedGrowthRate: number
   social: SocialAnalytics
@@ -446,14 +480,28 @@ function buildSectionInsights(input: {
     duration: topDuration
       ? `duration กลุ่ม ${topDuration.bucket} ให้ engagement เฉลี่ย ${percent(topDuration.avgEngagementRate)} จึงเหมาะกับคอนเทนต์ที่ต้องการคอมเมนต์/ไลก์`
       : 'ไม่มี duration bucket หลัง filter นี้',
-    timing: input.bestPostingSlot
-      ? `${input.bestPostingSlot.weekdayLabel} ${input.bestPostingSlot.slot} เป็น slot ที่คะแนนรวมดีที่สุดจากวันที่อัปโหลดและ proxy time-slot`
-      : 'ยังไม่มี slot ที่ชัดเจนหลัง filter นี้',
+    timing: input.bestPublishingPattern
+      ? `วัน ${input.bestPublishingPattern.weekdayLabel} กับวิดีโอ ${input.bestPublishingPattern.durationSegment} เป็นรูปแบบที่คะแนนรวมดีที่สุดจากวันที่เผยแพร่และความยาวจริง โดยไม่ได้อนุมานเวลาอัปโหลด`
+      : 'ยังไม่มีรูปแบบวันและความยาวที่ชัดเจนหลัง filter นี้',
     videos: topVideo
       ? `Top viral candidate คือ "${topVideo.title}" ด้วย score ${topVideo.viralScore.toFixed(1)} ควรนำ pattern ชื่อคลิปและ opening hook ไปทำซ้ำ`
       : 'ไม่มีวิดีโอหลัง filter นี้',
     social: input.social.strategicInsight,
   }
+}
+
+function evidenceConfidence(
+  sampleSize: number,
+  targetSampleSize: number,
+  minimum = 35,
+  maximum = 90,
+) {
+  if (sampleSize <= 0) {
+    return 0
+  }
+
+  const evidenceRatio = clamp(sampleSize / targetSampleSize, 0, 1)
+  return Math.round(minimum + (maximum - minimum) * Math.sqrt(evidenceRatio))
 }
 
 function summarize(records: VideoRecord[]) {
@@ -508,6 +556,7 @@ function getSortableValue(record: VideoRecord, key: TableSort['key']) {
 
 function rankContentTypes(metrics: ContentTypeMetric[]) {
   const maxViews = Math.max(...metrics.map((metric) => metric.avgViews), 1)
+  const maxEngagement = Math.max(...metrics.map((metric) => metric.avgEngagementRate), 0.01)
   const maxGrowth = Math.max(...metrics.map((metric) => Math.max(metric.growthRate, 0)), 1)
   const maxViral = Math.max(...metrics.map((metric) => metric.avgViralScore), 1)
 
@@ -516,7 +565,7 @@ function rankContentTypes(metrics: ContentTypeMetric[]) {
       ...metric,
       score:
         (metric.avgViews / maxViews) * 38 +
-        metric.avgEngagementRate * 100 * 18 +
+        (metric.avgEngagementRate / maxEngagement) * 18 +
         (Math.max(metric.growthRate, 0) / maxGrowth) * 20 +
         (metric.avgRetentionScore / 100) * 10 +
         (metric.avgViralScore / maxViral) * 14,
@@ -525,7 +574,7 @@ function rankContentTypes(metrics: ContentTypeMetric[]) {
 }
 
 function growthFromRecentMonths(monthly: MonthlyMetric[]) {
-  if (monthly.length < 4) {
+  if (monthly.length < 6) {
     return 0
   }
 
@@ -535,20 +584,20 @@ function growthFromRecentMonths(monthly: MonthlyMetric[]) {
   return deltaPercent(sum(recent.map((metric) => metric.views)), sum(previous.map((metric) => metric.views)))
 }
 
-function estimateSlot(record: VideoRecord) {
+function getDurationSegment(record: VideoRecord) {
   if (record.contentType === 'Shorts' || record.minutes <= 15) {
-    return '12:00 Shorts'
+    return 'Short ≤15 นาที'
   }
 
   if (record.minutes <= 60) {
-    return '18:00 Compact'
+    return 'Compact 16–60 นาที'
   }
 
   if (record.minutes <= 130) {
-    return '20:00 Prime'
+    return 'Long 61–130 นาที'
   }
 
-  return '22:00 Long'
+  return 'Extended >130 นาที'
 }
 
 function durationBucket(minutes: number) {

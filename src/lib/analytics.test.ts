@@ -69,6 +69,21 @@ describe('buildAnalytics', () => {
         uploadMonth: 2,
         uploadWeek: 5,
       }),
+      videoRecord({
+        id: 3,
+        url: 'https://youtu.be/gamma789',
+        title: 'Marine Chariot March free talk',
+        contentType: 'FreeTalk',
+        tags: ['FreeTalk'],
+        views: 1400,
+        likes: 130,
+        comments: 22,
+        viralScore: 60,
+        publishedAt: new Date('2026-03-01T00:00:00.000Z'),
+        publishedDate: '2026-03-01',
+        uploadMonth: 3,
+        uploadWeek: 9,
+      }),
     ]
     const xData: XDataset = {
       sourceUrl: 'https://x.com/MarineChariot',
@@ -115,9 +130,11 @@ describe('buildAnalytics', () => {
       xData,
     )
 
-    expect(analytics.topVideos.map((record) => record.id)).toEqual([2, 1])
+    expect(analytics.topVideos.map((record) => record.id)).toEqual([2, 3, 1])
     expect(analytics.contentMetrics.map((metric) => metric.contentType)).toContain('ASMR')
     expect(analytics.forecast).toHaveLength(6)
+    expect(analytics.forecastConfidence).toBeGreaterThan(0)
+    expect(analytics.bestPublishingPattern?.durationSegment).not.toMatch(/\d{2}:\d{2}/)
     expect(analytics.social.status).toBe('ready')
     expect(analytics.social.videoMatches[0]).toMatchObject({
       videoId: 2,

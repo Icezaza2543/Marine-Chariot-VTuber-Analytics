@@ -12,19 +12,19 @@ interface InsightPanelProps {
 
 export function InsightPanel({ analytics, compact = false }: InsightPanelProps) {
   const recommendation = analytics.nextContentRecommendation
-  const bestSlot = analytics.bestPostingSlot
+  const bestPattern = analytics.bestPublishingPattern
   const insights = compact ? analytics.insights.slice(0, 3) : analytics.insights
 
   return (
     <div className="insight-panel">
       <div className="panel-heading">
         <div>
-          <h2>AI Insight ภาษาไทย</h2>
-          <p>คำแนะนำกลยุทธ์จากข้อมูลล่าสุด</p>
+          <h2>Data Insight ภาษาไทย</h2>
+          <p>คำแนะนำแบบ rule-based จากข้อมูลล่าสุด</p>
         </div>
         <div className="panel-badge">
           <BrainCircuit className="h-3.5 w-3.5" />
-          สด
+          {analytics.filteredRecords.length} วิดีโอ
         </div>
       </div>
 
@@ -53,8 +53,12 @@ export function InsightPanel({ analytics, compact = false }: InsightPanelProps) 
           <strong>{analytics.optimalFrequency}</strong>
         </div>
         <div>
-          <span>ช่วงเวลาลงคลิป</span>
-          <strong>{bestSlot ? `${bestSlot.weekdayLabel} ${bestSlot.slot}` : '-'}</strong>
+          <span>รูปแบบวันที่เด่น</span>
+          <strong>
+            {bestPattern
+              ? `${bestPattern.weekdayLabel} · ${bestPattern.durationSegment}`
+              : '-'}
+          </strong>
         </div>
         <div>
           <span>โปรโมตข้ามแพลตฟอร์ม</span>

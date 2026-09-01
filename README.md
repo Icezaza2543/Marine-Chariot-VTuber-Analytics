@@ -24,7 +24,7 @@ This project is fan-made and is not official, endorsed, sponsored, or operated b
 - Dynamic Thai summary boxes for strengths and improvement opportunities
 - Forecasting with linear regression + exponential smoothing
 - X social signal layer: post engagement, reach proxy, cross-promotion rate, hashtags, and video/post matching
-- Thai AI Insight Engine for content, timing, retention, X promotion, and next-month strategy
+- Thai rule-based insight engine with sample-aware confidence for content, retention, publishing patterns, X promotion, and next-month strategy
 - Vercel-ready config with static output and optional build-time X data refresh
 
 ## Stack

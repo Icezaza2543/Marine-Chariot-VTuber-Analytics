@@ -21,6 +21,7 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
   const chartData = analytics.forecast.map((point) => ({
     label: point.label,
     views: point.views,
+    range: [point.lowerViews, point.upperViews],
     linear: point.linearViews,
     smoothing: point.smoothedViews,
     engagement: point.engagementRate * 100,
@@ -31,11 +32,11 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
       <div className="panel-heading">
         <div>
           <h2>คาดการณ์การเติบโต</h2>
-          <p>Linear regression + exponential smoothing</p>
+          <p>Regression + smoothing จาก 18 เดือนล่าสุดที่จบแล้ว</p>
         </div>
         <div className="panel-badge">
           <TrendingUp className="h-3.5 w-3.5" />
-          {analytics.projectedGrowthRate.toFixed(1)}%
+          หลักฐาน {analytics.forecastConfidence}%
         </div>
       </div>
 
@@ -54,7 +55,13 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
               }}
             />
             <Legend />
-            <Area dataKey="views" fill="rgba(8,145,178,0.14)" name="คาดการณ์" stroke="#0891b2" />
+            <Area
+              dataKey="range"
+              fill="rgba(8,145,178,0.10)"
+              name="ช่วงประมาณการ"
+              stroke="transparent"
+            />
+            <Line dataKey="views" name="ค่ากลาง" stroke="#0891b2" strokeWidth={2} />
             <Line dataKey="linear" dot={false} name="Linear" stroke="#e44878" strokeDasharray="6 5" />
             <Line dataKey="smoothing" dot={false} name="Smoothing" stroke="#7c3aed" strokeDasharray="2 4" />
           </ComposedChart>
@@ -65,7 +72,9 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
         {analytics.forecast.slice(0, 3).map((point) => (
           <div className="forecast-row" key={point.key}>
             <span>{point.label}</span>
-            <strong>{compactNumber(point.views)}</strong>
+            <strong title={`${compactNumber(point.lowerViews)}–${compactNumber(point.upperViews)} วิว`}>
+              {compactNumber(point.views)}
+            </strong>
             <em>{percent(point.engagementRate)}</em>
           </div>
         ))}

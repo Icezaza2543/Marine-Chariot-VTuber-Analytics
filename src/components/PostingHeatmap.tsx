@@ -1,4 +1,4 @@
-import { Clock3 } from 'lucide-react'
+import { CalendarDays } from 'lucide-react'
 import { compactNumber, percent } from '../lib/format'
 import type { AnalyticsBundle } from '../types'
 import { SectionInsight } from './SectionInsight'
@@ -12,18 +12,20 @@ const GITHUB_HEAT_LEVELS = ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39
 export function PostingHeatmap({ analytics }: PostingHeatmapProps) {
   const maxScore = Math.max(...analytics.heatmap.map((cell) => cell.score), 1)
   const weekdays = Array.from(new Set(analytics.heatmap.map((cell) => cell.weekdayLabel)))
-  const slots = Array.from(new Set(analytics.heatmap.map((cell) => cell.slot)))
+  const durationSegments = Array.from(
+    new Set(analytics.heatmap.map((cell) => cell.durationSegment)),
+  )
 
   return (
     <article className="chart-panel">
       <div className="panel-heading">
         <div>
-          <h2>Heatmap ความถี่การลงคลิป</h2>
-          <p>วันในสัปดาห์ × ช่วงเวลาที่คาดว่าอัปโหลด</p>
+          <h2>Heatmap รูปแบบการลงคลิป</h2>
+          <p>วันในสัปดาห์ × ความยาววิดีโอ โดยไม่อนุมานเวลาอัปโหลด</p>
         </div>
         <div className="panel-badge">
-          <Clock3 className="h-3.5 w-3.5" />
-          {analytics.bestPostingSlot?.weekdayLabel ?? '-'}
+          <CalendarDays className="h-3.5 w-3.5" />
+          {analytics.bestPublishingPattern?.weekdayLabel ?? '-'}
         </div>
       </div>
 
@@ -32,13 +34,17 @@ export function PostingHeatmap({ analytics }: PostingHeatmapProps) {
         {weekdays.map((weekday) => (
           <span className="heatmap-axis" key={weekday}>{weekday}</span>
         ))}
-        {slots.map((slot) => (
+        {durationSegments.map((durationSegment) => (
           <HeatmapRow
-            key={slot}
+            key={durationSegment}
             maxScore={maxScore}
-            slot={slot}
+            durationSegment={durationSegment}
             cells={weekdays.map((weekday) =>
-              analytics.heatmap.find((cell) => cell.weekdayLabel === weekday && cell.slot === slot),
+              analytics.heatmap.find(
+                (cell) =>
+                  cell.weekdayLabel === weekday &&
+                  cell.durationSegment === durationSegment,
+              ),
             )}
           />
         ))}
@@ -63,27 +69,27 @@ export function PostingHeatmap({ analytics }: PostingHeatmapProps) {
 }
 
 interface HeatmapRowProps {
-  slot: string
+  durationSegment: string
   maxScore: number
   cells: Array<AnalyticsBundle['heatmap'][number] | undefined>
 }
 
-function HeatmapRow({ slot, maxScore, cells }: HeatmapRowProps) {
+function HeatmapRow({ durationSegment, maxScore, cells }: HeatmapRowProps) {
   return (
     <>
-      <span className="heatmap-slot">{slot}</span>
+      <span className="heatmap-slot">{durationSegment}</span>
       {cells.map((cell, index) => {
         const level = getHeatLevel(cell, maxScore)
 
         return (
           <div
             className={`heatmap-cell heat-level-${level}`}
-            key={`${slot}-${index}`}
+            key={`${durationSegment}-${index}`}
             style={{ backgroundColor: GITHUB_HEAT_LEVELS[level] }}
             title={
               cell
-                ? `${cell.weekdayLabel} ${cell.slot}: ${cell.count} ครั้ง, ${compactNumber(cell.viewsPerUpload)} วิวเฉลี่ย, มีส่วนร่วม ${percent(cell.engagementRate)}`
-                : slot
+                ? `${cell.weekdayLabel} ${cell.durationSegment}: ${cell.count} ครั้ง, ${compactNumber(cell.viewsPerUpload)} วิวเฉลี่ย, มีส่วนร่วม ${percent(cell.engagementRate)}`
+                : durationSegment
             }
           >
             <strong>{cell?.count ?? 0}</strong>
