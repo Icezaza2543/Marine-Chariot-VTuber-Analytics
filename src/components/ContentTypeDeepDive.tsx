@@ -40,11 +40,20 @@ export function ContentTypeDeepDive({ analytics }: ContentTypeDeepDiveProps) {
       </div>
 
       <div className="h-[240px]">
-        <ResponsiveContainer height="100%" initialDimension={{ width: 640, height: 240 }} minWidth={0} width="100%">
+        <ResponsiveContainer
+          height="100%"
+          initialDimension={{ width: 640, height: 240 }}
+          minWidth={0}
+          width="100%"
+        >
           <BarChart data={chartData}>
             <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
             <XAxis dataKey="name" stroke="#475569" tickLine={false} />
-            <YAxis stroke="#475569" tickFormatter={(value) => compactNumber(Number(value))} tickLine={false} />
+            <YAxis
+              stroke="#475569"
+              tickFormatter={(value) => compactNumber(Number(value))}
+              tickLine={false}
+            />
             <Tooltip
               contentStyle={{
                 background: 'rgba(255, 255, 255, 0.98)',

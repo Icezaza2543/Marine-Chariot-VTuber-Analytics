@@ -15,7 +15,10 @@ interface OfficialLinksProps {
 
 export function OfficialLinks({ links, compact = false }: OfficialLinksProps) {
   return (
-    <nav aria-label="ลิงก์ช่องทางอย่างเป็นทางการ" className={`official-links${compact ? ' official-links--compact' : ''}`}>
+    <nav
+      aria-label="ลิงก์ช่องทางอย่างเป็นทางการ"
+      className={`official-links${compact ? ' official-links--compact' : ''}`}
+    >
       {links.map((link) => {
         const Icon = iconMap[link.kind]
 
@@ -29,7 +32,9 @@ export function OfficialLinks({ links, compact = false }: OfficialLinksProps) {
           >
             <Icon aria-hidden="true" className="h-3.5 w-3.5" />
             <span>{link.label}</span>
-            {!compact ? <ExternalLink aria-hidden="true" className="h-3 w-3 official-link__external" /> : null}
+            {!compact ? (
+              <ExternalLink aria-hidden="true" className="h-3 w-3 official-link__external" />
+            ) : null}
           </a>
         )
       })}

@@ -35,7 +35,9 @@ const csvText = await response.text()
 const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true })
 
 if (parsed.errors.length > 0) {
-  throw new Error(`Cannot parse YouTube CSV: ${parsed.errors.map((error) => error.message).join(', ')}`)
+  throw new Error(
+    `Cannot parse YouTube CSV: ${parsed.errors.map((error) => error.message).join(', ')}`,
+  )
 }
 
 const fields = parsed.meta.fields ?? []

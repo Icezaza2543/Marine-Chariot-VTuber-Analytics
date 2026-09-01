@@ -71,7 +71,10 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
                   {column.key === 'thumbnail' ? (
                     column.label
                   ) : (
-                    <button type="button" onClick={() => toggleSort(column.key as TableSort['key'])}>
+                    <button
+                      type="button"
+                      onClick={() => toggleSort(column.key as TableSort['key'])}
+                    >
                       {column.label}
                       {tableSort.key === column.key ? (
                         tableSort.direction === 'desc' ? (
@@ -84,52 +87,55 @@ export function TopVideosTable({ analytics }: TopVideosTableProps) {
                   )}
                 </th>
               ))}
-
             </tr>
           </thead>
           <tbody>
             {analytics.topVideos.map((video, index) => {
               const videoId = getYouTubeId(video.url)
-              
+
               return (
                 <tr key={video.id}>
                   <td>
                     {videoId && (
                       <div className="flex items-center justify-center">
-                        <img 
+                        <img
                           alt="Thumbnail"
-                          className="w-16 h-auto rounded border border-[var(--mc-border)] shadow-sm object-cover" 
-                          loading="lazy" 
+                          className="w-16 h-auto rounded border border-[var(--mc-border)] shadow-sm object-cover"
+                          loading="lazy"
                           src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
                         />
                       </div>
                     )}
                   </td>
                   <td>
-                  <div className="video-title-cell">
-                    <span className="rank-medal">
-                      {index < 3 ? <Trophy className="h-3.5 w-3.5" /> : index + 1}
-                    </span>
-                    <a href={video.url} rel="noreferrer" target="_blank">
-                      {video.title}
-                      <ExternalLink className="h-3 w-3" />
-                    </a>
-                  </div>
-                </td>
-                <td><span className="type-badge">{video.contentType}</span></td>
-                <td>{video.publishedDate}</td>
-                <td>{compactNumber(video.views)}</td>
-                <td>{percent(video.engagementRate)}</td>
-                <td>{video.viralScore.toFixed(1)}</td>
-                <td>{retentionLabel(video)}</td>
-              </tr>
-            )
-          })}
+                    <div className="video-title-cell">
+                      <span className="rank-medal">
+                        {index < 3 ? <Trophy className="h-3.5 w-3.5" /> : index + 1}
+                      </span>
+                      <a href={video.url} rel="noreferrer" target="_blank">
+                        {video.title}
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </div>
+                  </td>
+                  <td>
+                    <span className="type-badge">{video.contentType}</span>
+                  </td>
+                  <td>{video.publishedDate}</td>
+                  <td>{compactNumber(video.views)}</td>
+                  <td>{percent(video.engagementRate)}</td>
+                  <td>{video.viralScore.toFixed(1)}</td>
+                  <td>{retentionLabel(video)}</td>
+                </tr>
+              )
+            })}
           </tbody>
         </table>
       </div>
 
-      <SectionInsight>{analytics.sectionInsights.videos} · เรียงตาม {metricLabel(tableSort.key)}</SectionInsight>
+      <SectionInsight>
+        {analytics.sectionInsights.videos} · เรียงตาม {metricLabel(tableSort.key)}
+      </SectionInsight>
     </article>
   )
 }

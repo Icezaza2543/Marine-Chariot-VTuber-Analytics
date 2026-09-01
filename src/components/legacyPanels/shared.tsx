@@ -16,7 +16,16 @@ export interface CategoryMetric {
   avgEngagementRate: number
 }
 
-export const palette = ['#e44878', '#0891b2', '#2563eb', '#7c3aed', '#db2777', '#b45309', '#047857', '#64748b']
+export const palette = [
+  '#e44878',
+  '#0891b2',
+  '#2563eb',
+  '#7c3aed',
+  '#db2777',
+  '#b45309',
+  '#047857',
+  '#64748b',
+]
 
 export const tooltipStyle = {
   background: 'rgba(255, 255, 255, 0.98)',
@@ -34,7 +43,13 @@ export function MiniStat({ label, value }: { label: string; value: string }) {
   )
 }
 
-export function CategoryTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: CategoryMetric }> }) {
+export function CategoryTooltip({
+  active,
+  payload,
+}: {
+  active?: boolean
+  payload?: Array<{ payload: CategoryMetric }>
+}) {
   if (!active || !payload?.[0]) {
     return null
   }
@@ -53,7 +68,9 @@ export function CategoryTooltip({ active, payload }: { active?: boolean; payload
 
 export function buildFormatMonthlyData(analytics: AnalyticsBundle) {
   return analytics.monthlyMetrics.map((metric) => {
-    const records = analytics.filteredRecords.filter((record) => format(record.publishedAt, 'yyyy-MM') === metric.key)
+    const records = analytics.filteredRecords.filter(
+      (record) => format(record.publishedAt, 'yyyy-MM') === metric.key,
+    )
     const videoRecords = records.filter(isVideoFormat)
     const talkRecords = records.filter((record) => !isVideoFormat(record))
 
@@ -69,10 +86,7 @@ export function buildFormatTotals(records: VideoRecord[]) {
   const videoRecords = records.filter(isVideoFormat)
   const talkRecords = records.filter((record) => !isVideoFormat(record))
 
-  return [
-    formatTotal('Video', videoRecords),
-    formatTotal('Content Talk', talkRecords),
-  ]
+  return [formatTotal('Video', videoRecords), formatTotal('Content Talk', talkRecords)]
 }
 
 export function buildShortsMonthlyData(analytics: AnalyticsBundle) {
@@ -109,13 +123,19 @@ export function compactCategories(metrics: ContentTypeMetric[]): CategoryMetric[
       likes: sum(rest.map((metric) => metric.likes)),
       comments: sum(rest.map((metric) => metric.comments)),
       avgViews: safeDivide(otherViews, otherVideos),
-      avgEngagementRate: averageWeighted(rest.map((metric) => [metric.avgEngagementRate, metric.videos])),
+      avgEngagementRate: averageWeighted(
+        rest.map((metric) => [metric.avgEngagementRate, metric.videos]),
+      ),
     },
   ]
 }
 
 export function isShortVideo(record: VideoRecord) {
-  return /short/i.test(record.contentType) || record.minutes <= 1.2 || record.tags.some((tag) => /short/i.test(tag))
+  return (
+    /short/i.test(record.contentType) ||
+    record.minutes <= 1.2 ||
+    record.tags.some((tag) => /short/i.test(tag))
+  )
 }
 
 export function average(values: number[]) {

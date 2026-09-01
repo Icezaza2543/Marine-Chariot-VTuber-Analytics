@@ -1,4 +1,17 @@
-import { CartesianGrid, Cell, Legend, Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from 'recharts'
+import {
+  CartesianGrid,
+  Cell,
+  Legend,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Scatter,
+  ScatterChart,
+  Tooltip,
+  XAxis,
+  YAxis,
+  ZAxis,
+} from 'recharts'
 import { Layers3 } from 'lucide-react'
 import { compactNumber } from '../../lib/format'
 import { SectionInsight } from '../SectionInsight'
@@ -34,7 +47,12 @@ export function CategoryBreakdownPanel({ analytics }: AnalyticsPanelProps) {
 
       <div className="split-chart-grid">
         <div className="chart-box-md">
-          <ResponsiveContainer height="100%" initialDimension={{ width: 540, height: 280 }} minWidth={0} width="100%">
+          <ResponsiveContainer
+            height="100%"
+            initialDimension={{ width: 540, height: 280 }}
+            minWidth={0}
+            width="100%"
+          >
             <PieChart>
               <Pie
                 data={categories}
@@ -48,17 +66,31 @@ export function CategoryBreakdownPanel({ analytics }: AnalyticsPanelProps) {
                   <Cell fill={palette[index % palette.length]} key={item.contentType} />
                 ))}
               </Pie>
-              <Tooltip contentStyle={tooltipStyle} formatter={(value) => compactNumber(Number(value))} />
+              <Tooltip
+                contentStyle={tooltipStyle}
+                formatter={(value) => compactNumber(Number(value))}
+              />
               <Legend />
             </PieChart>
           </ResponsiveContainer>
         </div>
 
         <div className="chart-box-md">
-          <ResponsiveContainer height="100%" initialDimension={{ width: 540, height: 280 }} minWidth={0} width="100%">
+          <ResponsiveContainer
+            height="100%"
+            initialDimension={{ width: 540, height: 280 }}
+            minWidth={0}
+            width="100%"
+          >
             <ScatterChart>
               <CartesianGrid stroke="rgba(71,85,105,0.16)" />
-              <XAxis dataKey="videos" name="จำนวนวิดีโอ" stroke="#475569" tickLine={false} type="number" />
+              <XAxis
+                dataKey="videos"
+                name="จำนวนวิดีโอ"
+                stroke="#475569"
+                tickLine={false}
+                type="number"
+              />
               <YAxis
                 dataKey="avgViews"
                 name="วิวเฉลี่ย"

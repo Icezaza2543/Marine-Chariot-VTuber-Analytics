@@ -5,6 +5,9 @@
   "license": "MIT",
   "description": "Marine Chariot VTuber analytics dashboard with YouTube CSV and X social signal analysis.",
   "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
     "dev": "vite",
     "sync:youtube": "node scripts/sync-youtube-data.mjs --out public/data/marine-ch-data.csv",
@@ -13,6 +16,9 @@
     "build": "tsc && vite build",
     "build:vercel": "npm run fetch:x:optional && tsc && vite build",
     "check": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "smoke": "node scripts/smoke-dashboard.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -21,25 +27,33 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/hammerjs": "^2.0.46",
     "@types/papaparse": "^5.5.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
+    "daisyui": "^5.7.23",
+    "eslint": "^10.9.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.5",
+    "globals": "^17.11.0",
     "playwright": "^1.60.0",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4.3.3",
     "typescript": "~6.0.2",
+    "typescript-eslint": "^8.69.0",
     "vite": "^8.0.12",
     "vitest": "^4.1.9"
   },
   "dependencies": {
     "@fontsource/ibm-plex-sans-thai": "^5.2.8",
     "@hookform/resolvers": "^5.4.0",
-    "@tailwindcss/vite": "^4.3.1",
     "chart.js": "^4.5.1",
     "chartjs-plugin-annotation": "^3.1.0",
     "chartjs-plugin-datalabels": "^2.2.0",
     "chartjs-plugin-zoom": "^2.2.0",
-    "daisyui": "^5.5.23",
     "date-fns": "^4.4.0",
     "framer-motion": "^12.40.0",
     "hammerjs": "^2.0.8",
@@ -50,7 +64,6 @@
     "react-dom": "^19.2.7",
     "react-hook-form": "^7.79.0",
     "recharts": "^3.8.1",
-    "tailwindcss": "^4.3.1",
     "zod": "^4.4.3",
     "zustand": "^5.0.14"
   }

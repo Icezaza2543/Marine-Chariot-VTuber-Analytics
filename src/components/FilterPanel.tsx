@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { CalendarDays, ChevronDown, Filter, RotateCcw, Search, Tags } from 'lucide-react'
 import { useEffect } from 'react'
-import { useForm } from 'react-hook-form'
+import { useForm, useWatch } from 'react-hook-form'
 import { useShallow } from 'zustand/react/shallow'
 import { z } from 'zod'
 import { thaiMonthLabel } from '../lib/format'
@@ -41,15 +41,15 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
       setFilters: state.setFilters,
     })),
   )
-  const { register, handleSubmit, reset, setValue, watch } = useForm<FilterFormValues>({
+  const { control, register, handleSubmit, reset, setValue } = useForm<FilterFormValues>({
     resolver: zodResolver(filterSchema),
     defaultValues: filters,
   })
-  const selectedTypes = watch('contentTypes') ?? []
-  const selectedYears = watch('years') ?? []
-  const selectedMonths = watch('months') ?? []
-  const selectedWeeks = watch('weeks') ?? []
-  const granularity = watch('granularity')
+  const selectedTypes = useWatch({ control, name: 'contentTypes' }) ?? []
+  const selectedYears = useWatch({ control, name: 'years' }) ?? []
+  const selectedMonths = useWatch({ control, name: 'months' }) ?? []
+  const selectedWeeks = useWatch({ control, name: 'weeks' }) ?? []
+  const granularity = useWatch({ control, name: 'granularity' })
 
   useEffect(() => {
     reset(filters)
@@ -73,7 +73,12 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
   }
 
   const toggleNumber = (field: 'years' | 'months' | 'weeks', value: number) => {
-    const current = watch(field) ?? []
+    const selectedValues = {
+      years: selectedYears,
+      months: selectedMonths,
+      weeks: selectedWeeks,
+    }
+    const current = selectedValues[field]
     const next = current.includes(value)
       ? current.filter((item) => item !== value)
       : [...current, value].sort((a, b) => a - b)
@@ -106,8 +111,16 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
             ช่วงวันที่
           </label>
           <div className="grid grid-cols-2 gap-2">
-            <input className="input input-sm input-bordered filter-input" type="date" {...register('dateStart')} />
-            <input className="input input-sm input-bordered filter-input" type="date" {...register('dateEnd')} />
+            <input
+              className="input input-sm input-bordered filter-input"
+              type="date"
+              {...register('dateStart')}
+            />
+            <input
+              className="input input-sm input-bordered filter-input"
+              type="date"
+              {...register('dateEnd')}
+            />
           </div>
         </div>
 
@@ -156,7 +169,9 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         <MultiSelectDropdown
           label="ประเภทคอนเทนต์"
           selectedCount={selectedTypes.length}
-          selectedText={selectedTypes.length > 0 ? selectedTypes.slice(0, 2).join(', ') : 'ทุกประเภท'}
+          selectedText={
+            selectedTypes.length > 0 ? selectedTypes.slice(0, 2).join(', ') : 'ทุกประเภท'
+          }
         >
           {analytics.allContentTypes.map((type) => (
             <DropdownCheck
@@ -205,7 +220,11 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
         <MultiSelectDropdown
           label="สัปดาห์"
           selectedCount={selectedWeeks.length}
-          selectedText={selectedWeeks.length > 0 ? selectedWeeks.map((week) => `W${week}`).join(', ') : 'ทุกสัปดาห์'}
+          selectedText={
+            selectedWeeks.length > 0
+              ? selectedWeeks.map((week) => `W${week}`).join(', ')
+              : 'ทุกสัปดาห์'
+          }
         >
           <div className="dropdown-grid">
             {analytics.allWeeks.map((week) => (
@@ -230,11 +249,9 @@ export function FilterPanel({ analytics }: FilterPanelProps) {
 }
 
 function closeOpenDropdowns() {
-  document
-    .querySelectorAll<HTMLDetailsElement>('.filter-dropdown[open]')
-    .forEach((dropdown) => {
-      dropdown.open = false
-    })
+  document.querySelectorAll<HTMLDetailsElement>('.filter-dropdown[open]').forEach((dropdown) => {
+    dropdown.open = false
+  })
 }
 
 interface MultiSelectDropdownProps {
@@ -244,7 +261,12 @@ interface MultiSelectDropdownProps {
   children: React.ReactNode
 }
 
-function MultiSelectDropdown({ label, selectedCount, selectedText, children }: MultiSelectDropdownProps) {
+function MultiSelectDropdown({
+  label,
+  selectedCount,
+  selectedText,
+  children,
+}: MultiSelectDropdownProps) {
   const countLabel = selectedCount > 0 ? `เลือก ${selectedCount}` : 'ทั้งหมด'
 
   return (

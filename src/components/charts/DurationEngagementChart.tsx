@@ -80,7 +80,10 @@ export function DurationEngagementChart({ analytics }: DurationEngagementChartPr
         {analytics.durationMetrics.map((metric) => (
           <div className="duration-pill" key={metric.bucket}>
             <strong>{metric.bucket}</strong>
-            <span>{compactNumber(metric.avgViews)} วิวเฉลี่ย · retention {metric.avgRetentionScore.toFixed(1)}</span>
+            <span>
+              {compactNumber(metric.avgViews)} วิวเฉลี่ย · retention{' '}
+              {metric.avgRetentionScore.toFixed(1)}
+            </span>
           </div>
         ))}
       </div>

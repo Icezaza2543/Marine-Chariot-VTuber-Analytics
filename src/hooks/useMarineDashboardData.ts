@@ -14,7 +14,7 @@ export function useMarineDashboardData() {
   const [dataSnapshot, setDataSnapshot] = useState<MarineDataSnapshot | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [didInitDateRange, setDidInitDateRange] = useState(false)
+  const didInitDateRangeRef = useRef(false)
   const latestDataDateRef = useRef<string | null>(null)
   const latestLoadTimeRef = useRef(0)
   const { dateEnd, patchFilters } = useDashboardStore(
@@ -125,13 +125,13 @@ export function useMarineDashboardData() {
     const nextDateEnd = format(rangeEnd, 'yyyy-MM-dd')
     const previousDateEnd = latestDataDateRef.current
 
-    if (!didInitDateRange) {
+    if (!didInitDateRangeRef.current) {
       patchFilters({
         dateStart: nextDateStart,
         dateEnd: nextDateEnd,
       })
       latestDataDateRef.current = nextDateEnd
-      setDidInitDateRange(true)
+      didInitDateRangeRef.current = true
       return
     }
 
@@ -142,7 +142,7 @@ export function useMarineDashboardData() {
     }
 
     latestDataDateRef.current = nextDateEnd
-  }, [dateEnd, didInitDateRange, patchFilters, records])
+  }, [dateEnd, patchFilters, records])
 
   return {
     records,

@@ -18,9 +18,11 @@ export function filterRecords(records: VideoRecord[], filters: DashboardFilters)
     const matchesYear = selectedYears.size === 0 || selectedYears.has(record.uploadYear)
     const matchesMonth = selectedMonths.size === 0 || selectedMonths.has(record.uploadMonth)
     const matchesWeek = selectedWeeks.size === 0 || selectedWeeks.has(record.uploadWeek)
-    const searchable = `${record.title} ${record.contentType} ${record.tags.join(' ')}`.toLowerCase()
+    const searchable =
+      `${record.title} ${record.contentType} ${record.tags.join(' ')}`.toLowerCase()
     const matchesSearch = search.length === 0 || searchable.includes(search)
-    const matchesTag = tag.length === 0 || record.tags.some((value) => value.toLowerCase().includes(tag))
+    const matchesTag =
+      tag.length === 0 || record.tags.some((value) => value.toLowerCase().includes(tag))
 
     return (
       matchesDateStart &&

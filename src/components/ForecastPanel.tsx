@@ -41,11 +41,20 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
       </div>
 
       <div className="h-[205px]">
-        <ResponsiveContainer height="100%" initialDimension={{ width: 640, height: 205 }} minWidth={0} width="100%">
+        <ResponsiveContainer
+          height="100%"
+          initialDimension={{ width: 640, height: 205 }}
+          minWidth={0}
+          width="100%"
+        >
           <ComposedChart data={chartData}>
             <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
             <XAxis dataKey="label" stroke="#475569" tickLine={false} />
-            <YAxis stroke="#475569" tickFormatter={(value) => compactNumber(Number(value))} tickLine={false} />
+            <YAxis
+              stroke="#475569"
+              tickFormatter={(value) => compactNumber(Number(value))}
+              tickLine={false}
+            />
             <Tooltip
               contentStyle={{
                 background: 'rgba(255, 255, 255, 0.98)',
@@ -62,8 +71,20 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
               stroke="transparent"
             />
             <Line dataKey="views" name="ค่ากลาง" stroke="#0891b2" strokeWidth={2} />
-            <Line dataKey="linear" dot={false} name="Linear" stroke="#e44878" strokeDasharray="6 5" />
-            <Line dataKey="smoothing" dot={false} name="Smoothing" stroke="#7c3aed" strokeDasharray="2 4" />
+            <Line
+              dataKey="linear"
+              dot={false}
+              name="Linear"
+              stroke="#e44878"
+              strokeDasharray="6 5"
+            />
+            <Line
+              dataKey="smoothing"
+              dot={false}
+              name="Smoothing"
+              stroke="#7c3aed"
+              strokeDasharray="2 4"
+            />
           </ComposedChart>
         </ResponsiveContainer>
       </div>
@@ -72,7 +93,9 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
         {analytics.forecast.slice(0, 3).map((point) => (
           <div className="forecast-row" key={point.key}>
             <span>{point.label}</span>
-            <strong title={`${compactNumber(point.lowerViews)}–${compactNumber(point.upperViews)} วิว`}>
+            <strong
+              title={`${compactNumber(point.lowerViews)}–${compactNumber(point.upperViews)} วิว`}
+            >
               {compactNumber(point.views)}
             </strong>
             <em>{percent(point.engagementRate)}</em>
@@ -84,8 +107,10 @@ export function ForecastPanel({ analytics }: ForecastPanelProps) {
         <BrainCircuit className="h-4 w-4 shrink-0 text-[var(--mc-pink)]" />
         <p>
           คำแนะนำเดือนหน้า:{' '}
-          <strong>{analytics.nextContentRecommendation?.contentType ?? 'เลือกช่วงข้อมูลเพิ่ม'}</strong> · ความถี่{' '}
-          <strong>{analytics.optimalFrequency}</strong>
+          <strong>
+            {analytics.nextContentRecommendation?.contentType ?? 'เลือกช่วงข้อมูลเพิ่ม'}
+          </strong>{' '}
+          · ความถี่ <strong>{analytics.optimalFrequency}</strong>
         </p>
       </div>
     </article>

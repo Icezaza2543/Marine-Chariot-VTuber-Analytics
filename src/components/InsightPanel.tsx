@@ -55,14 +55,14 @@ export function InsightPanel({ analytics, compact = false }: InsightPanelProps) 
         <div>
           <span>รูปแบบวันที่เด่น</span>
           <strong>
-            {bestPattern
-              ? `${bestPattern.weekdayLabel} · ${bestPattern.durationSegment}`
-              : '-'}
+            {bestPattern ? `${bestPattern.weekdayLabel} · ${bestPattern.durationSegment}` : '-'}
           </strong>
         </div>
         <div>
           <span>โปรโมตข้ามแพลตฟอร์ม</span>
-          <strong>{analytics.social.crossPromoPostCount > 0 ? 'X → YouTube' : 'Shorts → Long-form'}</strong>
+          <strong>
+            {analytics.social.crossPromoPostCount > 0 ? 'X → YouTube' : 'Shorts → Long-form'}
+          </strong>
         </div>
         <div>
           <span>เติบโตคาดการณ์</span>

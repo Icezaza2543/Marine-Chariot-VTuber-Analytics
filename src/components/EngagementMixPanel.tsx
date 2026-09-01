@@ -1,4 +1,13 @@
-import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
 import { MessageCircleHeart } from 'lucide-react'
 import { decimal, percent } from '../lib/format'
 import type { AnalyticsBundle } from '../types'
@@ -15,7 +24,9 @@ export function EngagementMixPanel({ analytics }: EngagementMixPanelProps) {
     commentsPerThousandViews: Number(metric.commentsPerThousandViews.toFixed(1)),
     conversationShare: Number((metric.conversationShare * 100).toFixed(1)),
   }))
-  const topConversation = [...analytics.engagementMix].sort((a, b) => b.conversationShare - a.conversationShare)[0]
+  const topConversation = [...analytics.engagementMix].sort(
+    (a, b) => b.conversationShare - a.conversationShare,
+  )[0]
 
   return (
     <article className="chart-panel">
@@ -31,7 +42,12 @@ export function EngagementMixPanel({ analytics }: EngagementMixPanelProps) {
       </div>
 
       <div className="panel-chart-fill">
-        <ResponsiveContainer height="100%" initialDimension={{ width: 640, height: 280 }} minWidth={0} width="100%">
+        <ResponsiveContainer
+          height="100%"
+          initialDimension={{ width: 640, height: 280 }}
+          minWidth={0}
+          width="100%"
+        >
           <BarChart data={chartData}>
             <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
             <XAxis dataKey="contentType" stroke="#475569" tickLine={false} />
@@ -45,8 +61,18 @@ export function EngagementMixPanel({ analytics }: EngagementMixPanelProps) {
               }}
             />
             <Legend />
-            <Bar dataKey="likesPerThousandViews" fill="#e44878" name="ไลก์ / 1k วิว" radius={[6, 6, 0, 0]} />
-            <Bar dataKey="commentsPerThousandViews" fill="#0891b2" name="คอมเมนต์ / 1k วิว" radius={[6, 6, 0, 0]} />
+            <Bar
+              dataKey="likesPerThousandViews"
+              fill="#e44878"
+              name="ไลก์ / 1k วิว"
+              radius={[6, 6, 0, 0]}
+            />
+            <Bar
+              dataKey="commentsPerThousandViews"
+              fill="#0891b2"
+              name="คอมเมนต์ / 1k วิว"
+              radius={[6, 6, 0, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>

@@ -34,7 +34,9 @@ describe('forecast', () => {
     expect(forecast[0].key).toBe('2026-04')
     expect(forecast[0].lowerViews).toBeLessThanOrEqual(forecast[0].views)
     expect(forecast[0].upperViews).toBeGreaterThanOrEqual(forecast[0].views)
-    expect(computeForecastConfidence(metrics, new Date('2026-04-15T00:00:00.000Z'))).toBeGreaterThan(0)
+    expect(
+      computeForecastConfidence(metrics, new Date('2026-04-15T00:00:00.000Z')),
+    ).toBeGreaterThan(0)
   })
 
   it('does not forecast from fewer than three completed months', () => {

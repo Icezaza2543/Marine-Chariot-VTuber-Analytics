@@ -9,7 +9,6 @@ export function percent(value: number, digits = 1) {
   return `${(value * 100).toFixed(digits)}%`
 }
 
-
 export function decimal(value: number, digits = 1) {
   return value.toFixed(digits)
 }

@@ -29,10 +29,17 @@ export function PostingHeatmap({ analytics }: PostingHeatmapProps) {
         </div>
       </div>
 
-      <div className="heatmap-grid" style={{ gridTemplateColumns: `112px repeat(${weekdays.length}, var(--heatmap-cell-size))` }}>
+      <div
+        className="heatmap-grid"
+        style={{
+          gridTemplateColumns: `112px repeat(${weekdays.length}, var(--heatmap-cell-size))`,
+        }}
+      >
         <span />
         {weekdays.map((weekday) => (
-          <span className="heatmap-axis" key={weekday}>{weekday}</span>
+          <span className="heatmap-axis" key={weekday}>
+            {weekday}
+          </span>
         ))}
         {durationSegments.map((durationSegment) => (
           <HeatmapRow
@@ -41,9 +48,7 @@ export function PostingHeatmap({ analytics }: PostingHeatmapProps) {
             durationSegment={durationSegment}
             cells={weekdays.map((weekday) =>
               analytics.heatmap.find(
-                (cell) =>
-                  cell.weekdayLabel === weekday &&
-                  cell.durationSegment === durationSegment,
+                (cell) => cell.weekdayLabel === weekday && cell.durationSegment === durationSegment,
               ),
             )}
           />

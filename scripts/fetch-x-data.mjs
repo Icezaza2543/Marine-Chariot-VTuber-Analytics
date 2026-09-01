@@ -25,13 +25,16 @@ if (!bearerToken) {
     process.exit(0)
   }
 
-  console.error(`${message}\nSet X_BEARER_TOKEN in .env.local or Vercel env vars, then run npm run fetch:x.`)
+  console.error(
+    `${message}\nSet X_BEARER_TOKEN in .env.local or Vercel env vars, then run npm run fetch:x.`,
+  )
   process.exit(1)
 }
 
 try {
   const profileResponse = await xFetch(`/users/by/username/${encodeURIComponent(username)}`, {
-    'user.fields': 'created_at,description,location,profile_image_url,public_metrics,verified,verified_type,url',
+    'user.fields':
+      'created_at,description,location,profile_image_url,public_metrics,verified,verified_type,url',
   })
   const profile = profileResponse.data
 
@@ -109,7 +112,9 @@ async function xFetch(path, params) {
 
   if (!response.ok) {
     const resetAt = response.headers.get('x-rate-limit-reset')
-    const retryHint = resetAt ? ` Rate limit resets at ${new Date(Number(resetAt) * 1000).toISOString()}.` : ''
+    const retryHint = resetAt
+      ? ` Rate limit resets at ${new Date(Number(resetAt) * 1000).toISOString()}.`
+      : ''
     const body = await response.text()
     throw new Error(`X API ${response.status} ${response.statusText}.${retryHint} ${body}`)
   }
@@ -237,7 +242,10 @@ function loadEnvFiles(files) {
       }
 
       const [key, ...rest] = trimmed.split('=')
-      const value = rest.join('=').trim().replace(/^['"]|['"]$/g, '')
+      const value = rest
+        .join('=')
+        .trim()
+        .replace(/^['"]|['"]$/g, '')
       loaded[key.trim()] = value
     }
   }

@@ -74,21 +74,33 @@ export function AppShell({ analytics, dataSnapshot, children }: AppShellProps) {
               </h1>
               <span className="text-sm font-medium text-[var(--mc-cyan)]">@MarineChariot</span>
             </div>
-            
+
             <p className="channel-tagline mt-1 whitespace-pre-line text-slate-300 italic">
-              "{CHANNEL_META.tagline}{'\n'}I make you feel happy and memorable."
+              "{CHANNEL_META.tagline}
+              {'\n'}I make you feel happy and memorable."
             </p>
-            
+
             <div className="my-2 flex flex-wrap gap-2 text-xs font-medium">
-              <span className="px-2 py-0.5 rounded-full bg-[var(--mc-cyan)]/10 text-[var(--mc-cyan)] border border-[var(--mc-cyan)]/20">FA #Marinartz</span>
-              <span className="px-2 py-0.5 rounded-full bg-[var(--mc-magenta)]/10 text-[var(--mc-magenta)] border border-[var(--mc-magenta)]/20">R18 #MarinSecretz</span>
-              <span className="px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">LIVE #MarinLifez</span>
-              <span className="px-2 py-0.5 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Meme #Mayeenz</span>
-              <span className="px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">Fan: Yhoiyeen</span>
+              <span className="px-2 py-0.5 rounded-full bg-[var(--mc-cyan)]/10 text-[var(--mc-cyan)] border border-[var(--mc-cyan)]/20">
+                FA #Marinartz
+              </span>
+              <span className="px-2 py-0.5 rounded-full bg-[var(--mc-magenta)]/10 text-[var(--mc-magenta)] border border-[var(--mc-magenta)]/20">
+                R18 #MarinSecretz
+              </span>
+              <span className="px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">
+                LIVE #MarinLifez
+              </span>
+              <span className="px-2 py-0.5 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">
+                Meme #Mayeenz
+              </span>
+              <span className="px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                Fan: Yhoiyeen
+              </span>
             </div>
 
             <p className="channel-bio text-sm mt-1">
-              VTuber TH · เดบิวต์ {formatDebutDate(CHANNEL_META.debutDate)} · {CHANNEL_META.genres.join(' / ')}
+              VTuber TH · เดบิวต์ {formatDebutDate(CHANNEL_META.debutDate)} ·{' '}
+              {CHANNEL_META.genres.join(' / ')}
             </p>
             <p className="channel-range text-xs opacity-70">
               ข้อมูล {firstDate} ถึง {lastDate}

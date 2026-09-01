@@ -29,8 +29,12 @@ export function ChannelSummaryPanel({ analytics }: AnalyticsPanelProps) {
             {shorts
               ? `Shorts ยังเป็น growth engine ชัดเจน: ${shorts.videos} วิดีโอ, วิวเฉลี่ย ${compactNumber(shorts.avgViews)}. `
               : ''}
-            {topContent ? `${topContent.contentType} เป็นหมวดที่ควรใช้เป็นหัวหอกของเดือนถัดไป. ` : ''}
-            Engagement เฉลี่ยของชุดข้อมูลนี้อยู่ที่ {percent(average(analytics.filteredRecords.map((record) => record.engagementRate)))} ซึ่งสะท้อนฐานแฟนที่ตอบสนองต่อคอนเทนต์ได้ดี
+            {topContent
+              ? `${topContent.contentType} เป็นหมวดที่ควรใช้เป็นหัวหอกของเดือนถัดไป. `
+              : ''}
+            Engagement เฉลี่ยของชุดข้อมูลนี้อยู่ที่{' '}
+            {percent(average(analytics.filteredRecords.map((record) => record.engagementRate)))}{' '}
+            ซึ่งสะท้อนฐานแฟนที่ตอบสนองต่อคอนเทนต์ได้ดี
           </p>
         </div>
         <div className="summary-box improve">
@@ -42,7 +46,8 @@ export function ChannelSummaryPanel({ analytics }: AnalyticsPanelProps) {
             {longForm
               ? `คอนเทนต์ยาว ${longForm.bucket} ควรตัดเป็น highlights/Shorts เพื่อเพิ่ม reach ก่อนพากลับไปดู long-form. `
               : ''}
-            รักษาความถี่อัปโหลดที่ {analytics.optimalFrequency} และใช้ X/Shorts เป็น cross-promotion ก่อนปล่อยคอนเทนต์หลัก
+            รักษาความถี่อัปโหลดที่ {analytics.optimalFrequency} และใช้ X/Shorts เป็น cross-promotion
+            ก่อนปล่อยคอนเทนต์หลัก
           </p>
         </div>
       </div>

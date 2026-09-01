@@ -8,13 +8,17 @@ import { KpiDashboard } from './components/KpiDashboard'
 import { useMarineDashboardData } from './hooks/useMarineDashboardData'
 
 const GrowthTrendChart = lazy(() =>
-  import('./components/charts/GrowthTrendChart').then((module) => ({ default: module.GrowthTrendChart })),
+  import('./components/charts/GrowthTrendChart').then((module) => ({
+    default: module.GrowthTrendChart,
+  })),
 )
 const FilterPanel = lazy(() =>
   import('./components/FilterPanel').then((module) => ({ default: module.FilterPanel })),
 )
 const ContentTypeDeepDive = lazy(() =>
-  import('./components/ContentTypeDeepDive').then((module) => ({ default: module.ContentTypeDeepDive })),
+  import('./components/ContentTypeDeepDive').then((module) => ({
+    default: module.ContentTypeDeepDive,
+  })),
 )
 const DurationEngagementChart = lazy(() =>
   import('./components/charts/DurationEngagementChart').then((module) => ({
@@ -34,22 +38,34 @@ const ForecastPanel = lazy(() =>
   import('./components/ForecastPanel').then((module) => ({ default: module.ForecastPanel })),
 )
 const SocialSignalPanel = lazy(() =>
-  import('./components/SocialSignalPanel').then((module) => ({ default: module.SocialSignalPanel })),
+  import('./components/SocialSignalPanel').then((module) => ({
+    default: module.SocialSignalPanel,
+  })),
 )
 const YearlyComparisonPanel = lazy(() =>
-  import('./components/YearlyComparisonPanel').then((module) => ({ default: module.YearlyComparisonPanel })),
+  import('./components/YearlyComparisonPanel').then((module) => ({
+    default: module.YearlyComparisonPanel,
+  })),
 )
 const ContentEfficiencyPanel = lazy(() =>
-  import('./components/ContentEfficiencyPanel').then((module) => ({ default: module.ContentEfficiencyPanel })),
+  import('./components/ContentEfficiencyPanel').then((module) => ({
+    default: module.ContentEfficiencyPanel,
+  })),
 )
 const EngagementMixPanel = lazy(() =>
-  import('./components/EngagementMixPanel').then((module) => ({ default: module.EngagementMixPanel })),
+  import('./components/EngagementMixPanel').then((module) => ({
+    default: module.EngagementMixPanel,
+  })),
 )
 const MonthlyUploadPanel = lazy(() =>
-  import('./components/legacyPanels/MonthlyUploadPanel').then((module) => ({ default: module.MonthlyUploadPanel })),
+  import('./components/legacyPanels/MonthlyUploadPanel').then((module) => ({
+    default: module.MonthlyUploadPanel,
+  })),
 )
 const ContentFormatPanel = lazy(() =>
-  import('./components/legacyPanels/ContentFormatPanel').then((module) => ({ default: module.ContentFormatPanel })),
+  import('./components/legacyPanels/ContentFormatPanel').then((module) => ({
+    default: module.ContentFormatPanel,
+  })),
 )
 const CategoryBreakdownPanel = lazy(() =>
   import('./components/legacyPanels/CategoryBreakdownPanel').then((module) => ({
@@ -57,10 +73,14 @@ const CategoryBreakdownPanel = lazy(() =>
   })),
 )
 const ShortsDeepDivePanel = lazy(() =>
-  import('./components/legacyPanels/ShortsDeepDivePanel').then((module) => ({ default: module.ShortsDeepDivePanel })),
+  import('./components/legacyPanels/ShortsDeepDivePanel').then((module) => ({
+    default: module.ShortsDeepDivePanel,
+  })),
 )
 const ChannelSummaryPanel = lazy(() =>
-  import('./components/legacyPanels/ChannelSummaryPanel').then((module) => ({ default: module.ChannelSummaryPanel })),
+  import('./components/legacyPanels/ChannelSummaryPanel').then((module) => ({
+    default: module.ChannelSummaryPanel,
+  })),
 )
 
 function DeferredSection({ children }: { children: ReactNode }) {
@@ -104,7 +124,9 @@ export default function App() {
             <Activity className="h-6 w-6 animate-pulse text-[var(--mc-cyan)]" />
             <div>
               <p className="text-sm font-semibold text-white">Loading Marine Chariot data</p>
-              <p className="text-xs text-[var(--mc-muted)]">Parsing CSV and preparing analytics engine</p>
+              <p className="text-xs text-[var(--mc-muted)]">
+                Parsing CSV and preparing analytics engine
+              </p>
             </div>
           </div>
         </div>

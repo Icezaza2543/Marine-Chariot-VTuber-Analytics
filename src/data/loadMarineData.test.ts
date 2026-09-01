@@ -73,7 +73,10 @@ describe('loadMarineData', () => {
       '1,https://youtu.be/alpha123,Marine Alpha,not-a-number,100,10,2026-01-01,00:30:00,30,Gaming,0.11,0.06,10',
     ].join('\n')
 
-    vi.stubGlobal('fetch', vi.fn(async () => new Response(csv, { status: 200 })))
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => new Response(csv, { status: 200 })),
+    )
 
     await expect(loadMarineData()).rejects.toThrow(/invalid View at row 2/i)
   })

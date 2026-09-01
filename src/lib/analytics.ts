@@ -1,10 +1,4 @@
-import {
-  compareAsc,
-  eachMonthOfInterval,
-  format,
-  getMonth,
-  startOfMonth,
-} from 'date-fns'
+import { compareAsc, eachMonthOfInterval, format, getMonth, startOfMonth } from 'date-fns'
 import { compactNumber, percent, thaiMonthLabel } from './format'
 import {
   buildForecast,
@@ -12,7 +6,16 @@ import {
   computeProjectedGrowth,
 } from './analytics/forecast'
 import { filterRecords } from './analytics/filtering'
-import { average, clamp, deltaPercent, groupBy, median, safeDivide, sum, unique } from './analytics/math'
+import {
+  average,
+  clamp,
+  deltaPercent,
+  groupBy,
+  median,
+  safeDivide,
+  sum,
+  unique,
+} from './analytics/math'
 import { buildSocialAnalytics } from './analytics/social'
 import type {
   AnalyticsBundle,
@@ -184,7 +187,9 @@ function buildMonthlyMetrics(records: VideoRecord[]) {
 
   return months.map<MonthlyMetric>((date) => {
     const key = format(date, 'yyyy-MM')
-    const monthRecords = sortedRecords.filter((record) => format(record.publishedAt, 'yyyy-MM') === key)
+    const monthRecords = sortedRecords.filter(
+      (record) => format(record.publishedAt, 'yyyy-MM') === key,
+    )
     const summary = summarize(monthRecords)
     cumulativeViews += summary.views
     cumulativeLikes += summary.likes
@@ -271,7 +276,12 @@ function buildEngagementMix(records: VideoRecord[]) {
         conversationShare: safeDivide(summary.comments, totalComments),
       }
     })
-    .sort((a, b) => b.likesPerThousandViews + b.commentsPerThousandViews - (a.likesPerThousandViews + a.commentsPerThousandViews))
+    .sort(
+      (a, b) =>
+        b.likesPerThousandViews +
+        b.commentsPerThousandViews -
+        (a.likesPerThousandViews + a.commentsPerThousandViews),
+    )
 }
 
 function buildDurationMetrics(records: VideoRecord[]) {
@@ -310,8 +320,7 @@ function buildHeatmap(records: VideoRecord[]) {
   for (let weekday = 0; weekday < 7; weekday += 1) {
     for (const durationSegment of DURATION_SEGMENTS) {
       const values = records.filter(
-        (record) =>
-          record.weekday === weekday && getDurationSegment(record) === durationSegment,
+        (record) => record.weekday === weekday && getDurationSegment(record) === durationSegment,
       )
       const summary = summarize(values)
 
@@ -395,10 +404,9 @@ function buildInsights(input: {
   const bestDuration = [...input.durationMetrics].sort((a, b) => b.avgViews - a.avgViews)[0]
   const firstForecast = input.forecast[0]
   const topVideo = [...input.filteredRecords].sort((a, b) => b.viralScore - a.viralScore)[0]
-  const forecastText =
-    firstForecast
-      ? `เดือนถัดไปประมาณ ${compactNumber(firstForecast.views)} วิว (ช่วง ${compactNumber(firstForecast.lowerViews)}–${compactNumber(firstForecast.upperViews)}) จาก regression + smoothing ของเดือนที่จบแล้ว`
-      : 'ต้องมีข้อมูลรายเดือนที่จบแล้วอย่างน้อย 3 เดือนเพื่อสร้างการคาดการณ์'
+  const forecastText = firstForecast
+    ? `เดือนถัดไปประมาณ ${compactNumber(firstForecast.views)} วิว (ช่วง ${compactNumber(firstForecast.lowerViews)}–${compactNumber(firstForecast.upperViews)}) จาก regression + smoothing ของเดือนที่จบแล้ว`
+    : 'ต้องมีข้อมูลรายเดือนที่จบแล้วอย่างน้อย 3 เดือนเพื่อสร้างการคาดการณ์'
 
   const insights: StrategyInsight[] = [
     {
@@ -466,7 +474,9 @@ function buildSectionInsights(input: {
 }) {
   const topContent = input.contentMetrics[0]
   const secondContent = input.contentMetrics[1]
-  const topDuration = [...input.durationMetrics].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate)[0]
+  const topDuration = [...input.durationMetrics].sort(
+    (a, b) => b.avgEngagementRate - a.avgEngagementRate,
+  )[0]
   const forecastPeak = [...input.forecast].sort((a, b) => b.views - a.views)[0]
   const topVideo = input.topVideos[0]
 
@@ -581,7 +591,10 @@ function growthFromRecentMonths(monthly: MonthlyMetric[]) {
   const recent = monthly.slice(-3)
   const previous = monthly.slice(-6, -3)
 
-  return deltaPercent(sum(recent.map((metric) => metric.views)), sum(previous.map((metric) => metric.views)))
+  return deltaPercent(
+    sum(recent.map((metric) => metric.views)),
+    sum(previous.map((metric) => metric.views)),
+  )
 }
 
 function getDurationSegment(record: VideoRecord) {

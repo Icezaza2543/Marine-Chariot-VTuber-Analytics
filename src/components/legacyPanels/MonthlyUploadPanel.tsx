@@ -1,4 +1,14 @@
-import { Bar, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import {
+  Bar,
+  CartesianGrid,
+  ComposedChart,
+  Legend,
+  Line,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
 import { Gauge } from 'lucide-react'
 import { compactNumber } from '../../lib/format'
 import { SectionInsight } from '../SectionInsight'
@@ -27,7 +37,12 @@ export function MonthlyUploadPanel({ analytics }: AnalyticsPanelProps) {
       </div>
 
       <div className="chart-box-lg">
-        <ResponsiveContainer height="100%" initialDimension={{ width: 960, height: 320 }} minWidth={0} width="100%">
+        <ResponsiveContainer
+          height="100%"
+          initialDimension={{ width: 960, height: 320 }}
+          minWidth={0}
+          width="100%"
+        >
           <ComposedChart data={data}>
             <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
             <XAxis dataKey="label" stroke="#475569" tickLine={false} />
@@ -40,8 +55,21 @@ export function MonthlyUploadPanel({ analytics }: AnalyticsPanelProps) {
             <YAxis orientation="right" stroke="#e44878" tickLine={false} yAxisId="videos" />
             <Tooltip contentStyle={tooltipStyle} />
             <Legend />
-            <Bar dataKey="views" fill="#2563eb" name="ยอดวิว" radius={[5, 5, 0, 0]} yAxisId="views" />
-            <Line dataKey="videos" dot={false} name="จำนวนอัปโหลด" stroke="#e44878" strokeWidth={2.4} yAxisId="videos" />
+            <Bar
+              dataKey="views"
+              fill="#2563eb"
+              name="ยอดวิว"
+              radius={[5, 5, 0, 0]}
+              yAxisId="views"
+            />
+            <Line
+              dataKey="videos"
+              dot={false}
+              name="จำนวนอัปโหลด"
+              stroke="#e44878"
+              strokeWidth={2.4}
+              yAxisId="videos"
+            />
           </ComposedChart>
         </ResponsiveContainer>
       </div>

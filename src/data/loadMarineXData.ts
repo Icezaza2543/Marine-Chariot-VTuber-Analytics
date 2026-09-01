@@ -5,62 +5,81 @@ const X_DATA_PATH = '/data/marine-x-posts.json'
 const X_SOURCE_URL = 'https://x.com/MarineChariot'
 
 const optionalNumberSchema = z.coerce.number().optional()
-const xPostUrlSchema = z.object({
-  url: z.string().optional().default(''),
-  expandedUrl: z.string().optional().default(''),
-  displayUrl: z.string().optional().default(''),
-  title: z.string().optional().default(''),
-  description: z.string().optional().default(''),
-}).passthrough()
-const xPostSchema = z.object({
-  id: z.union([z.string(), z.number()]),
-  url: z.string().optional(),
-  text: z.string().optional().default(''),
-  createdAt: z.string().optional().default(''),
-  lang: z.string().optional().default(''),
-  conversationId: z.union([z.string(), z.number()]).optional(),
-  likeCount: optionalNumberSchema,
-  repostCount: optionalNumberSchema,
-  replyCount: optionalNumberSchema,
-  quoteCount: optionalNumberSchema,
-  bookmarkCount: optionalNumberSchema,
-  impressionCount: optionalNumberSchema,
-  engagementCount: optionalNumberSchema,
-  hashtags: z.array(z.string()).optional().default([]),
-  urls: z.array(xPostUrlSchema).optional().default([]),
-  referencedTweets: z.array(z.object({
-    type: z.string().optional().default(''),
+const xPostUrlSchema = z
+  .object({
+    url: z.string().optional().default(''),
+    expandedUrl: z.string().optional().default(''),
+    displayUrl: z.string().optional().default(''),
+    title: z.string().optional().default(''),
+    description: z.string().optional().default(''),
+  })
+  .passthrough()
+const xPostSchema = z
+  .object({
     id: z.union([z.string(), z.number()]),
-  }).passthrough()).optional().default([]),
-}).passthrough()
-const xProfileSchema = z.object({
-  id: z.union([z.string(), z.number()]),
-  username: z.string().optional().default('MarineChariot'),
-  name: z.string().optional().default('Marine Chariot'),
-  description: z.string().optional().default(''),
-  url: z.string().optional().default(X_SOURCE_URL),
-  profileImageUrl: z.string().optional().default(''),
-  verified: z.boolean().optional().default(false),
-  verifiedType: z.string().nullable().optional().default(null),
-  followersCount: optionalNumberSchema.default(0),
-  followingCount: optionalNumberSchema.default(0),
-  postCount: optionalNumberSchema.default(0),
-  listedCount: optionalNumberSchema.default(0),
-}).passthrough()
-const xDatasetSchema = z.object({
-  sourceUrl: z.string().optional().default(X_SOURCE_URL),
-  fetchedAt: z.string().nullable().optional().default(null),
-  profile: xProfileSchema.nullable().optional().default(null),
-  posts: z.array(xPostSchema).optional().default([]),
-  meta: z.object({
-    status: z.string().optional().default('unknown'),
-    message: z.string().optional(),
-    username: z.string().optional(),
-    requestedMaxPosts: optionalNumberSchema,
-    pagesFetched: optionalNumberSchema,
-    api: z.string().optional(),
-  }).passthrough().optional().default({ status: 'unknown' }),
-}).passthrough()
+    url: z.string().optional(),
+    text: z.string().optional().default(''),
+    createdAt: z.string().optional().default(''),
+    lang: z.string().optional().default(''),
+    conversationId: z.union([z.string(), z.number()]).optional(),
+    likeCount: optionalNumberSchema,
+    repostCount: optionalNumberSchema,
+    replyCount: optionalNumberSchema,
+    quoteCount: optionalNumberSchema,
+    bookmarkCount: optionalNumberSchema,
+    impressionCount: optionalNumberSchema,
+    engagementCount: optionalNumberSchema,
+    hashtags: z.array(z.string()).optional().default([]),
+    urls: z.array(xPostUrlSchema).optional().default([]),
+    referencedTweets: z
+      .array(
+        z
+          .object({
+            type: z.string().optional().default(''),
+            id: z.union([z.string(), z.number()]),
+          })
+          .passthrough(),
+      )
+      .optional()
+      .default([]),
+  })
+  .passthrough()
+const xProfileSchema = z
+  .object({
+    id: z.union([z.string(), z.number()]),
+    username: z.string().optional().default('MarineChariot'),
+    name: z.string().optional().default('Marine Chariot'),
+    description: z.string().optional().default(''),
+    url: z.string().optional().default(X_SOURCE_URL),
+    profileImageUrl: z.string().optional().default(''),
+    verified: z.boolean().optional().default(false),
+    verifiedType: z.string().nullable().optional().default(null),
+    followersCount: optionalNumberSchema.default(0),
+    followingCount: optionalNumberSchema.default(0),
+    postCount: optionalNumberSchema.default(0),
+    listedCount: optionalNumberSchema.default(0),
+  })
+  .passthrough()
+const xDatasetSchema = z
+  .object({
+    sourceUrl: z.string().optional().default(X_SOURCE_URL),
+    fetchedAt: z.string().nullable().optional().default(null),
+    profile: xProfileSchema.nullable().optional().default(null),
+    posts: z.array(xPostSchema).optional().default([]),
+    meta: z
+      .object({
+        status: z.string().optional().default('unknown'),
+        message: z.string().optional(),
+        username: z.string().optional(),
+        requestedMaxPosts: optionalNumberSchema,
+        pagesFetched: optionalNumberSchema,
+        api: z.string().optional(),
+      })
+      .passthrough()
+      .optional()
+      .default({ status: 'unknown' }),
+  })
+  .passthrough()
 
 type ValidatedXPost = z.infer<typeof xPostSchema>
 type ValidatedXProfile = z.infer<typeof xProfileSchema>
@@ -99,7 +118,9 @@ function validateXDataset(value: unknown) {
   const result = xDatasetSchema.safeParse(value)
 
   if (!result.success) {
-    throw new Error(`Invalid X cache shape at ${X_DATA_PATH}: ${formatZodIssues(result.error.issues)}`)
+    throw new Error(
+      `Invalid X cache shape at ${X_DATA_PATH}: ${formatZodIssues(result.error.issues)}`,
+    )
   }
 
   return result.data

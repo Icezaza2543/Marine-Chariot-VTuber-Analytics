@@ -130,7 +130,8 @@ function buildSocialVideoMatches(records: VideoRecord[], posts: XPost[]): Social
 }
 
 function isPostVideoMatch(record: VideoRecord, post: XPost) {
-  const text = `${post.text} ${post.urls.map((url) => `${url.expandedUrl} ${url.title}`).join(' ')}`.toLowerCase()
+  const text =
+    `${post.text} ${post.urls.map((url) => `${url.expandedUrl} ${url.title}`).join(' ')}`.toLowerCase()
   const videoId = extractYouTubeId(record.url)
   const postDate = parseISO(post.createdAt)
   const dayDistance = Number.isNaN(postDate.getTime())
@@ -145,7 +146,9 @@ function isPostVideoMatch(record: VideoRecord, post: XPost) {
 
 function isCrossPromoPost(post: XPost) {
   const text = `${post.text} ${post.urls.map((url) => url.expandedUrl).join(' ')}`.toLowerCase()
-  return /youtube\.com|youtu\.be|stream|live|shorts|配信|動画|ไลฟ์|คลิป|เกม|ร้องเพลง|asmr/.test(text)
+  return /youtube\.com|youtu\.be|stream|live|shorts|配信|動画|ไลฟ์|คลิป|เกม|ร้องเพลง|asmr/.test(
+    text,
+  )
 }
 
 function estimatePostReach(post: XPost) {
@@ -160,7 +163,7 @@ function extractYouTubeId(url: string) {
 function titleKeywords(title: string) {
   return title
     .toLowerCase()
-    .replace(/[【】\[\]().|]/g, ' ')
+    .replace(/【|】|\[|\]|\(|\)|\.|\|/g, ' ')
     .split(/\s+/)
     .map((part) => part.trim())
     .filter((part) => part.length >= 4)

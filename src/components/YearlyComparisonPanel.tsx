@@ -42,7 +42,12 @@ export function YearlyComparisonPanel({ analytics }: YearlyComparisonPanelProps)
       </div>
 
       <div className="panel-chart-fill">
-        <ResponsiveContainer height="100%" initialDimension={{ width: 960, height: 280 }} minWidth={0} width="100%">
+        <ResponsiveContainer
+          height="100%"
+          initialDimension={{ width: 960, height: 280 }}
+          minWidth={0}
+          width="100%"
+        >
           <ComposedChart data={chartData}>
             <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
             <XAxis dataKey="year" stroke="#475569" tickLine={false} />
@@ -68,10 +73,37 @@ export function YearlyComparisonPanel({ analytics }: YearlyComparisonPanelProps)
               }}
             />
             <Legend />
-            <Bar dataKey="views" fill="#e44878" name="ยอดวิว" radius={[6, 6, 0, 0]} yAxisId="views" />
-            <Line dataKey="avgViews" dot name="วิวเฉลี่ย" stroke="#7c3aed" strokeWidth={2} yAxisId="views" />
-            <Line dataKey="engagement" dot name="Engagement %" stroke="#0891b2" strokeWidth={2} yAxisId="rate" />
-            <Line dataKey="retention" dot={false} name="Retention" stroke="#047857" strokeDasharray="5 5" yAxisId="rate" />
+            <Bar
+              dataKey="views"
+              fill="#e44878"
+              name="ยอดวิว"
+              radius={[6, 6, 0, 0]}
+              yAxisId="views"
+            />
+            <Line
+              dataKey="avgViews"
+              dot
+              name="วิวเฉลี่ย"
+              stroke="#7c3aed"
+              strokeWidth={2}
+              yAxisId="views"
+            />
+            <Line
+              dataKey="engagement"
+              dot
+              name="Engagement %"
+              stroke="#0891b2"
+              strokeWidth={2}
+              yAxisId="rate"
+            />
+            <Line
+              dataKey="retention"
+              dot={false}
+              name="Retention"
+              stroke="#047857"
+              strokeDasharray="5 5"
+              yAxisId="rate"
+            />
           </ComposedChart>
         </ResponsiveContainer>
       </div>

@@ -7,24 +7,25 @@ const LOCAL_DATA_PATH = '/data/marine-ch-data.csv'
 const DEFAULT_GOOGLE_SHEET_CSV_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vTyNpRUR1B4SDX_VKOIDndOfodMaEMuojtK7SYocFy6oz6bHtJ_uxmMDTvmipvu8H_7o7yNb5rgq0fq/pub?gid=0&single=true&output=csv'
 
-const DATA_PATH =
-  import.meta.env.VITE_MARINE_CSV_URL?.trim() || DEFAULT_GOOGLE_SHEET_CSV_URL
+const DATA_PATH = import.meta.env.VITE_MARINE_CSV_URL?.trim() || DEFAULT_GOOGLE_SHEET_CSV_URL
 
-const marineCsvRowSchema = z.object({
-  No: z.string(),
-  Urls: z.string(),
-  'Video Name': z.string(),
-  View: z.string(),
-  Like: z.string(),
-  Comm: z.string(),
-  published_date: z.string(),
-  duration: z.string(),
-  minute: z.string(),
-  type: z.string(),
-  'Engagement Rate': z.string(),
-  'AVG View Duration': z.string(),
-  'Views to Likes Ratio': z.string(),
-}).passthrough()
+const marineCsvRowSchema = z
+  .object({
+    No: z.string(),
+    Urls: z.string(),
+    'Video Name': z.string(),
+    View: z.string(),
+    Like: z.string(),
+    Comm: z.string(),
+    published_date: z.string(),
+    duration: z.string(),
+    minute: z.string(),
+    type: z.string(),
+    'Engagement Rate': z.string(),
+    'AVG View Duration': z.string(),
+    'Views to Likes Ratio': z.string(),
+  })
+  .passthrough()
 
 const REQUIRED_CSV_FIELDS = Object.keys(marineCsvRowSchema.shape) as Array<keyof RawMarineRow>
 
@@ -79,7 +80,11 @@ export async function loadMarineData(signal?: AbortSignal): Promise<MarineDataSn
   }
 }
 
-function validateCsvRows(rows: RawMarineRow[], fields: string[], sourcePath: string): RawMarineRow[] {
+function validateCsvRows(
+  rows: RawMarineRow[],
+  fields: string[],
+  sourcePath: string,
+): RawMarineRow[] {
   const missingFields = REQUIRED_CSV_FIELDS.filter((field) => !fields.includes(field))
 
   if (missingFields.length > 0) {
@@ -134,6 +139,7 @@ async function loadCsvPayload(primaryPath: string, signal?: AbortSignal) {
         `Cannot load Marine Chariot CSV. Primary source failed: ${describeError(
           primaryError,
         )}. Local fallback failed: ${describeError(fallbackError)}`,
+        { cause: fallbackError },
       )
     }
   }
@@ -240,10 +246,7 @@ function scoreVideos(records: VideoRecord[]) {
   const newestTime = Math.max(...records.map((record) => record.publishedAt.getTime()))
 
   return records.map((record) => {
-    const daysSinceNewest = Math.max(
-      0,
-      (newestTime - record.publishedAt.getTime()) / 86_400_000,
-    )
+    const daysSinceNewest = Math.max(0, (newestTime - record.publishedAt.getTime()) / 86_400_000)
     const recencyBoost = 1 - Math.min(daysSinceNewest, 365) / 365
     const score =
       (record.views / maxViews) * 42 +
@@ -277,7 +280,7 @@ function normalizeContentType(type: string, title: string) {
 
 function extractTags(title: string, contentType: string) {
   const tags = new Set<string>([contentType])
-  const bracketMatches = title.matchAll(/[【\[]([^】\]]+)[】\]]/g)
+  const bracketMatches = title.matchAll(/(?:【|\[)([^】\]]+)(?:】|\])/g)
 
   for (const match of bracketMatches) {
     const value = match[1]?.trim()
@@ -322,12 +325,7 @@ function durationToMinutes(duration: string, rowNumber: number, sourcePath: stri
   throw dataError(sourcePath, rowNumber, 'duration', duration)
 }
 
-function parseRequiredNumeric(
-  value: string,
-  field: string,
-  rowNumber: number,
-  sourcePath: string,
-) {
+function parseRequiredNumeric(value: string, field: string, rowNumber: number, sourcePath: string) {
   const normalized = String(value).replaceAll(',', '').trim()
   const parsed = Number(normalized)
 
@@ -338,12 +336,7 @@ function parseRequiredNumeric(
   return parsed
 }
 
-function parseRequiredInteger(
-  value: string,
-  field: string,
-  rowNumber: number,
-  sourcePath: string,
-) {
+function parseRequiredInteger(value: string, field: string, rowNumber: number, sourcePath: string) {
   return Math.round(parseRequiredNumeric(value, field, rowNumber, sourcePath))
 }
 

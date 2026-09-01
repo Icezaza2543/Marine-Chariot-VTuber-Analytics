@@ -1,4 +1,16 @@
-import { Bar, CartesianGrid, Cell, ComposedChart, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import {
+  Bar,
+  CartesianGrid,
+  Cell,
+  ComposedChart,
+  Legend,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
 import { Sparkles } from 'lucide-react'
 import { compactNumber, percent } from '../../lib/format'
 import { SectionInsight } from '../SectionInsight'
@@ -26,21 +38,47 @@ export function ContentFormatPanel({ analytics }: AnalyticsPanelProps) {
 
       <div className="split-chart-grid">
         <div className="chart-box-md">
-          <ResponsiveContainer height="100%" initialDimension={{ width: 640, height: 280 }} minWidth={0} width="100%">
+          <ResponsiveContainer
+            height="100%"
+            initialDimension={{ width: 640, height: 280 }}
+            minWidth={0}
+            width="100%"
+          >
             <ComposedChart data={data}>
               <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
               <XAxis dataKey="label" stroke="#475569" tickLine={false} />
-              <YAxis stroke="#475569" tickFormatter={(value) => compactNumber(Number(value))} tickLine={false} />
+              <YAxis
+                stroke="#475569"
+                tickFormatter={(value) => compactNumber(Number(value))}
+                tickLine={false}
+              />
               <Tooltip contentStyle={tooltipStyle} />
               <Legend />
-              <Bar dataKey="videoViews" fill="#2563eb" name="วิวจากวิดีโอ" radius={[4, 4, 0, 0]} stackId="views" />
-              <Bar dataKey="talkViews" fill="#0891b2" name="วิวจากพูดคุย" radius={[4, 4, 0, 0]} stackId="views" />
+              <Bar
+                dataKey="videoViews"
+                fill="#2563eb"
+                name="วิวจากวิดีโอ"
+                radius={[4, 4, 0, 0]}
+                stackId="views"
+              />
+              <Bar
+                dataKey="talkViews"
+                fill="#0891b2"
+                name="วิวจากพูดคุย"
+                radius={[4, 4, 0, 0]}
+                stackId="views"
+              />
             </ComposedChart>
           </ResponsiveContainer>
         </div>
 
         <div className="chart-box-md">
-          <ResponsiveContainer height="100%" initialDimension={{ width: 360, height: 280 }} minWidth={0} width="100%">
+          <ResponsiveContainer
+            height="100%"
+            initialDimension={{ width: 360, height: 280 }}
+            minWidth={0}
+            width="100%"
+          >
             <PieChart>
               <Pie
                 data={formatTotals}
@@ -54,7 +92,10 @@ export function ContentFormatPanel({ analytics }: AnalyticsPanelProps) {
                   <Cell fill={item.name === 'Video' ? '#2563eb' : '#0891b2'} key={item.name} />
                 ))}
               </Pie>
-              <Tooltip contentStyle={tooltipStyle} formatter={(value) => compactNumber(Number(value))} />
+              <Tooltip
+                contentStyle={tooltipStyle}
+                formatter={(value) => compactNumber(Number(value))}
+              />
               <Legend />
             </PieChart>
           </ResponsiveContainer>
@@ -64,7 +105,12 @@ export function ContentFormatPanel({ analytics }: AnalyticsPanelProps) {
       <div className="format-stat-row">
         <MiniStat label="วิวเฉลี่ยวิดีโอ" value={video ? compactNumber(video.avgViews) : '-'} />
         <MiniStat label="วิวเฉลี่ยพูดคุย" value={talk ? compactNumber(talk.avgViews) : '-'} />
-        <MiniStat label="สัดส่วนวิดีโอ" value={video ? percent(video.views / Math.max(video.views + (talk?.views ?? 0), 1), 0) : '-'} />
+        <MiniStat
+          label="สัดส่วนวิดีโอ"
+          value={
+            video ? percent(video.views / Math.max(video.views + (talk?.views ?? 0), 1), 0) : '-'
+          }
+        />
       </div>
 
       <SectionInsight>

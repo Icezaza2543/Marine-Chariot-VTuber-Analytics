@@ -1,4 +1,14 @@
-import { Bar, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import {
+  Bar,
+  CartesianGrid,
+  ComposedChart,
+  Legend,
+  Line,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
 import { Scissors } from 'lucide-react'
 import { compactNumber } from '../../lib/format'
 import { SectionInsight } from '../SectionInsight'
@@ -24,7 +34,12 @@ export function ShortsDeepDivePanel({ analytics }: AnalyticsPanelProps) {
       </div>
 
       <div className="chart-box-md">
-        <ResponsiveContainer height="100%" initialDimension={{ width: 960, height: 280 }} minWidth={0} width="100%">
+        <ResponsiveContainer
+          height="100%"
+          initialDimension={{ width: 960, height: 280 }}
+          minWidth={0}
+          width="100%"
+        >
           <ComposedChart data={data}>
             <CartesianGrid stroke="rgba(71,85,105,0.16)" vertical={false} />
             <XAxis dataKey="label" stroke="#475569" tickLine={false} />
@@ -37,8 +52,21 @@ export function ShortsDeepDivePanel({ analytics }: AnalyticsPanelProps) {
             <YAxis orientation="right" stroke="#7c3aed" tickLine={false} yAxisId="count" />
             <Tooltip contentStyle={tooltipStyle} />
             <Legend />
-            <Bar dataKey="views" fill="#e44878" name="วิวจาก Shorts" radius={[5, 5, 0, 0]} yAxisId="views" />
-            <Line dataKey="count" dot={false} name="จำนวน Shorts" stroke="#7c3aed" strokeWidth={2.4} yAxisId="count" />
+            <Bar
+              dataKey="views"
+              fill="#e44878"
+              name="วิวจาก Shorts"
+              radius={[5, 5, 0, 0]}
+              yAxisId="views"
+            />
+            <Line
+              dataKey="count"
+              dot={false}
+              name="จำนวน Shorts"
+              stroke="#7c3aed"
+              strokeWidth={2.4}
+              yAxisId="count"
+            />
           </ComposedChart>
         </ResponsiveContainer>
       </div>

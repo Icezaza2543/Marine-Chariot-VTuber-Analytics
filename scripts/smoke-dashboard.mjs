@@ -12,7 +12,9 @@ let previewProcess
 try {
   if (shouldStartPreview) {
     if (await isServerResponding(smokeUrl)) {
-      throw new Error(`${smokeUrl} is already serving before smoke starts. Stop the existing server or set SMOKE_URL.`)
+      throw new Error(
+        `${smokeUrl} is already serving before smoke starts. Stop the existing server or set SMOKE_URL.`,
+      )
     }
 
     previewProcess = startPreviewServer()
@@ -101,10 +103,10 @@ async function launchBrowser() {
     try {
       return await chromium.launch({ headless: true })
     } catch (bundledError) {
-      throw new Error(
-        `Cannot launch Playwright browser. Chrome channel failed: ${describeError(
-          chromeError,
-        )}. Bundled Chromium failed: ${describeError(bundledError)}`,
+      throw new AggregateError(
+        [chromeError, bundledError],
+        `Cannot launch Playwright browser. Chrome channel failed: ${describeError(chromeError)}. Bundled Chromium failed: ${describeError(bundledError)}`,
+        { cause: bundledError },
       )
     }
   }
@@ -130,7 +132,9 @@ async function runDesktopSmoke(browser, url) {
     await page.locator('dialog[open]').getByText('MIT License').waitFor({ timeout: 10_000 })
     await page.getByRole('button', { name: 'เข้าใจแล้ว' }).click()
 
-    const dataNoticeHref = await page.getByRole('link', { name: 'Data Notice' }).getAttribute('href')
+    const dataNoticeHref = await page
+      .getByRole('link', { name: 'Data Notice' })
+      .getAttribute('href')
     assert(dataNoticeHref?.includes('NOTICE.md'), 'Data Notice link should point to NOTICE.md')
     assertNoConsoleIssues(issues)
 
@@ -145,7 +149,10 @@ async function runDesktopSmoke(browser, url) {
 }
 
 async function runMobileSmoke(browser, url) {
-  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true })
+  const context = await browser.newContext({
+    viewport: { width: 390, height: 844 },
+    isMobile: true,
+  })
   const page = await context.newPage()
   const issues = collectConsoleIssues(page)
 

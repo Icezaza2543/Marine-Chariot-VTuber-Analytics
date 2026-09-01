@@ -149,10 +149,14 @@ For Git integration, connect this repo to Vercel and push to the production bran
 ## QA
 
 ```bash
+npm run format:check
+npm run lint
 npm run check
 npm run test
 npm run build
 npm run smoke
 ```
+
+The `Quality` GitHub Actions workflow runs formatting, lint, strict TypeScript, unit tests, production build, security audit, and desktop/mobile smoke checks for every push and pull request to `master`.
 
 Known build note: the bundle-size warning is expected because the dashboard intentionally ships Chart.js, Chart.js plugins, and Recharts together.

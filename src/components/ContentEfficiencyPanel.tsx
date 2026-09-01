@@ -44,7 +44,12 @@ export function ContentEfficiencyPanel({ analytics }: ContentEfficiencyPanelProp
       </div>
 
       <div className="panel-chart-fill">
-        <ResponsiveContainer height="100%" initialDimension={{ width: 640, height: 300 }} minWidth={0} width="100%">
+        <ResponsiveContainer
+          height="100%"
+          initialDimension={{ width: 640, height: 300 }}
+          minWidth={0}
+          width="100%"
+        >
           <ScatterChart>
             <CartesianGrid stroke="rgba(71,85,105,0.16)" />
             <XAxis
@@ -54,7 +59,13 @@ export function ContentEfficiencyPanel({ analytics }: ContentEfficiencyPanelProp
               tickFormatter={(value) => compactNumber(Number(value))}
               type="number"
             />
-            <YAxis dataKey="engagement" name="การมีส่วนร่วม" stroke="#475569" tickFormatter={(value) => `${value}%`} type="number" />
+            <YAxis
+              dataKey="engagement"
+              name="การมีส่วนร่วม"
+              stroke="#475569"
+              tickFormatter={(value) => `${value}%`}
+              type="number"
+            />
             <ZAxis dataKey="videos" range={[90, 620]} />
             <Tooltip content={<EfficiencyTooltip />} cursor={{ strokeDasharray: '3 3' }} />
             <Scatter data={chartData} fill="#0891b2" name="ประเภทคอนเทนต์" />
@@ -71,7 +82,13 @@ export function ContentEfficiencyPanel({ analytics }: ContentEfficiencyPanelProp
   )
 }
 
-function EfficiencyTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: Record<string, number | string> }> }) {
+function EfficiencyTooltip({
+  active,
+  payload,
+}: {
+  active?: boolean
+  payload?: Array<{ payload: Record<string, number | string> }>
+}) {
   if (!active || !payload?.[0]) {
     return null
   }
@@ -83,7 +100,9 @@ function EfficiencyTooltip({ active, payload }: { active?: boolean; payload?: Ar
       <strong>{data.contentType}</strong>
       <span>{compactNumber(Number(data.avgViews))} วิวเฉลี่ย</span>
       <span>มีส่วนร่วม {data.engagement}%</span>
-      <span>{data.videos} วิดีโอ · ไวรัล {Number(data.viral).toFixed(1)}</span>
+      <span>
+        {data.videos} วิดีโอ · ไวรัล {Number(data.viral).toFixed(1)}
+      </span>
     </div>
   )
 }

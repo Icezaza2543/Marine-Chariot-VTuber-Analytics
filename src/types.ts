@@ -1,10 +1,5 @@
 export type MetricKey =
-  | 'views'
-  | 'likes'
-  | 'comments'
-  | 'engagementRate'
-  | 'viralScore'
-  | 'retentionScore'
+  'views' | 'likes' | 'comments' | 'engagementRate' | 'viralScore' | 'retentionScore'
 
 export type Granularity = 'year' | 'month' | 'week' | 'day'
 
