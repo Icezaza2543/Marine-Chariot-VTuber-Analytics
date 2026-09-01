@@ -13,7 +13,7 @@ export const STACK_ARCHITECTURE = {
   formsAndValidation: 'React Hook Form + Zod for the advanced filter system',
   dateHandling: 'date-fns for ISO parsing, calendar grouping, and range math',
   csvPipeline:
-    'Papa Parse reads the live Google Sheet CSV at runtime with public/data/marine-ch-data.csv as fallback',
+    'Papa Parse reads the live Google Sheet CSV at runtime with a scheduled public/data/marine-ch-data.csv snapshot as fallback',
   socialPipeline:
     'scripts/fetch-x-data.mjs pulls X API v2 data into public/data/marine-x-posts.json; the app merges it as social signal analytics',
   deployment:

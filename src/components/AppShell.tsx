@@ -1,16 +1,17 @@
 import { format, parseISO } from 'date-fns'
 import { th } from 'date-fns/locale'
 import { motion } from 'framer-motion'
-import { Play, Sparkles, Users } from 'lucide-react'
+import { Database, Play, Sparkles, Users } from 'lucide-react'
 import { STACK_ARCHITECTURE } from '../architecture'
 import { CHANNEL_META } from '../data/channelMeta'
 import { compactNumber } from '../lib/format'
-import type { AnalyticsBundle } from '../types'
+import type { AnalyticsBundle, MarineDataSnapshot } from '../types'
 import { OfficialLinks } from './OfficialLinks'
 import { SiteFooter } from './SiteFooter'
 
 interface AppShellProps {
   analytics: AnalyticsBundle
+  dataSnapshot: MarineDataSnapshot | null
   children: React.ReactNode
 }
 
@@ -34,7 +35,17 @@ function formatSnapshotDate(value: string) {
   return format(date, 'MMM yyyy', { locale: th })
 }
 
-export function AppShell({ analytics, children }: AppShellProps) {
+function formatLoadedAt(value: string) {
+  const date = parseISO(value)
+
+  if (Number.isNaN(date.getTime())) {
+    return value
+  }
+
+  return format(date, 'd MMM yyyy HH:mm', { locale: th })
+}
+
+export function AppShell({ analytics, dataSnapshot, children }: AppShellProps) {
   const firstRecord = analytics.records[0]
   const lastRecord = analytics.records.at(-1)
   const firstDate = firstRecord?.publishedDate ?? '-'
@@ -82,6 +93,13 @@ export function AppShell({ analytics, children }: AppShellProps) {
             <p className="channel-range text-xs opacity-70">
               ข้อมูล {firstDate} ถึง {lastDate}
             </p>
+            {dataSnapshot ? (
+              <p className="channel-range mt-1 flex items-center gap-1.5 text-xs opacity-70">
+                <Database aria-hidden="true" className="h-3 w-3" />
+                {dataSnapshot.source === 'live' ? 'Google Sheet สด' : 'Fallback CSV'} · โหลดเมื่อ{' '}
+                {formatLoadedAt(dataSnapshot.loadedAt)}
+              </p>
+            ) : null}
           </div>
         </div>
 

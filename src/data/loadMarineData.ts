@@ -1,7 +1,7 @@
 import { getISOWeek, getMonth, getYear, parseISO } from 'date-fns'
 import Papa from 'papaparse'
 import { z } from 'zod'
-import type { RawMarineRow, VideoRecord } from '../types'
+import type { MarineDataSnapshot, RawMarineRow, VideoRecord } from '../types'
 
 const LOCAL_DATA_PATH = '/data/marine-ch-data.csv'
 const DEFAULT_GOOGLE_SHEET_CSV_URL =
@@ -47,8 +47,8 @@ const contentTypeAliases: Array<[RegExp, string]> = [
   [/^(drawing|draw|วาดรูป)$/i, 'Drawing'],
 ]
 
-export async function loadMarineData() {
-  const { csvText, sourcePath } = await loadCsvPayload(DATA_PATH)
+export async function loadMarineData(signal?: AbortSignal): Promise<MarineDataSnapshot> {
+  const { csvText, sourcePath, source } = await loadCsvPayload(DATA_PATH, signal)
   const parsed = Papa.parse<RawMarineRow>(csvText, {
     header: true,
     skipEmptyLines: true,
@@ -65,11 +65,18 @@ export async function loadMarineData() {
 
   const rows = validateCsvRows(parsed.data, parsed.meta.fields ?? [], sourcePath)
   const records = rows
-    .map(normalizeRow)
-    .filter((record): record is VideoRecord => record !== null)
+    .map((row, index) => normalizeRow(row, index + 2, sourcePath))
     .sort((a, b) => a.publishedAt.getTime() - b.publishedAt.getTime())
 
-  return scoreVideos(records)
+  const scoredRecords = scoreVideos(records)
+
+  return {
+    records: scoredRecords,
+    source,
+    sourcePath,
+    loadedAt: new Date().toISOString(),
+    newestPublishedDate: scoredRecords.at(-1)?.publishedDate ?? null,
+  }
 }
 
 function validateCsvRows(rows: RawMarineRow[], fields: string[], sourcePath: string): RawMarineRow[] {
@@ -103,16 +110,25 @@ function formatZodIssues(issues: z.core.$ZodIssue[]) {
     .join('; ')
 }
 
-async function loadCsvPayload(primaryPath: string) {
+async function loadCsvPayload(primaryPath: string, signal?: AbortSignal) {
   try {
-    return await fetchCsvPayload(primaryPath)
+    const payload = await fetchCsvPayload(primaryPath, signal)
+    return {
+      ...payload,
+      source: primaryPath === LOCAL_DATA_PATH ? ('fallback' as const) : ('live' as const),
+    }
   } catch (primaryError) {
+    if (isAbortError(primaryError)) {
+      throw primaryError
+    }
+
     if (primaryPath === LOCAL_DATA_PATH) {
       throw primaryError
     }
 
     try {
-      return await fetchCsvPayload(LOCAL_DATA_PATH)
+      const payload = await fetchCsvPayload(LOCAL_DATA_PATH, signal)
+      return { ...payload, source: 'fallback' as const }
     } catch (fallbackError) {
       throw new Error(
         `Cannot load Marine Chariot CSV. Primary source failed: ${describeError(
@@ -123,8 +139,11 @@ async function loadCsvPayload(primaryPath: string) {
   }
 }
 
-async function fetchCsvPayload(sourcePath: string) {
-  const response = await fetch(addCacheBuster(sourcePath), { cache: 'no-store' })
+async function fetchCsvPayload(sourcePath: string, signal?: AbortSignal) {
+  const response = await fetch(sourcePath, {
+    cache: sourcePath === LOCAL_DATA_PATH ? 'force-cache' : 'no-cache',
+    signal,
+  })
 
   if (!response.ok) {
     throw new Error(`${sourcePath} returned HTTP ${response.status}`)
@@ -136,48 +155,73 @@ async function fetchCsvPayload(sourcePath: string) {
   }
 }
 
-function addCacheBuster(sourcePath: string) {
-  const separator = sourcePath.includes('?') ? '&' : '?'
-  return `${sourcePath}${separator}refresh=${Date.now()}`
-}
-
 function describeError(error: unknown) {
   return error instanceof Error ? error.message : String(error)
 }
 
-function normalizeRow(row: RawMarineRow): VideoRecord | null {
+function isAbortError(error: unknown) {
+  return error instanceof DOMException && error.name === 'AbortError'
+}
+
+function normalizeRow(row: RawMarineRow, rowNumber: number, sourcePath: string): VideoRecord {
   const date = parseISO(row.published_date)
 
   if (Number.isNaN(date.getTime())) {
-    return null
+    throw dataError(sourcePath, rowNumber, 'published_date', row.published_date)
   }
 
-  const minutes = parseNumeric(row.minute) || durationToMinutes(row.duration)
-  const avgViewDurationRatio = parseNumeric(row['AVG View Duration'])
+  const parsedMinutes = row.minute.trim()
+    ? parseRequiredNumeric(row.minute, 'minute', rowNumber, sourcePath)
+    : 0
+  const minutes = parsedMinutes || durationToMinutes(row.duration, rowNumber, sourcePath)
+  const avgViewDurationRatio = parseRequiredNumeric(
+    row['AVG View Duration'],
+    'AVG View Duration',
+    rowNumber,
+    sourcePath,
+  )
   const contentType = normalizeContentType(row.type, row['Video Name'])
 
   if (contentType === 'ไม่ระบุ') {
-    return null
+    throw dataError(sourcePath, rowNumber, 'type', row.type)
+  }
+
+  const id = parseRequiredInteger(row.No, 'No', rowNumber, sourcePath)
+  const url = validateYouTubeUrl(row.Urls, rowNumber, sourcePath)
+  const title = row['Video Name'].trim()
+
+  if (!title) {
+    throw dataError(sourcePath, rowNumber, 'Video Name', row['Video Name'])
   }
 
   const tags = extractTags(row['Video Name'], contentType)
   const retentionMinutes = minutes * avgViewDurationRatio
 
   return {
-    id: parseInteger(row.No),
-    url: row.Urls.trim(),
-    title: row['Video Name'].trim(),
-    views: parseInteger(row.View),
-    likes: parseInteger(row.Like),
-    comments: parseInteger(row.Comm),
+    id,
+    url,
+    title,
+    views: parseRequiredInteger(row.View, 'View', rowNumber, sourcePath),
+    likes: parseRequiredInteger(row.Like, 'Like', rowNumber, sourcePath),
+    comments: parseRequiredInteger(row.Comm, 'Comm', rowNumber, sourcePath),
     publishedAt: date,
     publishedDate: row.published_date,
     duration: row.duration.trim(),
     minutes,
     contentType,
-    engagementRate: parseNumeric(row['Engagement Rate']),
+    engagementRate: parseRequiredNumeric(
+      row['Engagement Rate'],
+      'Engagement Rate',
+      rowNumber,
+      sourcePath,
+    ),
     avgViewDurationRatio,
-    viewsToLikesRatio: parseNumeric(row['Views to Likes Ratio']),
+    viewsToLikesRatio: parseRequiredNumeric(
+      row['Views to Likes Ratio'],
+      'Views to Likes Ratio',
+      rowNumber,
+      sourcePath,
+    ),
     tags,
     retentionMinutes,
     retentionScore: clamp((avgViewDurationRatio / 0.12) * 100, 0, 100),
@@ -252,11 +296,16 @@ function extractTags(title: string, contentType: string) {
   return Array.from(tags)
 }
 
-function durationToMinutes(duration: string) {
-  const parts = duration
-    .split(':')
-    .map((part) => Number(part))
-    .filter((part) => Number.isFinite(part))
+function durationToMinutes(duration: string, rowNumber: number, sourcePath: string) {
+  const parts = duration.split(':').map((part) => Number(part))
+
+  if (
+    parts.length < 1 ||
+    parts.length > 3 ||
+    parts.some((part) => !Number.isFinite(part) || part < 0)
+  ) {
+    throw dataError(sourcePath, rowNumber, 'duration', duration)
+  }
 
   if (parts.length === 3) {
     return parts[0] * 60 + parts[1] + parts[2] / 60
@@ -266,16 +315,58 @@ function durationToMinutes(duration: string) {
     return parts[0] + parts[1] / 60
   }
 
-  return parts[0] || 0
+  if (parts.length === 1) {
+    return parts[0]
+  }
+
+  throw dataError(sourcePath, rowNumber, 'duration', duration)
 }
 
-function parseNumeric(value: string) {
-  const parsed = Number(String(value).replaceAll(',', '').trim())
-  return Number.isFinite(parsed) ? parsed : 0
+function parseRequiredNumeric(
+  value: string,
+  field: string,
+  rowNumber: number,
+  sourcePath: string,
+) {
+  const normalized = String(value).replaceAll(',', '').trim()
+  const parsed = Number(normalized)
+
+  if (!normalized || !Number.isFinite(parsed) || parsed < 0) {
+    throw dataError(sourcePath, rowNumber, field, value)
+  }
+
+  return parsed
 }
 
-function parseInteger(value: string) {
-  return Math.round(parseNumeric(value))
+function parseRequiredInteger(
+  value: string,
+  field: string,
+  rowNumber: number,
+  sourcePath: string,
+) {
+  return Math.round(parseRequiredNumeric(value, field, rowNumber, sourcePath))
+}
+
+function validateYouTubeUrl(value: string, rowNumber: number, sourcePath: string) {
+  const normalized = value.trim()
+
+  try {
+    const url = new URL(normalized)
+
+    if (!['youtube.com', 'www.youtube.com', 'youtu.be'].includes(url.hostname.toLowerCase())) {
+      throw new Error('Unsupported host')
+    }
+
+    return normalized
+  } catch {
+    throw dataError(sourcePath, rowNumber, 'Urls', value)
+  }
+}
+
+function dataError(sourcePath: string, rowNumber: number, field: string, value: string) {
+  return new Error(
+    `Marine Chariot CSV from ${sourcePath} has invalid ${field} at row ${rowNumber}: ${JSON.stringify(value)}`,
+  )
 }
 
 function clamp(value: number, min: number, max: number) {

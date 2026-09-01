@@ -7,6 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "sync:youtube": "node scripts/sync-youtube-data.mjs --out public/data/marine-ch-data.csv",
     "fetch:x": "node scripts/fetch-x-data.mjs --username MarineChariot --out public/data/marine-x-posts.json",
     "fetch:x:optional": "node scripts/fetch-x-data.mjs --optional --username MarineChariot --out public/data/marine-x-posts.json",
     "build": "tsc && vite build",

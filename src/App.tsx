@@ -82,7 +82,7 @@ function SectionFallback() {
 }
 
 export default function App() {
-  const { records, xData, isLoading, error } = useMarineDashboardData()
+  const { records, xData, dataSnapshot, isLoading, error } = useMarineDashboardData()
   const { filters, tableSort, topLimit } = useDashboardStore(
     useShallow((state) => ({
       filters: state.filters,
@@ -129,7 +129,7 @@ export default function App() {
   }
 
   return (
-    <AppShell analytics={analytics}>
+    <AppShell analytics={analytics} dataSnapshot={dataSnapshot}>
       <div className="dashboard-workspace">
         <KpiDashboard kpis={analytics.kpis} />
         <DeferredSection>

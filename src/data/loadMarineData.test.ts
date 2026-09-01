@@ -21,8 +21,11 @@ describe('loadMarineData', () => {
       vi.fn(async () => new Response(csv, { status: 200 })),
     )
 
-    const records = await loadMarineData()
+    const snapshot = await loadMarineData()
+    const records = snapshot.records
 
+    expect(snapshot.source).toBe('live')
+    expect(snapshot.newestPublishedDate).toBe('2026-02-01')
     expect(records.map((record) => record.id)).toEqual([1, 2])
     expect(records[0]).toMatchObject({
       contentType: 'ASMR',
@@ -43,5 +46,35 @@ describe('loadMarineData', () => {
     )
 
     await expect(loadMarineData()).rejects.toThrow(/missing required CSV fields/i)
+  })
+
+  it('uses the local snapshot when the live source is unavailable', async () => {
+    const csv = [
+      header,
+      '1,https://youtu.be/alpha123,Marine Alpha,1000,100,10,2026-01-01,00:30:00,30,Gaming,0.11,0.06,10',
+    ].join('\n')
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response('unavailable', { status: 503 }))
+      .mockResolvedValueOnce(new Response(csv, { status: 200 }))
+    vi.stubGlobal('fetch', fetchMock)
+
+    const snapshot = await loadMarineData()
+
+    expect(snapshot.source).toBe('fallback')
+    expect(snapshot.sourcePath).toBe('/data/marine-ch-data.csv')
+    expect(snapshot.records).toHaveLength(1)
+    expect(fetchMock).toHaveBeenCalledTimes(2)
+  })
+
+  it('rejects invalid numeric metrics instead of silently replacing them with zero', async () => {
+    const csv = [
+      header,
+      '1,https://youtu.be/alpha123,Marine Alpha,not-a-number,100,10,2026-01-01,00:30:00,30,Gaming,0.11,0.06,10',
+    ].join('\n')
+
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(csv, { status: 200 })))
+
+    await expect(loadMarineData()).rejects.toThrow(/invalid View at row 2/i)
   })
 })

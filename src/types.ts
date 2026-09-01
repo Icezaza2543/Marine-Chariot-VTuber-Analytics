@@ -49,6 +49,14 @@ export interface VideoRecord {
   weekday: number
 }
 
+export interface MarineDataSnapshot {
+  records: VideoRecord[]
+  source: 'live' | 'fallback'
+  sourcePath: string
+  loadedAt: string
+  newestPublishedDate: string | null
+}
+
 export interface DashboardFilters {
   dateStart: string
   dateEnd: string
