@@ -16,8 +16,6 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    env:
-      VITE_MARINE_CSV_URL: /data/marine-ch-data.csv
     steps:
       - uses: actions/checkout@v4
 
@@ -32,6 +30,9 @@ jobs:
       - run: npm run lint
       - run: npm run check
       - run: npm test
-      - run: npm run build
+      - name: Build with the committed fallback snapshot
+        env:
+          VITE_MARINE_CSV_URL: /data/marine-ch-data.csv
+        run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run smoke
