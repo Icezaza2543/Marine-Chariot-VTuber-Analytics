@@ -1,11 +1,10 @@
 import type { MarineDataSnapshot } from '../types'
-import { parseMarineCsv } from './parseMarineCsv'
+import { parseMarineSheet } from './parseMarineSheet'
 
-const LOCAL_DATA_PATH = '/data/marine-ch-data.csv'
-const DEFAULT_GOOGLE_SHEET_CSV_URL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vTyNpRUR1B4SDX_VKOIDndOfodMaEMuojtK7SYocFy6oz6bHtJ_uxmMDTvmipvu8H_7o7yNb5rgq0fq/pub?gid=0&single=true&output=csv'
+import { GOOGLE_SHEET_URL } from './sheetSource.ts'
 
-const DATA_PATH = import.meta.env.VITE_MARINE_CSV_URL?.trim() || DEFAULT_GOOGLE_SHEET_CSV_URL
+const LOCAL_DATA_PATH = '/data/marine-sheet.json'
+const DATA_PATH = import.meta.env.VITE_MARINE_SHEET_URL?.trim() || GOOGLE_SHEET_URL
 
 export async function loadMarineData(signal?: AbortSignal): Promise<MarineDataSnapshot> {
   try {
@@ -16,7 +15,7 @@ export async function loadMarineData(signal?: AbortSignal): Promise<MarineDataSn
       return await loadSnapshot(LOCAL_DATA_PATH, signal)
     } catch (fallbackError) {
       throw new Error(
-        `Cannot load Marine Chariot CSV. Primary source failed: ${describeError(primaryError)}. Local fallback failed: ${describeError(fallbackError)}`,
+        `Cannot load Marine Chariot Google Sheets data. Primary source failed: ${describeError(primaryError)}. Local fallback failed: ${describeError(fallbackError)}`,
         { cause: fallbackError },
       )
     }
@@ -30,9 +29,10 @@ async function loadSnapshot(sourcePath: string, signal?: AbortSignal): Promise<M
     signal: signal ? AbortSignal.any([signal, timeout]) : timeout,
   })
   if (!response.ok) throw new Error(`${sourcePath} returned HTTP ${response.status}`)
-  const { records, skippedRows } = parseMarineCsv(await response.text(), sourcePath)
+  const { records, skippedRows, updatedAt } = parseMarineSheet(await response.json(), sourcePath)
   return {
     records,
+    updatedAt,
     skippedRows,
     source: sourcePath === LOCAL_DATA_PATH ? 'fallback' : 'live',
     sourcePath,

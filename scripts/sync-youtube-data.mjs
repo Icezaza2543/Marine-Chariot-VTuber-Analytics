@@ -1,28 +1,30 @@
 import { mkdirSync, writeFileSync, renameSync, rmSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
-import Papa from 'papaparse'
-import { parseMarineCsv } from '../src/data/parseMarineCsv.ts'
+import { parseMarineSheet } from '../src/data/parseMarineSheet.ts'
 
-const DEFAULT_SOURCE =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vTyNpRUR1B4SDX_VKOIDndOfodMaEMuojtK7SYocFy6oz6bHtJ_uxmMDTvmipvu8H_7o7yNb5rgq0fq/pub?gid=0&single=true&output=csv'
+import { GOOGLE_SHEET_URL } from '../src/data/sheetSource.ts'
+
 const args = parseArgs(process.argv.slice(2))
 const sourceUrl = String(
-  args.source ?? process.env.MARINE_CSV_URL ?? process.env.VITE_MARINE_CSV_URL ?? DEFAULT_SOURCE,
+  args.source ??
+    process.env.MARINE_SHEET_URL ??
+    process.env.VITE_MARINE_SHEET_URL ??
+    GOOGLE_SHEET_URL,
 )
-const outputPath = resolve(String(args.out ?? 'public/data/marine-ch-data.csv'))
+const outputPath = resolve(String(args.out ?? 'public/data/marine-sheet.json'))
 const response = await fetch(sourceUrl, { cache: 'no-cache', signal: AbortSignal.timeout(15_000) })
 
 if (!response.ok) {
-  throw new Error(`YouTube CSV source returned HTTP ${response.status}`)
+  throw new Error(`Google Sheets endpoint returned HTTP ${response.status}`)
 }
 
-const csvText = await response.text()
-const { records, rows, skippedRows } = parseMarineCsv(csvText, sourceUrl)
+const payload = await response.json()
+const { records, rows, skippedRows } = parseMarineSheet(payload, sourceUrl)
 const newestDate = records.at(-1).publishedDate
 mkdirSync(dirname(outputPath), { recursive: true })
 const temporaryPath = `${outputPath}.tmp`
 try {
-  writeFileSync(temporaryPath, `${Papa.unparse(rows)}\n`)
+  writeFileSync(temporaryPath, `${JSON.stringify({ ...payload, rows }, null, 2)}\n`)
   renameSync(temporaryPath, outputPath)
 } finally {
   rmSync(temporaryPath, { force: true })

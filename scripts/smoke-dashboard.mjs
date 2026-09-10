@@ -127,6 +127,9 @@ async function runDesktopSmoke(browser, url) {
     await page.locator('.app-shell').waitFor({ timeout: 15_000 })
     await page.locator('.kpi-grid').waitFor({ timeout: 15_000 })
     await page.getByText('ตัวกรองข้อมูล').waitFor({ timeout: 15_000 })
+    if (process.env.SMOKE_REQUIRE_LIVE === '1') {
+      await page.getByText(/Google Sheet สด/).waitFor({ timeout: 15_000 })
+    }
 
     await page.getByPlaceholder('ชื่อคลิป เกม หรือคำสำคัญ').fill('ASMR')
     await page.getByRole('button', { name: 'ใช้ตัวกรอง' }).click()
@@ -169,6 +172,9 @@ async function runMobileSmoke(browser, url) {
     await page.locator('.app-shell').waitFor({ timeout: 15_000 })
     await page.locator('.kpi-grid').waitFor({ timeout: 15_000 })
     await page.getByText('ตัวกรองข้อมูล').waitFor({ timeout: 15_000 })
+    if (process.env.SMOKE_REQUIRE_LIVE === '1') {
+      await page.getByText(/Google Sheet สด/).waitFor({ timeout: 15_000 })
+    }
     await page.getByRole('button', { name: 'ใช้ตัวกรอง' }).waitFor({ timeout: 15_000 })
     assertNoConsoleIssues(issues)
 

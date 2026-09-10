@@ -33,7 +33,7 @@ export interface VideoRecord {
   contentType: string
   engagementRate: number
   avgViewDurationRatio: number
-  viewsToLikesRatio: number
+  viewsToLikesRatio: number | null
   tags: string[]
   retentionMinutes: number
   retentionScore: number
@@ -48,6 +48,7 @@ export interface MarineDataSnapshot {
   records: VideoRecord[]
   source: 'live' | 'fallback'
   sourcePath: string
+  updatedAt: string
   loadedAt: string
   newestPublishedDate: string | null
   skippedRows: number

@@ -85,7 +85,7 @@ export function useMarineDashboardData() {
         }
       } catch (cause) {
         if (!isAbortError(cause)) {
-          console.warn('Marine Chariot CSV refresh failed', cause)
+          console.warn('Marine Chariot Google Sheets refresh failed', cause)
         }
       } finally {
         isRefreshing = false

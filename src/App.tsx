@@ -158,7 +158,7 @@ export default function App() {
             <div>
               <p className="text-sm font-semibold text-white">Loading Marine Chariot data</p>
               <p className="text-xs text-[var(--mc-muted)]">
-                Parsing CSV and preparing analytics engine
+                Loading Google Sheets and preparing analytics engine
               </p>
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function App() {
           <div className="glass-panel border-red-400/40 p-6" role="alert">
             <div className="mb-4 flex items-center gap-3 text-red-200">
               <AlertTriangle className="h-6 w-6" />
-              <h1 className="text-xl font-semibold">CSV load failed</h1>
+              <h1 className="text-xl font-semibold">Google Sheets data unavailable</h1>
             </div>
             <p className="text-sm text-[var(--mc-muted)]">{error}</p>
           </div>

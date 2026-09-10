@@ -108,8 +108,8 @@ export function AppShell({ analytics, dataSnapshot, children }: AppShellProps) {
             {dataSnapshot ? (
               <p className="channel-range mt-1 flex items-center gap-1.5 text-xs opacity-70">
                 <Database aria-hidden="true" className="h-3 w-3" />
-                {dataSnapshot.source === 'live' ? 'Google Sheet สด' : 'Fallback CSV'} · โหลดเมื่อ{' '}
-                {formatLoadedAt(dataSnapshot.loadedAt)}
+                {dataSnapshot.source === 'live' ? 'Google Sheet สด' : 'สำเนาสำรอง JSON'} ·
+                ซิงก์ชีตเมื่อ {formatLoadedAt(dataSnapshot.updatedAt)}
                 {dataSnapshot.skippedRows > 0
                   ? ` · รอข้อมูลครบ ${dataSnapshot.skippedRows} คลิป (ยังไม่นำมาคำนวณ)`
                   : ''}

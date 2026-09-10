@@ -38,7 +38,7 @@ jobs:
       - run: npm test
       - name: Build with the refreshed snapshot
         env:
-          VITE_MARINE_CSV_URL: /data/marine-ch-data.csv
+          VITE_MARINE_SHEET_URL: /data/marine-sheet.json
         run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run smoke
@@ -46,7 +46,7 @@ jobs:
       - name: Commit refreshed snapshots
         shell: bash
         run: |
-          git add public/data/marine-ch-data.csv public/data/marine-x-posts.json
+          git add public/data/marine-sheet.json public/data/marine-x-posts.json
           if git diff --cached --quiet; then
             echo "Snapshots are already current."
             exit 0

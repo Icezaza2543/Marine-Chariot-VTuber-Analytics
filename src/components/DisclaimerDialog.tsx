@@ -50,7 +50,7 @@ export function DisclaimerDialog({ open, onClose }: DisclaimerDialogProps) {
         <div className="disclaimer-dialog__body">
           <p>
             Marine Chariot Analytics เป็นโปรเจกต์ fan-made ที่จัดทำเพื่อวิเคราะห์ข้อมูลสาธารณะจาก
-            YouTube export และ X API ไม่ได้ดำเนินการโดยหรือในนามของ Marine Chariot อย่างเป็นทางการ
+            YouTube Data API และ X API ไม่ได้ดำเนินการโดยหรือในนามของ Marine Chariot อย่างเป็นทางการ
           </p>
           <p>
             โค้ดของแดชบอร์ดเผยแพร่ภายใต้ MIT License
@@ -64,9 +64,13 @@ export function DisclaimerDialog({ open, onClose }: DisclaimerDialogProps) {
             หรือแสดงว่าเป็นงานอย่างเป็นทางการโดยไม่ได้รับอนุญาต
           </p>
           <p>
-            ตัวเลขในแดชบอร์ดมาจาก Google Sheet CSV ที่รีเฟรชเป็นระยะ และ cache ของ X
+            ตัวเลขในแดชบอร์ดมาจาก Google Sheets JSON ที่รีเฟรชเป็นระยะ และ cache ของ X
             อาจไม่ตรงกับแพลตฟอร์มแบบเรียลไทม์ 100% ยอดซับและข้อมูลช่องทางอื่นเป็น snapshot
             ที่อัปเดตเป็นระยะ
+          </p>
+          <p>
+            ระยะเวลารับชมและ Retention เป็นค่าประมาณ 45% ของความยาวคลิป ไม่ใช่ข้อมูลการรับชมจริงจาก
+            YouTube Analytics
           </p>
           <p>
             Insight และการพยากรณ์เป็นการตีความจากข้อมูลในอดีต ไม่ใช่คำแนะนำทางธุรกิจหรือการลงทุน

@@ -1,9 +1,8 @@
 import { getISOWeek, getMonth, getYear, parseISO } from 'date-fns'
-import Papa from 'papaparse'
 import { z } from 'zod'
 import type { RawMarineRow, VideoRecord } from '../types.ts'
 
-const marineCsvRowSchema = z
+const marineRowSchema = z
   .object({
     No: z.string(),
     Urls: z.string(),
@@ -21,7 +20,7 @@ const marineCsvRowSchema = z
   })
   .passthrough()
 
-const REQUIRED_CSV_FIELDS = Object.keys(marineCsvRowSchema.shape) as Array<keyof RawMarineRow>
+const REQUIRED_FIELDS = Object.keys(marineRowSchema.shape) as Array<keyof RawMarineRow>
 
 const keywordTags: Array<[RegExp, string]> = [
   [/asmr/i, 'ASMR'],
@@ -42,30 +41,38 @@ const contentTypeAliases: Array<[RegExp, string]> = [
   [/^(drawing|draw|วาดรูป)$/i, 'Drawing'],
 ]
 
-export function parseMarineCsv(csvText: string, sourcePath: string) {
-  const parsed = Papa.parse<RawMarineRow>(csvText, {
-    header: true,
-    skipEmptyLines: true,
-    dynamicTyping: false,
-  })
+const cell = z.union([z.string(), z.number().finite()]).transform(String)
+const sheetSchema = z.object({
+  schemaVersion: z.literal(1),
+  source: z.literal('google-sheets'),
+  updatedAt: z.iso.datetime(),
+  retention: z.object({
+    source: z.literal('estimated'),
+    unit: z.literal('minutes'),
+    assumption: z.literal(0.45),
+  }),
+  rows: z.array(z.record(z.string(), cell)),
+})
 
-  if (parsed.errors.length > 0) {
+export function parseMarineSheet(payload: unknown, sourcePath: string) {
+  const envelope = sheetSchema.safeParse(payload)
+  if (!envelope.success)
     throw new Error(
-      `Cannot parse Marine Chariot CSV from ${sourcePath}: ${parsed.errors
-        .map((error) => error.message)
-        .join(', ')}`,
+      `Invalid Google Sheets response from ${sourcePath}: ${formatZodIssues(envelope.error.issues)}`,
     )
-  }
-
-  const rows = validateCsvRows(parsed.data, parsed.meta.fields ?? [], sourcePath)
+  const rows = validateRows(envelope.data.rows, sourcePath)
   const completeRows: RawMarineRow[] = []
   let skippedRows = 0
   const records = rows
     .flatMap((row, index) => {
       // Published-sheet draft rows must not become zero-valued analytics.
       if (
-        REQUIRED_CSV_FIELDS.some(
-          (field) => field !== 'minute' && field !== 'duration' && !row[field].trim(),
+        REQUIRED_FIELDS.some(
+          (field) =>
+            field !== 'minute' &&
+            field !== 'duration' &&
+            field !== 'Views to Likes Ratio' &&
+            !row[field].trim(),
         ) ||
         (!row.minute.trim() && !row.duration.trim())
       ) {
@@ -79,31 +86,26 @@ export function parseMarineCsv(csvText: string, sourcePath: string) {
     .sort((a, b) => a.publishedAt.getTime() - b.publishedAt.getTime())
 
   if (!records.length)
-    throw new Error(`Marine Chariot CSV from ${sourcePath} has no complete data rows`)
+    throw new Error(
+      `Marine Chariot Google Sheets data from ${sourcePath} has no complete data rows`,
+    )
   const scoredRecords = scoreVideos(records)
 
-  return { records: scoredRecords, rows: completeRows, skippedRows }
+  return {
+    records: scoredRecords,
+    rows: completeRows,
+    skippedRows,
+    updatedAt: envelope.data.updatedAt,
+  }
 }
 
-function validateCsvRows(
-  rows: RawMarineRow[],
-  fields: string[],
-  sourcePath: string,
-): RawMarineRow[] {
-  const missingFields = REQUIRED_CSV_FIELDS.filter((field) => !fields.includes(field))
-
-  if (missingFields.length > 0) {
-    throw new Error(
-      `Marine Chariot CSV from ${sourcePath} is missing required CSV fields: ${missingFields.join(', ')}`,
-    )
-  }
-
+function validateRows(rows: Record<string, string>[], sourcePath: string): RawMarineRow[] {
   return rows.map((row, index) => {
-    const result = marineCsvRowSchema.safeParse(row)
+    const result = marineRowSchema.safeParse(row)
 
     if (!result.success) {
       throw new Error(
-        `Marine Chariot CSV from ${sourcePath} has invalid row ${index + 2}: ${formatZodIssues(result.error.issues)}`,
+        `Marine Chariot Google Sheets data from ${sourcePath} has invalid row ${index + 2}: ${formatZodIssues(result.error.issues)}`,
       )
     }
 
@@ -131,12 +133,15 @@ function normalizeRow(row: RawMarineRow, rowNumber: number, sourcePath: string):
     ? parseRequiredNumeric(row.minute, 'minute', rowNumber, sourcePath)
     : 0
   const minutes = parsedMinutes || durationToMinutes(row.duration, rowNumber, sourcePath)
-  const avgViewDurationRatio = parseRequiredNumeric(
+  const estimatedMinutes = parseRequiredNumeric(
     row['AVG View Duration'],
     'AVG View Duration',
     rowNumber,
     sourcePath,
   )
+  if (minutes <= 0 || estimatedMinutes > minutes)
+    throw dataError(sourcePath, rowNumber, 'AVG View Duration', row['AVG View Duration'])
+  const avgViewDurationRatio = estimatedMinutes / minutes
   const contentType = normalizeContentType(row.type, row['Video Name'])
 
   if (contentType === 'ไม่ระบุ') {
@@ -173,12 +178,14 @@ function normalizeRow(row: RawMarineRow, rowNumber: number, sourcePath: string):
       sourcePath,
     ),
     avgViewDurationRatio,
-    viewsToLikesRatio: parseRequiredNumeric(
-      row['Views to Likes Ratio'],
-      'Views to Likes Ratio',
-      rowNumber,
-      sourcePath,
-    ),
+    viewsToLikesRatio: row['Views to Likes Ratio'].trim()
+      ? parseRequiredNumeric(
+          row['Views to Likes Ratio'],
+          'Views to Likes Ratio',
+          rowNumber,
+          sourcePath,
+        )
+      : null,
     tags,
     retentionMinutes,
     retentionScore: clamp((avgViewDurationRatio / 0.12) * 100, 0, 100),
@@ -309,7 +316,7 @@ function validateYouTubeUrl(value: string, rowNumber: number, sourcePath: string
 
 function dataError(sourcePath: string, rowNumber: number, field: string, value: string) {
   return new Error(
-    `Marine Chariot CSV from ${sourcePath} has invalid ${field} at row ${rowNumber}: ${JSON.stringify(value)}`,
+    `Marine Chariot Google Sheets data from ${sourcePath} has invalid ${field} at row ${rowNumber}: ${JSON.stringify(value)}`,
   )
 }
 

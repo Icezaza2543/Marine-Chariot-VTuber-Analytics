@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
-  "description": "Marine Chariot VTuber analytics dashboard with YouTube CSV and X social signal analysis.",
+  "description": "Marine Chariot VTuber analytics dashboard with Google Sheets JSON and X social signal analysis.",
   "type": "module",
   "engines": {
     "node": "24.x"
   },
   "scripts": {
     "dev": "vite",
-    "sync:youtube": "node scripts/sync-youtube-data.mjs --out public/data/marine-ch-data.csv",
+    "sync:youtube": "node scripts/sync-youtube-data.mjs --out public/data/marine-sheet.json",
     "fetch:x": "node scripts/fetch-x-data.mjs --username MarineChariot --out public/data/marine-x-posts.json",
     "fetch:x:optional": "node scripts/fetch-x-data.mjs --optional --username MarineChariot --out public/data/marine-x-posts.json",
     "build": "tsc && vite build",
@@ -31,7 +31,6 @@
     "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.3.3",
     "@types/hammerjs": "^2.0.46",
-    "@types/papaparse": "^5.5.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.0.2",
@@ -59,7 +58,6 @@
     "framer-motion": "^13.2.0",
     "hammerjs": "^2.0.8",
     "lucide-react": "^1.41.0",
-    "papaparse": "^5.5.3",
     "react": "^19.2.7",
     "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.7",
