@@ -6,7 +6,7 @@
   "description": "Marine Chariot VTuber analytics dashboard with YouTube CSV and X social signal analysis.",
   "type": "module",
   "engines": {
-    "node": ">=20.19.0"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,7 @@
     "fetch:x": "node scripts/fetch-x-data.mjs --username MarineChariot --out public/data/marine-x-posts.json",
     "fetch:x:optional": "node scripts/fetch-x-data.mjs --optional --username MarineChariot --out public/data/marine-x-posts.json",
     "build": "tsc && vite build",
-    "build:vercel": "npm run fetch:x:optional && tsc && vite build",
+    "build:vercel": "npm run validate:data && npm test && npm run fetch:x:optional && tsc && vite build",
     "check": "tsc --noEmit",
     "lint": "eslint . --max-warnings=0",
     "format": "prettier --write .",
@@ -24,7 +24,8 @@
     "test:watch": "vitest",
     "deploy:preview": "vercel",
     "deploy:prod": "vercel --prod",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:data": "node scripts/validate-data.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

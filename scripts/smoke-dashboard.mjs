@@ -1,5 +1,7 @@
 import { spawn } from 'node:child_process'
 import { chromium } from 'playwright'
+import { mkdir } from 'node:fs/promises'
+import { fileURLToPath } from 'node:url'
 
 const host = '127.0.0.1'
 const port = 4173
@@ -38,12 +40,15 @@ try {
 }
 
 function startPreviewServer() {
-  const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx'
-  const child = spawn(npx, ['vite', 'preview', '--host', host, '--port', String(port)], {
-    shell: process.platform === 'win32',
-    stdio: 'ignore',
-    windowsHide: true,
-  })
+  const vite = fileURLToPath(new URL('../node_modules/vite/bin/vite.js', import.meta.url))
+  const child = spawn(
+    process.execPath,
+    [vite, 'preview', '--host', host, '--port', String(port), '--strictPort'],
+    {
+      stdio: 'inherit',
+      windowsHide: true,
+    },
+  )
 
   return child
 }
@@ -143,6 +148,9 @@ async function runDesktopSmoke(browser, url) {
       filterSearch: 'ASMR',
       dataNoticeHref,
     }
+  } catch (error) {
+    await reportFailure(page, issues, 'desktop')
+    throw error
   } finally {
     await context.close()
   }
@@ -168,6 +176,9 @@ async function runMobileSmoke(browser, url) {
       viewport: '390x844',
       loaded: true,
     }
+  } catch (error) {
+    await reportFailure(page, issues, 'mobile')
+    throw error
   } finally {
     await context.close()
   }
@@ -191,6 +202,14 @@ function collectConsoleIssues(page) {
   })
 
   return issues
+}
+
+async function reportFailure(page, issues, device) {
+  console.error(
+    JSON.stringify({ device, issues, body: await page.locator('body').innerText() }, null, 2),
+  )
+  await mkdir('test-results', { recursive: true })
+  await page.screenshot({ path: `test-results/${device}-failure.png`, fullPage: true })
 }
 
 function assertNoConsoleIssues(issues) {

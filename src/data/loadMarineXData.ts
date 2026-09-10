@@ -86,7 +86,7 @@ type ValidatedXProfile = z.infer<typeof xProfileSchema>
 
 export async function loadMarineXData(): Promise<XDataset> {
   try {
-    const response = await fetch(X_DATA_PATH)
+    const response = await fetch(X_DATA_PATH, { signal: AbortSignal.timeout(10_000) })
 
     if (!response.ok) {
       return emptyXDataset(`X cache not found at ${X_DATA_PATH}`)

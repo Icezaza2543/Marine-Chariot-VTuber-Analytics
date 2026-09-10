@@ -110,6 +110,9 @@ export function AppShell({ analytics, dataSnapshot, children }: AppShellProps) {
                 <Database aria-hidden="true" className="h-3 w-3" />
                 {dataSnapshot.source === 'live' ? 'Google Sheet สด' : 'Fallback CSV'} · โหลดเมื่อ{' '}
                 {formatLoadedAt(dataSnapshot.loadedAt)}
+                {dataSnapshot.skippedRows > 0
+                  ? ` · รอข้อมูลครบ ${dataSnapshot.skippedRows} คลิป (ยังไม่นำมาคำนวณ)`
+                  : ''}
               </p>
             ) : null}
           </div>

@@ -14,9 +14,12 @@ concurrency:
 
 jobs:
   refresh:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-node@v7
         with:
@@ -31,6 +34,15 @@ jobs:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: npm run fetch:x:optional
 
+      - run: npm run validate:data
+      - run: npm test
+      - name: Build with the refreshed snapshot
+        env:
+          VITE_MARINE_CSV_URL: /data/marine-ch-data.csv
+        run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run smoke
+
       - name: Commit refreshed snapshots
         shell: bash
         run: |
@@ -42,4 +54,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore(data): refresh analytics snapshots"
-          git push
+          git push origin HEAD:main
+
+      - name: Upload smoke failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-smoke-failure
+          path: test-results/
+          if-no-files-found: ignore

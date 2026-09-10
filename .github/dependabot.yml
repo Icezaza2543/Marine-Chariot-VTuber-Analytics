@@ -2,6 +2,8 @@ version: 2
 updates:
   - package-ecosystem: npm
     directory: /
+    # Keep the repository on a single branch; updates are reviewed manually.
+    open-pull-requests-limit: 0
     schedule:
       interval: weekly
     groups:
@@ -14,5 +16,7 @@ updates:
 
   - package-ecosystem: github-actions
     directory: /
+    # Keep the repository on a single branch; updates are reviewed manually.
+    open-pull-requests-limit: 0
     schedule:
       interval: weekly

@@ -3,3 +3,5 @@ docs/design/
 dev-server*.log
 dist/
 node_modules/
+
+test-results/

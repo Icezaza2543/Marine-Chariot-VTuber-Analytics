@@ -50,6 +50,7 @@ export interface MarineDataSnapshot {
   sourcePath: string
   loadedAt: string
   newestPublishedDate: string | null
+  skippedRows: number
 }
 
 export interface DashboardFilters {

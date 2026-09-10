@@ -80,4 +80,39 @@ describe('loadMarineData', () => {
 
     await expect(loadMarineData()).rejects.toThrow(/invalid View at row 2/i)
   })
+
+  it.each([
+    'No,Urls\n1,https://youtu.be/broken',
+    header,
+    `${header}\n1,https://youtu.be/a,Alpha,bad,1,1,2026-01-01,30,30,Gaming,1,1,1`,
+  ])('falls back when a successful HTTP response contains unusable CSV', async (badCsv) => {
+    const goodCsv = `${header}\n1,https://youtu.be/a,Alpha,100,1,1,2026-01-01,30,30,Gaming,1,1,1`
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(badCsv))
+      .mockResolvedValueOnce(new Response(goodCsv))
+    vi.stubGlobal('fetch', fetchMock)
+    expect((await loadMarineData()).source).toBe('fallback')
+    expect(fetchMock).toHaveBeenCalledTimes(2)
+  })
+
+  it('does not start a fallback request after cancellation', async () => {
+    const controller = new AbortController()
+    controller.abort()
+    const fetchMock = vi.fn().mockRejectedValue(new DOMException('Cancelled', 'AbortError'))
+    vi.stubGlobal('fetch', fetchMock)
+    await expect(loadMarineData(controller.signal)).rejects.toThrow('Cancelled')
+    expect(fetchMock).toHaveBeenCalledTimes(1)
+  })
+
+  it('falls back after a request timeout', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockRejectedValueOnce(new DOMException('Timed out', 'TimeoutError'))
+      .mockResolvedValueOnce(
+        new Response(`${header}\n1,https://youtu.be/a,Alpha,100,1,1,2026-01-01,30,30,Gaming,1,1,1`),
+      )
+    vi.stubGlobal('fetch', fetchMock)
+    expect((await loadMarineData()).source).toBe('fallback')
+  })
 })

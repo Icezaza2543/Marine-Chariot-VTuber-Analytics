@@ -67,7 +67,8 @@ The `Refresh analytics snapshots` GitHub Actions workflow runs daily and commits
 ## Local Setup
 
 ```bash
-npm install
+nvm use
+npm ci
 npm run dev
 ```
 
@@ -157,6 +158,14 @@ npm run build
 npm run smoke
 ```
 
-The `Quality` GitHub Actions workflow runs formatting, lint, strict TypeScript, unit tests, production build, security audit, and desktop/mobile smoke checks for every push and pull request to `master`.
+The `Quality` GitHub Actions workflow runs formatting, lint, strict TypeScript, unit tests, production build, security audit, and desktop/mobile smoke checks for every push and pull request to `main`.
 
 Known build note: the bundle-size warning is expected because the dashboard intentionally ships Chart.js, Chart.js plugins, and Recharts together.
+
+## Data reliability and maintenance
+
+Use Node.js 24 (see `.nvmrc`). The browser and snapshot refresh share the same CSV parser. Incomplete rows are excluded from analytics and the live dashboard reports their count; missing metrics are never substituted with zero. Malformed complete rows reject the source. Network, parsing, validation, and timeout failures use the last validated local snapshot.
+
+The refresh workflow validates data, runs tests, builds, and runs desktop/mobile smoke checks before publishing snapshots to `main`. `npm run validate:data` verifies the committed snapshot independently. Failed smoke checks attach screenshots and print page errors.
+
+`main` is the production and default branch. Routine Dependabot PR creation is paused to preserve the single-branch maintenance policy; dependency updates must be reviewed and tested manually. TypeScript remains on version 6 until the lint toolchain supports version 7. Security update PRs, if enabled separately in GitHub settings, are managed independently of this schedule.

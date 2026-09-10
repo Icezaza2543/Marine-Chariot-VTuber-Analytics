@@ -82,10 +82,8 @@ export const CHANNEL_META: ChannelMeta = {
   project: {
     author: 'Icezaza2543',
     githubUrl: 'https://github.com/Icezaza2543/Marine-Chariot-VTuber-Analytics',
-    licenseUrl:
-      'https://github.com/Icezaza2543/Marine-Chariot-VTuber-Analytics/blob/master/LICENSE',
-    noticeUrl:
-      'https://github.com/Icezaza2543/Marine-Chariot-VTuber-Analytics/blob/master/NOTICE.md',
+    licenseUrl: 'https://github.com/Icezaza2543/Marine-Chariot-VTuber-Analytics/blob/main/LICENSE',
+    noticeUrl: 'https://github.com/Icezaza2543/Marine-Chariot-VTuber-Analytics/blob/main/NOTICE.md',
     kind: 'fan-made',
   },
 }
