@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-09-12T05:44:51.740Z",
+  "updatedAt": "2026-09-13T05:44:51.474Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -10,36 +10,66 @@
   "rows": [
     {
       "No": "1",
+      "Urls": "https://www.youtube.com/watch?v=z0aXo2rahWs",
+      "Video Name": "ใครจะเท่ห์กว่าเขา .. ไม่มี |【 Resident Evil: Requiem 】EP.6",
+      "View": "256",
+      "Like": "15",
+      "Comm": "0",
+      "published_date": "2026-09-12",
+      "duration": "2:41:19",
+      "minute": "161.32",
+      "type": "Gaming",
+      "Engagement Rate": "0.05859375",
+      "AVG View Duration": "72.59",
+      "Views to Likes Ratio": "17.066666666666666"
+    },
+    {
+      "No": "2",
+      "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
+      "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
+      "View": "96",
+      "Like": "16",
+      "Comm": "6",
+      "published_date": "2026-09-12",
+      "duration": "0:04:13",
+      "minute": "4.22",
+      "type": "FreeTalk",
+      "Engagement Rate": "0.22916666666666666",
+      "AVG View Duration": "1.9",
+      "Views to Likes Ratio": "6"
+    },
+    {
+      "No": "3",
       "Urls": "https://www.youtube.com/watch?v=xveQ0oeE3DY",
       "Video Name": "ซึนเดเระ ไม่ซึนเด๊ะ |【 Ghostwire Tokyo 】EP.4 Re - project",
-      "View": "141",
-      "Like": "17",
-      "Comm": "0",
+      "View": "244",
+      "Like": "16",
+      "Comm": "1",
       "published_date": "2026-09-11",
       "duration": "2:17:08",
       "minute": "137.13",
       "type": "Gaming",
-      "Engagement Rate": "0.12056737588652482",
+      "Engagement Rate": "0.06967213114754098",
       "AVG View Duration": "61.71",
-      "Views to Likes Ratio": "8.294117647058824"
+      "Views to Likes Ratio": "15.25"
     },
     {
-      "No": "2",
+      "No": "4",
       "Urls": "https://www.youtube.com/watch?v=hIIE94W4rME",
       "Video Name": "ยีน กิน ติม #shorts #vtuber",
-      "View": "656",
-      "Like": "33",
-      "Comm": "4",
+      "View": "918",
+      "Like": "42",
+      "Comm": "5",
       "published_date": "2026-09-11",
       "duration": "0:00:37",
       "minute": "0.62",
       "type": "Shots",
-      "Engagement Rate": "0.056402439024390245",
+      "Engagement Rate": "0.05119825708061002",
       "AVG View Duration": "0.28",
-      "Views to Likes Ratio": "19.87878787878788"
+      "Views to Likes Ratio": "21.857142857142858"
     },
     {
-      "No": "3",
+      "No": "5",
       "Urls": "https://www.youtube.com/watch?v=gftgIMojqoE",
       "Video Name": "อุโมงค์เก่า | คุณหนูเล่าเรื่องผีกับคุณ Gosofia [เล่าเรื่องผี EP.20]",
       "View": "129",
@@ -54,7 +84,7 @@
       "Views to Likes Ratio": "7.166666666666667"
     },
     {
-      "No": "4",
+      "No": "6",
       "Urls": "https://www.youtube.com/watch?v=hUz5X4waqkQ",
       "Video Name": "อย่าได้เจอกันอีก EP.5 (ตอนจบ)【The Bridge Curse 2: The Extrication】",
       "View": "97",
@@ -69,7 +99,7 @@
       "Views to Likes Ratio": "8.818181818181818"
     },
     {
-      "No": "5",
+      "No": "7",
       "Urls": "https://www.youtube.com/watch?v=WbBAvFxTN3o",
       "Video Name": "จุดเริ่มต้น มหาลัยต้องสาป EP.1【The Bridge Curse 2: The Extrication】",
       "View": "150",
@@ -84,7 +114,7 @@
       "Views to Likes Ratio": "7.142857142857143"
     },
     {
-      "No": "6",
+      "No": "8",
       "Urls": "https://www.youtube.com/watch?v=lkuNQ4LiIGA",
       "Video Name": "【Only climb : better together】ปีนไม่หยุด จบที่ไหน 1 #Vtuber",
       "View": "143",
@@ -99,7 +129,7 @@
       "Views to Likes Ratio": "5.72"
     },
     {
-      "No": "7",
+      "No": "9",
       "Urls": "https://www.youtube.com/watch?v=XY8rj6yKYqY",
       "Video Name": "สรุปเนื้อหามังงะ Secret Garden บทที่ 1 Part ที่ 1 #Vtuber",
       "View": "389",
@@ -114,7 +144,7 @@
       "Views to Likes Ratio": "8.456521739130435"
     },
     {
-      "No": "8",
+      "No": "10",
       "Urls": "https://www.youtube.com/watch?v=Hyzez8WPQss",
       "Video Name": "ประสบการณ์การนอนค้าง ในโรงพยาบาล 3 คืน | [เล่าเรื่องผี EP.5]",
       "View": "529",
@@ -129,7 +159,7 @@
       "Views to Likes Ratio": "10.372549019607844"
     },
     {
-      "No": "9",
+      "No": "11",
       "Urls": "https://www.youtube.com/watch?v=biYS9C8xBsg",
       "Video Name": "แวะมานั่งคุยสาระทุกข์ สุขดิบ และพักผ่อนกับคุณหนูมารีน  🦋 #Vtuber",
       "View": "722",
@@ -144,7 +174,7 @@
       "Views to Likes Ratio": "12.23728813559322"
     },
     {
-      "No": "10",
+      "No": "12",
       "Urls": "https://www.youtube.com/watch?v=JfGddHCylpI",
       "Video Name": "พูดคุยชิลๆและพักผ่อนหย่อนใจ ท่ามกลางแสงจันทร์ 🦋 #vtuber",
       "View": "306",
@@ -159,7 +189,7 @@
       "Views to Likes Ratio": "9.870967741935484"
     },
     {
-      "No": "11",
+      "No": "13",
       "Urls": "https://www.youtube.com/watch?v=80YpT4jrUag",
       "Video Name": "Chipi Chipi Chapa Chapa Dubi Dubi Daba Daba. Ft.Marine Chariot #vtuber #shorts",
       "View": "1113",
@@ -174,7 +204,7 @@
       "Views to Likes Ratio": "12.366666666666667"
     },
     {
-      "No": "12",
+      "No": "14",
       "Urls": "https://www.youtube.com/watch?v=DzqvLbE5llA",
       "Video Name": "【READ CHAT & CHILL】🦋 คืนวันศุกร์ แวะมาฮีลลิ่งกับคุณหนู  | Marine Chariot #Vtuber",
       "View": "66",
@@ -189,7 +219,7 @@
       "Views to Likes Ratio": "3.473684210526316"
     },
     {
-      "No": "13",
+      "No": "15",
       "Urls": "https://www.youtube.com/watch?v=let-mcsNMFU",
       "Video Name": "【AKAZU Off limits】เดินหลอนผจญ ผีญี่ปุ่น | Marine Chariot #vtuber",
       "View": "70",
@@ -204,7 +234,7 @@
       "Views to Likes Ratio": "3.1818181818181817"
     },
     {
-      "No": "14",
+      "No": "16",
       "Urls": "https://www.youtube.com/watch?v=lrYdU2ERftQ",
       "Video Name": "【FREETALK & CHILL】🦋 พักผ่อนกับคุณหนูติดเกม~~ | Marine Chariot #Vtuber",
       "View": "108",
@@ -219,7 +249,7 @@
       "Views to Likes Ratio": "6.75"
     },
     {
-      "No": "15",
+      "No": "17",
       "Urls": "https://www.youtube.com/watch?v=m5bmTQombhM",
       "Video Name": "ประสบการณ์โดยตรงจากคุณหนู & ทางบ้าน [เล่าเรื่องผี EP.2]",
       "View": "165",
@@ -234,7 +264,7 @@
       "Views to Likes Ratio": "8.68421052631579"
     },
     {
-      "No": "16",
+      "No": "18",
       "Urls": "https://www.youtube.com/watch?v=IL6T3iW4XiE",
       "Video Name": "【FREETALK & CHILL】🦋 แคมป์นี้ปิ้งย่าง ใต้แสงจันทร์ | Marine Chariot",
       "View": "77",
@@ -249,7 +279,7 @@
       "Views to Likes Ratio": "8.555555555555555"
     },
     {
-      "No": "17",
+      "No": "19",
       "Urls": "https://www.youtube.com/watch?v=6mpb5lJp6MI",
       "Video Name": "【FREETALK & CHILL】🦋 แชร์วิธีขจัดความกังวลของคุณหนู | Marine Chariot",
       "View": "127",
@@ -264,7 +294,7 @@
       "Views to Likes Ratio": "9.76923076923077"
     },
     {
-      "No": "18",
+      "No": "20",
       "Urls": "https://www.youtube.com/watch?v=Wi7-xVWki9k",
       "Video Name": "【Zelter】🦋 เอาตัวรอดในโลกซอมบี้กับคุณหนู  | Marine Chariot",
       "View": "635",
@@ -279,7 +309,7 @@
       "Views to Likes Ratio": "27.608695652173914"
     },
     {
-      "No": "19",
+      "No": "21",
       "Urls": "https://www.youtube.com/watch?v=ZnkT0-I7Hoo",
       "Video Name": "【Drawing】🦋 ลงสี Towa-san & วันสบายๆกับคุณหนู #4 | Marine Chariot  #Vtuber #Drawing",
       "View": "234",
@@ -294,7 +324,7 @@
       "Views to Likes Ratio": "9.75"
     },
     {
-      "No": "20",
+      "No": "22",
       "Urls": "https://www.youtube.com/watch?v=VdZ0sib2Xlw",
       "Video Name": "【FREETALK & CHILL】🦋 ค่ำคืนอันแสนสงบกับคุณหนู | Marine Chariot  #Vtuber",
       "View": "169",
@@ -309,7 +339,7 @@
       "Views to Likes Ratio": "8.45"
     },
     {
-      "No": "21",
+      "No": "23",
       "Urls": "https://www.youtube.com/watch?v=H1IoBcgl7W4",
       "Video Name": "【DOOM Eternal: The Ancient Gods】🦋 ลุยนรกล้างบางทุกอย่างไปกับคุณหนู  | Marine Chariot  #Vtuber",
       "View": "368",
@@ -324,7 +354,7 @@
       "Views to Likes Ratio": "24.533333333333335"
     },
     {
-      "No": "22",
+      "No": "24",
       "Urls": "https://www.youtube.com/watch?v=-GWZ6i605Gw",
       "Video Name": "【Honkai Star Rail】🦋 เกมเปิดวันแรก กับ กาชา 50โรลแบบไม่รีไอดี  | Marine Chariot  #Vtuber",
       "View": "840",
@@ -339,52 +369,52 @@
       "Views to Likes Ratio": "38.18181818181818"
     },
     {
-      "No": "23",
+      "No": "25",
       "Urls": "https://www.youtube.com/watch?v=hVqB_N6K_gI",
       "Video Name": "หยั่งเซียน |【 Monster Hunter :World 】EP.5",
-      "View": "470",
+      "View": "474",
       "Like": "31",
       "Comm": "0",
       "published_date": "2026-09-09",
       "duration": "2:11:19",
       "minute": "131.32",
       "type": "Gaming",
-      "Engagement Rate": "0.06595744680851064",
+      "Engagement Rate": "0.06540084388185655",
       "AVG View Duration": "59.09",
-      "Views to Likes Ratio": "15.161290322580646"
+      "Views to Likes Ratio": "15.290322580645162"
     },
     {
-      "No": "24",
+      "No": "26",
       "Urls": "https://www.youtube.com/watch?v=1lNbii3Dinc",
       "Video Name": "เรื่องราว ของต่ายผจญภัย #shorts #vtuber",
-      "View": "255",
-      "Like": "21",
+      "View": "263",
+      "Like": "22",
       "Comm": "2",
       "published_date": "2026-09-08",
       "duration": "0:02:30",
       "minute": "2.5",
       "type": "Shots",
-      "Engagement Rate": "0.09019607843137255",
+      "Engagement Rate": "0.09125475285171103",
       "AVG View Duration": "1.13",
-      "Views to Likes Ratio": "12.142857142857142"
+      "Views to Likes Ratio": "11.954545454545455"
     },
     {
-      "No": "25",
+      "No": "27",
       "Urls": "https://www.youtube.com/watch?v=zxGiwHgCIxI",
       "Video Name": "ยิ่งกว่าเซียน คือเซียนชิบผาย |【 Resident Evil: Requiem 】EP.5",
-      "View": "183",
+      "View": "186",
       "Like": "18",
       "Comm": "2",
       "published_date": "2026-09-06",
       "duration": "1:38:38",
       "minute": "98.63",
       "type": "Gaming",
-      "Engagement Rate": "0.1092896174863388",
+      "Engagement Rate": "0.10752688172043011",
       "AVG View Duration": "44.39",
-      "Views to Likes Ratio": "10.166666666666666"
+      "Views to Likes Ratio": "10.333333333333334"
     },
     {
-      "No": "26",
+      "No": "28",
       "Urls": "https://www.youtube.com/watch?v=2AGUT0GOlII",
       "Video Name": "มารีน เผชิญกับเกมน่ากลัว #shorts #vtuber",
       "View": "220",
@@ -399,7 +429,7 @@
       "Views to Likes Ratio": "13.75"
     },
     {
-      "No": "27",
+      "No": "29",
       "Urls": "https://www.youtube.com/watch?v=X3ClCMbdqqk",
       "Video Name": "ตำนานโรตีห่อ #shorts #vtuber",
       "View": "1319",
@@ -414,7 +444,7 @@
       "Views to Likes Ratio": "31.404761904761905"
     },
     {
-      "No": "28",
+      "No": "30",
       "Urls": "https://www.youtube.com/watch?v=hNkttiriQhE",
       "Video Name": "ไปฟาร์ม กันก่อนแม๊ะ |【 Monster Hunter :World 】EP.4",
       "View": "501",
@@ -429,7 +459,7 @@
       "Views to Likes Ratio": "17.892857142857142"
     },
     {
-      "No": "29",
+      "No": "31",
       "Urls": "https://www.youtube.com/watch?v=rbOagTXYI5A",
       "Video Name": "สู้ต่อไป ซักวันเดี๋ยวก็ไม่เก่ง |【 Mortal Shell 2 】EP.2",
       "View": "176",
@@ -444,7 +474,7 @@
       "Views to Likes Ratio": "9.777777777777779"
     },
     {
-      "No": "30",
+      "No": "32",
       "Urls": "https://www.youtube.com/watch?v=htKvNKyZ10o",
       "Video Name": "โอนิจัง เท้าใหญ่จุง |【 Ghostwire Tokyo 】EP.3 Re - project",
       "View": "149",
@@ -459,7 +489,7 @@
       "Views to Likes Ratio": "7.842105263157895"
     },
     {
-      "No": "31",
+      "No": "33",
       "Urls": "https://www.youtube.com/watch?v=9Q_xUPloIZM",
       "Video Name": "สุดยอด เจ้าของช่อง",
       "View": "115",
@@ -474,22 +504,22 @@
       "Views to Likes Ratio": "6.764705882352941"
     },
     {
-      "No": "32",
+      "No": "34",
       "Urls": "https://www.youtube.com/watch?v=JcXpKNNRJn4",
       "Video Name": "จะโกเล็งก็มา เรามีโกเฟีย |【 Mortal Shell 2 】EP.1",
-      "View": "287",
+      "View": "290",
       "Like": "16",
       "Comm": "1",
       "published_date": "2026-08-22",
       "duration": "2:58:45",
       "minute": "178.75",
       "type": "Gaming",
-      "Engagement Rate": "0.059233449477351915",
+      "Engagement Rate": "0.05862068965517241",
       "AVG View Duration": "80.44",
-      "Views to Likes Ratio": "17.9375"
+      "Views to Likes Ratio": "18.125"
     },
     {
-      "No": "33",
+      "No": "35",
       "Urls": "https://www.youtube.com/watch?v=tmuq-ShloSE",
       "Video Name": "วันรวมญาติ พักแรม |【 เล่าเรื่องผี EP.30 】ประสบการณ์หลอนในวัยเด็ก ของเพื่อนมารีน",
       "View": "183",
@@ -504,7 +534,7 @@
       "Views to Likes Ratio": "15.25"
     },
     {
-      "No": "34",
+      "No": "36",
       "Urls": "https://www.youtube.com/watch?v=Z-MLy11tiao",
       "Video Name": "ไม่เจอกันนาน ฉันสวยอยู่บ่ |【 Ghostwire Tokyo 】EP.2 Re - project",
       "View": "250",
@@ -519,22 +549,22 @@
       "Views to Likes Ratio": "10.416666666666666"
     },
     {
-      "No": "35",
+      "No": "37",
       "Urls": "https://www.youtube.com/watch?v=5FWXj-X_4_4",
       "Video Name": "ผีเส้น โตเกียว ดริฟ! |【 Ghostwire Tokyo 】EP.1 Re - project",
-      "View": "201",
+      "View": "202",
       "Like": "15",
       "Comm": "1",
       "published_date": "2026-08-15",
       "duration": "2:20:37",
       "minute": "140.62",
       "type": "Gaming",
-      "Engagement Rate": "0.07960199004975124",
+      "Engagement Rate": "0.07920792079207921",
       "AVG View Duration": "63.28",
-      "Views to Likes Ratio": "13.4"
+      "Views to Likes Ratio": "13.466666666666667"
     },
     {
-      "No": "36",
+      "No": "38",
       "Urls": "https://www.youtube.com/watch?v=dMrk2z2NutM",
       "Video Name": "วันพุทธ อะเกน วิทโก",
       "View": "188",
@@ -549,7 +579,7 @@
       "Views to Likes Ratio": "7.230769230769231"
     },
     {
-      "No": "37",
+      "No": "39",
       "Urls": "https://www.youtube.com/watch?v=QaDqYdRE-b0",
       "Video Name": "เลื้อยเข้าไป คลานออกมา |【 Monster Hunter :World 】EP.3",
       "View": "167",
@@ -564,7 +594,7 @@
       "Views to Likes Ratio": "10.4375"
     },
     {
-      "No": "38",
+      "No": "40",
       "Urls": "https://www.youtube.com/watch?v=jPCkRayQccw",
       "Video Name": "สามัคคีคือพัง มักจะพังสามัคคี |【 Chained Together 】จบ",
       "View": "253",
@@ -579,7 +609,7 @@
       "Views to Likes Ratio": "16.866666666666667"
     },
     {
-      "No": "39",
+      "No": "41",
       "Urls": "https://www.youtube.com/watch?v=XBtN_Nc3OTA",
       "Video Name": "ออกไปเลยได้มั้ย หัวใจมันร่ำไห้ |【 Resident Evil: Requiem 】EP.4",
       "View": "194",
@@ -594,7 +624,7 @@
       "Views to Likes Ratio": "8.083333333333334"
     },
     {
-      "No": "40",
+      "No": "42",
       "Urls": "https://www.youtube.com/watch?v=2w9gwe1KVB8",
       "Video Name": "เชียร์กันไป เชียร์กันเอง |【 Monster Hunter :World 】EP.2",
       "View": "202",
@@ -609,7 +639,7 @@
       "Views to Likes Ratio": "11.222222222222221"
     },
     {
-      "No": "41",
+      "No": "43",
       "Urls": "https://www.youtube.com/watch?v=7rvt8yKUgj8",
       "Video Name": "วันเพลียๆ ของยีน",
       "View": "169",
@@ -624,7 +654,7 @@
       "Views to Likes Ratio": "4.5675675675675675"
     },
     {
-      "No": "42",
+      "No": "44",
       "Urls": "https://www.youtube.com/watch?v=3wBNzP5iRag",
       "Video Name": "พี่น้อง น้องพี่ ผจญภัย |【 Resident Evil: Requiem 】EP.3",
       "View": "129",
@@ -639,7 +669,7 @@
       "Views to Likes Ratio": "5.375"
     },
     {
-      "No": "43",
+      "No": "45",
       "Urls": "https://www.youtube.com/watch?v=meHD7wxu9ZM",
       "Video Name": "มื้อนี้ อิ่มปะล่ะ |【 Monster Hunter :World 】EP.1",
       "View": "169",
@@ -654,7 +684,7 @@
       "Views to Likes Ratio": "9.38888888888889"
     },
     {
-      "No": "44",
+      "No": "46",
       "Urls": "https://www.youtube.com/watch?v=MTRlRFdT8_4",
       "Video Name": "เรื่องราวของกระต่าย 2 ตัว |【 Bunny guys! 】จบ",
       "View": "122",
@@ -669,7 +699,7 @@
       "Views to Likes Ratio": "6.421052631578948"
     },
     {
-      "No": "45",
+      "No": "47",
       "Urls": "https://www.youtube.com/watch?v=FSNSHvW8Ty4",
       "Video Name": "เรื่องราว เพื่อนบ้าน |【 Dread neighbor  】Duo game live EP.2",
       "View": "129",
@@ -684,7 +714,7 @@
       "Views to Likes Ratio": "4.961538461538462"
     },
     {
-      "No": "46",
+      "No": "48",
       "Urls": "https://www.youtube.com/watch?v=557AWFLm3ys",
       "Video Name": "เรื่องราวของกระต่าย 1 ตัว |【 Bunny guys! 】จบ",
       "View": "150",
@@ -699,7 +729,7 @@
       "Views to Likes Ratio": "5.555555555555555"
     },
     {
-      "No": "47",
+      "No": "49",
       "Urls": "https://www.youtube.com/watch?v=VWhlfhnK5Y0",
       "Video Name": "ใหญ่คับซอย คอยทำไม |【 Resident Evil: Requiem 】EP.2",
       "View": "121",
@@ -714,7 +744,7 @@
       "Views to Likes Ratio": "6.368421052631579"
     },
     {
-      "No": "48",
+      "No": "50",
       "Urls": "https://www.youtube.com/watch?v=W5PEhxgl8tk",
       "Video Name": "วันศุกร์ หว่าเว้",
       "View": "108",
@@ -729,7 +759,7 @@
       "Views to Likes Ratio": "6"
     },
     {
-      "No": "49",
+      "No": "51",
       "Urls": "https://www.youtube.com/watch?v=9lUlmnFzoaw",
       "Video Name": "ค่ายจิตอาสา |【 เล่าเรื่องผี EP.29 】ประสบการณ์หลอน ในค่ายจิตอาสาของมารีนและเพื่อน",
       "View": "103",
@@ -744,22 +774,22 @@
       "Views to Likes Ratio": "4.478260869565218"
     },
     {
-      "No": "50",
+      "No": "52",
       "Urls": "https://www.youtube.com/watch?v=ZXFHJT4w6d8",
       "Video Name": "ล่าผีห่าน เมืองแรคคูน |【 Resident Evil: Requiem 】EP.1",
-      "View": "544",
+      "View": "545",
       "Like": "28",
       "Comm": "1",
       "published_date": "2026-06-27",
       "duration": "2:24:36",
       "minute": "144.6",
       "type": "Gaming",
-      "Engagement Rate": "0.05330882352941176",
+      "Engagement Rate": "0.05321100917431193",
       "AVG View Duration": "65.07",
-      "Views to Likes Ratio": "19.428571428571427"
+      "Views to Likes Ratio": "19.464285714285715"
     },
     {
-      "No": "51",
+      "No": "53",
       "Urls": "https://www.youtube.com/watch?v=N0o1i_AYpk8",
       "Video Name": "เตาหลอม แห่งสงคราม |【 Ai Limit 】Eirene's Furnace of War : EP.1",
       "View": "165",
@@ -774,7 +804,7 @@
       "Views to Likes Ratio": "7.857142857142857"
     },
     {
-      "No": "52",
+      "No": "54",
       "Urls": "https://www.youtube.com/watch?v=Va8gNWnN2JU",
       "Video Name": "อยากชิล ให้ชิล",
       "View": "111",
@@ -789,7 +819,7 @@
       "Views to Likes Ratio": "5.285714285714286"
     },
     {
-      "No": "53",
+      "No": "55",
       "Urls": "https://www.youtube.com/watch?v=f2nXzob972Y",
       "Video Name": "กระทิงแดง สำแดงเดช |【 DOOM : Eternal 】(EP.5) จบเนื้อเรื่องหลัก",
       "View": "127",
@@ -804,7 +834,7 @@
       "Views to Likes Ratio": "5.7727272727272725"
     },
     {
-      "No": "54",
+      "No": "56",
       "Urls": "https://www.youtube.com/watch?v=D5oF1A8yglE",
       "Video Name": "แวะเติมคุณหนู ช่วงบ่าย ..",
       "View": "151",
@@ -819,7 +849,7 @@
       "Views to Likes Ratio": "5.392857142857143"
     },
     {
-      "No": "55",
+      "No": "57",
       "Urls": "https://www.youtube.com/watch?v=YCpMESitcow",
       "Video Name": "จุดสิ้นสุด คือจุดเริ่มต้น |【 Ai Limit 】(EP.7) จบเนื้อเรื่องหลัก!",
       "View": "200",
@@ -834,7 +864,7 @@
       "Views to Likes Ratio": "10.526315789473685"
     },
     {
-      "No": "56",
+      "No": "58",
       "Urls": "https://www.youtube.com/watch?v=nmPE1z6b19U",
       "Video Name": "เราต้องห่างกันซักพัก |【 Enshrouded 】EP.5 (จบ พักเบรค)",
       "View": "127",
@@ -849,7 +879,7 @@
       "Views to Likes Ratio": "7.9375"
     },
     {
-      "No": "57",
+      "No": "59",
       "Urls": "https://www.youtube.com/watch?v=3tmeY_agjg8",
       "Video Name": "วันแก้แค้น เจ้าแย้บิน |【 Enshrouded 】EP.4",
       "View": "127",
@@ -864,7 +894,7 @@
       "Views to Likes Ratio": "7.9375"
     },
     {
-      "No": "58",
+      "No": "60",
       "Urls": "https://www.youtube.com/watch?v=hEngOT7hed4",
       "Video Name": "ไลฟ์บ่าย ในรอบ ศตวรรษ ..",
       "View": "235",
@@ -879,7 +909,7 @@
       "Views to Likes Ratio": "6.351351351351352"
     },
     {
-      "No": "59",
+      "No": "61",
       "Urls": "https://www.youtube.com/watch?v=QyXc4mbvhwM",
       "Video Name": "ผู้พิทักษ์ แห่งต้นไม้ |【 Ai Limit 】(EP.6)",
       "View": "100",
@@ -894,7 +924,7 @@
       "Views to Likes Ratio": "6.25"
     },
     {
-      "No": "60",
+      "No": "62",
       "Urls": "https://www.youtube.com/watch?v=SWkiarMTEG0",
       "Video Name": "เล่าเรื่องชีวิต.. เพลินๆ",
       "View": "150",
@@ -909,7 +939,7 @@
       "Views to Likes Ratio": "8.823529411764707"
     },
     {
-      "No": "61",
+      "No": "63",
       "Urls": "https://www.youtube.com/watch?v=G9vmlBWhMJI",
       "Video Name": "นักล่าโครตมังกร |【 Enshrouded 】EP.3",
       "View": "122",
@@ -924,7 +954,7 @@
       "Views to Likes Ratio": "6.777777777777778"
     },
     {
-      "No": "62",
+      "No": "64",
       "Urls": "https://www.youtube.com/watch?v=h7Et445CVEc",
       "Video Name": "คุยอะไร ไม่รู้ .. รู้ แต่ไม่รู้",
       "View": "291",
@@ -939,7 +969,7 @@
       "Views to Likes Ratio": "13.227272727272727"
     },
     {
-      "No": "63",
+      "No": "65",
       "Urls": "https://www.youtube.com/watch?v=ZIhtT6t5GZk",
       "Video Name": "ก็มาดิ เจ๊แดงแรงฤทธิ์ |【 Ai Limit 】(EP.5)",
       "View": "727",
@@ -954,7 +984,7 @@
       "Views to Likes Ratio": "26.925925925925927"
     },
     {
-      "No": "64",
+      "No": "66",
       "Urls": "https://www.youtube.com/watch?v=fRmKX71SjeE",
       "Video Name": "ใคร ที่ยืนข้างเตียง |【 เล่าเรื่องผี EP.28 】ประสบการณ์ที่น่ากลัวอันดับ 1 ในชีวิตของมารีน",
       "View": "231",
@@ -969,7 +999,7 @@
       "Views to Likes Ratio": "11.55"
     },
     {
-      "No": "65",
+      "No": "67",
       "Urls": "https://www.youtube.com/watch?v=xSbtpxEL9_0",
       "Video Name": "มินีมารีน ถาม - ตอบ สารพัด",
       "View": "150",
@@ -984,7 +1014,7 @@
       "Views to Likes Ratio": "6.521739130434782"
     },
     {
-      "No": "66",
+      "No": "68",
       "Urls": "https://www.youtube.com/watch?v=D19LhRUA0a0",
       "Video Name": "ชายผู้แบกโล่ มาถูกกระทืบ |【 DOOM : Eternal 】(EP.4)",
       "View": "95",
@@ -999,7 +1029,7 @@
       "Views to Likes Ratio": "6.785714285714286"
     },
     {
-      "No": "67",
+      "No": "69",
       "Urls": "https://www.youtube.com/watch?v=bjVXkg70sVE",
       "Video Name": "วิถีของนักผจญภัย |【 Enshrouded 】EP.2",
       "View": "150",
@@ -1014,7 +1044,7 @@
       "Views to Likes Ratio": "7.894736842105263"
     },
     {
-      "No": "68",
+      "No": "70",
       "Urls": "https://www.youtube.com/watch?v=C-az0O9i-PQ",
       "Video Name": "ช่ำระดับนี้ พี่ขอบาย |【 Ai Limit 】(EP.4)",
       "View": "137",
@@ -1029,7 +1059,7 @@
       "Views to Likes Ratio": "5.48"
     },
     {
-      "No": "69",
+      "No": "71",
       "Urls": "https://www.youtube.com/watch?v=iVAvLaHr4yE",
       "Video Name": "คุย เรื่องเนื้อเพลง",
       "View": "72",
@@ -1044,7 +1074,7 @@
       "Views to Likes Ratio": "4.5"
     },
     {
-      "No": "70",
+      "No": "72",
       "Urls": "https://www.youtube.com/watch?v=VweVeHSg-Jg",
       "Video Name": "MYSTERY LIVE EP.3",
       "View": "117",
@@ -1059,7 +1089,7 @@
       "Views to Likes Ratio": "5.85"
     },
     {
-      "No": "71",
+      "No": "73",
       "Urls": "https://www.youtube.com/watch?v=UXVxSuFIbyA",
       "Video Name": "จุดเริ่มต้น นักไถฟาร์ม  |【 Enshrouded 】EP.1",
       "View": "410",
@@ -1074,7 +1104,7 @@
       "Views to Likes Ratio": "12.058823529411764"
     },
     {
-      "No": "72",
+      "No": "74",
       "Urls": "https://www.youtube.com/watch?v=qoY59hu8Wy4",
       "Video Name": "เคียวนี้ ขอข้าเถิด |【 Ai Limit 】(EP.3)",
       "View": "113",
@@ -1089,7 +1119,7 @@
       "Views to Likes Ratio": "5.65"
     },
     {
-      "No": "73",
+      "No": "75",
       "Urls": "https://www.youtube.com/watch?v=ygpsYtVPI38",
       "Video Name": "หัวข้อ ที่ไม่มีหัวข้อ",
       "View": "96",
@@ -1104,7 +1134,7 @@
       "Views to Likes Ratio": "7.384615384615385"
     },
     {
-      "No": "74",
+      "No": "76",
       "Urls": "https://www.youtube.com/watch?v=Bhz82B6thNo",
       "Video Name": "เพื่อนรัก เพื่อนตาย |【 DOOM : Eternal 】(EP.3)",
       "View": "243",
@@ -1119,7 +1149,7 @@
       "Views to Likes Ratio": "8.678571428571429"
     },
     {
-      "No": "75",
+      "No": "77",
       "Urls": "https://www.youtube.com/watch?v=Bw1UUDmD1kk",
       "Video Name": "หน้าร้อน ร้อนไหมล่ะ",
       "View": "126",
@@ -1134,7 +1164,7 @@
       "Views to Likes Ratio": "4.846153846153846"
     },
     {
-      "No": "76",
+      "No": "78",
       "Urls": "https://www.youtube.com/watch?v=DPuce0Zg6iI",
       "Video Name": "โอ้ว..แม่ ชีวภาพ |【 Ai Limit 】(EP.2)",
       "View": "96",
@@ -1149,22 +1179,22 @@
       "Views to Likes Ratio": "3.84"
     },
     {
-      "No": "77",
+      "No": "79",
       "Urls": "https://www.youtube.com/watch?v=fQBbwruclyE",
       "Video Name": "กระจกปริศนา ในโรงแรม |【 เล่าเรื่องผี EP.27 】",
-      "View": "86",
+      "View": "89",
       "Like": "19",
       "Comm": "1",
       "published_date": "2026-04-11",
       "duration": "1:31:15",
       "minute": "91.25",
       "type": "เล่าเรื่องผี",
-      "Engagement Rate": "0.23255813953488372",
+      "Engagement Rate": "0.2247191011235955",
       "AVG View Duration": "41.06",
-      "Views to Likes Ratio": "4.526315789473684"
+      "Views to Likes Ratio": "4.684210526315789"
     },
     {
-      "No": "78",
+      "No": "80",
       "Urls": "https://www.youtube.com/watch?v=vxT-T4e4f_k",
       "Video Name": "อย่าไปสน อย่าไป Sad |【 DOOM : Eternal 】(EP.2)",
       "View": "136",
@@ -1179,7 +1209,7 @@
       "Views to Likes Ratio": "5.037037037037037"
     },
     {
-      "No": "79",
+      "No": "81",
       "Urls": "https://www.youtube.com/watch?v=AY9nkZBHNUg",
       "Video Name": "สุดขีด เอไอ |【 Ai Limit 】(EP.1)",
       "View": "110",
@@ -1194,7 +1224,7 @@
       "Views to Likes Ratio": "4.583333333333333"
     },
     {
-      "No": "80",
+      "No": "82",
       "Urls": "https://www.youtube.com/watch?v=6ExE8pfFI6Q",
       "Video Name": "เตรียมตัว Original Song ต่อไป",
       "View": "79",
@@ -1209,37 +1239,37 @@
       "Views to Likes Ratio": "4.157894736842105"
     },
     {
-      "No": "81",
+      "No": "83",
       "Urls": "https://www.youtube.com/watch?v=ZgsYBMekEcs",
       "Video Name": "นาที ที่โลกหยุดหมุน ( Frozen in time ) - Marine Chariot | Original Song Valentine 2026",
-      "View": "831",
+      "View": "840",
       "Like": "45",
       "Comm": "11",
       "published_date": "2026-04-01",
       "duration": "0:04:16",
       "minute": "4.27",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.06738868832731648",
+      "Engagement Rate": "0.06666666666666667",
       "AVG View Duration": "1.92",
-      "Views to Likes Ratio": "18.466666666666665"
+      "Views to Likes Ratio": "18.666666666666668"
     },
     {
-      "No": "82",
+      "No": "84",
       "Urls": "https://www.youtube.com/watch?v=AymOSCA-Xqs",
       "Video Name": "นาที ที่โลกหยุดหมุน - Marine Chariot (Official Teaser) | Original Song Valentine 2026",
-      "View": "206",
+      "View": "207",
       "Like": "21",
       "Comm": "4",
       "published_date": "2026-03-31",
       "duration": "0:00:41",
       "minute": "0.68",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.12135922330097088",
+      "Engagement Rate": "0.12077294685990338",
       "AVG View Duration": "0.31",
-      "Views to Likes Ratio": "9.80952380952381"
+      "Views to Likes Ratio": "9.857142857142858"
     },
     {
-      "No": "83",
+      "No": "85",
       "Urls": "https://www.youtube.com/watch?v=gIkun-lRgfs",
       "Video Name": "เจตจำนงค์แห่งผีเสื้อ |【Wildhearts】(EP.5) จบ",
       "View": "116",
@@ -1254,7 +1284,7 @@
       "Views to Likes Ratio": "5.523809523809524"
     },
     {
-      "No": "84",
+      "No": "86",
       "Urls": "https://www.youtube.com/watch?v=SOIdrngevwk",
       "Video Name": "สิ้นสุดโลกเน่าเปื่อย  |【 State of decay 2 】EP.4 (จบ)",
       "View": "135",
@@ -1269,7 +1299,7 @@
       "Views to Likes Ratio": "6.428571428571429"
     },
     {
-      "No": "85",
+      "No": "87",
       "Urls": "https://www.youtube.com/watch?v=v6hFfX3oc08",
       "Video Name": "อยากเล่นเกม แต่ไหวแค่คุย",
       "View": "183",
@@ -1284,7 +1314,7 @@
       "Views to Likes Ratio": "7.956521739130435"
     },
     {
-      "No": "86",
+      "No": "88",
       "Urls": "https://www.youtube.com/watch?v=xpTg11oIGhU",
       "Video Name": "มาคุยกันให้หายคิดถึง | Freetalk",
       "View": "153",
@@ -1299,7 +1329,7 @@
       "Views to Likes Ratio": "5.666666666666667"
     },
     {
-      "No": "87",
+      "No": "89",
       "Urls": "https://www.youtube.com/watch?v=v7U_-MIlTk4",
       "Video Name": "นิยาม .. ของคำว่า คุณภาพ",
       "View": "151",
@@ -1314,7 +1344,7 @@
       "Views to Likes Ratio": "6.04"
     },
     {
-      "No": "88",
+      "No": "90",
       "Urls": "https://www.youtube.com/watch?v=Sv3j7ehoY4k",
       "Video Name": "ตรอกทางเดินเก่า ๆ |【 เล่าเรื่องผี EP.26 】",
       "View": "104",
@@ -1329,7 +1359,7 @@
       "Views to Likes Ratio": "5.2"
     },
     {
-      "No": "89",
+      "No": "91",
       "Urls": "https://www.youtube.com/watch?v=ddVe-0CVy6g",
       "Video Name": "คุณหนู ... หายดีหรือยัง ?",
       "View": "138",
@@ -1344,7 +1374,7 @@
       "Views to Likes Ratio": "6"
     },
     {
-      "No": "90",
+      "No": "92",
       "Urls": "https://www.youtube.com/watch?v=h34YklM6TFk",
       "Video Name": "แจ้งสถานะการณ์ กำหนดการณ์ปี 2029",
       "View": "139",
@@ -1359,7 +1389,7 @@
       "Views to Likes Ratio": "4.633333333333334"
     },
     {
-      "No": "91",
+      "No": "93",
       "Urls": "https://www.youtube.com/watch?v=geV8D89xXBI",
       "Video Name": "คุยกัน กับ คุณหนู",
       "View": "200",
@@ -1374,7 +1404,7 @@
       "Views to Likes Ratio": "6.666666666666667"
     },
     {
-      "No": "92",
+      "No": "94",
       "Urls": "https://www.youtube.com/watch?v=4nJchqym1sQ",
       "Video Name": "ไลฟ์แรกปี 2026",
       "View": "173",
@@ -1389,22 +1419,22 @@
       "Views to Likes Ratio": "5.242424242424242"
     },
     {
-      "No": "93",
+      "No": "95",
       "Urls": "https://www.youtube.com/watch?v=GEWUqiEux2I",
       "Video Name": "แสงของผีเสื้อวันใหม่ - 黎明の蝶の光 (New Day Butterfly's Glow)【Original song & Lyrics 】2025 END",
-      "View": "334",
+      "View": "337",
       "Like": "39",
       "Comm": "14",
       "published_date": "2025-12-31",
       "duration": "0:03:18",
       "minute": "3.3",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.15868263473053892",
+      "Engagement Rate": "0.1572700296735905",
       "AVG View Duration": "1.49",
-      "Views to Likes Ratio": "8.564102564102564"
+      "Views to Likes Ratio": "8.64102564102564"
     },
     {
-      "No": "94",
+      "No": "96",
       "Urls": "https://www.youtube.com/watch?v=rj05R3iq7b4",
       "Video Name": "คริสมาสต์ของยีน / Yeen'Christmas & [NEW Original song]",
       "View": "131",
@@ -1419,22 +1449,22 @@
       "Views to Likes Ratio": "4.366666666666666"
     },
     {
-      "No": "95",
+      "No": "97",
       "Urls": "https://www.youtube.com/watch?v=kmyqgyAKYa4",
       "Video Name": "Yeen'Christmas - คริสมาสต์ของยีน【Original song & Lyrics】",
-      "View": "328",
+      "View": "330",
       "Like": "35",
       "Comm": "14",
       "published_date": "2025-12-25",
       "duration": "0:03:56",
       "minute": "3.93",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.14939024390243902",
+      "Engagement Rate": "0.1484848484848485",
       "AVG View Duration": "1.77",
-      "Views to Likes Ratio": "9.371428571428572"
+      "Views to Likes Ratio": "9.428571428571429"
     },
     {
-      "No": "96",
+      "No": "98",
       "Urls": "https://www.youtube.com/watch?v=RwT7v7gzejw",
       "Video Name": "ใจดำ เสียยิ่งกระไร  |【 State of decay 2 】EP.3",
       "View": "200",
@@ -1449,7 +1479,7 @@
       "Views to Likes Ratio": "10"
     },
     {
-      "No": "97",
+      "No": "99",
       "Urls": "https://www.youtube.com/watch?v=TSR-BOjxgAU",
       "Video Name": "สารพัด หัวข้อ แนวคิด / แจ้งข่าวดีของปี 2026",
       "View": "143",
@@ -1464,7 +1494,7 @@
       "Views to Likes Ratio": "5.958333333333333"
     },
     {
-      "No": "98",
+      "No": "100",
       "Urls": "https://www.youtube.com/watch?v=7tjQwjQP5gs",
       "Video Name": "อิ่ม จนต้องไประบาย  |【 State of decay 2 】EP.2",
       "View": "499",
@@ -1479,7 +1509,7 @@
       "Views to Likes Ratio": "14.676470588235293"
     },
     {
-      "No": "99",
+      "No": "101",
       "Urls": "https://www.youtube.com/watch?v=W5VdX2jH3jA",
       "Video Name": "ฉีกสะบั้นให้ขาด |【 DOOM : Eternal 】(EP.1)",
       "View": "209",
@@ -1494,7 +1524,7 @@
       "Views to Likes Ratio": "7.206896551724138"
     },
     {
-      "No": "100",
+      "No": "102",
       "Urls": "https://www.youtube.com/watch?v=4D6N5lL8Fv8",
       "Video Name": "สภาวะเสื่อมโทรม ที่อิ่มมาก  |【 State of decay 2 】EP.1",
       "View": "269",
@@ -1509,7 +1539,7 @@
       "Views to Likes Ratio": "10.76"
     },
     {
-      "No": "101",
+      "No": "103",
       "Urls": "https://www.youtube.com/watch?v=OAP5Wa14fLI",
       "Video Name": "บ้านญี่ปุ่นมือ 2 |  [เล่าเรื่องผี EP.25]",
       "View": "91",
@@ -1524,7 +1554,7 @@
       "Views to Likes Ratio": "4.7894736842105265"
     },
     {
-      "No": "102",
+      "No": "104",
       "Urls": "https://www.youtube.com/watch?v=uvE57TmRtXg",
       "Video Name": "กายจาก หัวใจคงอยู่  |【Atomic heart DLC 3】Enchantment under the sea",
       "View": "128",
@@ -1539,7 +1569,7 @@
       "Views to Likes Ratio": "7.111111111111111"
     },
     {
-      "No": "103",
+      "No": "105",
       "Urls": "https://www.youtube.com/watch?v=qv4hp-czj9U",
       "Video Name": "ตามหาห่าน ทุกชาติไป |【Wildhearts】(EP.4)",
       "View": "90",
@@ -1554,7 +1584,7 @@
       "Views to Likes Ratio": "7.5"
     },
     {
-      "No": "104",
+      "No": "106",
       "Urls": "https://www.youtube.com/watch?v=C19HUF0wWJg",
       "Video Name": "ข้าง กอง ไฟ",
       "View": "102",
@@ -1569,7 +1599,7 @@
       "Views to Likes Ratio": "4.25"
     },
     {
-      "No": "105",
+      "No": "107",
       "Urls": "https://www.youtube.com/watch?v=RzIrzqnNSKg",
       "Video Name": "ทุกสายตา จับจ้องใจ  |【Atomic heart DLC 1】Annihilation instinct",
       "View": "145",
@@ -1584,7 +1614,7 @@
       "Views to Likes Ratio": "7.25"
     },
     {
-      "No": "106",
+      "No": "108",
       "Urls": "https://www.youtube.com/watch?v=z_woWaIJxNY",
       "Video Name": "มารีน ในปี 2026",
       "View": "230",
@@ -1599,7 +1629,7 @@
       "Views to Likes Ratio": "9.2"
     },
     {
-      "No": "107",
+      "No": "109",
       "Urls": "https://www.youtube.com/watch?v=ge1A20pDSsY",
       "Video Name": "หิวไก่ |【Wildhearts】(EP.3)",
       "View": "132",
@@ -1614,7 +1644,7 @@
       "Views to Likes Ratio": "8.25"
     },
     {
-      "No": "108",
+      "No": "110",
       "Urls": "https://www.youtube.com/watch?v=iuLnKTC_Y1Y",
       "Video Name": "ปล่อยผี ปีนี้ มีอะไร ? | HALLOWEEN LIVE 2025",
       "View": "98",
@@ -1629,7 +1659,7 @@
       "Views to Likes Ratio": "3.2666666666666666"
     },
     {
-      "No": "109",
+      "No": "111",
       "Urls": "https://www.youtube.com/watch?v=E383dwQi9b8",
       "Video Name": "คุณหนูยีน จอมเหนื่อย",
       "View": "130",
@@ -1644,7 +1674,7 @@
       "Views to Likes Ratio": "6.190476190476191"
     },
     {
-      "No": "110",
+      "No": "112",
       "Urls": "https://www.youtube.com/watch?v=t3F6QTtQRmE",
       "Video Name": "เกาะเบาะล่าตัวไร |【 Duo Game Live EP.1 】Dead frontier 2",
       "View": "173",
@@ -1659,7 +1689,7 @@
       "Views to Likes Ratio": "8.65"
     },
     {
-      "No": "111",
+      "No": "113",
       "Urls": "https://www.youtube.com/watch?v=XZh3l-L1xOI",
       "Video Name": "ยักษ์ใหญ่ ใจตูมตาม |【Wildhearts】(EP.2)",
       "View": "121",
@@ -1674,7 +1704,7 @@
       "Views to Likes Ratio": "7.117647058823529"
     },
     {
-      "No": "112",
+      "No": "114",
       "Urls": "https://www.youtube.com/watch?v=0JF-tZQ1DQQ",
       "Video Name": "แจงเรื่อง หัวข้อ สำคัญๆ",
       "View": "247",
@@ -1689,7 +1719,7 @@
       "Views to Likes Ratio": "9.148148148148149"
     },
     {
-      "No": "113",
+      "No": "115",
       "Urls": "https://www.youtube.com/watch?v=XrP7bIuPkYs",
       "Video Name": "คู่หู นักล่าอสูร |【Wildhearts】(EP.1)",
       "View": "180",
@@ -1704,7 +1734,7 @@
       "Views to Likes Ratio": "8.571428571428571"
     },
     {
-      "No": "114",
+      "No": "116",
       "Urls": "https://www.youtube.com/watch?v=v7lv7NmPzAY",
       "Video Name": "ปิดจบ ซอมบี้ที่รัก |【Night of the dead 】(EP.4 END)",
       "View": "92",
@@ -1719,7 +1749,7 @@
       "Views to Likes Ratio": "4.6"
     },
     {
-      "No": "115",
+      "No": "117",
       "Urls": "https://www.youtube.com/watch?v=InfAwIKxMD0",
       "Video Name": "รีสอร์ทฉุกเฉิน |  [เล่าเรื่องผี EP.24]",
       "View": "108",
@@ -1734,7 +1764,7 @@
       "Views to Likes Ratio": "5.4"
     },
     {
-      "No": "116",
+      "No": "118",
       "Urls": "https://www.youtube.com/watch?v=DuKW1wFH4Jk",
       "Video Name": "ขอส่งเธอ จนสุดทาง |【The Calisto protocol】EP.4 END",
       "View": "759",
@@ -1749,7 +1779,7 @@
       "Views to Likes Ratio": "21.685714285714287"
     },
     {
-      "No": "117",
+      "No": "119",
       "Urls": "https://www.youtube.com/watch?v=k5JbuEDUQSw",
       "Video Name": "จุดจบ ที่เลือกไม่ได้ |【Silent hill f】EP.5 END",
       "View": "363",
@@ -1764,7 +1794,7 @@
       "Views to Likes Ratio": "10.676470588235293"
     },
     {
-      "No": "118",
+      "No": "120",
       "Urls": "https://www.youtube.com/watch?v=DImIRtpKhYg",
       "Video Name": "พิธีกรรม แลกแขน |【Silent hill f】EP.4",
       "View": "136",
@@ -1779,7 +1809,7 @@
       "Views to Likes Ratio": "4.857142857142857"
     },
     {
-      "No": "119",
+      "No": "121",
       "Urls": "https://www.youtube.com/watch?v=XhyJ2mrnGTE",
       "Video Name": "ใครดีใครร้าย ไม่ทราบได้ |【Silent hill f】EP.3",
       "View": "344",
@@ -1794,7 +1824,7 @@
       "Views to Likes Ratio": "10.424242424242424"
     },
     {
-      "No": "120",
+      "No": "122",
       "Urls": "https://www.youtube.com/watch?v=soxf88txH2w",
       "Video Name": "คนไม่เกี่ยว ก็จะเกี่ยวให้ได้ |【Silent hill f】EP.2",
       "View": "350",
@@ -1809,7 +1839,7 @@
       "Views to Likes Ratio": "10.9375"
     },
     {
-      "No": "121",
+      "No": "123",
       "Urls": "https://www.youtube.com/watch?v=Aq9Rorqm6g0",
       "Video Name": "เมืองผีห่าน พาชิบหาญย์ |【Silent hill f】EP.1",
       "View": "465",
@@ -1824,7 +1854,7 @@
       "Views to Likes Ratio": "9.489795918367347"
     },
     {
-      "No": "122",
+      "No": "124",
       "Urls": "https://www.youtube.com/watch?v=0kEvwPkW_AI",
       "Video Name": "ทำหน้าเหมือนคิดได้ |【The Calisto protocol】EP.3",
       "View": "216",
@@ -1839,7 +1869,7 @@
       "Views to Likes Ratio": "7.714285714285714"
     },
     {
-      "No": "123",
+      "No": "125",
       "Urls": "https://www.youtube.com/watch?v=kSO8hDxsjHA",
       "Video Name": "วันๆ ของการเม้ามอย",
       "View": "271",
@@ -1854,7 +1884,7 @@
       "Views to Likes Ratio": "7.970588235294118"
     },
     {
-      "No": "124",
+      "No": "126",
       "Urls": "https://www.youtube.com/watch?v=uGcAIAXB0Hk",
       "Video Name": "Dating Of Necromancer【Original song & Lyrics - English edition -】",
       "View": "592",
@@ -1869,7 +1899,7 @@
       "Views to Likes Ratio": "16.914285714285715"
     },
     {
-      "No": "125",
+      "No": "127",
       "Urls": "https://www.youtube.com/watch?v=x9jzCSkGEEw",
       "Video Name": "คนป่วย มาคุยเรื่องนิยาย Secret garden",
       "View": "335",
@@ -1884,7 +1914,7 @@
       "Views to Likes Ratio": "15.227272727272727"
     },
     {
-      "No": "126",
+      "No": "128",
       "Urls": "https://www.youtube.com/watch?v=PK_rGuerIGI",
       "Video Name": "Dating Of Necromancer 【Original song & Lyrics - ฉบับไทยปรับปรุง -】",
       "View": "594",
@@ -1899,7 +1929,7 @@
       "Views to Likes Ratio": "21.214285714285715"
     },
     {
-      "No": "127",
+      "No": "129",
       "Urls": "https://www.youtube.com/watch?v=gMaRv5a93A0",
       "Video Name": "วันที่พูดน้อยที่สุด",
       "View": "554",
@@ -1914,7 +1944,7 @@
       "Views to Likes Ratio": "19.103448275862068"
     },
     {
-      "No": "128",
+      "No": "130",
       "Urls": "https://www.youtube.com/watch?v=Tn1CBgA_9Rg",
       "Video Name": "การเผชิญหน้า! #vtuber #shorts",
       "View": "1914",
@@ -1929,7 +1959,7 @@
       "Views to Likes Ratio": "14.177777777777777"
     },
     {
-      "No": "129",
+      "No": "131",
       "Urls": "https://www.youtube.com/watch?v=6oiTo46lT1c",
       "Video Name": "จับอะไร ให้ใช้อันนั้น  |【Neon Abyss 1】EP.2",
       "View": "111",
@@ -1944,7 +1974,7 @@
       "Views to Likes Ratio": "5.285714285714286"
     },
     {
-      "No": "130",
+      "No": "132",
       "Urls": "https://www.youtube.com/watch?v=OFngQz0FzEM",
       "Video Name": "จุดจบ เพียงแค่เริ่มต้น  |【Atomic heart】EP.5 END",
       "View": "174",
@@ -1959,7 +1989,7 @@
       "Views to Likes Ratio": "7.565217391304348"
     },
     {
-      "No": "131",
+      "No": "133",
       "Urls": "https://www.youtube.com/watch?v=hxI4mLBHQ4I",
       "Video Name": "ใต้วงแขน แสนกินใจ #vtuber #shorts",
       "View": "460",
@@ -1974,7 +2004,7 @@
       "Views to Likes Ratio": "7.931034482758621"
     },
     {
-      "No": "132",
+      "No": "134",
       "Urls": "https://www.youtube.com/watch?v=MMWinQS_Ajk",
       "Video Name": "เหล่ายีนผู้พิทักษ์ !  #vtuber #shorts #anime #fyp #shortvideo #cute #feedshorts #short #shortsfeed",
       "View": "3178",
@@ -1989,7 +2019,7 @@
       "Views to Likes Ratio": "30.854368932038835"
     },
     {
-      "No": "133",
+      "No": "135",
       "Urls": "https://www.youtube.com/watch?v=Zt6-_Sq7XUI",
       "Video Name": "เลิฟยู ~~ #vtuber #shorts",
       "View": "416",
@@ -2004,7 +2034,7 @@
       "Views to Likes Ratio": "6.709677419354839"
     },
     {
-      "No": "134",
+      "No": "136",
       "Urls": "https://www.youtube.com/watch?v=KuyaYemWQQE",
       "Video Name": "MYSTERY LIVE EP.2",
       "View": "192",
@@ -2019,7 +2049,7 @@
       "Views to Likes Ratio": "6.857142857142857"
     },
     {
-      "No": "135",
+      "No": "137",
       "Urls": "https://www.youtube.com/watch?v=3teqaI4RNbY",
       "Video Name": "ยืดหดได้ เหมือนใจคน  |【Atomic heart】EP.4",
       "View": "97",
@@ -2034,7 +2064,7 @@
       "Views to Likes Ratio": "5.388888888888889"
     },
     {
-      "No": "136",
+      "No": "138",
       "Urls": "https://www.youtube.com/watch?v=edEEFPFHtl4",
       "Video Name": "ชีวิตที่แสนอิ่ม ข้างริมตลิ่ง |【Night of the dead 】(EP.3)",
       "View": "349",
@@ -2049,7 +2079,7 @@
       "Views to Likes Ratio": "10.575757575757576"
     },
     {
-      "No": "137",
+      "No": "139",
       "Urls": "https://www.youtube.com/watch?v=3Z2b86PaO9M",
       "Video Name": "ลูกนิมิตร พาเพลิน  |【Atomic heart】EP.3",
       "View": "100",
@@ -2064,7 +2094,7 @@
       "Views to Likes Ratio": "4.166666666666667"
     },
     {
-      "No": "138",
+      "No": "140",
       "Urls": "https://www.youtube.com/watch?v=krXApKQCzuY",
       "Video Name": "พูดคุย ชิลๆ",
       "View": "135",
@@ -2079,7 +2109,7 @@
       "Views to Likes Ratio": "6.428571428571429"
     },
     {
-      "No": "139",
+      "No": "141",
       "Urls": "https://www.youtube.com/watch?v=p5wO3SlyX0M",
       "Video Name": "หว่อ อ้าย หนี่~~ #vtuber #shorts #anime #fyp #shortvideo #cute #feedshorts #short #shortsfeed",
       "View": "2508",
@@ -2094,7 +2124,7 @@
       "Views to Likes Ratio": "16.076923076923077"
     },
     {
-      "No": "140",
+      "No": "142",
       "Urls": "https://www.youtube.com/watch?v=h4Yz-Mdr818",
       "Video Name": "โล้นแล้วไง บวกแล้วกัน  |【The Calisto protocol】EP.2",
       "View": "129",
@@ -2109,7 +2139,7 @@
       "Views to Likes Ratio": "4.961538461538462"
     },
     {
-      "No": "141",
+      "No": "143",
       "Urls": "https://www.youtube.com/watch?v=AcTci15KFhE",
       "Video Name": "การทดลองบ้าบิ่น  |【Atomic heart】EP.2",
       "View": "140",
@@ -2124,7 +2154,7 @@
       "Views to Likes Ratio": "4.666666666666667"
     },
     {
-      "No": "142",
+      "No": "144",
       "Urls": "https://www.youtube.com/watch?v=2SivUEeQjmM",
       "Video Name": "เป็นการเอาตัวรอดที่อิ่มมาก |【Night of the dead 】(EP.2)",
       "View": "161",
@@ -2139,7 +2169,7 @@
       "Views to Likes Ratio": "4.878787878787879"
     },
     {
-      "No": "143",
+      "No": "145",
       "Urls": "https://www.youtube.com/watch?v=81-AGZSztag",
       "Video Name": "Marine Chariot - Dating Of Necromancer 【Original song & Lyrics】",
       "View": "392",
@@ -2154,7 +2184,7 @@
       "Views to Likes Ratio": "10.88888888888889"
     },
     {
-      "No": "144",
+      "No": "146",
       "Urls": "https://www.youtube.com/watch?v=ae5zXGhtvbU",
       "Video Name": "ยุคสมัยแห่งหุ่น  |【Atomic heart】EP.1",
       "View": "311",
@@ -2169,7 +2199,7 @@
       "Views to Likes Ratio": "7.232558139534884"
     },
     {
-      "No": "145",
+      "No": "147",
       "Urls": "https://www.youtube.com/watch?v=SdvKGEyz4RY",
       "Video Name": "งานพาร์ทไทม์ ที่ร้านสะดวกซื้อ |  [เล่าเรื่องผี EP.23]",
       "View": "147",
@@ -2184,7 +2214,7 @@
       "Views to Likes Ratio": "6.125"
     },
     {
-      "No": "146",
+      "No": "148",
       "Urls": "https://www.youtube.com/watch?v=pzELD4lBUiY",
       "Video Name": "วิธีที่ยูทูปใช้อัลกอริทึ่ม #vtuber #shorts #anime",
       "View": "439",
@@ -2199,7 +2229,7 @@
       "Views to Likes Ratio": "9.340425531914894"
     },
     {
-      "No": "147",
+      "No": "149",
       "Urls": "https://www.youtube.com/watch?v=DERh8zqlrA4",
       "Video Name": "วันๆของคุณหนู ก็แบบนี้ล่ะ~~ #vtuber #shorts #fyp #anime #trending #trendingshorts #dance",
       "View": "504",
@@ -2214,22 +2244,22 @@
       "Views to Likes Ratio": "6.379746835443038"
     },
     {
-      "No": "148",
+      "No": "150",
       "Urls": "https://www.youtube.com/watch?v=Whsh1NYdwfw",
       "Video Name": "Marine Chariot - Blue Butterfly Whisper 【Original song & Lyrics】",
-      "View": "499",
+      "View": "500",
       "Like": "43",
       "Comm": "12",
       "published_date": "2025-07-28",
       "duration": "0:03:26",
       "minute": "3.43",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.11022044088176353",
+      "Engagement Rate": "0.11",
       "AVG View Duration": "1.55",
-      "Views to Likes Ratio": "11.604651162790697"
+      "Views to Likes Ratio": "11.627906976744185"
     },
     {
-      "No": "149",
+      "No": "151",
       "Urls": "https://www.youtube.com/watch?v=3UFPE5IIdpQ",
       "Video Name": "หวนคืนสู่ ความวินาศ  |【The Calisto protocol】EP.1",
       "View": "344",
@@ -2244,7 +2274,7 @@
       "Views to Likes Ratio": "6.142857142857143"
     },
     {
-      "No": "150",
+      "No": "152",
       "Urls": "https://www.youtube.com/watch?v=N4iVMqw1Fq0",
       "Video Name": "The beginning of Rip and tear [ DOOM : The Dark Ages ] (EP.7 END)",
       "View": "211",
@@ -2259,7 +2289,7 @@
       "Views to Likes Ratio": "7.814814814814815"
     },
     {
-      "No": "151",
+      "No": "153",
       "Urls": "https://www.youtube.com/watch?v=V2scb3RTNOk",
       "Video Name": "ดื่มน้ำอะไร ? #vtuber #shorts",
       "View": "332",
@@ -2274,7 +2304,7 @@
       "Views to Likes Ratio": "9.222222222222221"
     },
     {
-      "No": "152",
+      "No": "154",
       "Urls": "https://www.youtube.com/watch?v=1Pa7dM_nvr8",
       "Video Name": "อัพเดทเนื้อหา Content ใหม่ๆ ที่กำลังจะมา!",
       "View": "200",
@@ -2289,7 +2319,7 @@
       "Views to Likes Ratio": "4.761904761904762"
     },
     {
-      "No": "153",
+      "No": "155",
       "Urls": "https://www.youtube.com/watch?v=OLTehMUI9GU",
       "Video Name": "อีโมชั่ลลล ~~ #vtuber #shorts",
       "View": "2624",
@@ -2304,7 +2334,7 @@
       "Views to Likes Ratio": "14.497237569060774"
     },
     {
-      "No": "154",
+      "No": "156",
       "Urls": "https://www.youtube.com/watch?v=pgeQ7U_ltS0",
       "Video Name": "ปากใหม่สวยใสกิ๊ง ~~ #vtuber #shorts",
       "View": "2065",
@@ -2319,7 +2349,7 @@
       "Views to Likes Ratio": "20.858585858585858"
     },
     {
-      "No": "155",
+      "No": "157",
       "Urls": "https://www.youtube.com/watch?v=DW3k5AJw6a0",
       "Video Name": "คู่มือการเป็นคุณหนู 2.0 ~ #vtuber #shorts",
       "View": "333",
@@ -2334,22 +2364,22 @@
       "Views to Likes Ratio": "6.9375"
     },
     {
-      "No": "156",
+      "No": "158",
       "Urls": "https://www.youtube.com/watch?v=VixW0lRow4Y",
       "Video Name": "สู้กับทุกอย่าง จบที่ของกิน ~ #vtuber #shorts #youtubeshorts #fyp #trending #viral #comedy #anime",
-      "View": "1699",
+      "View": "1700",
       "Like": "192",
       "Comm": "13",
       "published_date": "2025-07-22",
       "duration": "0:00:16",
       "minute": "0.27",
       "type": "Shots",
-      "Engagement Rate": "0.12065921130076515",
+      "Engagement Rate": "0.12058823529411765",
       "AVG View Duration": "0.12",
-      "Views to Likes Ratio": "8.848958333333334"
+      "Views to Likes Ratio": "8.854166666666666"
     },
     {
-      "No": "157",
+      "No": "159",
       "Urls": "https://www.youtube.com/watch?v=4P3KGGAdXPk",
       "Video Name": "คนที่พยายามจะ อารา อาร่า ~ #vtuber #shorts #youtubeshorts #fyp #trending #viral #comedy #anime",
       "View": "1888",
@@ -2364,7 +2394,7 @@
       "Views to Likes Ratio": "13.295774647887324"
     },
     {
-      "No": "158",
+      "No": "160",
       "Urls": "https://www.youtube.com/watch?v=Kc6B9pc47AE",
       "Video Name": "คิดถึงมาก มากจริงๆ ~ #vtuber #shorts #youtubeshorts #fyp #trending #viral #comedy #anime",
       "View": "2071",
@@ -2379,7 +2409,7 @@
       "Views to Likes Ratio": "16.975409836065573"
     },
     {
-      "No": "159",
+      "No": "161",
       "Urls": "https://www.youtube.com/watch?v=YSC4m4wt9MU",
       "Video Name": "ให้ผีเสื้อนำทางไป  |【Lies of P】(EP.12) END",
       "View": "324",
@@ -2394,7 +2424,7 @@
       "Views to Likes Ratio": "9.529411764705882"
     },
     {
-      "No": "160",
+      "No": "162",
       "Urls": "https://www.youtube.com/watch?v=Q185eA9FnRE",
       "Video Name": "เปิดตัวอลังกาล จำปุ่มไม่ได้ ~~#vtuber #shorts #youtubeshorts #fyp #trending #viral #comedy",
       "View": "2046",
@@ -2409,7 +2439,7 @@
       "Views to Likes Ratio": "15.044117647058824"
     },
     {
-      "No": "161",
+      "No": "163",
       "Urls": "https://www.youtube.com/watch?v=E7xG_ImMlG0",
       "Video Name": "เปิดใจคุย .. ครั้งสุดท้าย",
       "View": "795",
@@ -2424,7 +2454,7 @@
       "Views to Likes Ratio": "10.743243243243244"
     },
     {
-      "No": "162",
+      "No": "164",
       "Urls": "https://www.youtube.com/watch?v=aA-_AicEkMQ",
       "Video Name": "ฤดูร้อนนี้ เหงื่อใหลซึม .. #vtuber #shorts #youtubeshorts #fyp #เปิดการมองเห็น",
       "View": "497",
@@ -2439,7 +2469,7 @@
       "Views to Likes Ratio": "9.745098039215685"
     },
     {
-      "No": "163",
+      "No": "165",
       "Urls": "https://www.youtube.com/watch?v=qj1vsG4b3jI",
       "Video Name": "เต้นนนนนน ~~#vtuber #shorts #youtubeshorts #fyp #เปิดการมองเห็น",
       "View": "690",
@@ -2454,7 +2484,7 @@
       "Views to Likes Ratio": "12.545454545454545"
     },
     {
-      "No": "164",
+      "No": "166",
       "Urls": "https://www.youtube.com/watch?v=ZElESk7CIAY",
       "Video Name": "Squid has a heart too [ DOOM : The Dark Ages ] (EP.6)",
       "View": "242",
@@ -2469,7 +2499,7 @@
       "Views to Likes Ratio": "10.521739130434783"
     },
     {
-      "No": "165",
+      "No": "167",
       "Urls": "https://www.youtube.com/watch?v=tG6_rhGp3S0",
       "Video Name": "เก็บตกแลบลิ้น ถือลูกซองยิงผี! 【Freetalk & Games】",
       "View": "177",
@@ -2484,7 +2514,7 @@
       "Views to Likes Ratio": "6.555555555555555"
     },
     {
-      "No": "166",
+      "No": "168",
       "Urls": "https://www.youtube.com/watch?v=yIiW5qLiPaY",
       "Video Name": "ฮันนี่~ พายยย~~~ ..#vtuber #vtuberclips #shorts #youtubeshorts #fyp #trending #viral #comedy",
       "View": "2483",
@@ -2499,7 +2529,7 @@
       "Views to Likes Ratio": "13.794444444444444"
     },
     {
-      "No": "167",
+      "No": "169",
       "Urls": "https://www.youtube.com/watch?v=k5fu9vxckGk",
       "Video Name": "นี่จริงจังกันหน่อย! ..#vtuber #vtuberclips #shorts #youtubeshorts #fyp #trending #viral #comedy",
       "View": "2872",
@@ -2514,7 +2544,7 @@
       "Views to Likes Ratio": "16.225988700564972"
     },
     {
-      "No": "168",
+      "No": "170",
       "Urls": "https://www.youtube.com/watch?v=rfChh86hIfY",
       "Video Name": "ยีนวิ๊งงง~~ ..#vtuber #shorts #youtubeshorts #fyp #trending #viral #comedy",
       "View": "2461",
@@ -2529,7 +2559,7 @@
       "Views to Likes Ratio": "18.93076923076923"
     },
     {
-      "No": "169",
+      "No": "171",
       "Urls": "https://www.youtube.com/watch?v=DMVPLAkkJQ0",
       "Video Name": "วิ๊งรับยามเช้า! ..#vtuber #shorts #個人vtuber #新人vtuber #vtuber準備中 #eyeloop #anime #youtubeshorts #fyp",
       "View": "2514",
@@ -2544,7 +2574,7 @@
       "Views to Likes Ratio": "22.446428571428573"
     },
     {
-      "No": "170",
+      "No": "172",
       "Urls": "https://www.youtube.com/watch?v=0Q0FeJg2h8k",
       "Video Name": "เย็นนี้กินอะไรดี ? ทารันทูล่ามั้ย !! .. #vtuber #shorts",
       "View": "3246",
@@ -2559,7 +2589,7 @@
       "Views to Likes Ratio": "20.544303797468356"
     },
     {
-      "No": "171",
+      "No": "173",
       "Urls": "https://www.youtube.com/watch?v=jE1ojS2MgaE",
       "Video Name": "Dating Of Necromancer : วันเดทกับคุณหนูลุคใหม่ [V2.0 & New Outfit Arrival]",
       "View": "1839",
@@ -2574,7 +2604,7 @@
       "Views to Likes Ratio": "3.1543739279588334"
     },
     {
-      "No": "172",
+      "No": "174",
       "Urls": "https://www.youtube.com/watch?v=Cwkt5Ks2cL0",
       "Video Name": "เช้านี้ ยังอีกยาวไกล .. #vtuber #shorts",
       "View": "2385",
@@ -2589,7 +2619,7 @@
       "Views to Likes Ratio": "34.07142857142857"
     },
     {
-      "No": "173",
+      "No": "175",
       "Urls": "https://www.youtube.com/watch?v=AbgsWLytH-8",
       "Video Name": "ไลค์ อะ ยีน .. #vtuber #shorts",
       "View": "3163",
@@ -2604,7 +2634,7 @@
       "Views to Likes Ratio": "19.169696969696968"
     },
     {
-      "No": "174",
+      "No": "176",
       "Urls": "https://www.youtube.com/watch?v=GymbV3HjmLo",
       "Video Name": "โอฮาโย นี่ ตื่นสิ!! .. #vtuber #shorts",
       "View": "2635",
@@ -2619,7 +2649,7 @@
       "Views to Likes Ratio": "33.782051282051285"
     },
     {
-      "No": "175",
+      "No": "177",
       "Urls": "https://www.youtube.com/watch?v=3wrhy0Ipu2Q",
       "Video Name": "เกมที่ลุย ล้านอารมณ์ .. #vtuber #shorts",
       "View": "1290",
@@ -2634,7 +2664,7 @@
       "Views to Likes Ratio": "19.545454545454547"
     },
     {
-      "No": "176",
+      "No": "178",
       "Urls": "https://www.youtube.com/watch?v=wmiyaQsNNJ0",
       "Video Name": "วันอาทิตย์ เป็นยังไงกันมั่ง! .. #vtuber #shorts",
       "View": "968",
@@ -2649,7 +2679,7 @@
       "Views to Likes Ratio": "22"
     },
     {
-      "No": "177",
+      "No": "179",
       "Urls": "https://www.youtube.com/watch?v=t746UJ0o0CQ",
       "Video Name": "ชิ แบร่ๆ .. #vtuber #shorts",
       "View": "1009",
@@ -2664,7 +2694,7 @@
       "Views to Likes Ratio": "21.020833333333332"
     },
     {
-      "No": "178",
+      "No": "180",
       "Urls": "https://www.youtube.com/watch?v=JoIKiiiw7HE",
       "Video Name": "วันที่ 7 นี้วันสำคัญ เจอกันนะคะ! .. #vtuber #shorts",
       "View": "648",
@@ -2679,7 +2709,7 @@
       "Views to Likes Ratio": "24.923076923076923"
     },
     {
-      "No": "179",
+      "No": "181",
       "Urls": "https://www.youtube.com/watch?v=iF7dCUItgzQ",
       "Video Name": "จะเป็นอะไรดี? ก็เป็นแล้วทุกอย่าง .. #vtuber #shorts",
       "View": "12461",
@@ -2694,7 +2724,7 @@
       "Views to Likes Ratio": "38.81931464174455"
     },
     {
-      "No": "180",
+      "No": "182",
       "Urls": "https://www.youtube.com/watch?v=0Fh0xkMFx4g",
       "Video Name": "zZzZz . . . #vtuber #shorts",
       "View": "3037",
@@ -2709,7 +2739,7 @@
       "Views to Likes Ratio": "17.354285714285716"
     },
     {
-      "No": "181",
+      "No": "183",
       "Urls": "https://www.youtube.com/watch?v=ex3G8Q0Rvns",
       "Video Name": "เลิกงาน ต้องกลับบ้านไวๆนะ!  .. #vtuber #shorts",
       "View": "2626",
@@ -2724,7 +2754,7 @@
       "Views to Likes Ratio": "29.177777777777777"
     },
     {
-      "No": "182",
+      "No": "184",
       "Urls": "https://www.youtube.com/watch?v=jrgrc6V-_N0",
       "Video Name": "จะฟาดคนไม่กินข้าวเช้า!  .. #vtuber #shorts",
       "View": "2758",
@@ -2739,7 +2769,7 @@
       "Views to Likes Ratio": "33.2289156626506"
     },
     {
-      "No": "183",
+      "No": "185",
       "Urls": "https://www.youtube.com/watch?v=X5BJPD9iirU",
       "Video Name": "Live Schedule : Dating Of Necromancer [V2.0 & New outfit has arrived]",
       "View": "103",
@@ -2754,7 +2784,7 @@
       "Views to Likes Ratio": "7.923076923076923"
     },
     {
-      "No": "184",
+      "No": "186",
       "Urls": "https://www.youtube.com/watch?v=QiofmFwG84U",
       "Video Name": "🦋 .. Emblem : Supreme Leader Secret garden ..🦋",
       "View": "326",
@@ -2769,7 +2799,7 @@
       "Views to Likes Ratio": "19.176470588235293"
     },
     {
-      "No": "185",
+      "No": "187",
       "Urls": "https://www.youtube.com/watch?v=70kETfMCaO8",
       "Video Name": "กลางคืนไม่หวั่น .. มาว่ะไปดิ |【Night of the dead 】(EP.1)",
       "View": "221",
@@ -2784,7 +2814,7 @@
       "Views to Likes Ratio": "11.631578947368421"
     },
     {
-      "No": "186",
+      "No": "188",
       "Urls": "https://www.youtube.com/watch?v=wpkjsMZY-Ms",
       "Video Name": "เหล่ากระต่ายแสนน่ารัก ..  |【Lies of P】(EP.11)",
       "View": "107",
@@ -2799,7 +2829,7 @@
       "Views to Likes Ratio": "8.916666666666666"
     },
     {
-      "No": "187",
+      "No": "189",
       "Urls": "https://www.youtube.com/watch?v=ADZuBfeSXJ8",
       "Video Name": "ช่วงเวลา วิกาล | ประสบการณ์น่ากลัวของคุณหนู [เล่าเรื่องผี EP.22]",
       "View": "96",
@@ -2814,7 +2844,7 @@
       "Views to Likes Ratio": "6"
     },
     {
-      "No": "188",
+      "No": "190",
       "Urls": "https://www.youtube.com/watch?v=80FD5-gokPA",
       "Video Name": "🦋.. 07.07.2025 ..🦋",
       "View": "207",
@@ -2829,7 +2859,7 @@
       "Views to Likes Ratio": "12.176470588235293"
     },
     {
-      "No": "189",
+      "No": "191",
       "Urls": "https://www.youtube.com/watch?v=REkaHUECGjA",
       "Video Name": "Breaking the Universe |【 DOOM: The Dark Ages 】(EP.5)",
       "View": "111",
@@ -2844,7 +2874,7 @@
       "Views to Likes Ratio": "8.538461538461538"
     },
     {
-      "No": "190",
+      "No": "192",
       "Urls": "https://www.youtube.com/watch?v=oQ_I-b6ywoU",
       "Video Name": "พี่คือพี.. ชาวไร่ ไถนา  |【Lies of P】(EP.10)",
       "View": "126",
@@ -2859,7 +2889,7 @@
       "Views to Likes Ratio": "7.875"
     },
     {
-      "No": "191",
+      "No": "193",
       "Urls": "https://www.youtube.com/watch?v=t00d3994_bQ",
       "Video Name": "เส้นทาง .. การสู้ชีวิต",
       "View": "99",
@@ -2874,7 +2904,7 @@
       "Views to Likes Ratio": "7.071428571428571"
     },
     {
-      "No": "192",
+      "No": "194",
       "Urls": "https://www.youtube.com/watch?v=_fT3L_-QbsI",
       "Video Name": "สองเรา .. วันโลกสิ้น |【Bulletstorm: Full Clip Edition】(EP.3 จบ)",
       "View": "87",
@@ -2889,7 +2919,7 @@
       "Views to Likes Ratio": "6.6923076923076925"
     },
     {
-      "No": "193",
+      "No": "195",
       "Urls": "https://www.youtube.com/watch?v=TjM2qLyz31E",
       "Video Name": "เข้าฤดูร้อนนี้ .. คุณหนูเหลว",
       "View": "131",
@@ -2904,7 +2934,7 @@
       "Views to Likes Ratio": "10.076923076923077"
     },
     {
-      "No": "194",
+      "No": "196",
       "Urls": "https://www.youtube.com/watch?v=ZjTtU3vIlKE",
       "Video Name": "The Floating Cathedral |【 DOOM: The Dark Ages 】(EP.4)",
       "View": "131",
@@ -2919,7 +2949,7 @@
       "Views to Likes Ratio": "7.705882352941177"
     },
     {
-      "No": "195",
+      "No": "197",
       "Urls": "https://www.youtube.com/watch?v=aSkKaEyy9EE",
       "Video Name": "ผีผักกระเฉด  |【Lies of P】(EP.9)",
       "View": "100",
@@ -2934,7 +2964,7 @@
       "Views to Likes Ratio": "7.6923076923076925"
     },
     {
-      "No": "196",
+      "No": "198",
       "Urls": "https://www.youtube.com/watch?v=qBgG8AYrg9Y",
       "Video Name": "รวมกัน ... เราเทม คู่หูนักเลี้ยงสัตว์ ในตำนาน |【 ARK Survival Evolved: Fjordur 】(EP.4)",
       "View": "232",
@@ -2949,7 +2979,7 @@
       "Views to Likes Ratio": "15.466666666666667"
     },
     {
-      "No": "197",
+      "No": "199",
       "Urls": "https://www.youtube.com/watch?v=iC5RwG8mn_0",
       "Video Name": "การทำงานล่วงเวลา | นั่งเล่าเรื่องผีกับคุณ Gosofia [เล่าเรื่องผี EP.21]",
       "View": "77",
@@ -2964,7 +2994,7 @@
       "Views to Likes Ratio": "5.5"
     },
     {
-      "No": "198",
+      "No": "200",
       "Urls": "https://www.youtube.com/watch?v=EAzXXfAL4uw",
       "Video Name": "บัวขาวยังอาย  |【Lies of P】(EP.8)",
       "View": "117",
@@ -2979,7 +3009,7 @@
       "Views to Likes Ratio": "10.636363636363637"
     },
     {
-      "No": "199",
+      "No": "201",
       "Urls": "https://www.youtube.com/watch?v=V3afG1nJw3A",
       "Video Name": "Great Shield .. Grants power! |【 DOOM: The Dark Ages 】(EP.3)",
       "View": "156",
@@ -2994,7 +3024,7 @@
       "Views to Likes Ratio": "6.782608695652174"
     },
     {
-      "No": "200",
+      "No": "202",
       "Urls": "https://www.youtube.com/watch?v=cjdayuBMmx4",
       "Video Name": "สิ่งสำคัญที่โลกใบนี้ ในปัจจุบัน .. ขาดไป",
       "View": "117",
@@ -3009,7 +3039,7 @@
       "Views to Likes Ratio": "5.571428571428571"
     },
     {
-      "No": "201",
+      "No": "203",
       "Urls": "https://www.youtube.com/watch?v=52DvG3mQfWA",
       "Video Name": "Spread wings..into the sky |【 DOOM: The Dark Ages 】(EP.2)",
       "View": "195",
@@ -3024,7 +3054,7 @@
       "Views to Likes Ratio": "9.75"
     },
     {
-      "No": "202",
+      "No": "204",
       "Urls": "https://www.youtube.com/watch?v=q5feZO3CjoI",
       "Video Name": "Call me .. Ojou-Slayer |【 DOOM: The Dark Ages 】(EP.1)",
       "View": "268",
@@ -3039,7 +3069,7 @@
       "Views to Likes Ratio": "8.933333333333334"
     },
     {
-      "No": "203",
+      "No": "205",
       "Urls": "https://www.youtube.com/watch?v=bbqiXs0PNLI",
       "Video Name": "ร่วมกัน...เราล่า คู่หูเซียนนักล่ามือดี |【 ARK Survival Evolved: Fjordur 】(EP.3)",
       "View": "211",
@@ -3054,7 +3084,7 @@
       "Views to Likes Ratio": "9.173913043478262"
     },
     {
-      "No": "204",
+      "No": "206",
       "Urls": "https://www.youtube.com/watch?v=RK_jLxabXyM",
       "Video Name": "น้องเคยทำขายตรงมั้ย พี่เคยนะ ..",
       "View": "137",
@@ -3069,7 +3099,7 @@
       "Views to Likes Ratio": "8.058823529411764"
     },
     {
-      "No": "205",
+      "No": "207",
       "Urls": "https://www.youtube.com/watch?v=QVO1Eh-FfM0",
       "Video Name": "เพื่อนรัก vs ลูกนิมิตร  .. #vtuber #shorts",
       "View": "1333",
@@ -3084,7 +3114,7 @@
       "Views to Likes Ratio": "39.205882352941174"
     },
     {
-      "No": "206",
+      "No": "208",
       "Urls": "https://www.youtube.com/watch?v=iv71Lu0so_k",
       "Video Name": "ชีวิต นั้นคือชีวิต  |【Lies of P】(EP.7)",
       "View": "89",
@@ -3099,7 +3129,7 @@
       "Views to Likes Ratio": "5.235294117647059"
     },
     {
-      "No": "207",
+      "No": "209",
       "Urls": "https://www.youtube.com/watch?v=9RpkEheBaak",
       "Video Name": "สไลด์มันไป  |【Bulletstorm: Full Clip Edition】(EP.2)",
       "View": "76",
@@ -3114,7 +3144,7 @@
       "Views to Likes Ratio": "7.6"
     },
     {
-      "No": "208",
+      "No": "210",
       "Urls": "https://www.youtube.com/watch?v=l2RUhCS1gWU",
       "Video Name": "รวมกัน..เราตาย สองนักเอาตัวรอดมืออาชีพ |【 ARK Survival Evolved: Fjordur 】(EP.2)",
       "View": "251",
@@ -3129,7 +3159,7 @@
       "Views to Likes Ratio": "10.91304347826087"
     },
     {
-      "No": "209",
+      "No": "211",
       "Urls": "https://www.youtube.com/watch?v=Er6xVyceKGk",
       "Video Name": "อ๊าก! จะไหวเร้อ |【 ARK Survival Evolved: Fjordur 】(EP.1)",
       "View": "292",
@@ -3144,7 +3174,7 @@
       "Views to Likes Ratio": "11.68"
     },
     {
-      "No": "210",
+      "No": "212",
       "Urls": "https://www.youtube.com/watch?v=jG_KrFP4_n8",
       "Video Name": "Ai กับ นักวาด / จากความรู้สึกของคุณหนู",
       "View": "255",
@@ -3159,7 +3189,7 @@
       "Views to Likes Ratio": "9.107142857142858"
     },
     {
-      "No": "211",
+      "No": "213",
       "Urls": "https://www.youtube.com/watch?v=izpikxjmAcg",
       "Video Name": "พายุกระสุน  |【Bulletstorm: Full Clip Edition】(EP.1)",
       "View": "134",
@@ -3174,7 +3204,7 @@
       "Views to Likes Ratio": "5.583333333333333"
     },
     {
-      "No": "212",
+      "No": "214",
       "Urls": "https://www.youtube.com/watch?v=tadaiuRXKBM",
       "Video Name": "สรุปความหมายที่ลึกซึ้งของเกม MiSide / มิตะบ้าคลั่ง ร้ายจริงๆ หรือเปล่า ?",
       "View": "199",
@@ -3189,7 +3219,7 @@
       "Views to Likes Ratio": "2.551282051282051"
     },
     {
-      "No": "213",
+      "No": "215",
       "Urls": "https://www.youtube.com/watch?v=ImeLuopMmzI",
       "Video Name": "วันนี้จะถึงมั้ย  |【Lies of P】(EP.6)",
       "View": "90",
@@ -3204,7 +3234,7 @@
       "Views to Likes Ratio": "8.181818181818182"
     },
     {
-      "No": "214",
+      "No": "216",
       "Urls": "https://www.youtube.com/watch?v=tfgiDdZPPuk",
       "Video Name": "ขี้เกียจทำปกไลฟ์ห์ .. จังเลยค่ะ",
       "View": "100",
@@ -3219,7 +3249,7 @@
       "Views to Likes Ratio": "6.666666666666667"
     },
     {
-      "No": "215",
+      "No": "217",
       "Urls": "https://www.youtube.com/watch?v=OFz3BM_zdyg",
       "Video Name": "อยู่ในใจตลอดไป |【MiSide】(EP.3 จบ)",
       "View": "325",
@@ -3234,7 +3264,7 @@
       "Views to Likes Ratio": "20.3125"
     },
     {
-      "No": "216",
+      "No": "218",
       "Urls": "https://www.youtube.com/watch?v=HSI8k3fhZag",
       "Video Name": "เรื่องเล่าในโรงนา | เล่าเรื่องผีกับคุณ Gosofia [เล่าเรื่องผี EP.19]",
       "View": "224",
@@ -3249,7 +3279,7 @@
       "Views to Likes Ratio": "14"
     },
     {
-      "No": "217",
+      "No": "219",
       "Urls": "https://www.youtube.com/watch?v=qOQBduR3nEQ",
       "Video Name": "เธอแตกต่าง |【MiSide】(EP.2)",
       "View": "127",
@@ -3264,7 +3294,7 @@
       "Views to Likes Ratio": "1.2574257425742574"
     },
     {
-      "No": "218",
+      "No": "220",
       "Urls": "https://www.youtube.com/watch?v=YrNKmFraKI4",
       "Video Name": "อัพเดทอาการป่วย ของคุณหนู  |  Freetalk & Chill",
       "View": "103",
@@ -3279,7 +3309,7 @@
       "Views to Likes Ratio": "3.3225806451612905"
     },
     {
-      "No": "219",
+      "No": "221",
       "Urls": "https://www.youtube.com/watch?v=9RN4ux4U_FA",
       "Video Name": "ไม่อยากเจอ  |【Lies of P】(EP.5)",
       "View": "93",
@@ -3294,7 +3324,7 @@
       "Views to Likes Ratio": "5.8125"
     },
     {
-      "No": "220",
+      "No": "222",
       "Urls": "https://www.youtube.com/watch?v=rFBjBkXeo0I",
       "Video Name": "ชีวประวัติการพบเจอกัน  |  Freetalk & Chill กับ Gosofia",
       "View": "167",
@@ -3309,7 +3339,7 @@
       "Views to Likes Ratio": "2.2266666666666666"
     },
     {
-      "No": "221",
+      "No": "223",
       "Urls": "https://www.youtube.com/watch?v=oB_CIhYfifs",
       "Video Name": "ฉันอยู่ข้างใน  |【MiSide】(EP.1)",
       "View": "212",
@@ -3324,7 +3354,7 @@
       "Views to Likes Ratio": "3.4193548387096775"
     },
     {
-      "No": "222",
+      "No": "224",
       "Urls": "https://www.youtube.com/watch?v=4oLkR_L0GQc",
       "Video Name": "ชีวิตที่แสนเรียบง่าย  |  Freetalk & Chill กับ Gosofia",
       "View": "83",
@@ -3339,7 +3369,7 @@
       "Views to Likes Ratio": "8.3"
     },
     {
-      "No": "223",
+      "No": "225",
       "Urls": "https://www.youtube.com/watch?v=Iy6hU5_huI8",
       "Video Name": "เป็นการเอาตัวรอด ที่อิ่มมาก .. #vtuber #shorts",
       "View": "698",
@@ -3354,7 +3384,7 @@
       "Views to Likes Ratio": "12.690909090909091"
     },
     {
-      "No": "224",
+      "No": "226",
       "Urls": "https://www.youtube.com/watch?v=_27o_JbGRUo",
       "Video Name": "เกมหมาโกหก .. #vtuber #shorts",
       "View": "162",
@@ -3369,7 +3399,7 @@
       "Views to Likes Ratio": "6.230769230769231"
     },
     {
-      "No": "225",
+      "No": "227",
       "Urls": "https://www.youtube.com/watch?v=cwlZjdZAnmw",
       "Video Name": "ต้นไม้หลังบ้าน | เล่าเรื่องผีกับคุณ Gosofia [เล่าเรื่องผี EP.18]",
       "View": "97",
@@ -3384,7 +3414,7 @@
       "Views to Likes Ratio": "1.3661971830985915"
     },
     {
-      "No": "226",
+      "No": "228",
       "Urls": "https://www.youtube.com/watch?v=gNNlqArypRE",
       "Video Name": "เพลงที่คุณหนูร้อง 2  .. #vtuber #shorts",
       "View": "613",
@@ -3399,22 +3429,22 @@
       "Views to Likes Ratio": "13.042553191489361"
     },
     {
-      "No": "227",
+      "No": "229",
       "Urls": "https://www.youtube.com/watch?v=iQ375VD13Ws",
       "Video Name": "เพลงที่คุณหนูร้อง 1  .. #vtuber #shorts",
-      "View": "157",
+      "View": "158",
       "Like": "30",
       "Comm": "4",
       "published_date": "2025-02-24",
       "duration": "0:01:47",
       "minute": "1.78",
       "type": "Shots",
-      "Engagement Rate": "0.21656050955414013",
+      "Engagement Rate": "0.21518987341772153",
       "AVG View Duration": "0.8",
-      "Views to Likes Ratio": "5.233333333333333"
+      "Views to Likes Ratio": "5.266666666666667"
     },
     {
-      "No": "228",
+      "No": "230",
       "Urls": "https://www.youtube.com/watch?v=SvTjjk0grXY",
       "Video Name": "ตาค้าง .. #vtuber #shorts",
       "View": "579",
@@ -3429,7 +3459,7 @@
       "Views to Likes Ratio": "8.64179104477612"
     },
     {
-      "No": "229",
+      "No": "231",
       "Urls": "https://www.youtube.com/watch?v=y6Octa8bcl4",
       "Video Name": "แก๊งกระต่าย กวนส้นทีน  |【Lies of P】(EP.4)",
       "View": "93",
@@ -3444,7 +3474,7 @@
       "Views to Likes Ratio": "4.894736842105263"
     },
     {
-      "No": "230",
+      "No": "232",
       "Urls": "https://www.youtube.com/watch?v=gTizDdFYIX8",
       "Video Name": "รวมมิตร Shorts Greenhell เสพกันไปยาวๆ EP. 1【 Edited by Gosofia 】",
       "View": "122",
@@ -3459,7 +3489,7 @@
       "Views to Likes Ratio": "8.714285714285714"
     },
     {
-      "No": "231",
+      "No": "233",
       "Urls": "https://www.youtube.com/watch?v=mr4pg5ajzpw",
       "Video Name": "ยีนมาหรอย .. #vtuber #shorts",
       "View": "591",
@@ -3474,7 +3504,7 @@
       "Views to Likes Ratio": "10.016949152542374"
     },
     {
-      "No": "232",
+      "No": "234",
       "Urls": "https://www.youtube.com/watch?v=_bJhcWwQkoE",
       "Video Name": "ว๊อด อีส หย๋อย ? .. #vtuber #shorts",
       "View": "257",
@@ -3489,7 +3519,7 @@
       "Views to Likes Ratio": "8.566666666666666"
     },
     {
-      "No": "233",
+      "No": "235",
       "Urls": "https://www.youtube.com/watch?v=i4V2BGF0OuE",
       "Video Name": "ผีห้อยหัว หยอยห้อยหมี  |【Lies of P】(EP.3)",
       "View": "66",
@@ -3504,7 +3534,7 @@
       "Views to Likes Ratio": "4.4"
     },
     {
-      "No": "234",
+      "No": "236",
       "Urls": "https://www.youtube.com/watch?v=rl0sedP92yM",
       "Video Name": "คิดชื่อไลฟ์ไม่ออก  |  Freetalk & Chill อันนี้ชิลจริงๆ",
       "View": "65",
@@ -3519,7 +3549,7 @@
       "Views to Likes Ratio": "4.642857142857143"
     },
     {
-      "No": "235",
+      "No": "237",
       "Urls": "https://www.youtube.com/watch?v=S3n70w1x8eE",
       "Video Name": "หย๋อยทั้งหมด ทั้งมวล .. #vtuber #shorts",
       "View": "570",
@@ -3534,7 +3564,7 @@
       "Views to Likes Ratio": "11.875"
     },
     {
-      "No": "236",
+      "No": "238",
       "Urls": "https://www.youtube.com/watch?v=yX1V-RK2DAg",
       "Video Name": "ห้อง 204 Part 1 .. #vtuber #shorts",
       "View": "155",
@@ -3549,7 +3579,7 @@
       "Views to Likes Ratio": "8.157894736842104"
     },
     {
-      "No": "237",
+      "No": "239",
       "Urls": "https://www.youtube.com/watch?v=s7Q5H4Mav-M",
       "Video Name": "เล่าเรื่องผี มีเสียงในไลฟ์ .. #vtuber #shorts",
       "View": "115",
@@ -3564,7 +3594,7 @@
       "Views to Likes Ratio": "3.8333333333333335"
     },
     {
-      "No": "238",
+      "No": "240",
       "Urls": "https://www.youtube.com/watch?v=S6X1aRDCVl0",
       "Video Name": "ตำรวจสายฟ้าฟาด  |【Lies of P】(EP.2)",
       "View": "60",
@@ -3579,7 +3609,7 @@
       "Views to Likes Ratio": "5"
     },
     {
-      "No": "239",
+      "No": "241",
       "Urls": "https://www.youtube.com/watch?v=CJnKwPxOQwg",
       "Video Name": "ห้อง 204 | เล่าเรื่องผีกับคุณ Gosofia [เล่าเรื่องผี EP.17]",
       "View": "114",
@@ -3594,7 +3624,7 @@
       "Views to Likes Ratio": "5.428571428571429"
     },
     {
-      "No": "240",
+      "No": "242",
       "Urls": "https://www.youtube.com/watch?v=8fiNmX_hivA",
       "Video Name": "แมงป่อง RGB .. #vtuber #shorts",
       "View": "159",
@@ -3609,7 +3639,7 @@
       "Views to Likes Ratio": "6.115384615384615"
     },
     {
-      "No": "241",
+      "No": "243",
       "Urls": "https://www.youtube.com/watch?v=RuA6wLKwuT8",
       "Video Name": "มาเยอะไม่กลัว มันมา 3 .. #vtuber #shorts",
       "View": "529",
@@ -3624,7 +3654,7 @@
       "Views to Likes Ratio": "13.921052631578947"
     },
     {
-      "No": "242",
+      "No": "244",
       "Urls": "https://www.youtube.com/watch?v=5aRpJUmr_Ss",
       "Video Name": "แจ็คทั่วทุกที่ .. #vtuber #shorts",
       "View": "445",
@@ -3639,7 +3669,7 @@
       "Views to Likes Ratio": "10.348837209302326"
     },
     {
-      "No": "243",
+      "No": "245",
       "Urls": "https://www.youtube.com/watch?v=boFu_HL37FU",
       "Video Name": "จุดเริ่มต้นแห่งความชิบหาย  |【Lies of P】(EP.1)",
       "View": "145",
@@ -3654,7 +3684,7 @@
       "Views to Likes Ratio": "6.041666666666667"
     },
     {
-      "No": "244",
+      "No": "246",
       "Urls": "https://www.youtube.com/watch?v=gXdHu4qL3SU",
       "Video Name": "พักผ่อน  |  Freetalk & Chill ชิลๆ ไปเรื่อย",
       "View": "95",
@@ -3669,7 +3699,7 @@
       "Views to Likes Ratio": "5.9375"
     },
     {
-      "No": "245",
+      "No": "247",
       "Urls": "https://www.youtube.com/watch?v=9tZqBYFc31g",
       "Video Name": "นอน vs ตื่น .. #vtuber #shorts",
       "View": "591",
@@ -3684,7 +3714,7 @@
       "Views to Likes Ratio": "9.234375"
     },
     {
-      "No": "246",
+      "No": "248",
       "Urls": "https://www.youtube.com/watch?v=ObL7PgthkRc",
       "Video Name": "มันไม่น่าแตกต่างกันเท่าไหร่ .. #vtuber #shorts",
       "View": "760",
@@ -3699,7 +3729,7 @@
       "Views to Likes Ratio": "9.743589743589743"
     },
     {
-      "No": "247",
+      "No": "249",
       "Urls": "https://www.youtube.com/watch?v=5X12WNPSfaw",
       "Video Name": "ไม่อยากอยู่ถึงเลข 5  .. #vtuber #shorts",
       "View": "947",
@@ -3714,7 +3744,7 @@
       "Views to Likes Ratio": "10.182795698924732"
     },
     {
-      "No": "248",
+      "No": "250",
       "Urls": "https://www.youtube.com/watch?v=z86gHt-yFkk",
       "Video Name": "อีกคนน่ารัก อีกคนหน้าบาป  .. #vtuber #shorts",
       "View": "618",
@@ -3729,7 +3759,7 @@
       "Views to Likes Ratio": "12.612244897959183"
     },
     {
-      "No": "249",
+      "No": "251",
       "Urls": "https://www.youtube.com/watch?v=fYAttv4koss",
       "Video Name": "บุคคลที่มีความน้อยใจ  |  Freetalk & Share แบ่งปันความรู้สึก",
       "View": "87",
@@ -3744,7 +3774,7 @@
       "Views to Likes Ratio": "3.625"
     },
     {
-      "No": "250",
+      "No": "252",
       "Urls": "https://www.youtube.com/watch?v=viGGUFn28xA",
       "Video Name": "เอาเนื้อไป .. #vtuber #shorts",
       "View": "237",
@@ -3759,7 +3789,7 @@
       "Views to Likes Ratio": "12.473684210526315"
     },
     {
-      "No": "251",
+      "No": "253",
       "Urls": "https://www.youtube.com/watch?v=O2y7hP3WzRw",
       "Video Name": "อีกคนสร้าง อีกคนกิน .. #vtuber #shorts",
       "View": "214",
@@ -3774,7 +3804,7 @@
       "Views to Likes Ratio": "10.7"
     },
     {
-      "No": "252",
+      "No": "254",
       "Urls": "https://www.youtube.com/watch?v=UzILJKJ6RJY",
       "Video Name": "เจ้าป่า หรือจะเจอเจ้ากิน  .. #vtuber #shorts",
       "View": "566",
@@ -3789,7 +3819,7 @@
       "Views to Likes Ratio": "12.577777777777778"
     },
     {
-      "No": "253",
+      "No": "255",
       "Urls": "https://www.youtube.com/watch?v=0sJ-wcxumD0",
       "Video Name": "ฤดูหนาว ต้องอยู่ในห้อง  |  Co-op Time กับ Gosofia",
       "View": "92",
@@ -3804,22 +3834,22 @@
       "Views to Likes Ratio": "4.842105263157895"
     },
     {
-      "No": "254",
+      "No": "256",
       "Urls": "https://www.youtube.com/watch?v=JkTDeY92Zv0",
       "Video Name": "กล้ามเบิ้มๆ คนป่าแล้วไง .. #vtuber #shorts",
-      "View": "641",
+      "View": "642",
       "Like": "55",
       "Comm": "2",
       "published_date": "2025-01-17",
       "duration": "0:00:42",
       "minute": "0.7",
       "type": "Shots",
-      "Engagement Rate": "0.08892355694227769",
+      "Engagement Rate": "0.08878504672897196",
       "AVG View Duration": "0.32",
-      "Views to Likes Ratio": "11.654545454545454"
+      "Views to Likes Ratio": "11.672727272727272"
     },
     {
-      "No": "255",
+      "No": "257",
       "Urls": "https://www.youtube.com/watch?v=2TrdnZBUoGg",
       "Video Name": "อะไรก็หมูเด้ง และ ET .. #vtuber #shorts",
       "View": "592",
@@ -3834,7 +3864,7 @@
       "Views to Likes Ratio": "10.385964912280702"
     },
     {
-      "No": "256",
+      "No": "258",
       "Urls": "https://www.youtube.com/watch?v=2deXkWBSQdQ",
       "Video Name": "ทิศเหนือคือ West .. #vtuber #shorts",
       "View": "721",
@@ -3849,7 +3879,7 @@
       "Views to Likes Ratio": "12.649122807017545"
     },
     {
-      "No": "257",
+      "No": "259",
       "Urls": "https://www.youtube.com/watch?v=1C-OFWNNv0w",
       "Video Name": "สวัสดี ฉัน แจ็ค ชาริออท  |【Green hell】EP.3 Co-op with Gosofia",
       "View": "175",
@@ -3864,7 +3894,7 @@
       "Views to Likes Ratio": "4.861111111111111"
     },
     {
-      "No": "258",
+      "No": "260",
       "Urls": "https://www.youtube.com/watch?v=MOr-kRG3lTI",
       "Video Name": "การขึ้นดอย ปี 62 | ประสบการณ์น่ากลัวโดยคุณหนู [เล่าเรื่องผี EP.16]",
       "View": "441",
@@ -3879,7 +3909,7 @@
       "Views to Likes Ratio": "1.785425101214575"
     },
     {
-      "No": "259",
+      "No": "261",
       "Urls": "https://www.youtube.com/watch?v=iqMomVIY3n4",
       "Video Name": "หัวแมวยักษ์ ไม่ใช่อาหาร .. #vtuber #shorts",
       "View": "648",
@@ -3894,7 +3924,7 @@
       "Views to Likes Ratio": "19.058823529411764"
     },
     {
-      "No": "260",
+      "No": "262",
       "Urls": "https://www.youtube.com/watch?v=6y6KXCx-C0o",
       "Video Name": "โรงอาหารเก่า 2 .. #vtuber #shorts",
       "View": "246",
@@ -3909,7 +3939,7 @@
       "Views to Likes Ratio": "8.2"
     },
     {
-      "No": "261",
+      "No": "263",
       "Urls": "https://www.youtube.com/watch?v=-OcSyKCZ2Ps",
       "Video Name": "โรงอาหารเก่า 1 .. #vtuber #shorts",
       "View": "371",
@@ -3924,7 +3954,7 @@
       "Views to Likes Ratio": "8.431818181818182"
     },
     {
-      "No": "262",
+      "No": "264",
       "Urls": "https://www.youtube.com/watch?v=mm_0gqoyNSY",
       "Video Name": "สวัสดีวันปีเกิดใหม่ 2025",
       "View": "257",
@@ -3939,7 +3969,7 @@
       "Views to Likes Ratio": "1.4277777777777778"
     },
     {
-      "No": "263",
+      "No": "265",
       "Urls": "https://www.youtube.com/watch?v=5OAG6Pco9CU",
       "Video Name": "เรื่องเล่า 3 นาที  .. (!มีจั้มสแกร !) #vtuber #shorts",
       "View": "272",
@@ -3954,7 +3984,7 @@
       "Views to Likes Ratio": "4.689655172413793"
     },
     {
-      "No": "264",
+      "No": "266",
       "Urls": "https://www.youtube.com/watch?v=xj1dbimmsJI",
       "Video Name": "เจ้าถุงจอมดึง #vtuber #shorts",
       "View": "213",
@@ -3969,7 +3999,7 @@
       "Views to Likes Ratio": "6.454545454545454"
     },
     {
-      "No": "265",
+      "No": "267",
       "Urls": "https://www.youtube.com/watch?v=NUOqOXhUtOw",
       "Video Name": "เกิดใหม่ ทำไมไม่บอก .. #vtuber #shorts",
       "View": "147",
@@ -3984,7 +4014,7 @@
       "Views to Likes Ratio": "8.166666666666666"
     },
     {
-      "No": "266",
+      "No": "268",
       "Urls": "https://www.youtube.com/watch?v=uHGDqV7hUdc",
       "Video Name": "บนตักคุณหนู ก่อนสิ้นปี .. #vtuber #shorts",
       "View": "170",
@@ -3999,7 +4029,7 @@
       "Views to Likes Ratio": "6.8"
     },
     {
-      "No": "267",
+      "No": "269",
       "Urls": "https://www.youtube.com/watch?v=p57bc73PiwA",
       "Video Name": "【SPEACIAL LIVE】🦋 CHRISTMAS PARTY 2024  | คริสมาสต์ที่มีความสุขกับคุณหนู",
       "View": "235",
@@ -4014,7 +4044,7 @@
       "Views to Likes Ratio": "1.7153284671532847"
     },
     {
-      "No": "268",
+      "No": "270",
       "Urls": "https://www.youtube.com/watch?v=BZhON-9uX6w",
       "Video Name": "คนกินแอล vs คนไม่กินแอล .. #vtuber #shorts",
       "View": "707",
@@ -4029,7 +4059,7 @@
       "Views to Likes Ratio": "12.189655172413794"
     },
     {
-      "No": "269",
+      "No": "271",
       "Urls": "https://www.youtube.com/watch?v=-Unbh--NSLc",
       "Video Name": "Doodle : Dance trend (Marine Chariot) #vtuber #shorts",
       "View": "646",
@@ -4044,7 +4074,7 @@
       "Views to Likes Ratio": "7.9753086419753085"
     },
     {
-      "No": "270",
+      "No": "272",
       "Urls": "https://www.youtube.com/watch?v=rtmGzn7vYtc",
       "Video Name": "สารพัด คุยไม่ยั้ง คู่หู คู่ฮา  |  Co-op Time เม้ามอยกับคุณ Gosofia",
       "View": "127",
@@ -4059,7 +4089,7 @@
       "Views to Likes Ratio": "5.08"
     },
     {
-      "No": "271",
+      "No": "273",
       "Urls": "https://www.youtube.com/watch?v=A8qTjHmctj8",
       "Video Name": "ฤดูหนาว ฉันมีเธออยู่  |  Chat time & Chill อากาศเย็นๆ นั่งพูดคุย",
       "View": "99",
@@ -4074,7 +4104,7 @@
       "Views to Likes Ratio": "6.1875"
     },
     {
-      "No": "272",
+      "No": "274",
       "Urls": "https://www.youtube.com/watch?v=XpCGTbsbmm0",
       "Video Name": "ประสบการณ์ซื้อแอล 2 .. #vtuber #shorts",
       "View": "1376",
@@ -4089,7 +4119,7 @@
       "Views to Likes Ratio": "8.6"
     },
     {
-      "No": "273",
+      "No": "275",
       "Urls": "https://www.youtube.com/watch?v=lYEwiYHQ_eo",
       "Video Name": "ประสบการณ์ซื้อแอล 1 .. #vtuber #shorts",
       "View": "11795",
@@ -4104,7 +4134,7 @@
       "Views to Likes Ratio": "10.392070484581497"
     },
     {
-      "No": "274",
+      "No": "276",
       "Urls": "https://www.youtube.com/watch?v=s744wfLuNkE",
       "Video Name": "เคาะ 3 ที แวะมาทักทาย! .. #vtuber #shorts",
       "View": "711",
@@ -4119,7 +4149,7 @@
       "Views to Likes Ratio": "11.655737704918034"
     },
     {
-      "No": "275",
+      "No": "277",
       "Urls": "https://www.youtube.com/watch?v=J1--uS4nRPo",
       "Video Name": "ตั้งแคมป์ หลังเขา | เล่าเรื่องผีกับคุณ Gosofia [เล่าเรื่องผี EP.15]",
       "View": "121",
@@ -4134,7 +4164,7 @@
       "Views to Likes Ratio": "5.5"
     },
     {
-      "No": "276",
+      "No": "278",
       "Urls": "https://www.youtube.com/watch?v=THVhjZKHhDs",
       "Video Name": "คุณหนูแมวรีน! .. #vtuber #shorts",
       "View": "573",
@@ -4149,7 +4179,7 @@
       "Views to Likes Ratio": "11.01923076923077"
     },
     {
-      "No": "277",
+      "No": "279",
       "Urls": "https://www.youtube.com/watch?v=V3-fga9WEcc",
       "Video Name": "มิจภาพต่างชาติ 3 .. #vtuber #shorts",
       "View": "713",
@@ -4164,7 +4194,7 @@
       "Views to Likes Ratio": "11.5"
     },
     {
-      "No": "278",
+      "No": "280",
       "Urls": "https://www.youtube.com/watch?v=Hdc6QUHJRnM",
       "Video Name": "มิจภาพต่างชาติ 2 .. #vtuber #shorts",
       "View": "728",
@@ -4179,7 +4209,7 @@
       "Views to Likes Ratio": "12.771929824561404"
     },
     {
-      "No": "279",
+      "No": "281",
       "Urls": "https://www.youtube.com/watch?v=5UUPxbClGNs",
       "Video Name": "สาระ น่ารัก  |  Freetalk & Chill วันศุกร์ สุขสันต์",
       "View": "70",
@@ -4194,22 +4224,22 @@
       "Views to Likes Ratio": "5"
     },
     {
-      "No": "280",
+      "No": "282",
       "Urls": "https://www.youtube.com/watch?v=6mDhk2CczS4",
       "Video Name": "To you far away. (Short Cover : by Marine Chariot) #vtuber #shorts",
-      "View": "160",
+      "View": "161",
       "Like": "23",
       "Comm": "3",
       "published_date": "2024-12-05",
       "duration": "0:00:33",
       "minute": "0.55",
       "type": "Shots",
-      "Engagement Rate": "0.1625",
+      "Engagement Rate": "0.16149068322981366",
       "AVG View Duration": "0.25",
-      "Views to Likes Ratio": "6.956521739130435"
+      "Views to Likes Ratio": "7"
     },
     {
-      "No": "281",
+      "No": "283",
       "Urls": "https://www.youtube.com/watch?v=BRcrEAqjwwY",
       "Video Name": "มิจภาพต่างชาติ.. #vtuber #shorts",
       "View": "616",
@@ -4224,7 +4254,7 @@
       "Views to Likes Ratio": "10.440677966101696"
     },
     {
-      "No": "282",
+      "No": "284",
       "Urls": "https://www.youtube.com/watch?v=0hp2DcjEeac",
       "Video Name": "ราตรีนี้ ยังอีกยาวไกล.. #vtuber #shorts",
       "View": "615",
@@ -4239,7 +4269,7 @@
       "Views to Likes Ratio": "8.541666666666666"
     },
     {
-      "No": "283",
+      "No": "285",
       "Urls": "https://www.youtube.com/watch?v=qnDYkXRaacE",
       "Video Name": "อีกคนคุย อีกคนชิล  |  Co-op Time เม้ามอยกับคุณ Gosofia",
       "View": "154",
@@ -4254,7 +4284,7 @@
       "Views to Likes Ratio": "5.5"
     },
     {
-      "No": "284",
+      "No": "286",
       "Urls": "https://www.youtube.com/watch?v=rcBqIgLv4F4",
       "Video Name": "เพื่อนยาก มักหายาก #vtuber #shorts",
       "View": "587",
@@ -4269,7 +4299,7 @@
       "Views to Likes Ratio": "15.447368421052632"
     },
     {
-      "No": "285",
+      "No": "287",
       "Urls": "https://www.youtube.com/watch?v=x5ZrECdem3g",
       "Video Name": "เครื่องซักผ้าหรรษา.. #vtuber #shorts",
       "View": "564",
@@ -4284,7 +4314,7 @@
       "Views to Likes Ratio": "16.58823529411765"
     },
     {
-      "No": "286",
+      "No": "288",
       "Urls": "https://www.youtube.com/watch?v=v4SrqMQ2AmI",
       "Video Name": "ไฟแดงๆ จะล่อซื้อสินะ #vtuber #shorts",
       "View": "604",
@@ -4299,7 +4329,7 @@
       "Views to Likes Ratio": "20.133333333333333"
     },
     {
-      "No": "287",
+      "No": "289",
       "Urls": "https://www.youtube.com/watch?v=wa-uRPhQCog",
       "Video Name": "ปากแตกต้องดูดวาสลีน #vtuber #shorts",
       "View": "625",
@@ -4314,7 +4344,7 @@
       "Views to Likes Ratio": "12.5"
     },
     {
-      "No": "288",
+      "No": "290",
       "Urls": "https://www.youtube.com/watch?v=vI_2AtSXYtg",
       "Video Name": "อ่านแชท ตอบแชท  |  Chill talk พูดคุยสบายๆ ตอบทุกเม้น",
       "View": "133",
@@ -4329,7 +4359,7 @@
       "Views to Likes Ratio": "8.866666666666667"
     },
     {
-      "No": "289",
+      "No": "291",
       "Urls": "https://www.youtube.com/watch?v=ND61Pi4OXSw",
       "Video Name": "เกมที่ไม่มีอันตรายใดๆ【 Edited by Gosofia 】",
       "View": "157",
@@ -4344,7 +4374,7 @@
       "Views to Likes Ratio": "13.083333333333334"
     },
     {
-      "No": "290",
+      "No": "292",
       "Urls": "https://www.youtube.com/watch?v=a0ckBGx9Xp8",
       "Video Name": "ประโยชน์ของหนังปลา #vtuber #shorts",
       "View": "565",
@@ -4359,7 +4389,7 @@
       "Views to Likes Ratio": "16.61764705882353"
     },
     {
-      "No": "291",
+      "No": "293",
       "Urls": "https://www.youtube.com/watch?v=937L43gf7pY",
       "Video Name": "กลางคืนต้องใช้หูดีๆ .. #vtuber #shorts",
       "View": "580",
@@ -4374,7 +4404,7 @@
       "Views to Likes Ratio": "18.125"
     },
     {
-      "No": "292",
+      "No": "294",
       "Urls": "https://www.youtube.com/watch?v=N4pnPNv3nBY",
       "Video Name": "โรงอาหารเก่า | ประสบการณ์โดยตรงจากคุณหนู [เล่าเรื่องผี EP.14]",
       "View": "156",
@@ -4389,7 +4419,7 @@
       "Views to Likes Ratio": "9.75"
     },
     {
-      "No": "293",
+      "No": "295",
       "Urls": "https://www.youtube.com/watch?v=6TxzuaGJ3-Q",
       "Video Name": "เส้นทางชีวิตของคุณหนู  |  Chill talk เล่าประสบการณ์",
       "View": "115",
@@ -4404,7 +4434,7 @@
       "Views to Likes Ratio": "5.476190476190476"
     },
     {
-      "No": "294",
+      "No": "296",
       "Urls": "https://www.youtube.com/watch?v=HQ-ODFoQAPU",
       "Video Name": "การเอาตัวรอดแบบคุณภาพ .. #vtuber #shorts",
       "View": "550",
@@ -4419,7 +4449,7 @@
       "Views to Likes Ratio": "10.784313725490197"
     },
     {
-      "No": "295",
+      "No": "297",
       "Urls": "https://www.youtube.com/watch?v=QZTej5XWgzc",
       "Video Name": "ไม่มีอะไรที่จะต้อง เสี่ยงตาย ทั้งนั้น ..  #vtuber #shorts",
       "View": "588",
@@ -4434,7 +4464,7 @@
       "Views to Likes Ratio": "15.076923076923077"
     },
     {
-      "No": "296",
+      "No": "298",
       "Urls": "https://www.youtube.com/watch?v=rdseRdbZhJk",
       "Video Name": "ธุรกิจทำถั่วขายคนป่า【 Edited by Gosofia 】",
       "View": "301",
@@ -4449,7 +4479,7 @@
       "Views to Likes Ratio": "15.842105263157896"
     },
     {
-      "No": "297",
+      "No": "299",
       "Urls": "https://www.youtube.com/watch?v=9hiaB6pBFpQ",
       "Video Name": "อะไรล่ะที่ทำให้ชิล  |  Chill talk กับคุณหนูวันศุกร์",
       "View": "100",
@@ -4464,7 +4494,7 @@
       "Views to Likes Ratio": "3.4482758620689653"
     },
     {
-      "No": "298",
+      "No": "300",
       "Urls": "https://www.youtube.com/watch?v=zRjAbNTTOp4",
       "Video Name": "คาร์โบไฮเดรต และไขมัน คือสิ่งสำคัญ 【 Edited by Gosofia 】",
       "View": "175",
@@ -4479,7 +4509,7 @@
       "Views to Likes Ratio": "14.583333333333334"
     },
     {
-      "No": "299",
+      "No": "301",
       "Urls": "https://www.youtube.com/watch?v=0cbPjaTzrb4",
       "Video Name": "สำรวจแมพ ตะลุยถิ่น  |【Green hell】EP.2 Co-op with Gosofia",
       "View": "104",
@@ -4494,7 +4524,7 @@
       "Views to Likes Ratio": "5.777777777777778"
     },
     {
-      "No": "300",
+      "No": "302",
       "Urls": "https://www.youtube.com/watch?v=LAgYhuDAnts",
       "Video Name": "คุณหนู.. ใจผมก็เท่านี้! [Editor by UncleKanun] #vtuber #shorts",
       "View": "326",
@@ -4509,7 +4539,7 @@
       "Views to Likes Ratio": "7.761904761904762"
     },
     {
-      "No": "301",
+      "No": "303",
       "Urls": "https://www.youtube.com/watch?v=8WzhPWjkySY",
       "Video Name": "HALLOWEEN Special Live!  |  รวมมิตรคอนเทนต์สุดหลอน ปล่อยผี 2024",
       "View": "131",
@@ -4524,7 +4554,7 @@
       "Views to Likes Ratio": "4.366666666666666"
     },
     {
-      "No": "302",
+      "No": "304",
       "Urls": "https://www.youtube.com/watch?v=9gPEoaWJGo8",
       "Video Name": "คุณหนูวิ่งหนีผีสะพาน 2 - เผชิญผีห้อยหัว【 Edited by Gosofia 】",
       "View": "96",
@@ -4539,7 +4569,7 @@
       "Views to Likes Ratio": "4.173913043478261"
     },
     {
-      "No": "303",
+      "No": "305",
       "Urls": "https://www.youtube.com/watch?v=Nfy2JvxFhrU",
       "Video Name": "Wash yeep brain #vtuber #shorts",
       "View": "311",
@@ -4554,7 +4584,7 @@
       "Views to Likes Ratio": "7.404761904761905"
     },
     {
-      "No": "304",
+      "No": "306",
       "Urls": "https://www.youtube.com/watch?v=BeG5X-tktlA",
       "Video Name": "เธอจะมีใจหรือเปล่า ... |【The Calisto protocol】EP.3",
       "View": "70",
@@ -4569,7 +4599,7 @@
       "Views to Likes Ratio": "4.375"
     },
     {
-      "No": "305",
+      "No": "307",
       "Urls": "https://www.youtube.com/watch?v=TErVNO8RAwI",
       "Video Name": "พูดคุยข้างกองไฟ สารพัดเนื้อหา  |  Co-op Time ไปกับคุณ Gosofia",
       "View": "139",
@@ -4584,7 +4614,7 @@
       "Views to Likes Ratio": "6.95"
     },
     {
-      "No": "306",
+      "No": "308",
       "Urls": "https://www.youtube.com/watch?v=KloN9oL2WjE",
       "Video Name": "สิ้นสุดความทะเยอทะยาน  |【Steelrising】(EP.8 จบ!)",
       "View": "93",
@@ -4599,7 +4629,7 @@
       "Views to Likes Ratio": "6.642857142857143"
     },
     {
-      "No": "307",
+      "No": "309",
       "Urls": "https://www.youtube.com/watch?v=VsXvnMgCans",
       "Video Name": "โรงหนังเก่า | ประสบการณ์โดยตรงจากคุณหนู [เล่าเรื่องผี EP.13]",
       "View": "130",
@@ -4614,7 +4644,7 @@
       "Views to Likes Ratio": "7.647058823529412"
     },
     {
-      "No": "308",
+      "No": "310",
       "Urls": "https://www.youtube.com/watch?v=Z2h4KPmWKZ8",
       "Video Name": "YEEP ~ Piii #shorts",
       "View": "135",
@@ -4629,7 +4659,7 @@
       "Views to Likes Ratio": "5.1923076923076925"
     },
     {
-      "No": "309",
+      "No": "311",
       "Urls": "https://www.youtube.com/watch?v=87GlIBA4QSw",
       "Video Name": "จุดจบที่ใกล้เข้ามา  |【Steelrising】(EP.7)",
       "View": "74",
@@ -4644,7 +4674,7 @@
       "Views to Likes Ratio": "4.933333333333334"
     },
     {
-      "No": "310",
+      "No": "312",
       "Urls": "https://www.youtube.com/watch?v=-8TGRfaIXi4",
       "Video Name": "ภายในใจ ของคุณหนู  |  Real Talk ในคืนวันศุกร์",
       "View": "115",
@@ -4659,7 +4689,7 @@
       "Views to Likes Ratio": "6.388888888888889"
     },
     {
-      "No": "311",
+      "No": "313",
       "Urls": "https://www.youtube.com/watch?v=rMMdkQ2cJs4",
       "Video Name": "เกิดชาตินี้ ในป่าเขียว  |【Green hell】Co-op with Gosofia",
       "View": "186",
@@ -4674,7 +4704,7 @@
       "Views to Likes Ratio": "14.307692307692308"
     },
     {
-      "No": "312",
+      "No": "314",
       "Urls": "https://www.youtube.com/watch?v=Xl3Gwm58yAI",
       "Video Name": "หน้ากากแตก เหมือนใจคน  |【The Calisto protocol】EP.2",
       "View": "81",
@@ -4689,7 +4719,7 @@
       "Views to Likes Ratio": "8.1"
     },
     {
-      "No": "313",
+      "No": "315",
       "Urls": "https://www.youtube.com/watch?v=j54RNtKalno",
       "Video Name": "บุกรุกสัมภาษณ์คุณหนู  |  Co-op Time ไปกับคุณ Gosofia และพูดคุยสนุกๆ",
       "View": "200",
@@ -4704,7 +4734,7 @@
       "Views to Likes Ratio": "8.333333333333334"
     },
     {
-      "No": "314",
+      "No": "316",
       "Urls": "https://www.youtube.com/watch?v=6Eh0Kxqnwkw",
       "Video Name": "รับงานสำรวจที่รกร้าง | ประสบการณ์โดยตรงจากคุณหนู และเพื่อนๆ [เล่าเรื่องผี EP.12]",
       "View": "130",
@@ -4719,7 +4749,7 @@
       "Views to Likes Ratio": "8.125"
     },
     {
-      "No": "315",
+      "No": "317",
       "Urls": "https://www.youtube.com/watch?v=mgBzXO3GD2s",
       "Video Name": "ยักษ์ช็อต ก็ไม่เท่าเงินช็อต  |【Steelrising】(EP.6)",
       "View": "123",
@@ -4734,7 +4764,7 @@
       "Views to Likes Ratio": "9.461538461538462"
     },
     {
-      "No": "316",
+      "No": "318",
       "Urls": "https://www.youtube.com/watch?v=GegBSzYzIwg",
       "Video Name": "หัวข้อ คอนเทนต์ใหม่ๆ  |  Freetalk พูดคุย หัวเราะ เปิ่นๆ สไตล์คุณหนู",
       "View": "125",
@@ -4749,7 +4779,7 @@
       "Views to Likes Ratio": "6.25"
     },
     {
-      "No": "317",
+      "No": "319",
       "Urls": "https://www.youtube.com/watch?v=IIPLBp6Em9Q",
       "Video Name": "นึกว่าใกล้จบ แต่เกมไม่ยอมจบ  |【Steelrising】(EP.5)",
       "View": "87",
@@ -4764,7 +4794,7 @@
       "Views to Likes Ratio": "5.117647058823529"
     },
     {
-      "No": "318",
+      "No": "320",
       "Urls": "https://www.youtube.com/watch?v=uFj9hs0ZARY",
       "Video Name": "ไม่มีอะไร ก็แค่ไลฟ์ชิล  |  Freetalk Chill พูดคุยสไตล์คุณหนู",
       "View": "124",
@@ -4779,7 +4809,7 @@
       "Views to Likes Ratio": "6.2"
     },
     {
-      "No": "319",
+      "No": "321",
       "Urls": "https://www.youtube.com/watch?v=WLvqB3Nzj5M",
       "Video Name": "อวกาศ ไม่ใช่ทางออก  |【The Calisto protocol】EP.1",
       "View": "120",
@@ -4794,7 +4824,7 @@
       "Views to Likes Ratio": "5.217391304347826"
     },
     {
-      "No": "320",
+      "No": "322",
       "Urls": "https://www.youtube.com/watch?v=FIFTstE-sBc",
       "Video Name": "รถโดยสาร ยามค่ำคืน | ประสบการณ์โดยตรงจากคุณหนู [เล่าเรื่องผี EP.11]",
       "View": "137",
@@ -4809,7 +4839,7 @@
       "Views to Likes Ratio": "11.416666666666666"
     },
     {
-      "No": "321",
+      "No": "323",
       "Urls": "https://www.youtube.com/watch?v=8pT93SEutjA",
       "Video Name": "หยุดเดี๋ยวนี้ ไม่งั้นพี่เล็ง ไม่โดน  |【Steelrising】(EP.4)",
       "View": "88",
@@ -4824,7 +4854,7 @@
       "Views to Likes Ratio": "5.866666666666666"
     },
     {
-      "No": "322",
+      "No": "324",
       "Urls": "https://www.youtube.com/watch?v=VwcxSUsogEU",
       "Video Name": "วันศุกร์ที่มีคุณหนู จะอบอุ่นใจเสมอ  |  Freetalk พูดคุยหัวข้อต่างๆ",
       "View": "134",
@@ -4839,7 +4869,7 @@
       "Views to Likes Ratio": "7.052631578947368"
     },
     {
-      "No": "323",
+      "No": "325",
       "Urls": "https://www.youtube.com/watch?v=eWKiHTjCyNQ",
       "Video Name": "โอบอุ้มกาย อบอุ่นใจ  |【Steelrising】(EP.3)",
       "View": "132",
@@ -4854,7 +4884,7 @@
       "Views to Likes Ratio": "10.153846153846153"
     },
     {
-      "No": "324",
+      "No": "326",
       "Urls": "https://www.youtube.com/watch?v=tis5rPp9w9w",
       "Video Name": "ไลฟ์สบายๆ แค่พูดแล้วกิน  |  Freetalk และชิลกับคุณหนูในคืนวันศุกร์",
       "View": "98",
@@ -4869,7 +4899,7 @@
       "Views to Likes Ratio": "5.157894736842105"
     },
     {
-      "No": "325",
+      "No": "327",
       "Urls": "https://www.youtube.com/watch?v=q1yKGx9rmGI",
       "Video Name": "'. . . เ ร า จ ะ อ ยู่ คุ ย ด้ ว ย กั น . . .''",
       "View": "162",
@@ -4884,7 +4914,7 @@
       "Views to Likes Ratio": "4.05"
     },
     {
-      "No": "326",
+      "No": "328",
       "Urls": "https://www.youtube.com/watch?v=sbj2Z4v7U3c",
       "Video Name": "ขึ้นรถม้า สุขกาย สุขใจ  |【Steelrising】(EP.2)",
       "View": "108",
@@ -4899,22 +4929,22 @@
       "Views to Likes Ratio": "12"
     },
     {
-      "No": "327",
+      "No": "329",
       "Urls": "https://www.youtube.com/watch?v=UPz7ZSr8Cdo",
       "Video Name": "เสียงใคร ในคืนที่ฝนตก | ประสบการณ์โดยตรงจากคุณหนู [เล่าเรื่องผี EP.10]",
-      "View": "134",
+      "View": "135",
       "Like": "21",
       "Comm": "0",
       "published_date": "2024-08-17",
       "duration": "1:22:42",
       "minute": "82.7",
       "type": "เล่าเรื่องผี",
-      "Engagement Rate": "0.15671641791044777",
+      "Engagement Rate": "0.15555555555555556",
       "AVG View Duration": "37.22",
-      "Views to Likes Ratio": "6.380952380952381"
+      "Views to Likes Ratio": "6.428571428571429"
     },
     {
-      "No": "328",
+      "No": "330",
       "Urls": "https://www.youtube.com/watch?v=WGUtSi0-iBA",
       "Video Name": "เกมอะไรเอ่ย ไม่มีวันหัวร้อน? |  【Steelrising】(EP.1)",
       "View": "131",
@@ -4929,7 +4959,7 @@
       "Views to Likes Ratio": "8.733333333333333"
     },
     {
-      "No": "329",
+      "No": "331",
       "Urls": "https://www.youtube.com/watch?v=CqatlPn5czE",
       "Video Name": "สิ่งที่คุณหนูไม่แนะนำให้ทำ EP.2 |  แบ่งปันและแชร์ความคิดกับคุณหนู",
       "View": "91",
@@ -4944,7 +4974,7 @@
       "Views to Likes Ratio": "6.5"
     },
     {
-      "No": "330",
+      "No": "332",
       "Urls": "https://www.youtube.com/watch?v=QiQuilBEs1M",
       "Video Name": "ปีนไปยันสวรรค์ สุขไสวสวยเก๋  | Chained together EP.2 (จบเกม!)",
       "View": "86",
@@ -4959,7 +4989,7 @@
       "Views to Likes Ratio": "7.818181818181818"
     },
     {
-      "No": "331",
+      "No": "333",
       "Urls": "https://www.youtube.com/watch?v=ABMP8WaHQ9s",
       "Video Name": "คอนโดราคาถูกชั้น 7 | ประสบการณ์โดยตรงจากคุณหนู [เล่าเรื่องผี EP.9]",
       "View": "99",
@@ -4974,7 +5004,7 @@
       "Views to Likes Ratio": "6.1875"
     },
     {
-      "No": "332",
+      "No": "334",
       "Urls": "https://www.youtube.com/watch?v=xKLo4xoNCzA",
       "Video Name": "เนื้อหาเกี่ยวกับ การพักผ่อนสบายๆ สไตล์คุณหนู",
       "View": "105",
@@ -4989,7 +5019,7 @@
       "Views to Likes Ratio": "7.5"
     },
     {
-      "No": "333",
+      "No": "335",
       "Urls": "https://www.youtube.com/watch?v=58lsODYpjcg",
       "Video Name": "จัดอันดับอาหารไทยรสเลิศในใจฉัน | Tier List Thai Food EP.2",
       "View": "110",
@@ -5004,7 +5034,7 @@
       "Views to Likes Ratio": "6.111111111111111"
     },
     {
-      "No": "334",
+      "No": "336",
       "Urls": "https://www.youtube.com/watch?v=y6jcNQ1doRA",
       "Video Name": "เกมที่เกี่ยวกับโซ่ แต่ไม่ได้ใช้ล่าม  | Chained together EP.1 (จะต่อมั้ง)",
       "View": "184",
@@ -5019,22 +5049,22 @@
       "Views to Likes Ratio": "5.75"
     },
     {
-      "No": "335",
+      "No": "337",
       "Urls": "https://www.youtube.com/watch?v=TsCnBywxEmY",
       "Video Name": "อาหารไทยจานโปรดที่สุดของฉัน | Tier List Thai Food",
-      "View": "117",
+      "View": "118",
       "Like": "24",
       "Comm": "0",
       "published_date": "2024-07-13",
       "duration": "1:06:00",
       "minute": "66",
       "type": "FreeTalk",
-      "Engagement Rate": "0.20512820512820512",
+      "Engagement Rate": "0.2033898305084746",
       "AVG View Duration": "29.7",
-      "Views to Likes Ratio": "4.875"
+      "Views to Likes Ratio": "4.916666666666667"
     },
     {
-      "No": "336",
+      "No": "338",
       "Urls": "https://www.youtube.com/watch?v=2ySIUGF1Mm4",
       "Video Name": "ความพ่ายแพ้ต่อค่านิยม | Freetalk ได้ทุกเรื่อง",
       "View": "129",
@@ -5049,7 +5079,7 @@
       "Views to Likes Ratio": "5.375"
     },
     {
-      "No": "337",
+      "No": "339",
       "Urls": "https://www.youtube.com/watch?v=3Pbj7rFzN7o",
       "Video Name": "ผีที่แสนห่วงหา อาลัย EP.4【The Bridge Curse 2: The Extrication】",
       "View": "115",
@@ -5064,7 +5094,7 @@
       "Views to Likes Ratio": "7.1875"
     },
     {
-      "No": "338",
+      "No": "340",
       "Urls": "https://www.youtube.com/watch?v=Zl0367PEGGw",
       "Video Name": "ใครอยู่ที่ระเบียง ? | ประสบการณ์โดยตรงจากคุณหนู [เล่าเรื่องผี EP.8]",
       "View": "265",
@@ -5079,7 +5109,7 @@
       "Views to Likes Ratio": "17.666666666666668"
     },
     {
-      "No": "339",
+      "No": "341",
       "Urls": "https://www.youtube.com/watch?v=AG9En-vRCcg",
       "Video Name": "【Short Live】คุณหนูมารีนกับไลฟ์แนวตรง #shorts",
       "View": "124",
@@ -5094,7 +5124,7 @@
       "Views to Likes Ratio": "5.166666666666667"
     },
     {
-      "No": "340",
+      "No": "342",
       "Urls": "https://www.youtube.com/watch?v=kk3swf-bbxg",
       "Video Name": "ผีมันอยู่ใต้ดิน ยิ่งลงไปยิ่งลึกลับ EP.3【The Bridge Curse 2: The Extrication】",
       "View": "103",
@@ -5109,7 +5139,7 @@
       "Views to Likes Ratio": "7.923076923076923"
     },
     {
-      "No": "341",
+      "No": "343",
       "Urls": "https://www.youtube.com/watch?v=FiBarx6zLno",
       "Video Name": "【DEBUT】Mini Marine Chariot Arrival !  ถึงตัวจะเล็กแต่ หัวก็โต",
       "View": "324",
@@ -5124,7 +5154,7 @@
       "Views to Likes Ratio": "12.461538461538462"
     },
     {
-      "No": "342",
+      "No": "344",
       "Urls": "https://www.youtube.com/watch?v=X9Lf6j1S5_I",
       "Video Name": "ผีห้อยหัว ผีไม่มีหัว EP.2【The Bridge Curse 2: The Extrication】",
       "View": "93",
@@ -5139,7 +5169,7 @@
       "Views to Likes Ratio": "7.75"
     },
     {
-      "No": "343",
+      "No": "345",
       "Urls": "https://www.youtube.com/watch?v=JfBKKGok8w4",
       "Video Name": "【ฟรี】สิ่งที่คุณหนูไม่แนะนำให้ทำ | Marine Chariot [Vtuber]",
       "View": "122",
@@ -5154,7 +5184,7 @@
       "Views to Likes Ratio": "4.357142857142857"
     },
     {
-      "No": "344",
+      "No": "346",
       "Urls": "https://www.youtube.com/watch?v=zmnZuxgWtzM",
       "Video Name": "เด็กมัธยมที่ติดอยู่ในโรงเรียนร้าง | [เล่าเรื่องผี EP.7]",
       "View": "392",
@@ -5169,7 +5199,7 @@
       "Views to Likes Ratio": "12.64516129032258"
     },
     {
-      "No": "345",
+      "No": "347",
       "Urls": "https://www.youtube.com/watch?v=WTeWoVmh_KM",
       "Video Name": "【FREETALK】คิดจะพัก คิดถึงคุณหนู",
       "View": "93",
@@ -5184,7 +5214,7 @@
       "Views to Likes Ratio": "5.470588235294118"
     },
     {
-      "No": "346",
+      "No": "348",
       "Urls": "https://www.youtube.com/watch?v=5Kvm2dUeYpA",
       "Video Name": "【FREETALK】คุณหนูมารีนจอมเล่าเรื่อง",
       "View": "153",
@@ -5199,7 +5229,7 @@
       "Views to Likes Ratio": "5.275862068965517"
     },
     {
-      "No": "347",
+      "No": "349",
       "Urls": "https://www.youtube.com/watch?v=nUFbPyPdT5k",
       "Video Name": "【Only climb : better together】ปีนทำไม ภาคต่อกับคุณหนูสายโดด",
       "View": "152",
@@ -5214,7 +5244,7 @@
       "Views to Likes Ratio": "8"
     },
     {
-      "No": "348",
+      "No": "350",
       "Urls": "https://www.youtube.com/watch?v=qlnY0LaISJg",
       "Video Name": "【FREETALK】เรื่องราวของ Vtuber ที่ทุกคนอาจจะไม่เข้าใจ",
       "View": "167",
@@ -5229,7 +5259,7 @@
       "Views to Likes Ratio": "5.0606060606060606"
     },
     {
-      "No": "349",
+      "No": "351",
       "Urls": "https://www.youtube.com/watch?v=SGEBH-SBcJA",
       "Video Name": "【Maid of the Dead】พิทักษ์โลกกับสาวๆ ด้วยความยุติธรรม! 4 (จบแล้ว)",
       "View": "139",
@@ -5244,22 +5274,22 @@
       "Views to Likes Ratio": "4.212121212121212"
     },
     {
-      "No": "350",
+      "No": "352",
       "Urls": "https://www.youtube.com/watch?v=5LkZ-Ypm3PM",
       "Video Name": "【Review】รีวิวอนิเมะขวัญใจคุณหนูมารีน - สรุปความรู้สึกและขยายความหมาย / K-ON Anime",
-      "View": "223",
+      "View": "224",
       "Like": "27",
       "Comm": "2",
       "published_date": "2024-04-27",
       "duration": "1:03:25",
       "minute": "63.42",
       "type": "FreeTalk",
-      "Engagement Rate": "0.13004484304932734",
+      "Engagement Rate": "0.12946428571428573",
       "AVG View Duration": "28.54",
-      "Views to Likes Ratio": "8.25925925925926"
+      "Views to Likes Ratio": "8.296296296296296"
     },
     {
-      "No": "351",
+      "No": "353",
       "Urls": "https://www.youtube.com/watch?v=tdn0zWYGKFM",
       "Video Name": "More Marine Please!",
       "View": "344",
@@ -5274,7 +5304,7 @@
       "Views to Likes Ratio": "6.142857142857143"
     },
     {
-      "No": "352",
+      "No": "354",
       "Urls": "https://www.youtube.com/watch?v=2wqGEpEgdGo",
       "Video Name": "【Announcement】เนื้อหาสำคัญ และ เป้าหมายในปีนี้ #Vtuber",
       "View": "157",
@@ -5289,7 +5319,7 @@
       "Views to Likes Ratio": "5.233333333333333"
     },
     {
-      "No": "353",
+      "No": "355",
       "Urls": "https://www.youtube.com/watch?v=TJtGU56odoE",
       "Video Name": "【1st Year Anniversary】ครบรอบ 1 ปีแล้ว เป็นคุณหนูรึยัง ?",
       "View": "817",
@@ -5304,7 +5334,7 @@
       "Views to Likes Ratio": "6.433070866141732"
     },
     {
-      "No": "354",
+      "No": "356",
       "Urls": "https://www.youtube.com/watch?v=nSlO6E7XPcM",
       "Video Name": "รถไฟใต้ดิน เงาปริศนาที่ยืนมอง | [เล่าเรื่องผี EP.6]",
       "View": "381",
@@ -5319,7 +5349,7 @@
       "Views to Likes Ratio": "9.071428571428571"
     },
     {
-      "No": "355",
+      "No": "357",
       "Urls": "https://www.youtube.com/watch?v=M2kaBt3B7Aw",
       "Video Name": "ไคจูสายพันธุ์ใหม่ Yeenjira บุกบ้านคุณหนู #Vtuber",
       "View": "182",
@@ -5334,7 +5364,7 @@
       "Views to Likes Ratio": "8.272727272727273"
     },
     {
-      "No": "356",
+      "No": "358",
       "Urls": "https://www.youtube.com/watch?v=deRuCgxJxrs",
       "Video Name": "【Maid of the Dead】ยอมเป็นคนบาป เพื่อช่วยเหล่าเมด 3",
       "View": "177",
@@ -5349,7 +5379,7 @@
       "Views to Likes Ratio": "4.916666666666667"
     },
     {
-      "No": "357",
+      "No": "359",
       "Urls": "https://www.youtube.com/watch?v=GKpmKB7-g7E",
       "Video Name": "เมื่อคุณหนูมารีนจะมีมังงะเป็นของตัวเอง Secret garden บทที่ 1 #Vtuber",
       "View": "589",
@@ -5364,7 +5394,7 @@
       "Views to Likes Ratio": "14.725"
     },
     {
-      "No": "358",
+      "No": "360",
       "Urls": "https://www.youtube.com/watch?v=f7V2PSTOoTY",
       "Video Name": "【Honkai Star Rail 2.1】สิบโรลก็พอ! ไม่ขอมากกว่านี้  | Marine Chariot",
       "View": "516",
@@ -5379,7 +5409,7 @@
       "Views to Likes Ratio": "23.454545454545453"
     },
     {
-      "No": "359",
+      "No": "361",
       "Urls": "https://www.youtube.com/watch?v=zHysgaZ6_tA",
       "Video Name": "【HoloCure】Let's go  | Marine Chariot",
       "View": "400",
@@ -5394,7 +5424,7 @@
       "Views to Likes Ratio": "11.428571428571429"
     },
     {
-      "No": "360",
+      "No": "362",
       "Urls": "https://www.youtube.com/watch?v=0sa5HO3_M7A",
       "Video Name": "【Maid of the Dead】เขย่าขวดน้ำสีฟ้าพิทักษ์โลก 2",
       "View": "469",
@@ -5409,7 +5439,7 @@
       "Views to Likes Ratio": "13.794117647058824"
     },
     {
-      "No": "361",
+      "No": "363",
       "Urls": "https://www.youtube.com/watch?v=xafekkCHfJc",
       "Video Name": "ช่วงเวลาฮีลลิ่ง..พักผ่อนหย่อนใจ  🦋",
       "View": "216",
@@ -5424,7 +5454,7 @@
       "Views to Likes Ratio": "9.391304347826088"
     },
     {
-      "No": "362",
+      "No": "364",
       "Urls": "https://www.youtube.com/watch?v=oqrLVCEEa7U",
       "Video Name": "Stay with me : Short Cover By Marine Chariot (In the karaoke room) #shorts #vtuber #cover #japan",
       "View": "416",
@@ -5439,7 +5469,7 @@
       "Views to Likes Ratio": "6.028985507246377"
     },
     {
-      "No": "363",
+      "No": "365",
       "Urls": "https://www.youtube.com/watch?v=dmOCSGKSFEE",
       "Video Name": "You (=I) : Short Cover By Marine Chariot (In the onsen room) #shorts #vtuber #cover #japan",
       "View": "260",
@@ -5454,7 +5484,7 @@
       "Views to Likes Ratio": "5.777777777777778"
     },
     {
-      "No": "364",
+      "No": "366",
       "Urls": "https://www.youtube.com/watch?v=uupOd6cQhL0",
       "Video Name": "【Maid of the Dead】เหล่าเมดผู้พิทักษ์คุณหนู ! 1",
       "View": "569",
@@ -5469,7 +5499,7 @@
       "Views to Likes Ratio": "11.612244897959183"
     },
     {
-      "No": "365",
+      "No": "367",
       "Urls": "https://www.youtube.com/watch?v=qLLQUb-U_aM",
       "Video Name": "เรื่องเล่าจากประสบการณ์จริง part 2/2 #vtuber #shorts #story #เรื่องผี",
       "View": "331",
@@ -5484,7 +5514,7 @@
       "Views to Likes Ratio": "6.0181818181818185"
     },
     {
-      "No": "366",
+      "No": "368",
       "Urls": "https://www.youtube.com/watch?v=3NoeEGnx6Is",
       "Video Name": "เรื่องเล่าจากประสบการณ์จริง part 1/2 #vtuber #shorts #story #เรื่องผี",
       "View": "330",
@@ -5499,7 +5529,7 @@
       "Views to Likes Ratio": "6.111111111111111"
     },
     {
-      "No": "367",
+      "No": "369",
       "Urls": "https://www.youtube.com/watch?v=Fy9makDEETw",
       "Video Name": "วาดรูปต่างๆให้ทุกคนดู ด้วยเม้าส์หนู 🦋 | Marine Chariot #vtuber",
       "View": "576",
@@ -5514,7 +5544,7 @@
       "Views to Likes Ratio": "16.941176470588236"
     },
     {
-      "No": "368",
+      "No": "370",
       "Urls": "https://www.youtube.com/watch?v=rlbDhOfrUXc",
       "Video Name": "มาพูดคุยกัน .. เรื่องอะไรก็ได้  🦋",
       "View": "416",
@@ -5529,7 +5559,7 @@
       "Views to Likes Ratio": "18.90909090909091"
     },
     {
-      "No": "369",
+      "No": "371",
       "Urls": "https://www.youtube.com/watch?v=AKflhJaXYp4",
       "Video Name": "ประสบการณ์น่ากลัว | จากคุณหนูและเรื่องเล่าของเพื่อนๆ [เล่าเรื่องผี EP.4]",
       "View": "351",
@@ -5544,7 +5574,7 @@
       "Views to Likes Ratio": "10.028571428571428"
     },
     {
-      "No": "370",
+      "No": "372",
       "Urls": "https://www.youtube.com/watch?v=93RiH0so0lY",
       "Video Name": "【FREETALK & CHILL】🦋 ขอต้อนรับคนแข็งแรง กลับมาแล้ว! !  | Marine Chariot #Vtuber",
       "View": "511",
@@ -5559,7 +5589,7 @@
       "Views to Likes Ratio": "19.653846153846153"
     },
     {
-      "No": "371",
+      "No": "373",
       "Urls": "https://www.youtube.com/watch?v=1yQfoDMA7-U",
       "Video Name": "「YOASOBI   たぶん Tabun」Full cover by Marine Chariot",
       "View": "8787",
@@ -5574,7 +5604,7 @@
       "Views to Likes Ratio": "42.24519230769231"
     },
     {
-      "No": "372",
+      "No": "374",
       "Urls": "https://www.youtube.com/watch?v=oQDfXS3XlQo",
       "Video Name": "ค น เ เ ข็ ง เ เ ก ร่ ง เ เ ว ะ ม า คุ ย . . .",
       "View": "548",
@@ -5589,7 +5619,7 @@
       "Views to Likes Ratio": "19.571428571428573"
     },
     {
-      "No": "373",
+      "No": "375",
       "Urls": "https://www.youtube.com/watch?v=-8IQwZCoiFA",
       "Video Name": "【Metal : Hellsinger】🦋 หวนคืนสู่นรก พิฆาตอสูร 2 | Marine Chariot #Vtuber",
       "View": "540",
@@ -5604,7 +5634,7 @@
       "Views to Likes Ratio": "20"
     },
     {
-      "No": "374",
+      "No": "376",
       "Urls": "https://www.youtube.com/watch?v=tdMyfTRH_Ik",
       "Video Name": "【FREETALK & CHILL】🦋 ถ้าวันนี้ฝันเป็นจริง .. จะเป็นยังไง  | Marine Chariot #Vtuber",
       "View": "641",
@@ -5619,7 +5649,7 @@
       "Views to Likes Ratio": "18.852941176470587"
     },
     {
-      "No": "375",
+      "No": "377",
       "Urls": "https://www.youtube.com/watch?v=a6cNKUJsUrU",
       "Video Name": "【FREETALK & CHILL】🦋 ก็แค่อยากเล่าเรื่อง พูดคุยเรื่อยเปื่อย~  | Marine Chariot #Vtuber",
       "View": "748",
@@ -5634,7 +5664,7 @@
       "Views to Likes Ratio": "16.622222222222224"
     },
     {
-      "No": "376",
+      "No": "378",
       "Urls": "https://www.youtube.com/watch?v=lnVsUUCDFps",
       "Video Name": "【HOW TO & CONCEPT】🦋 แนวทางการเป็น Vtuber ฉบับคุณหนูมารีน  | Marine Chariot #Vtuber",
       "View": "879",
@@ -5649,7 +5679,7 @@
       "Views to Likes Ratio": "16.58490566037736"
     },
     {
-      "No": "377",
+      "No": "379",
       "Urls": "https://www.youtube.com/watch?v=COu1YR75m8U",
       "Video Name": "【FREETALK & HEAL】🦋 คุณหนูขอฮีลทุกคนด้วยหัวใจที่มี  | Marine Chariot #Vtuber",
       "View": "481",
@@ -5664,7 +5694,7 @@
       "Views to Likes Ratio": "17.178571428571427"
     },
     {
-      "No": "378",
+      "No": "380",
       "Urls": "https://www.youtube.com/watch?v=-fSXjxSj-wc",
       "Video Name": "【The Bridge Curse 2: The Extrication】DEMO 🦋 ถนนสู่ทางเจอผีไม่พ้นทุกข์ | Marine Chariot #vtuber",
       "View": "708",
@@ -5679,7 +5709,7 @@
       "Views to Likes Ratio": "28.32"
     },
     {
-      "No": "379",
+      "No": "381",
       "Urls": "https://www.youtube.com/watch?v=e9q9LLRtfEU",
       "Video Name": "【FREETALK】🦋 สถานะการณ์สำคัญของช่องคุณหนู (ซีเรียส + จริงจัง)  | Marine Chariot #Vtuber",
       "View": "952",
@@ -5694,7 +5724,7 @@
       "Views to Likes Ratio": "22.13953488372093"
     },
     {
-      "No": "380",
+      "No": "382",
       "Urls": "https://www.youtube.com/watch?v=XHqYY--xo-k",
       "Video Name": "Chipi Chipi Chapa Chapa Dubi Dubi Daba Daba. Ft.Marine Chariot #vtuber #shorts",
       "View": "1067",
@@ -5709,7 +5739,7 @@
       "Views to Likes Ratio": "10.67"
     },
     {
-      "No": "381",
+      "No": "383",
       "Urls": "https://www.youtube.com/watch?v=DsaBcr2jt4c",
       "Video Name": "【Genshin impact】บท 4 ฉากที่2 - ไร้เหตุผลที่ฝนโปรยปราย 🦋 | Marine Chariot #vtuber",
       "View": "523",
@@ -5724,7 +5754,7 @@
       "Views to Likes Ratio": "14.135135135135135"
     },
     {
-      "No": "382",
+      "No": "384",
       "Urls": "https://www.youtube.com/watch?v=kxYWxPuEsFk",
       "Video Name": "【COUNT DOWN 2023】🦋 จากปีเก่า สู่ปีใหม่ 2024  | Marine Chariot #Vtuber #Newyear",
       "View": "4527",
@@ -5739,7 +5769,7 @@
       "Views to Likes Ratio": "39.025862068965516"
     },
     {
-      "No": "383",
+      "No": "385",
       "Urls": "https://www.youtube.com/watch?v=4rElR7AANug",
       "Video Name": "【FREETALK & CHILL】🦋 ร่วมขอพรสิ้นปี ให้ปีใหม่สุขสมหวัง  | Marine Chariot #Vtuber",
       "View": "243",
@@ -5754,7 +5784,7 @@
       "Views to Likes Ratio": "11.045454545454545"
     },
     {
-      "No": "384",
+      "No": "386",
       "Urls": "https://www.youtube.com/watch?v=Xb0wqxxHLn8",
       "Video Name": "เก็บตกจากคืนวันคริสมาสของคุณหนู ซานยีนแห่ง Christmas ปี 2023 #Vtuber",
       "View": "346",
@@ -5769,7 +5799,7 @@
       "Views to Likes Ratio": "15.043478260869565"
     },
     {
-      "No": "385",
+      "No": "387",
       "Urls": "https://www.youtube.com/watch?v=NTaZXEDxK6M",
       "Video Name": "【SPEACIAL LIVE】🦋 CHRISTMAS PARTY 2023  | Marine Chariot #Vtuber #Christmas",
       "View": "1318",
@@ -5784,7 +5814,7 @@
       "Views to Likes Ratio": "28.652173913043477"
     },
     {
-      "No": "386",
+      "No": "388",
       "Urls": "https://www.youtube.com/watch?v=m9Pkaz7DeYc",
       "Video Name": "Ho ho ho ~ 🎄🦋",
       "View": "129",
@@ -5799,7 +5829,7 @@
       "Views to Likes Ratio": "8.6"
     },
     {
-      "No": "387",
+      "No": "389",
       "Urls": "https://www.youtube.com/watch?v=iV741j65leQ",
       "Video Name": "【HoloParade】🦋 ปกป้องฐานทัพ ร่วมด้วยช่วยกัน  | Marine Chariot #Vtuber",
       "View": "240",
@@ -5814,7 +5844,7 @@
       "Views to Likes Ratio": "21.818181818181817"
     },
     {
-      "No": "388",
+      "No": "390",
       "Urls": "https://www.youtube.com/watch?v=dIGeUTviZL4",
       "Video Name": "【FREETALK & CHILL】🦋 1 ปีที่แล้วของคุณหนูเป็นยังไง เมื่อเทียบกับปัจจุบัน  | Marine Chariot #Vtuber",
       "View": "217",
@@ -5829,7 +5859,7 @@
       "Views to Likes Ratio": "12.764705882352942"
     },
     {
-      "No": "389",
+      "No": "391",
       "Urls": "https://www.youtube.com/watch?v=uYbxYv3eHWI",
       "Video Name": "ผีโครงกระดูก Gashadokuro และ สาวคอยาว Rokuro-kubi 【ตำนานผีญี่ปุ่น EP.3】",
       "View": "327",
@@ -5844,7 +5874,7 @@
       "Views to Likes Ratio": "14.863636363636363"
     },
     {
-      "No": "390",
+      "No": "392",
       "Urls": "https://www.youtube.com/watch?v=qp8T7ZOEUo4",
       "Video Name": "【FREETALK & CHILL】🦋 ความสำเร็จของฉันในปี 2023  | Marine Chariot #Vtuber",
       "View": "268",
@@ -5859,7 +5889,7 @@
       "Views to Likes Ratio": "13.4"
     },
     {
-      "No": "391",
+      "No": "393",
       "Urls": "https://www.youtube.com/watch?v=a5CmMKXQNLs",
       "Video Name": "【#Genshinimpact】Lies Cast Shadows Under Gathered Lights- เงาใต้แสงสาดส่อง 🦋 | Marine Chariot #Vtuber",
       "View": "321",
@@ -5874,7 +5904,7 @@
       "Views to Likes Ratio": "13.956521739130435"
     },
     {
-      "No": "392",
+      "No": "394",
       "Urls": "https://www.youtube.com/watch?v=aYcK5YWkqoM",
       "Video Name": "【#Genshinimpact】Soloist's prologue - บทนำแห่งน้ำค้างขาวและคลื่นดำ (ต่อ) 🦋 | Marine Chariot #Vtuber",
       "View": "302",
@@ -5889,7 +5919,7 @@
       "Views to Likes Ratio": "13.130434782608695"
     },
     {
-      "No": "393",
+      "No": "395",
       "Urls": "https://www.youtube.com/watch?v=2A3qVhWi-Ho",
       "Video Name": "【FREETALK & CHILL】🦋 นั่งเม้าพูดคุยเกี่ยวกับวันคริสมาส  | Marine Chariot #Vtuber",
       "View": "139",
@@ -5904,7 +5934,7 @@
       "Views to Likes Ratio": "15.444444444444445"
     },
     {
-      "No": "394",
+      "No": "396",
       "Urls": "https://www.youtube.com/watch?v=vBWlFNZZMUs",
       "Video Name": "【Green hell】🦋 บุกป่าฝ่าดง เอาชีวิตรอดในนรกสีเขียว! | Marine Chariot #Vtuber",
       "View": "305",
@@ -5919,7 +5949,7 @@
       "Views to Likes Ratio": "14.523809523809524"
     },
     {
-      "No": "395",
+      "No": "397",
       "Urls": "https://www.youtube.com/watch?v=poC6Ky4FuQ0",
       "Video Name": "【Genshin impact】Soloist's prologue - บทนำแห่งน้ำค้างขาวและคลื่นดำ 🦋 | Marine Chariot #Vtuber",
       "View": "297",
@@ -5934,7 +5964,7 @@
       "Views to Likes Ratio": "22.846153846153847"
     },
     {
-      "No": "396",
+      "No": "398",
       "Urls": "https://www.youtube.com/watch?v=kAJh73KCfdU",
       "Video Name": "【COME BACK】🦋 กลับมาแย้ว สู่บ้านเฮาาา  | Marine Chariot #Vtuber",
       "View": "433",
@@ -5949,7 +5979,7 @@
       "Views to Likes Ratio": "12.735294117647058"
     },
     {
-      "No": "397",
+      "No": "399",
       "Urls": "https://www.youtube.com/watch?v=RoeUz4Itekk",
       "Video Name": "【Genshin Impact】🦋 กาชา 4.2 วิ่งเล่น + เนื้อเรื่อง (เก่า) ดองมาเป็นปี | Marine Chariot #Vtuber",
       "View": "237",
@@ -5964,7 +5994,7 @@
       "Views to Likes Ratio": "16.928571428571427"
     },
     {
-      "No": "398",
+      "No": "400",
       "Urls": "https://www.youtube.com/watch?v=AkXDyu-Mg_E",
       "Video Name": "【SPEACIAL LIVE】🦋 HAPPY & SCARY HALLOWEEN 2023  | Marine Chariot #Vtuber #Halloween",
       "View": "296",
@@ -5979,7 +6009,7 @@
       "Views to Likes Ratio": "14.095238095238095"
     },
     {
-      "No": "399",
+      "No": "401",
       "Urls": "https://www.youtube.com/watch?v=KM8w4B_vQcg",
       "Video Name": "【ENDING Halloween 2023】🦋 Marine Chariot | #vtuber #halloween",
       "View": "174",
@@ -5994,7 +6024,7 @@
       "Views to Likes Ratio": "13.384615384615385"
     },
     {
-      "No": "400",
+      "No": "402",
       "Urls": "https://www.youtube.com/watch?v=xuMYzDcksrM",
       "Video Name": "【INTRO Halloween 2023】🦋 Marine Chariot | #vtuber #halloween",
       "View": "174",
@@ -6009,7 +6039,7 @@
       "Views to Likes Ratio": "12.428571428571429"
     },
     {
-      "No": "401",
+      "No": "403",
       "Urls": "https://www.youtube.com/watch?v=ur8c4E77_k4",
       "Video Name": "คุณหนูมารีน กับค่ำคืนร้อนในแสนวิเศษ 🦋 | Marine Chariot [Highlight] #vtuber",
       "View": "308",
@@ -6024,7 +6054,7 @@
       "Views to Likes Ratio": "13.391304347826088"
     },
     {
-      "No": "402",
+      "No": "404",
       "Urls": "https://www.youtube.com/watch?v=f0cy3wiS47c",
       "Video Name": "【Metal : Hellsinger】🦋 บุกฝ่าดงนรก อสูรล่าอสูร | Marine Chariot #Vtuber",
       "View": "125",
@@ -6039,7 +6069,7 @@
       "Views to Likes Ratio": "9.615384615384615"
     },
     {
-      "No": "403",
+      "No": "405",
       "Urls": "https://www.youtube.com/watch?v=A-dbmIh5YlY",
       "Video Name": "【FREETALK & CHILL】🦋 เพราะชีวิต ขาดของเหลวไม่ได้  | Marine Chariot #Vtuber",
       "View": "225",
@@ -6054,7 +6084,7 @@
       "Views to Likes Ratio": "15"
     },
     {
-      "No": "404",
+      "No": "406",
       "Urls": "https://www.youtube.com/watch?v=PIR0RzxQt8k",
       "Video Name": "เมื่อคุณหนูมารีน จำชื่อยาไม่ได้ #vtuber #shorts",
       "View": "341",
@@ -6069,7 +6099,7 @@
       "Views to Likes Ratio": "6.686274509803922"
     },
     {
-      "No": "405",
+      "No": "407",
       "Urls": "https://www.youtube.com/watch?v=nzFJvbOtKv8",
       "Video Name": "【The Bridge Curse Road to Salvation】Part 4 [จบ]🦋สิ้นสุดกันที ชาตินี้ชาติไหน | Marine Chariot #vtuber",
       "View": "136",
@@ -6084,7 +6114,7 @@
       "Views to Likes Ratio": "9.066666666666666"
     },
     {
-      "No": "406",
+      "No": "408",
       "Urls": "https://www.youtube.com/watch?v=U7ZBb433Lf8",
       "Video Name": "【FREETALK & CHILL】🦋 ก่อนฮาโลวีนคุณหนูทำอะไรบ้างง  | Marine Chariot #Vtuber",
       "View": "106",
@@ -6099,7 +6129,7 @@
       "Views to Likes Ratio": "6.625"
     },
     {
-      "No": "407",
+      "No": "409",
       "Urls": "https://www.youtube.com/watch?v=rfgP5DrkLOs",
       "Video Name": "【The Bridge Curse Road to Salvation】Part 3 🦋 ในห้องน้ำ ท่องคาถาก็ไม่ช่วย | Marine Chariot #vtuber",
       "View": "384",
@@ -6114,7 +6144,7 @@
       "Views to Likes Ratio": "12.8"
     },
     {
-      "No": "408",
+      "No": "410",
       "Urls": "https://www.youtube.com/watch?v=X7-leXJbsLY",
       "Video Name": "ผีห้องน้ำ Hanako-san และ สาวรางรถไฟ Teke-teke【ตำนานผีญี่ปุ่น EP.2】",
       "View": "124",
@@ -6129,7 +6159,7 @@
       "Views to Likes Ratio": "6.526315789473684"
     },
     {
-      "No": "409",
+      "No": "411",
       "Urls": "https://www.youtube.com/watch?v=lmNvkZTGD28",
       "Video Name": "【FREETALK & CHILL】🦋 พูดคุยนั่งเล่นในห้องคุณหนู  | Marine Chariot #Vtuber",
       "View": "94",
@@ -6144,7 +6174,7 @@
       "Views to Likes Ratio": "5.222222222222222"
     },
     {
-      "No": "410",
+      "No": "412",
       "Urls": "https://www.youtube.com/watch?v=Rno8xZsHQM0",
       "Video Name": "【The Bridge Curse Road to Salvation】Part 2 🦋 หลวงพี่ไม่ช่วย หลวงปู่เผ่นหนี | Marine Chariot #vtuber",
       "View": "115",
@@ -6159,7 +6189,7 @@
       "Views to Likes Ratio": "8.214285714285714"
     },
     {
-      "No": "411",
+      "No": "413",
       "Urls": "https://www.youtube.com/watch?v=z_hBS_ucxZE",
       "Video Name": "【Ghostwire: Tokyo】Part 5 [END] 🦋 จดจำตลอดไปฉันกับเธอ~ | Marine Chariot #vtuber",
       "View": "62",
@@ -6174,7 +6204,7 @@
       "Views to Likes Ratio": "3.4444444444444446"
     },
     {
-      "No": "412",
+      "No": "414",
       "Urls": "https://www.youtube.com/watch?v=o3_w32lljCs",
       "Video Name": "【FREETALK & CHILL】🦋 สิ่งที่คุณหนูชอบและไม่ชอบ | Marine Chariot #Vtuber",
       "View": "94",
@@ -6189,7 +6219,7 @@
       "Views to Likes Ratio": "4.947368421052632"
     },
     {
-      "No": "413",
+      "No": "415",
       "Urls": "https://www.youtube.com/watch?v=DyPTpmVMKSQ",
       "Video Name": "【Ghostwire: Tokyo】Part 4 🦋 อยากจะแว๊น แต่ไม่ได้แว๊น~ | Marine Chariot #vtuber",
       "View": "78",
@@ -6204,7 +6234,7 @@
       "Views to Likes Ratio": "3.25"
     },
     {
-      "No": "414",
+      "No": "416",
       "Urls": "https://www.youtube.com/watch?v=Az79uze1wnU",
       "Video Name": "สาวปากฉีก Kuchisake Onna และ ผีเด็ก Zashiki warashi【ตำนานผีญี่ปุ่น EP.1】",
       "View": "272",
@@ -6219,7 +6249,7 @@
       "Views to Likes Ratio": "12.952380952380953"
     },
     {
-      "No": "415",
+      "No": "417",
       "Urls": "https://www.youtube.com/watch?v=aRCrd1JGXD8",
       "Video Name": "【FREETALK & CHILL】🦋 ความฝัน และ เป้าหมาย ของคุณหนู | Marine Chariot #Vtuber",
       "View": "68",
@@ -6234,7 +6264,7 @@
       "Views to Likes Ratio": "3.7777777777777777"
     },
     {
-      "No": "416",
+      "No": "418",
       "Urls": "https://www.youtube.com/watch?v=Qvq82lNOf_k",
       "Video Name": "【The Bridge Curse Road to Salvation】Part 1🦋 สะพานต้องสาป | Marine Chariot #vtuber",
       "View": "173",
@@ -6249,22 +6279,22 @@
       "Views to Likes Ratio": "6.92"
     },
     {
-      "No": "417",
+      "No": "419",
       "Urls": "https://www.youtube.com/watch?v=puGf1gDYl2U",
       "Video Name": "เมื่อคุณหนูกลายร่างเป็นหนูตะเภา #vtuber  #shorts",
-      "View": "405",
+      "View": "406",
       "Like": "58",
       "Comm": "8",
       "published_date": "2023-09-17",
       "duration": "0:00:15",
       "minute": "0.25",
       "type": "Shots",
-      "Engagement Rate": "0.16296296296296298",
+      "Engagement Rate": "0.1625615763546798",
       "AVG View Duration": "0.11",
-      "Views to Likes Ratio": "6.982758620689655"
+      "Views to Likes Ratio": "7"
     },
     {
-      "No": "418",
+      "No": "420",
       "Urls": "https://www.youtube.com/watch?v=56DrrRw-lmc",
       "Video Name": "【READ CHAT & CHILL】🦋 คุณหนูจะนั่งอ่านแชท คุยสบายๆ | Marine Chariot #Vtuber",
       "View": "132",
@@ -6279,7 +6309,7 @@
       "Views to Likes Ratio": "7.333333333333333"
     },
     {
-      "No": "419",
+      "No": "421",
       "Urls": "https://www.youtube.com/watch?v=dBvUwiM3Cc4",
       "Video Name": "【Ghostwire: Tokyo】Part 3 🦋 จู๊บเหม่งอินเจแพนนึ~ | Marine Chariot #vtuber",
       "View": "261",
@@ -6294,7 +6324,7 @@
       "Views to Likes Ratio": "12.428571428571429"
     },
     {
-      "No": "420",
+      "No": "422",
       "Urls": "https://www.youtube.com/watch?v=-mAerdRZvu8",
       "Video Name": "【FREETALK & CHILL】🦋 ว่ากันเรื่อง การไม่หุบยิ้มของคุณหนู | Marine Chariot #Vtuber",
       "View": "112",
@@ -6309,7 +6339,7 @@
       "Views to Likes Ratio": "6.222222222222222"
     },
     {
-      "No": "421",
+      "No": "423",
       "Urls": "https://www.youtube.com/watch?v=FMQtHhRCl5w",
       "Video Name": "【Ghostwire: Tokyo】Part 2 🦋 ตะลุยห่าผี สุดชีวิตเพื่อน้อง! | Marine Chariot #vtuber",
       "View": "78",
@@ -6324,7 +6354,7 @@
       "Views to Likes Ratio": "6"
     },
     {
-      "No": "422",
+      "No": "424",
       "Urls": "https://www.youtube.com/watch?v=KiJCKLgHdaE",
       "Video Name": "【FREETALK & CHILL】🦋 พูดคุยมังงะ Prologue : To the everlasting กับคุณหนู | Marine Chariot #Vtuber",
       "View": "96",
@@ -6339,7 +6369,7 @@
       "Views to Likes Ratio": "6.857142857142857"
     },
     {
-      "No": "423",
+      "No": "425",
       "Urls": "https://www.youtube.com/watch?v=w89NOFT4iEM",
       "Video Name": "【Ghostwire: Tokyo】Part 1 🦋 ตะลุยเมืองซากุระ มือปราบผีจำเป็น | Marine Chariot",
       "View": "412",
@@ -6354,7 +6384,7 @@
       "Views to Likes Ratio": "17.166666666666668"
     },
     {
-      "No": "424",
+      "No": "426",
       "Urls": "https://www.youtube.com/watch?v=EFqMrvqrFm0",
       "Video Name": "【FREETALK & CHILL】🦋 ชีวิตการเป็น V-artist ของคุณหนู | Marine Chariot #Vtuber",
       "View": "108",
@@ -6369,7 +6399,7 @@
       "Views to Likes Ratio": "4.5"
     },
     {
-      "No": "425",
+      "No": "427",
       "Urls": "https://www.youtube.com/watch?v=6C3RbGTnfqQ",
       "Video Name": "ประสบการณ์โดยตรงจากคุณหนู [เล่าเรื่องผี EP.3]",
       "View": "114",
@@ -6384,7 +6414,7 @@
       "Views to Likes Ratio": "5.428571428571429"
     },
     {
-      "No": "426",
+      "No": "428",
       "Urls": "https://www.youtube.com/watch?v=nHD9vlfpAqk",
       "Video Name": "【FREETALK & CHILL】🦋 เติมไฟหน่อย อยากปิ้งย่าง | Marine Chariot #Vtuber",
       "View": "114",
@@ -6399,7 +6429,7 @@
       "Views to Likes Ratio": "9.5"
     },
     {
-      "No": "427",
+      "No": "429",
       "Urls": "https://www.youtube.com/watch?v=Rt3c5bNxf9o",
       "Video Name": "【State of Decay 2】🦋 บุกป่าฝ่าดง ฟาร์มแสนสุขที่ รัฐแห่งความเน่าเปื่อย 2  | Marine Chariot",
       "View": "227",
@@ -6414,7 +6444,7 @@
       "Views to Likes Ratio": "8.107142857142858"
     },
     {
-      "No": "428",
+      "No": "430",
       "Urls": "https://www.youtube.com/watch?v=C5NXsYFFHLM",
       "Video Name": "【FREETALK & CHILL】🦋 เรื่อยเปื่อยกับคนหายป่วย~~ | Marine Chariot #Vtuber",
       "View": "729",
@@ -6429,7 +6459,7 @@
       "Views to Likes Ratio": "18.225"
     },
     {
-      "No": "429",
+      "No": "431",
       "Urls": "https://www.youtube.com/watch?v=LZLuTX-hxKc",
       "Video Name": "【State of Decay 2】🦋 ตะลุยซอมบี้ รัฐแห่งความเน่าเปื่อย 2  | Marine Chariot",
       "View": "1149",
@@ -6444,7 +6474,7 @@
       "Views to Likes Ratio": "29.46153846153846"
     },
     {
-      "No": "430",
+      "No": "432",
       "Urls": "https://www.youtube.com/watch?v=pe0atGqm3YI",
       "Video Name": "【FREETALK & CHILL】🦋 นั่งพูดคุยชิลๆ กับคนป่วย | Marine Chariot #Vtuber",
       "View": "138",
@@ -6459,7 +6489,7 @@
       "Views to Likes Ratio": "9.2"
     },
     {
-      "No": "431",
+      "No": "433",
       "Urls": "https://www.youtube.com/watch?v=4Z8tax95vN8",
       "Video Name": "【Lies of P】🦋 พีโกหกว่าเกมไม่หัวร้อน~ DEMO | Marine Chariot #vtuber",
       "View": "96",
@@ -6474,7 +6504,7 @@
       "Views to Likes Ratio": "9.6"
     },
     {
-      "No": "432",
+      "No": "434",
       "Urls": "https://www.youtube.com/watch?v=_TyNxODqprA",
       "Video Name": "【FREETALK】🦋 ทำวีเหนื่อยใจ หาวิธีฮีลลิ่งตัวเองกับคุณหนู | Marine Chariot",
       "View": "221",
@@ -6489,7 +6519,7 @@
       "Views to Likes Ratio": "12.277777777777779"
     },
     {
-      "No": "433",
+      "No": "435",
       "Urls": "https://www.youtube.com/watch?v=tthRoIrEXSU",
       "Video Name": "【Windbound】🦋ลุยตัวแลบลิ้น วาร์ปไปวาร์ปมา~กับคุณหนู  | Marine Chariot",
       "View": "53",
@@ -6504,7 +6534,7 @@
       "Views to Likes Ratio": "3.1176470588235294"
     },
     {
-      "No": "434",
+      "No": "436",
       "Urls": "https://www.youtube.com/watch?v=5X0dJAJXMkc",
       "Video Name": "【FREETALK & CHILL】🦋 ในคืนที่เก้าอี้คุณหนูหายไป | Marine Chariot",
       "View": "37",
@@ -6519,7 +6549,7 @@
       "Views to Likes Ratio": "6.166666666666667"
     },
     {
-      "No": "435",
+      "No": "437",
       "Urls": "https://www.youtube.com/watch?v=N0qOLLOnbHA",
       "Video Name": "ประสบการณ์โดยตรงจากคุณหนู & ทางบ้าน [เล่าเรื่องผี EP.1]",
       "View": "234",
@@ -6534,7 +6564,7 @@
       "Views to Likes Ratio": "11.142857142857142"
     },
     {
-      "No": "436",
+      "No": "438",
       "Urls": "https://www.youtube.com/watch?v=m2N25eY4wG4",
       "Video Name": "【Windbound】🦋โผล่เกาะลึกลับใหม่ไปกับคุณหนู   | Marine Chariot #Vtuber",
       "View": "56",
@@ -6549,7 +6579,7 @@
       "Views to Likes Ratio": "4"
     },
     {
-      "No": "437",
+      "No": "439",
       "Urls": "https://www.youtube.com/watch?v=6pDOIFGZyNY",
       "Video Name": "【FREETALK & CHILL】🦋 อาทิตย์นี้วันอังคารกับคุณหนู | Marine Chariot  #Vtuber",
       "View": "61",
@@ -6564,7 +6594,7 @@
       "Views to Likes Ratio": "4.357142857142857"
     },
     {
-      "No": "438",
+      "No": "440",
       "Urls": "https://www.youtube.com/watch?v=4XzkL14yIy4",
       "Video Name": "【Windbound】🦋ผจญภัยเกาะลึกลับไปกับคุณหนู  | Marine Chariot #Vtuber",
       "View": "64",
@@ -6579,7 +6609,7 @@
       "Views to Likes Ratio": "5.818181818181818"
     },
     {
-      "No": "439",
+      "No": "441",
       "Urls": "https://www.youtube.com/watch?v=qJDmCHZAOoQ",
       "Video Name": "【FREETALK & CHILL】🦋ตั้งวันศุกร์เป็นวัน Necromancer | Marine Chariot  #Vtuber",
       "View": "64",
@@ -6594,7 +6624,7 @@
       "Views to Likes Ratio": "3.764705882352941"
     },
     {
-      "No": "440",
+      "No": "442",
       "Urls": "https://www.youtube.com/watch?v=A42l5qapzF8",
       "Video Name": "【FREETALK & CHILL】🦋 คุณหนูม้าน้ำขึ้นบก | Marine Chariot  #Vtuber",
       "View": "84",
@@ -6609,7 +6639,7 @@
       "Views to Likes Ratio": "6"
     },
     {
-      "No": "441",
+      "No": "443",
       "Urls": "https://www.youtube.com/watch?v=gU8Qmoj0OUA",
       "Video Name": "【Inside the Backrooms】🦋 ทะลุมิติประหลาดไปกับคุณหนู  | Marine Chariot  #Vtuber",
       "View": "156",
@@ -6624,7 +6654,7 @@
       "Views to Likes Ratio": "8.666666666666666"
     },
     {
-      "No": "442",
+      "No": "444",
       "Urls": "https://www.youtube.com/watch?v=VWGClaTaZ_Y",
       "Video Name": "【FREETALK & CHILL】🦋 คืนวันศุกร์แวะมาเม้า - พักผ่อนกับคุณหนู | Marine Chariot  #Vtuber",
       "View": "148",
@@ -6639,7 +6669,7 @@
       "Views to Likes Ratio": "7.4"
     },
     {
-      "No": "443",
+      "No": "445",
       "Urls": "https://www.youtube.com/watch?v=R4UnuIePVAs",
       "Video Name": "【Speed painting】🦋 Tokoyami towa - Bunny (Time-lapse) | Marine Chariot #vtuber #drawing",
       "View": "432",
@@ -6654,7 +6684,7 @@
       "Views to Likes Ratio": "24"
     },
     {
-      "No": "444",
+      "No": "446",
       "Urls": "https://www.youtube.com/watch?v=X30iQ-IecL4",
       "Video Name": "【Drawing】🦋 ลงสี Towa-san & พูดคุยสบายๆกับคุณหนู #3 | Marine Chariot  #Vtuber #Drawing",
       "View": "255",
@@ -6669,7 +6699,7 @@
       "Views to Likes Ratio": "9.444444444444445"
     },
     {
-      "No": "445",
+      "No": "447",
       "Urls": "https://www.youtube.com/watch?v=bzUAt4OPnyM",
       "Video Name": "【FREETALK & CHILL】🦋 คืนวันศุกร์ สุดแสนชิลกับคุณหนู | Marine Chariot  #Vtuber",
       "View": "334",
@@ -6684,7 +6714,7 @@
       "Views to Likes Ratio": "23.857142857142858"
     },
     {
-      "No": "446",
+      "No": "448",
       "Urls": "https://www.youtube.com/watch?v=URjC-yYhHqM",
       "Video Name": "【Idol showdown】🦋 สนามมวยลุมพินี  | Marine Chariot  #Vtuber",
       "View": "461",
@@ -6699,7 +6729,7 @@
       "Views to Likes Ratio": "25.61111111111111"
     },
     {
-      "No": "447",
+      "No": "449",
       "Urls": "https://www.youtube.com/watch?v=X8x5vhP-KTQ",
       "Video Name": "【FREETALK & CHILL】🦋 พักผ่อนสบายๆ หลังเลิกงานกับคุณหนู | Marine Chariot  #Vtuber",
       "View": "287",
@@ -6714,7 +6744,7 @@
       "Views to Likes Ratio": "15.944444444444445"
     },
     {
-      "No": "448",
+      "No": "450",
       "Urls": "https://www.youtube.com/watch?v=lKOgs7-HULs",
       "Video Name": "【Drawing】🦋 วาดรูป Towa-san & แชร์เทคนิคในแบบของคุณหนู #2 | Marine Chariot  #Vtuber #Drawing",
       "View": "423",
@@ -6729,7 +6759,7 @@
       "Views to Likes Ratio": "21.15"
     },
     {
-      "No": "449",
+      "No": "451",
       "Urls": "https://www.youtube.com/watch?v=02LMl_zjSjI",
       "Video Name": "【hololiveERROR】🦋 Necromancer ที่ไหนกลัวผี | Marine Chariot [Highlight] #Vtuber",
       "View": "1385",
@@ -6744,7 +6774,7 @@
       "Views to Likes Ratio": "32.2093023255814"
     },
     {
-      "No": "450",
+      "No": "452",
       "Urls": "https://www.youtube.com/watch?v=3yv58-mYJ18",
       "Video Name": "【FREETALK & CHILL】🦋 วันหยุดพักของคุณหนู | Marine Chariot  #Vtuber",
       "View": "860",
@@ -6759,7 +6789,7 @@
       "Views to Likes Ratio": "35.833333333333336"
     },
     {
-      "No": "451",
+      "No": "453",
       "Urls": "https://www.youtube.com/watch?v=nMJIi3U8ujg",
       "Video Name": "【Drawing】🦋 วาดรูป Towa-san & แชร์เทคนิคในแบบของคุณหนู #1 | Marine Chariot  #Vtuber #Drawing",
       "View": "558",
@@ -6774,7 +6804,7 @@
       "Views to Likes Ratio": "18.6"
     },
     {
-      "No": "452",
+      "No": "454",
       "Urls": "https://www.youtube.com/watch?v=0GFNP7U7iDA",
       "Video Name": "【hololiveERROR】🦋 สำรวจโรงเรียน เล่าเรื่องสยองกับคุณหนู  | Marine Chariot  #Vtuber",
       "View": "995",
@@ -6789,7 +6819,7 @@
       "Views to Likes Ratio": "45.22727272727273"
     },
     {
-      "No": "453",
+      "No": "455",
       "Urls": "https://www.youtube.com/watch?v=J2L_rwMvYJk",
       "Video Name": "【FREETALK & CHILL】🦋 นั่งทำงานกับคุณหนู | Marine Chariot  #Vtuber",
       "View": "719",
@@ -6804,7 +6834,7 @@
       "Views to Likes Ratio": "21.147058823529413"
     },
     {
-      "No": "454",
+      "No": "456",
       "Urls": "https://www.youtube.com/watch?v=aY3kEPTf_Ug",
       "Video Name": "【FREETALK】🦋 ดื่มน้ำชาพูดคุยหลัง Debut กับคุณหนู | Marine Chariot  #Vtuber",
       "View": "1335",
@@ -6819,7 +6849,7 @@
       "Views to Likes Ratio": "38.142857142857146"
     },
     {
-      "No": "455",
+      "No": "457",
       "Urls": "https://www.youtube.com/watch?v=kq6z98TDZYs",
       "Video Name": "【DEBUT STREAM】🦋 Marine Ojou-sama Arrival !  -  Vtuber คุณหนูเนโครแมนเซอร์ #Vtuber",
       "View": "2060",
@@ -6834,7 +6864,7 @@
       "Views to Likes Ratio": "22.63736263736264"
     },
     {
-      "No": "456",
+      "No": "458",
       "Urls": "https://www.youtube.com/watch?v=z17NgqFy8JA",
       "Video Name": "PV Teaser : Marine Chariot ''Time to give your soul to me'' [4K 60FPS] #vtuber #virtualyoutuber",
       "View": "1912",
