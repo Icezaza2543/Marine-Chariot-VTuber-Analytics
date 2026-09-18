@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-09-17T05:44:51.241Z",
+  "updatedAt": "2026-09-18T05:44:54.512Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -12,16 +12,16 @@
       "No": "1",
       "Urls": "https://www.youtube.com/watch?v=bO2PdajNF50",
       "Video Name": "เจ๊อ้วน วิลแชร์ เรซซิ่ง |【 Mortal Shell 2 】EP.3",
-      "View": "205",
-      "Like": "15",
+      "View": "235",
+      "Like": "13",
       "Comm": "0",
       "published_date": "2026-09-16",
       "duration": "2:06:29",
       "minute": "126.48",
       "type": "Gaming",
-      "Engagement Rate": "0.07317073170731707",
+      "Engagement Rate": "0.05531914893617021",
       "AVG View Duration": "56.92",
-      "Views to Likes Ratio": "13.666666666666666"
+      "Views to Likes Ratio": "18.076923076923077"
     },
     {
       "No": "2",
@@ -42,46 +42,46 @@
       "No": "3",
       "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
       "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
-      "View": "223",
-      "Like": "16",
+      "View": "236",
+      "Like": "13",
       "Comm": "6",
       "published_date": "2026-09-12",
       "duration": "0:04:13",
       "minute": "4.22",
       "type": "FreeTalk",
-      "Engagement Rate": "0.09865470852017937",
+      "Engagement Rate": "0.08050847457627118",
       "AVG View Duration": "1.9",
-      "Views to Likes Ratio": "13.9375"
+      "Views to Likes Ratio": "18.153846153846153"
     },
     {
       "No": "4",
       "Urls": "https://www.youtube.com/watch?v=xveQ0oeE3DY",
       "Video Name": "ซึนเดเระ ไม่ซึนเด๊ะ |【 Ghostwire Tokyo 】EP.4 Re - project",
       "View": "318",
-      "Like": "16",
+      "Like": "0",
       "Comm": "1",
       "published_date": "2026-09-11",
       "duration": "2:17:08",
       "minute": "137.13",
       "type": "Gaming",
-      "Engagement Rate": "0.05345911949685535",
+      "Engagement Rate": "0.0031446540880503146",
       "AVG View Duration": "61.71",
-      "Views to Likes Ratio": "19.875"
+      "Views to Likes Ratio": ""
     },
     {
       "No": "5",
       "Urls": "https://www.youtube.com/watch?v=hIIE94W4rME",
       "Video Name": "ยีน กิน ติม #shorts #vtuber",
-      "View": "962",
-      "Like": "41",
+      "View": "966",
+      "Like": "20",
       "Comm": "5",
       "published_date": "2026-09-11",
       "duration": "0:00:37",
       "minute": "0.62",
       "type": "Shots",
-      "Engagement Rate": "0.04781704781704782",
+      "Engagement Rate": "0.025879917184265012",
       "AVG View Duration": "0.28",
-      "Views to Likes Ratio": "23.463414634146343"
+      "Views to Likes Ratio": "48.3"
     },
     {
       "No": "6",
@@ -402,31 +402,31 @@
       "No": "27",
       "Urls": "https://www.youtube.com/watch?v=1lNbii3Dinc",
       "Video Name": "เรื่องราว ของต่ายผจญภัย #shorts #vtuber",
-      "View": "275",
+      "View": "276",
       "Like": "23",
       "Comm": "2",
       "published_date": "2026-09-08",
       "duration": "0:02:30",
       "minute": "2.5",
       "type": "Shots",
-      "Engagement Rate": "0.09090909090909091",
+      "Engagement Rate": "0.09057971014492754",
       "AVG View Duration": "1.13",
-      "Views to Likes Ratio": "11.956521739130435"
+      "Views to Likes Ratio": "12"
     },
     {
       "No": "28",
       "Urls": "https://www.youtube.com/watch?v=zxGiwHgCIxI",
       "Video Name": "ยิ่งกว่าเซียน คือเซียนชิบผาย |【 Resident Evil: Requiem 】EP.5",
-      "View": "186",
+      "View": "188",
       "Like": "18",
       "Comm": "2",
       "published_date": "2026-09-06",
       "duration": "1:38:38",
       "minute": "98.63",
       "type": "Gaming",
-      "Engagement Rate": "0.10752688172043011",
+      "Engagement Rate": "0.10638297872340426",
       "AVG View Duration": "44.39",
-      "Views to Likes Ratio": "10.333333333333334"
+      "Views to Likes Ratio": "10.444444444444445"
     },
     {
       "No": "29",
@@ -522,16 +522,16 @@
       "No": "35",
       "Urls": "https://www.youtube.com/watch?v=JcXpKNNRJn4",
       "Video Name": "จะโกเล็งก็มา เรามีโกเฟีย |【 Mortal Shell 2 】EP.1",
-      "View": "294",
+      "View": "295",
       "Like": "16",
       "Comm": "1",
       "published_date": "2026-08-22",
       "duration": "2:58:45",
       "minute": "178.75",
       "type": "Gaming",
-      "Engagement Rate": "0.05782312925170068",
+      "Engagement Rate": "0.0576271186440678",
       "AVG View Duration": "80.44",
-      "Views to Likes Ratio": "18.375"
+      "Views to Likes Ratio": "18.4375"
     },
     {
       "No": "36",
@@ -627,16 +627,16 @@
       "No": "42",
       "Urls": "https://www.youtube.com/watch?v=XBtN_Nc3OTA",
       "Video Name": "ออกไปเลยได้มั้ย หัวใจมันร่ำไห้ |【 Resident Evil: Requiem 】EP.4",
-      "View": "194",
+      "View": "195",
       "Like": "24",
       "Comm": "1",
       "published_date": "2026-08-03",
       "duration": "1:49:23",
       "minute": "109.38",
       "type": "Gaming",
-      "Engagement Rate": "0.12886597938144329",
+      "Engagement Rate": "0.1282051282051282",
       "AVG View Duration": "49.22",
-      "Views to Likes Ratio": "8.083333333333334"
+      "Views to Likes Ratio": "8.125"
     },
     {
       "No": "43",
@@ -1257,16 +1257,16 @@
       "No": "84",
       "Urls": "https://www.youtube.com/watch?v=ZgsYBMekEcs",
       "Video Name": "นาที ที่โลกหยุดหมุน ( Frozen in time ) - Marine Chariot | Original Song Valentine 2026",
-      "View": "844",
+      "View": "845",
       "Like": "45",
       "Comm": "11",
       "published_date": "2026-04-01",
       "duration": "0:04:16",
       "minute": "4.27",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.06635071090047394",
+      "Engagement Rate": "0.06627218934911243",
       "AVG View Duration": "1.92",
-      "Views to Likes Ratio": "18.755555555555556"
+      "Views to Likes Ratio": "18.77777777777778"
     },
     {
       "No": "85",
@@ -2127,16 +2127,16 @@
       "No": "142",
       "Urls": "https://www.youtube.com/watch?v=p5wO3SlyX0M",
       "Video Name": "หว่อ อ้าย หนี่~~ #vtuber #shorts #anime #fyp #shortvideo #cute #feedshorts #short #shortsfeed",
-      "View": "2509",
+      "View": "2510",
       "Like": "156",
       "Comm": "18",
       "published_date": "2025-08-11",
       "duration": "0:00:18",
       "minute": "0.3",
       "type": "Shots",
-      "Engagement Rate": "0.0693503387803906",
+      "Engagement Rate": "0.06932270916334661",
       "AVG View Duration": "0.14",
-      "Views to Likes Ratio": "16.083333333333332"
+      "Views to Likes Ratio": "16.08974358974359"
     },
     {
       "No": "143",
@@ -2607,16 +2607,16 @@
       "No": "174",
       "Urls": "https://www.youtube.com/watch?v=jE1ojS2MgaE",
       "Video Name": "Dating Of Necromancer : วันเดทกับคุณหนูลุคใหม่ [V2.0 & New Outfit Arrival]",
-      "View": "1839",
+      "View": "1841",
       "Like": "583",
       "Comm": "3",
       "published_date": "2025-07-08",
       "duration": "1:10:29",
       "minute": "70.48",
       "type": "ประกาศ/อีเวนต์",
-      "Engagement Rate": "0.31865144100054377",
+      "Engagement Rate": "0.31830526887561106",
       "AVG View Duration": "31.72",
-      "Views to Likes Ratio": "3.1543739279588334"
+      "Views to Likes Ratio": "3.1578044596912522"
     },
     {
       "No": "175",
@@ -2638,30 +2638,30 @@
       "Urls": "https://www.youtube.com/watch?v=AbgsWLytH-8",
       "Video Name": "ไลค์ อะ ยีน .. #vtuber #shorts",
       "View": "3165",
-      "Like": "165",
+      "Like": "163",
       "Comm": "12",
       "published_date": "2025-07-07",
       "duration": "0:00:15",
       "minute": "0.25",
       "type": "Shots",
-      "Engagement Rate": "0.055924170616113746",
+      "Engagement Rate": "0.05529225908372828",
       "AVG View Duration": "0.11",
-      "Views to Likes Ratio": "19.181818181818183"
+      "Views to Likes Ratio": "19.41717791411043"
     },
     {
       "No": "177",
       "Urls": "https://www.youtube.com/watch?v=GymbV3HjmLo",
       "Video Name": "โอฮาโย นี่ ตื่นสิ!! .. #vtuber #shorts",
       "View": "2636",
-      "Like": "78",
+      "Like": "77",
       "Comm": "6",
       "published_date": "2025-07-07",
       "duration": "0:00:05",
       "minute": "0.08",
       "type": "Shots",
-      "Engagement Rate": "0.03186646433990895",
+      "Engagement Rate": "0.03148710166919575",
       "AVG View Duration": "0.04",
-      "Views to Likes Ratio": "33.794871794871796"
+      "Views to Likes Ratio": "34.23376623376623"
     },
     {
       "No": "178",
@@ -2772,16 +2772,16 @@
       "No": "185",
       "Urls": "https://www.youtube.com/watch?v=jrgrc6V-_N0",
       "Video Name": "จะฟาดคนไม่กินข้าวเช้า!  .. #vtuber #shorts",
-      "View": "2764",
-      "Like": "83",
+      "View": "2784",
+      "Like": "82",
       "Comm": "10",
       "published_date": "2025-07-03",
       "duration": "0:00:06",
       "minute": "0.1",
       "type": "Shots",
-      "Engagement Rate": "0.033646888567293774",
+      "Engagement Rate": "0.033045977011494254",
       "AVG View Duration": "0.05",
-      "Views to Likes Ratio": "33.30120481927711"
+      "Views to Likes Ratio": "33.951219512195124"
     },
     {
       "No": "186",
@@ -2922,16 +2922,16 @@
       "No": "195",
       "Urls": "https://www.youtube.com/watch?v=_fT3L_-QbsI",
       "Video Name": "สองเรา .. วันโลกสิ้น |【Bulletstorm: Full Clip Edition】(EP.3 จบ)",
-      "View": "87",
+      "View": "88",
       "Like": "13",
       "Comm": "0",
       "published_date": "2025-06-07",
       "duration": "2:18:23",
       "minute": "138.38",
       "type": "Gaming",
-      "Engagement Rate": "0.14942528735632185",
+      "Engagement Rate": "0.14772727272727273",
       "AVG View Duration": "62.27",
-      "Views to Likes Ratio": "6.6923076923076925"
+      "Views to Likes Ratio": "6.769230769230769"
     },
     {
       "No": "196",
@@ -3358,15 +3358,15 @@
       "Urls": "https://www.youtube.com/watch?v=oB_CIhYfifs",
       "Video Name": "ฉันอยู่ข้างใน  |【MiSide】(EP.1)",
       "View": "213",
-      "Like": "62",
+      "Like": "61",
       "Comm": "3",
       "published_date": "2025-03-09",
       "duration": "1:50:05",
       "minute": "110.08",
       "type": "Gaming",
-      "Engagement Rate": "0.3051643192488263",
+      "Engagement Rate": "0.3004694835680751",
       "AVG View Duration": "49.54",
-      "Views to Likes Ratio": "3.435483870967742"
+      "Views to Likes Ratio": "3.4918032786885247"
     },
     {
       "No": "225",
@@ -3523,15 +3523,15 @@
       "Urls": "https://www.youtube.com/watch?v=_bJhcWwQkoE",
       "Video Name": "ว๊อด อีส หย๋อย ? .. #vtuber #shorts",
       "View": "257",
-      "Like": "30",
+      "Like": "29",
       "Comm": "4",
       "published_date": "2025-02-16",
       "duration": "0:01:07",
       "minute": "1.12",
       "type": "Shots",
-      "Engagement Rate": "0.13229571984435798",
+      "Engagement Rate": "0.12840466926070038",
       "AVG View Duration": "0.5",
-      "Views to Likes Ratio": "8.566666666666666"
+      "Views to Likes Ratio": "8.862068965517242"
     },
     {
       "No": "236",
@@ -3748,15 +3748,15 @@
       "Urls": "https://www.youtube.com/watch?v=5X12WNPSfaw",
       "Video Name": "ไม่อยากอยู่ถึงเลข 5  .. #vtuber #shorts",
       "View": "947",
-      "Like": "93",
+      "Like": "92",
       "Comm": "5",
       "published_date": "2025-01-27",
       "duration": "0:01:00",
       "minute": "1",
       "type": "Shots",
-      "Engagement Rate": "0.10348468848996832",
+      "Engagement Rate": "0.10242872228088701",
       "AVG View Duration": "0.45",
-      "Views to Likes Ratio": "10.182795698924732"
+      "Views to Likes Ratio": "10.293478260869565"
     },
     {
       "No": "251",
@@ -3853,15 +3853,15 @@
       "Urls": "https://www.youtube.com/watch?v=JkTDeY92Zv0",
       "Video Name": "กล้ามเบิ้มๆ คนป่าแล้วไง .. #vtuber #shorts",
       "View": "642",
-      "Like": "55",
+      "Like": "54",
       "Comm": "2",
       "published_date": "2025-01-17",
       "duration": "0:00:42",
       "minute": "0.7",
       "type": "Shots",
-      "Engagement Rate": "0.08878504672897196",
+      "Engagement Rate": "0.08722741433021806",
       "AVG View Duration": "0.32",
-      "Views to Likes Ratio": "11.672727272727272"
+      "Views to Likes Ratio": "11.88888888888889"
     },
     {
       "No": "258",
@@ -3913,15 +3913,15 @@
       "Urls": "https://www.youtube.com/watch?v=MOr-kRG3lTI",
       "Video Name": "การขึ้นดอย ปี 62 | ประสบการณ์น่ากลัวโดยคุณหนู [เล่าเรื่องผี EP.16]",
       "View": "441",
-      "Like": "247",
+      "Like": "244",
       "Comm": "0",
       "published_date": "2025-01-11",
       "duration": "1:11:52",
       "minute": "71.87",
       "type": "เล่าเรื่องผี",
-      "Engagement Rate": "0.5600907029478458",
+      "Engagement Rate": "0.5532879818594104",
       "AVG View Duration": "32.34",
-      "Views to Likes Ratio": "1.785425101214575"
+      "Views to Likes Ratio": "1.8073770491803278"
     },
     {
       "No": "262",
@@ -3943,15 +3943,15 @@
       "Urls": "https://www.youtube.com/watch?v=6y6KXCx-C0o",
       "Video Name": "โรงอาหารเก่า 2 .. #vtuber #shorts",
       "View": "246",
-      "Like": "30",
+      "Like": "29",
       "Comm": "3",
       "published_date": "2025-01-06",
       "duration": "0:03:01",
       "minute": "3.02",
       "type": "Shots",
-      "Engagement Rate": "0.13414634146341464",
+      "Engagement Rate": "0.13008130081300814",
       "AVG View Duration": "1.36",
-      "Views to Likes Ratio": "8.2"
+      "Views to Likes Ratio": "8.482758620689655"
     },
     {
       "No": "264",
@@ -3973,15 +3973,15 @@
       "Urls": "https://www.youtube.com/watch?v=mm_0gqoyNSY",
       "Video Name": "สวัสดีวันปีเกิดใหม่ 2025",
       "View": "257",
-      "Like": "180",
+      "Like": "178",
       "Comm": "8",
       "published_date": "2025-01-05",
       "duration": "1:05:52",
       "minute": "65.87",
       "type": "ประกาศ/อีเวนต์",
-      "Engagement Rate": "0.7315175097276264",
+      "Engagement Rate": "0.7237354085603113",
       "AVG View Duration": "29.64",
-      "Views to Likes Ratio": "1.4277777777777778"
+      "Views to Likes Ratio": "1.4438202247191012"
     },
     {
       "No": "266",
@@ -4048,15 +4048,15 @@
       "Urls": "https://www.youtube.com/watch?v=p57bc73PiwA",
       "Video Name": "【SPEACIAL LIVE】🦋 CHRISTMAS PARTY 2024  | คริสมาสต์ที่มีความสุขกับคุณหนู",
       "View": "235",
-      "Like": "137",
+      "Like": "136",
       "Comm": "2",
       "published_date": "2024-12-26",
       "duration": "1:04:37",
       "minute": "64.62",
       "type": "ประกาศ/อีเวนต์",
-      "Engagement Rate": "0.5914893617021276",
+      "Engagement Rate": "0.5872340425531914",
       "AVG View Duration": "29.08",
-      "Views to Likes Ratio": "1.7153284671532847"
+      "Views to Likes Ratio": "1.7279411764705883"
     },
     {
       "No": "271",
@@ -4123,30 +4123,30 @@
       "Urls": "https://www.youtube.com/watch?v=XpCGTbsbmm0",
       "Video Name": "ประสบการณ์ซื้อแอล 2 .. #vtuber #shorts",
       "View": "1376",
-      "Like": "160",
+      "Like": "161",
       "Comm": "5",
       "published_date": "2024-12-19",
       "duration": "0:00:50",
       "minute": "0.83",
       "type": "Shots",
-      "Engagement Rate": "0.11991279069767442",
+      "Engagement Rate": "0.12063953488372094",
       "AVG View Duration": "0.38",
-      "Views to Likes Ratio": "8.6"
+      "Views to Likes Ratio": "8.546583850931677"
     },
     {
       "No": "276",
       "Urls": "https://www.youtube.com/watch?v=lYEwiYHQ_eo",
       "Video Name": "ประสบการณ์ซื้อแอล 1 .. #vtuber #shorts",
       "View": "11795",
-      "Like": "1134",
+      "Like": "1131",
       "Comm": "7",
       "published_date": "2024-12-16",
       "duration": "0:00:58",
       "minute": "0.97",
       "type": "Shots",
-      "Engagement Rate": "0.09673590504451039",
+      "Engagement Rate": "0.09648155998304367",
       "AVG View Duration": "0.44",
-      "Views to Likes Ratio": "10.401234567901234"
+      "Views to Likes Ratio": "10.428824049513704"
     },
     {
       "No": "277",
@@ -5487,16 +5487,16 @@
       "No": "366",
       "Urls": "https://www.youtube.com/watch?v=dmOCSGKSFEE",
       "Video Name": "You (=I) : Short Cover By Marine Chariot (In the onsen room) #shorts #vtuber #cover #japan",
-      "View": "260",
+      "View": "261",
       "Like": "45",
       "Comm": "6",
       "published_date": "2024-03-03",
       "duration": "0:00:32",
       "minute": "0.53",
       "type": "Shots",
-      "Engagement Rate": "0.19615384615384615",
+      "Engagement Rate": "0.19540229885057472",
       "AVG View Duration": "0.24",
-      "Views to Likes Ratio": "5.777777777777778"
+      "Views to Likes Ratio": "5.8"
     },
     {
       "No": "367",
