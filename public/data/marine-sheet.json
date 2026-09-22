@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-09-21T05:44:51.617Z",
+  "updatedAt": "2026-09-22T05:44:50.111Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -12,31 +12,31 @@
       "No": "1",
       "Urls": "https://www.youtube.com/watch?v=xD-p05ZYbt0",
       "Video Name": "คุยครั้งล่าสุด เมื่อไหร่ ?",
-      "View": "156",
+      "View": "161",
       "Like": "23",
       "Comm": "2",
       "published_date": "2026-09-19",
       "duration": "1:34:11",
       "minute": "94.18",
       "type": "FreeTalk",
-      "Engagement Rate": "0.16025641025641027",
+      "Engagement Rate": "0.15527950310559005",
       "AVG View Duration": "42.38",
-      "Views to Likes Ratio": "6.782608695652174"
+      "Views to Likes Ratio": "7"
     },
     {
       "No": "2",
       "Urls": "https://www.youtube.com/watch?v=bO2PdajNF50",
       "Video Name": "เจ๊อ้วน วิลแชร์ เรซซิ่ง |【 Mortal Shell 2 】EP.3",
-      "View": "367",
+      "View": "380",
       "Like": "16",
       "Comm": "0",
       "published_date": "2026-09-16",
       "duration": "2:06:29",
       "minute": "126.48",
       "type": "Gaming",
-      "Engagement Rate": "0.043596730245231606",
+      "Engagement Rate": "0.042105263157894736",
       "AVG View Duration": "56.92",
-      "Views to Likes Ratio": "22.9375"
+      "Views to Likes Ratio": "23.75"
     },
     {
       "No": "3",
@@ -57,16 +57,16 @@
       "No": "4",
       "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
       "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
-      "View": "248",
+      "View": "251",
       "Like": "16",
       "Comm": "6",
       "published_date": "2026-09-12",
       "duration": "0:04:13",
       "minute": "4.22",
       "type": "FreeTalk",
-      "Engagement Rate": "0.08870967741935484",
+      "Engagement Rate": "0.08764940239043825",
       "AVG View Duration": "1.9",
-      "Views to Likes Ratio": "15.5"
+      "Views to Likes Ratio": "15.6875"
     },
     {
       "No": "5",
@@ -402,16 +402,16 @@
       "No": "27",
       "Urls": "https://www.youtube.com/watch?v=hVqB_N6K_gI",
       "Video Name": "หยั่งเซียน |【 Monster Hunter :World 】EP.5",
-      "View": "489",
+      "View": "490",
       "Like": "34",
       "Comm": "0",
       "published_date": "2026-09-09",
       "duration": "2:11:19",
       "minute": "131.32",
       "type": "Gaming",
-      "Engagement Rate": "0.06952965235173825",
+      "Engagement Rate": "0.06938775510204082",
       "AVG View Duration": "59.09",
-      "Views to Likes Ratio": "14.382352941176471"
+      "Views to Likes Ratio": "14.411764705882353"
     },
     {
       "No": "28",
@@ -1242,16 +1242,16 @@
       "No": "83",
       "Urls": "https://www.youtube.com/watch?v=AY9nkZBHNUg",
       "Video Name": "สุดขีด เอไอ |【 Ai Limit 】(EP.1)",
-      "View": "110",
+      "View": "111",
       "Like": "24",
       "Comm": "1",
       "published_date": "2026-04-04",
       "duration": "2:10:34",
       "minute": "130.57",
       "type": "Gaming",
-      "Engagement Rate": "0.22727272727272727",
+      "Engagement Rate": "0.22522522522522523",
       "AVG View Duration": "58.76",
-      "Views to Likes Ratio": "4.583333333333333"
+      "Views to Likes Ratio": "4.625"
     },
     {
       "No": "84",
@@ -1287,16 +1287,16 @@
       "No": "86",
       "Urls": "https://www.youtube.com/watch?v=AymOSCA-Xqs",
       "Video Name": "นาที ที่โลกหยุดหมุน - Marine Chariot (Official Teaser) | Original Song Valentine 2026",
-      "View": "211",
+      "View": "210",
       "Like": "21",
       "Comm": "4",
       "published_date": "2026-03-31",
       "duration": "0:00:41",
       "minute": "0.68",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.11848341232227488",
+      "Engagement Rate": "0.11904761904761904",
       "AVG View Duration": "0.31",
-      "Views to Likes Ratio": "10.047619047619047"
+      "Views to Likes Ratio": "10"
     },
     {
       "No": "87",
@@ -2667,16 +2667,16 @@
       "No": "178",
       "Urls": "https://www.youtube.com/watch?v=GymbV3HjmLo",
       "Video Name": "โอฮาโย นี่ ตื่นสิ!! .. #vtuber #shorts",
-      "View": "2635",
+      "View": "2641",
       "Like": "76",
       "Comm": "6",
       "published_date": "2025-07-07",
       "duration": "0:00:05",
       "minute": "0.08",
       "type": "Shots",
-      "Engagement Rate": "0.03111954459203036",
+      "Engagement Rate": "0.03104884513441878",
       "AVG View Duration": "0.04",
-      "Views to Likes Ratio": "34.671052631578945"
+      "Views to Likes Ratio": "34.75"
     },
     {
       "No": "179",
@@ -5487,16 +5487,16 @@
       "No": "366",
       "Urls": "https://www.youtube.com/watch?v=oqrLVCEEa7U",
       "Video Name": "Stay with me : Short Cover By Marine Chariot (In the karaoke room) #shorts #vtuber #cover #japan",
-      "View": "416",
+      "View": "418",
       "Like": "69",
       "Comm": "14",
       "published_date": "2024-03-05",
       "duration": "0:00:46",
       "minute": "0.77",
       "type": "Shots",
-      "Engagement Rate": "0.19951923076923078",
+      "Engagement Rate": "0.19856459330143542",
       "AVG View Duration": "0.35",
-      "Views to Likes Ratio": "6.028985507246377"
+      "Views to Likes Ratio": "6.057971014492754"
     },
     {
       "No": "367",
@@ -5532,16 +5532,16 @@
       "No": "369",
       "Urls": "https://www.youtube.com/watch?v=qLLQUb-U_aM",
       "Video Name": "เรื่องเล่าจากประสบการณ์จริง part 2/2 #vtuber #shorts #story #เรื่องผี",
-      "View": "333",
+      "View": "332",
       "Like": "55",
       "Comm": "5",
       "published_date": "2024-02-26",
       "duration": "0:00:54",
       "minute": "0.9",
       "type": "Shots",
-      "Engagement Rate": "0.18018018018018017",
+      "Engagement Rate": "0.18072289156626506",
       "AVG View Duration": "0.41",
-      "Views to Likes Ratio": "6.054545454545455"
+      "Views to Likes Ratio": "6.036363636363636"
     },
     {
       "No": "370",
