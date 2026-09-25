@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-09-23T05:44:51.772Z",
+  "updatedAt": "2026-09-25T05:44:54.131Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -12,61 +12,61 @@
       "No": "1",
       "Urls": "https://www.youtube.com/watch?v=xD-p05ZYbt0",
       "Video Name": "คุยครั้งล่าสุด เมื่อไหร่ ?",
-      "View": "164",
+      "View": "171",
       "Like": "23",
       "Comm": "2",
       "published_date": "2026-09-19",
       "duration": "1:34:11",
       "minute": "94.18",
       "type": "FreeTalk",
-      "Engagement Rate": "0.1524390243902439",
+      "Engagement Rate": "0.14619883040935672",
       "AVG View Duration": "42.38",
-      "Views to Likes Ratio": "7.130434782608695"
+      "Views to Likes Ratio": "7.434782608695652"
     },
     {
       "No": "2",
       "Urls": "https://www.youtube.com/watch?v=bO2PdajNF50",
       "Video Name": "เจ๊อ้วน วิลแชร์ เรซซิ่ง |【 Mortal Shell 2 】EP.3",
-      "View": "393",
+      "View": "401",
       "Like": "16",
       "Comm": "0",
       "published_date": "2026-09-16",
       "duration": "2:06:29",
       "minute": "126.48",
       "type": "Gaming",
-      "Engagement Rate": "0.04071246819338423",
+      "Engagement Rate": "0.0399002493765586",
       "AVG View Duration": "56.92",
-      "Views to Likes Ratio": "24.5625"
+      "Views to Likes Ratio": "25.0625"
     },
     {
       "No": "3",
       "Urls": "https://www.youtube.com/watch?v=z0aXo2rahWs",
       "Video Name": "ใครจะเท่ห์กว่าเขา .. ไม่มี |【 Resident Evil: Requiem 】EP.6",
-      "View": "270",
+      "View": "272",
       "Like": "15",
       "Comm": "0",
       "published_date": "2026-09-12",
       "duration": "2:41:19",
       "minute": "161.32",
       "type": "Gaming",
-      "Engagement Rate": "0.05555555555555555",
+      "Engagement Rate": "0.05514705882352941",
       "AVG View Duration": "72.59",
-      "Views to Likes Ratio": "18"
+      "Views to Likes Ratio": "18.133333333333333"
     },
     {
       "No": "4",
       "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
       "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
-      "View": "256",
+      "View": "270",
       "Like": "16",
       "Comm": "6",
       "published_date": "2026-09-12",
       "duration": "0:04:13",
       "minute": "4.22",
       "type": "FreeTalk",
-      "Engagement Rate": "0.0859375",
+      "Engagement Rate": "0.08148148148148149",
       "AVG View Duration": "1.9",
-      "Views to Likes Ratio": "16"
+      "Views to Likes Ratio": "16.875"
     },
     {
       "No": "5",
@@ -582,16 +582,16 @@
       "No": "39",
       "Urls": "https://www.youtube.com/watch?v=5FWXj-X_4_4",
       "Video Name": "ผีเส้น โตเกียว ดริฟ! |【 Ghostwire Tokyo 】EP.1 Re - project",
-      "View": "202",
+      "View": "205",
       "Like": "15",
       "Comm": "1",
       "published_date": "2026-08-15",
       "duration": "2:20:37",
       "minute": "140.62",
       "type": "Gaming",
-      "Engagement Rate": "0.07920792079207921",
+      "Engagement Rate": "0.07804878048780488",
       "AVG View Duration": "63.28",
-      "Views to Likes Ratio": "13.466666666666667"
+      "Views to Likes Ratio": "13.666666666666666"
     },
     {
       "No": "40",
@@ -657,16 +657,16 @@
       "No": "44",
       "Urls": "https://www.youtube.com/watch?v=2w9gwe1KVB8",
       "Video Name": "เชียร์กันไป เชียร์กันเอง |【 Monster Hunter :World 】EP.2",
-      "View": "202",
+      "View": "203",
       "Like": "18",
       "Comm": "1",
       "published_date": "2026-07-31",
       "duration": "2:25:20",
       "minute": "145.33",
       "type": "Gaming",
-      "Engagement Rate": "0.09405940594059406",
+      "Engagement Rate": "0.09359605911330049",
       "AVG View Duration": "65.4",
-      "Views to Likes Ratio": "11.222222222222221"
+      "Views to Likes Ratio": "11.277777777777779"
     },
     {
       "No": "45",
@@ -702,16 +702,16 @@
       "No": "47",
       "Urls": "https://www.youtube.com/watch?v=meHD7wxu9ZM",
       "Video Name": "มื้อนี้ อิ่มปะล่ะ |【 Monster Hunter :World 】EP.1",
-      "View": "169",
+      "View": "170",
       "Like": "18",
       "Comm": "2",
       "published_date": "2026-07-24",
       "duration": "2:49:41",
       "minute": "169.68",
       "type": "Gaming",
-      "Engagement Rate": "0.11834319526627218",
+      "Engagement Rate": "0.11764705882352941",
       "AVG View Duration": "76.36",
-      "Views to Likes Ratio": "9.38888888888889"
+      "Views to Likes Ratio": "9.444444444444445"
     },
     {
       "No": "48",
@@ -1272,16 +1272,16 @@
       "No": "85",
       "Urls": "https://www.youtube.com/watch?v=ZgsYBMekEcs",
       "Video Name": "นาที ที่โลกหยุดหมุน ( Frozen in time ) - Marine Chariot | Original Song Valentine 2026",
-      "View": "852",
+      "View": "854",
       "Like": "45",
       "Comm": "11",
       "published_date": "2026-04-01",
       "duration": "0:04:16",
       "minute": "4.27",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.06572769953051644",
+      "Engagement Rate": "0.06557377049180328",
       "AVG View Duration": "1.92",
-      "Views to Likes Ratio": "18.933333333333334"
+      "Views to Likes Ratio": "18.977777777777778"
     },
     {
       "No": "86",
@@ -1977,16 +1977,16 @@
       "No": "132",
       "Urls": "https://www.youtube.com/watch?v=Tn1CBgA_9Rg",
       "Video Name": "การเผชิญหน้า! #vtuber #shorts",
-      "View": "1915",
+      "View": "1917",
       "Like": "135",
       "Comm": "13",
       "published_date": "2025-09-02",
       "duration": "0:00:20",
       "minute": "0.33",
       "type": "Shots",
-      "Engagement Rate": "0.07728459530026109",
+      "Engagement Rate": "0.07720396452790819",
       "AVG View Duration": "0.15",
-      "Views to Likes Ratio": "14.185185185185185"
+      "Views to Likes Ratio": "14.2"
     },
     {
       "No": "133",
@@ -2142,16 +2142,16 @@
       "No": "143",
       "Urls": "https://www.youtube.com/watch?v=p5wO3SlyX0M",
       "Video Name": "หว่อ อ้าย หนี่~~ #vtuber #shorts #anime #fyp #shortvideo #cute #feedshorts #short #shortsfeed",
-      "View": "2510",
+      "View": "2511",
       "Like": "156",
       "Comm": "18",
       "published_date": "2025-08-11",
       "duration": "0:00:18",
       "minute": "0.3",
       "type": "Shots",
-      "Engagement Rate": "0.06932270916334661",
+      "Engagement Rate": "0.06929510155316607",
       "AVG View Duration": "0.14",
-      "Views to Likes Ratio": "16.08974358974359"
+      "Views to Likes Ratio": "16.096153846153847"
     },
     {
       "No": "144",
@@ -4137,16 +4137,16 @@
       "No": "276",
       "Urls": "https://www.youtube.com/watch?v=XpCGTbsbmm0",
       "Video Name": "ประสบการณ์ซื้อแอล 2 .. #vtuber #shorts",
-      "View": "1387",
+      "View": "1388",
       "Like": "161",
       "Comm": "6",
       "published_date": "2024-12-19",
       "duration": "0:00:50",
       "minute": "0.83",
       "type": "Shots",
-      "Engagement Rate": "0.12040374909877433",
+      "Engagement Rate": "0.12031700288184438",
       "AVG View Duration": "0.38",
-      "Views to Likes Ratio": "8.614906832298137"
+      "Views to Likes Ratio": "8.621118012422361"
     },
     {
       "No": "277",
@@ -4197,16 +4197,16 @@
       "No": "280",
       "Urls": "https://www.youtube.com/watch?v=THVhjZKHhDs",
       "Video Name": "คุณหนูแมวรีน! .. #vtuber #shorts",
-      "View": "573",
+      "View": "574",
       "Like": "52",
       "Comm": "6",
       "published_date": "2024-12-12",
       "duration": "0:01:01",
       "minute": "1.02",
       "type": "Shots",
-      "Engagement Rate": "0.1012216404886562",
+      "Engagement Rate": "0.10104529616724739",
       "AVG View Duration": "0.46",
-      "Views to Likes Ratio": "11.01923076923077"
+      "Views to Likes Ratio": "11.038461538461538"
     },
     {
       "No": "281",
@@ -5307,16 +5307,16 @@
       "No": "354",
       "Urls": "https://www.youtube.com/watch?v=5LkZ-Ypm3PM",
       "Video Name": "【Review】รีวิวอนิเมะขวัญใจคุณหนูมารีน - สรุปความรู้สึกและขยายความหมาย / K-ON Anime",
-      "View": "224",
+      "View": "228",
       "Like": "27",
       "Comm": "2",
       "published_date": "2024-04-27",
       "duration": "1:03:25",
       "minute": "63.42",
       "type": "FreeTalk",
-      "Engagement Rate": "0.12946428571428573",
+      "Engagement Rate": "0.12719298245614036",
       "AVG View Duration": "28.54",
-      "Views to Likes Ratio": "8.296296296296296"
+      "Views to Likes Ratio": "8.444444444444445"
     },
     {
       "No": "355",
@@ -6852,16 +6852,16 @@
       "No": "457",
       "Urls": "https://www.youtube.com/watch?v=J2L_rwMvYJk",
       "Video Name": "【FREETALK & CHILL】🦋 นั่งทำงานกับคุณหนู | Marine Chariot  #Vtuber",
-      "View": "719",
+      "View": "720",
       "Like": "34",
       "Comm": "4",
       "published_date": "2023-04-21",
       "duration": "2:00:43",
       "minute": "120.72",
       "type": "FreeTalk",
-      "Engagement Rate": "0.05285118219749652",
+      "Engagement Rate": "0.05277777777777778",
       "AVG View Duration": "54.32",
-      "Views to Likes Ratio": "21.147058823529413"
+      "Views to Likes Ratio": "21.176470588235293"
     },
     {
       "No": "458",
