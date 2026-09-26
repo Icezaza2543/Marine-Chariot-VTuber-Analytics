@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-09-25T05:44:54.131Z",
+  "updatedAt": "2026-09-26T05:44:52.177Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -42,46 +42,46 @@
       "No": "3",
       "Urls": "https://www.youtube.com/watch?v=z0aXo2rahWs",
       "Video Name": "ใครจะเท่ห์กว่าเขา .. ไม่มี |【 Resident Evil: Requiem 】EP.6",
-      "View": "272",
+      "View": "273",
       "Like": "15",
       "Comm": "0",
       "published_date": "2026-09-12",
       "duration": "2:41:19",
       "minute": "161.32",
       "type": "Gaming",
-      "Engagement Rate": "0.05514705882352941",
+      "Engagement Rate": "0.054945054945054944",
       "AVG View Duration": "72.59",
-      "Views to Likes Ratio": "18.133333333333333"
+      "Views to Likes Ratio": "18.2"
     },
     {
       "No": "4",
       "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
       "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
-      "View": "270",
+      "View": "275",
       "Like": "16",
       "Comm": "6",
       "published_date": "2026-09-12",
       "duration": "0:04:13",
       "minute": "4.22",
       "type": "FreeTalk",
-      "Engagement Rate": "0.08148148148148149",
+      "Engagement Rate": "0.08",
       "AVG View Duration": "1.9",
-      "Views to Likes Ratio": "16.875"
+      "Views to Likes Ratio": "17.1875"
     },
     {
       "No": "5",
       "Urls": "https://www.youtube.com/watch?v=xveQ0oeE3DY",
       "Video Name": "ซึนเดเระ ไม่ซึนเด๊ะ |【 Ghostwire Tokyo 】EP.4 Re - project",
-      "View": "323",
+      "View": "324",
       "Like": "16",
       "Comm": "1",
       "published_date": "2026-09-11",
       "duration": "2:17:08",
       "minute": "137.13",
       "type": "Gaming",
-      "Engagement Rate": "0.05263157894736842",
+      "Engagement Rate": "0.05246913580246913",
       "AVG View Duration": "61.71",
-      "Views to Likes Ratio": "20.1875"
+      "Views to Likes Ratio": "20.25"
     },
     {
       "No": "6",
@@ -1272,16 +1272,16 @@
       "No": "85",
       "Urls": "https://www.youtube.com/watch?v=ZgsYBMekEcs",
       "Video Name": "นาที ที่โลกหยุดหมุน ( Frozen in time ) - Marine Chariot | Original Song Valentine 2026",
-      "View": "854",
+      "View": "855",
       "Like": "45",
       "Comm": "11",
       "published_date": "2026-04-01",
       "duration": "0:04:16",
       "minute": "4.27",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.06557377049180328",
+      "Engagement Rate": "0.06549707602339182",
       "AVG View Duration": "1.92",
-      "Views to Likes Ratio": "18.977777777777778"
+      "Views to Likes Ratio": "19"
     },
     {
       "No": "86",
@@ -1782,16 +1782,16 @@
       "No": "119",
       "Urls": "https://www.youtube.com/watch?v=InfAwIKxMD0",
       "Video Name": "รีสอร์ทฉุกเฉิน |  [เล่าเรื่องผี EP.24]",
-      "View": "108",
+      "View": "109",
       "Like": "20",
       "Comm": "2",
       "published_date": "2025-10-10",
       "duration": "1:22:43",
       "minute": "82.72",
       "type": "เล่าเรื่องผี",
-      "Engagement Rate": "0.2037037037037037",
+      "Engagement Rate": "0.2018348623853211",
       "AVG View Duration": "37.22",
-      "Views to Likes Ratio": "5.4"
+      "Views to Likes Ratio": "5.45"
     },
     {
       "No": "120",
@@ -2367,16 +2367,16 @@
       "No": "158",
       "Urls": "https://www.youtube.com/watch?v=pgeQ7U_ltS0",
       "Video Name": "ปากใหม่สวยใสกิ๊ง ~~ #vtuber #shorts",
-      "View": "2071",
+      "View": "2072",
       "Like": "100",
       "Comm": "14",
       "published_date": "2025-07-24",
       "duration": "0:00:09",
       "minute": "0.15",
       "type": "Shots",
-      "Engagement Rate": "0.05504587155963303",
+      "Engagement Rate": "0.05501930501930502",
       "AVG View Duration": "0.07",
-      "Views to Likes Ratio": "20.71"
+      "Views to Likes Ratio": "20.72"
     },
     {
       "No": "159",
@@ -2607,16 +2607,16 @@
       "No": "174",
       "Urls": "https://www.youtube.com/watch?v=0Q0FeJg2h8k",
       "Video Name": "เย็นนี้กินอะไรดี ? ทารันทูล่ามั้ย !! .. #vtuber #shorts",
-      "View": "3253",
+      "View": "3257",
       "Like": "157",
       "Comm": "14",
       "published_date": "2025-07-08",
       "duration": "0:00:06",
       "minute": "0.1",
       "type": "Shots",
-      "Engagement Rate": "0.052566861358745776",
+      "Engagement Rate": "0.052502302732575994",
       "AVG View Duration": "0.05",
-      "Views to Likes Ratio": "20.719745222929937"
+      "Views to Likes Ratio": "20.745222929936304"
     },
     {
       "No": "175",
@@ -6117,16 +6117,16 @@
       "No": "408",
       "Urls": "https://www.youtube.com/watch?v=PIR0RzxQt8k",
       "Video Name": "เมื่อคุณหนูมารีน จำชื่อยาไม่ได้ #vtuber #shorts",
-      "View": "342",
+      "View": "343",
       "Like": "51",
       "Comm": "6",
       "published_date": "2023-10-23",
       "duration": "0:00:42",
       "minute": "0.7",
       "type": "Shots",
-      "Engagement Rate": "0.16666666666666666",
+      "Engagement Rate": "0.1661807580174927",
       "AVG View Duration": "0.32",
-      "Views to Likes Ratio": "6.705882352941177"
+      "Views to Likes Ratio": "6.7254901960784315"
     },
     {
       "No": "409",
