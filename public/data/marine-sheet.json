@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-09-26T05:44:52.177Z",
+  "updatedAt": "2026-09-27T05:44:51.644Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -12,16 +12,16 @@
       "No": "1",
       "Urls": "https://www.youtube.com/watch?v=xD-p05ZYbt0",
       "Video Name": "คุยครั้งล่าสุด เมื่อไหร่ ?",
-      "View": "171",
+      "View": "172",
       "Like": "23",
       "Comm": "2",
       "published_date": "2026-09-19",
       "duration": "1:34:11",
       "minute": "94.18",
       "type": "FreeTalk",
-      "Engagement Rate": "0.14619883040935672",
+      "Engagement Rate": "0.14534883720930233",
       "AVG View Duration": "42.38",
-      "Views to Likes Ratio": "7.434782608695652"
+      "Views to Likes Ratio": "7.478260869565218"
     },
     {
       "No": "2",
@@ -57,31 +57,31 @@
       "No": "4",
       "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
       "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
-      "View": "275",
+      "View": "279",
       "Like": "16",
       "Comm": "6",
       "published_date": "2026-09-12",
       "duration": "0:04:13",
       "minute": "4.22",
       "type": "FreeTalk",
-      "Engagement Rate": "0.08",
+      "Engagement Rate": "0.07885304659498207",
       "AVG View Duration": "1.9",
-      "Views to Likes Ratio": "17.1875"
+      "Views to Likes Ratio": "17.4375"
     },
     {
       "No": "5",
       "Urls": "https://www.youtube.com/watch?v=xveQ0oeE3DY",
       "Video Name": "ซึนเดเระ ไม่ซึนเด๊ะ |【 Ghostwire Tokyo 】EP.4 Re - project",
-      "View": "324",
+      "View": "325",
       "Like": "16",
       "Comm": "1",
       "published_date": "2026-09-11",
       "duration": "2:17:08",
       "minute": "137.13",
       "type": "Gaming",
-      "Engagement Rate": "0.05246913580246913",
+      "Engagement Rate": "0.052307692307692305",
       "AVG View Duration": "61.71",
-      "Views to Likes Ratio": "20.25"
+      "Views to Likes Ratio": "20.3125"
     },
     {
       "No": "6",
@@ -582,16 +582,16 @@
       "No": "39",
       "Urls": "https://www.youtube.com/watch?v=5FWXj-X_4_4",
       "Video Name": "ผีเส้น โตเกียว ดริฟ! |【 Ghostwire Tokyo 】EP.1 Re - project",
-      "View": "205",
+      "View": "208",
       "Like": "15",
       "Comm": "1",
       "published_date": "2026-08-15",
       "duration": "2:20:37",
       "minute": "140.62",
       "type": "Gaming",
-      "Engagement Rate": "0.07804878048780488",
+      "Engagement Rate": "0.07692307692307693",
       "AVG View Duration": "63.28",
-      "Views to Likes Ratio": "13.666666666666666"
+      "Views to Likes Ratio": "13.866666666666667"
     },
     {
       "No": "40",
@@ -1452,16 +1452,16 @@
       "No": "97",
       "Urls": "https://www.youtube.com/watch?v=GEWUqiEux2I",
       "Video Name": "แสงของผีเสื้อวันใหม่ - 黎明の蝶の光 (New Day Butterfly's Glow)【Original song & Lyrics 】2025 END",
-      "View": "340",
+      "View": "344",
       "Like": "39",
       "Comm": "14",
       "published_date": "2025-12-31",
       "duration": "0:03:18",
       "minute": "3.3",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.15588235294117647",
+      "Engagement Rate": "0.15406976744186046",
       "AVG View Duration": "1.49",
-      "Views to Likes Ratio": "8.717948717948717"
+      "Views to Likes Ratio": "8.820512820512821"
     },
     {
       "No": "98",
@@ -1962,16 +1962,16 @@
       "No": "131",
       "Urls": "https://www.youtube.com/watch?v=gMaRv5a93A0",
       "Video Name": "วันที่พูดน้อยที่สุด",
-      "View": "554",
+      "View": "555",
       "Like": "29",
       "Comm": "2",
       "published_date": "2025-09-06",
       "duration": "1:28:15",
       "minute": "88.25",
       "type": "FreeTalk",
-      "Engagement Rate": "0.05595667870036101",
+      "Engagement Rate": "0.055855855855855854",
       "AVG View Duration": "39.71",
-      "Views to Likes Ratio": "19.103448275862068"
+      "Views to Likes Ratio": "19.137931034482758"
     },
     {
       "No": "132",
@@ -2607,16 +2607,16 @@
       "No": "174",
       "Urls": "https://www.youtube.com/watch?v=0Q0FeJg2h8k",
       "Video Name": "เย็นนี้กินอะไรดี ? ทารันทูล่ามั้ย !! .. #vtuber #shorts",
-      "View": "3257",
+      "View": "3261",
       "Like": "157",
       "Comm": "14",
       "published_date": "2025-07-08",
       "duration": "0:00:06",
       "minute": "0.1",
       "type": "Shots",
-      "Engagement Rate": "0.052502302732575994",
+      "Engagement Rate": "0.05243790248390064",
       "AVG View Duration": "0.05",
-      "Views to Likes Ratio": "20.745222929936304"
+      "Views to Likes Ratio": "20.770700636942674"
     },
     {
       "No": "175",
@@ -4422,16 +4422,16 @@
       "No": "295",
       "Urls": "https://www.youtube.com/watch?v=937L43gf7pY",
       "Video Name": "กลางคืนต้องใช้หูดีๆ .. #vtuber #shorts",
-      "View": "580",
+      "View": "581",
       "Like": "32",
       "Comm": "4",
       "published_date": "2024-11-17",
       "duration": "0:00:59",
       "minute": "0.98",
       "type": "Shots",
-      "Engagement Rate": "0.06206896551724138",
+      "Engagement Rate": "0.06196213425129088",
       "AVG View Duration": "0.44",
-      "Views to Likes Ratio": "18.125"
+      "Views to Likes Ratio": "18.15625"
     },
     {
       "No": "296",
@@ -5307,16 +5307,16 @@
       "No": "354",
       "Urls": "https://www.youtube.com/watch?v=5LkZ-Ypm3PM",
       "Video Name": "【Review】รีวิวอนิเมะขวัญใจคุณหนูมารีน - สรุปความรู้สึกและขยายความหมาย / K-ON Anime",
-      "View": "228",
+      "View": "229",
       "Like": "27",
       "Comm": "2",
       "published_date": "2024-04-27",
       "duration": "1:03:25",
       "minute": "63.42",
       "type": "FreeTalk",
-      "Engagement Rate": "0.12719298245614036",
+      "Engagement Rate": "0.12663755458515283",
       "AVG View Duration": "28.54",
-      "Views to Likes Ratio": "8.444444444444445"
+      "Views to Likes Ratio": "8.481481481481481"
     },
     {
       "No": "355",
@@ -5757,16 +5757,16 @@
       "No": "384",
       "Urls": "https://www.youtube.com/watch?v=XHqYY--xo-k",
       "Video Name": "Chipi Chipi Chapa Chapa Dubi Dubi Daba Daba. Ft.Marine Chariot #vtuber #shorts",
-      "View": "1069",
+      "View": "1070",
       "Like": "100",
       "Comm": "5",
       "published_date": "2024-01-07",
       "duration": "0:00:58",
       "minute": "0.97",
       "type": "Shots",
-      "Engagement Rate": "0.09822263797942002",
+      "Engagement Rate": "0.09813084112149532",
       "AVG View Duration": "0.44",
-      "Views to Likes Ratio": "10.69"
+      "Views to Likes Ratio": "10.7"
     },
     {
       "No": "385",
