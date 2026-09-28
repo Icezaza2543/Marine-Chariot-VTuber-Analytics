@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-09-27T05:44:51.644Z",
+  "updatedAt": "2026-09-28T05:44:50.725Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -57,16 +57,16 @@
       "No": "4",
       "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
       "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
-      "View": "279",
+      "View": "285",
       "Like": "16",
       "Comm": "6",
       "published_date": "2026-09-12",
       "duration": "0:04:13",
       "minute": "4.22",
       "type": "FreeTalk",
-      "Engagement Rate": "0.07885304659498207",
+      "Engagement Rate": "0.07719298245614035",
       "AVG View Duration": "1.9",
-      "Views to Likes Ratio": "17.4375"
+      "Views to Likes Ratio": "17.8125"
     },
     {
       "No": "5",
@@ -747,16 +747,16 @@
       "No": "50",
       "Urls": "https://www.youtube.com/watch?v=557AWFLm3ys",
       "Video Name": "เรื่องราวของกระต่าย 1 ตัว |【 Bunny guys! 】จบ",
-      "View": "150",
+      "View": "151",
       "Like": "27",
       "Comm": "2",
       "published_date": "2026-07-15",
       "duration": "2:08:42",
       "minute": "128.7",
       "type": "Gaming",
-      "Engagement Rate": "0.19333333333333333",
+      "Engagement Rate": "0.19205298013245034",
       "AVG View Duration": "57.92",
-      "Views to Likes Ratio": "5.555555555555555"
+      "Views to Likes Ratio": "5.592592592592593"
     },
     {
       "No": "51",
@@ -1092,16 +1092,16 @@
       "No": "73",
       "Urls": "https://www.youtube.com/watch?v=iVAvLaHr4yE",
       "Video Name": "คุย เรื่องเนื้อเพลง",
-      "View": "72",
+      "View": "73",
       "Like": "16",
       "Comm": "0",
       "published_date": "2026-05-02",
       "duration": "1:02:59",
       "minute": "62.98",
       "type": "FreeTalk",
-      "Engagement Rate": "0.2222222222222222",
+      "Engagement Rate": "0.2191780821917808",
       "AVG View Duration": "28.34",
-      "Views to Likes Ratio": "4.5"
+      "Views to Likes Ratio": "4.5625"
     },
     {
       "No": "74",
@@ -1272,16 +1272,16 @@
       "No": "85",
       "Urls": "https://www.youtube.com/watch?v=ZgsYBMekEcs",
       "Video Name": "นาที ที่โลกหยุดหมุน ( Frozen in time ) - Marine Chariot | Original Song Valentine 2026",
-      "View": "855",
+      "View": "856",
       "Like": "45",
       "Comm": "11",
       "published_date": "2026-04-01",
       "duration": "0:04:16",
       "minute": "4.27",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.06549707602339182",
+      "Engagement Rate": "0.06542056074766354",
       "AVG View Duration": "1.92",
-      "Views to Likes Ratio": "19"
+      "Views to Likes Ratio": "19.022222222222222"
     },
     {
       "No": "86",
@@ -2697,16 +2697,16 @@
       "No": "180",
       "Urls": "https://www.youtube.com/watch?v=wmiyaQsNNJ0",
       "Video Name": "วันอาทิตย์ เป็นยังไงกันมั่ง! .. #vtuber #shorts",
-      "View": "991",
+      "View": "996",
       "Like": "44",
       "Comm": "7",
       "published_date": "2025-07-06",
       "duration": "0:00:05",
       "minute": "0.08",
       "type": "Shots",
-      "Engagement Rate": "0.05146316851664985",
+      "Engagement Rate": "0.05120481927710843",
       "AVG View Duration": "0.04",
-      "Views to Likes Ratio": "22.522727272727273"
+      "Views to Likes Ratio": "22.636363636363637"
     },
     {
       "No": "181",
@@ -3522,16 +3522,16 @@
       "No": "235",
       "Urls": "https://www.youtube.com/watch?v=mr4pg5ajzpw",
       "Video Name": "ยีนมาหรอย .. #vtuber #shorts",
-      "View": "592",
+      "View": "593",
       "Like": "59",
       "Comm": "5",
       "published_date": "2025-02-17",
       "duration": "0:00:56",
       "minute": "0.93",
       "type": "Shots",
-      "Engagement Rate": "0.10810810810810811",
+      "Engagement Rate": "0.10792580101180438",
       "AVG View Duration": "0.42",
-      "Views to Likes Ratio": "10.033898305084746"
+      "Views to Likes Ratio": "10.05084745762712"
     },
     {
       "No": "236",
@@ -6582,16 +6582,16 @@
       "No": "439",
       "Urls": "https://www.youtube.com/watch?v=N0qOLLOnbHA",
       "Video Name": "ประสบการณ์โดยตรงจากคุณหนู & ทางบ้าน [เล่าเรื่องผี EP.1]",
-      "View": "234",
+      "View": "235",
       "Like": "21",
       "Comm": "2",
       "published_date": "2023-06-19",
       "duration": "1:00:21",
       "minute": "60.35",
       "type": "เล่าเรื่องผี",
-      "Engagement Rate": "0.09829059829059829",
+      "Engagement Rate": "0.09787234042553192",
       "AVG View Duration": "27.16",
-      "Views to Likes Ratio": "11.142857142857142"
+      "Views to Likes Ratio": "11.19047619047619"
     },
     {
       "No": "440",
