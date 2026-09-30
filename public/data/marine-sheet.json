@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-09-29T05:44:51.730Z",
+  "updatedAt": "2026-09-30T05:44:51.895Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -12,16 +12,16 @@
       "No": "1",
       "Urls": "https://www.youtube.com/watch?v=xD-p05ZYbt0",
       "Video Name": "คุยครั้งล่าสุด เมื่อไหร่ ?",
-      "View": "180",
+      "View": "182",
       "Like": "23",
       "Comm": "2",
       "published_date": "2026-09-19",
       "duration": "1:34:11",
       "minute": "94.18",
       "type": "FreeTalk",
-      "Engagement Rate": "0.1388888888888889",
+      "Engagement Rate": "0.13736263736263737",
       "AVG View Duration": "42.38",
-      "Views to Likes Ratio": "7.826086956521739"
+      "Views to Likes Ratio": "7.913043478260869"
     },
     {
       "No": "2",
@@ -57,16 +57,16 @@
       "No": "4",
       "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
       "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
-      "View": "298",
+      "View": "302",
       "Like": "16",
       "Comm": "6",
       "published_date": "2026-09-12",
       "duration": "0:04:13",
       "minute": "4.22",
       "type": "FreeTalk",
-      "Engagement Rate": "0.0738255033557047",
+      "Engagement Rate": "0.0728476821192053",
       "AVG View Duration": "1.9",
-      "Views to Likes Ratio": "18.625"
+      "Views to Likes Ratio": "18.875"
     },
     {
       "No": "5",
@@ -1287,16 +1287,16 @@
       "No": "86",
       "Urls": "https://www.youtube.com/watch?v=AymOSCA-Xqs",
       "Video Name": "นาที ที่โลกหยุดหมุน - Marine Chariot (Official Teaser) | Original Song Valentine 2026",
-      "View": "211",
+      "View": "212",
       "Like": "21",
       "Comm": "4",
       "published_date": "2026-03-31",
       "duration": "0:00:41",
       "minute": "0.68",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.11848341232227488",
+      "Engagement Rate": "0.1179245283018868",
       "AVG View Duration": "0.31",
-      "Views to Likes Ratio": "10.047619047619047"
+      "Views to Likes Ratio": "10.095238095238095"
     },
     {
       "No": "87",
@@ -2232,16 +2232,16 @@
       "No": "149",
       "Urls": "https://www.youtube.com/watch?v=SdvKGEyz4RY",
       "Video Name": "งานพาร์ทไทม์ ที่ร้านสะดวกซื้อ |  [เล่าเรื่องผี EP.23]",
-      "View": "147",
+      "View": "148",
       "Like": "24",
       "Comm": "2",
       "published_date": "2025-08-02",
       "duration": "1:36:05",
       "minute": "96.08",
       "type": "เล่าเรื่องผี",
-      "Engagement Rate": "0.17687074829931973",
+      "Engagement Rate": "0.17567567567567569",
       "AVG View Duration": "43.24",
-      "Views to Likes Ratio": "6.125"
+      "Views to Likes Ratio": "6.166666666666667"
     },
     {
       "No": "150",
@@ -2667,16 +2667,16 @@
       "No": "178",
       "Urls": "https://www.youtube.com/watch?v=GymbV3HjmLo",
       "Video Name": "โอฮาโย นี่ ตื่นสิ!! .. #vtuber #shorts",
-      "View": "2643",
+      "View": "2644",
       "Like": "76",
       "Comm": "6",
       "published_date": "2025-07-07",
       "duration": "0:00:05",
       "minute": "0.08",
       "type": "Shots",
-      "Engagement Rate": "0.031025349981082105",
+      "Engagement Rate": "0.031013615733736764",
       "AVG View Duration": "0.04",
-      "Views to Likes Ratio": "34.776315789473685"
+      "Views to Likes Ratio": "34.78947368421053"
     },
     {
       "No": "179",
@@ -3582,16 +3582,16 @@
       "No": "239",
       "Urls": "https://www.youtube.com/watch?v=S3n70w1x8eE",
       "Video Name": "หย๋อยทั้งหมด ทั้งมวล .. #vtuber #shorts",
-      "View": "571",
+      "View": "572",
       "Like": "48",
       "Comm": "4",
       "published_date": "2025-02-13",
       "duration": "0:00:47",
       "minute": "0.78",
       "type": "Shots",
-      "Engagement Rate": "0.09106830122591944",
+      "Engagement Rate": "0.09090909090909091",
       "AVG View Duration": "0.35",
-      "Views to Likes Ratio": "11.895833333333334"
+      "Views to Likes Ratio": "11.916666666666666"
     },
     {
       "No": "240",
@@ -4077,31 +4077,31 @@
       "No": "272",
       "Urls": "https://www.youtube.com/watch?v=BZhON-9uX6w",
       "Video Name": "คนกินแอล vs คนไม่กินแอล .. #vtuber #shorts",
-      "View": "707",
+      "View": "708",
       "Like": "58",
       "Comm": "3",
       "published_date": "2024-12-23",
       "duration": "0:00:57",
       "minute": "0.95",
       "type": "Shots",
-      "Engagement Rate": "0.08628005657708628",
+      "Engagement Rate": "0.08615819209039548",
       "AVG View Duration": "0.43",
-      "Views to Likes Ratio": "12.189655172413794"
+      "Views to Likes Ratio": "12.206896551724139"
     },
     {
       "No": "273",
       "Urls": "https://www.youtube.com/watch?v=-Unbh--NSLc",
       "Video Name": "Doodle : Dance trend (Marine Chariot) #vtuber #shorts",
-      "View": "646",
+      "View": "647",
       "Like": "81",
       "Comm": "9",
       "published_date": "2024-12-22",
       "duration": "0:01:00",
       "minute": "1",
       "type": "Shots",
-      "Engagement Rate": "0.1393188854489164",
+      "Engagement Rate": "0.1391035548686244",
       "AVG View Duration": "0.45",
-      "Views to Likes Ratio": "7.9753086419753085"
+      "Views to Likes Ratio": "7.987654320987654"
     },
     {
       "No": "274",
@@ -4152,16 +4152,16 @@
       "No": "277",
       "Urls": "https://www.youtube.com/watch?v=lYEwiYHQ_eo",
       "Video Name": "ประสบการณ์ซื้อแอล 1 .. #vtuber #shorts",
-      "View": "11809",
+      "View": "11810",
       "Like": "1127",
       "Comm": "7",
       "published_date": "2024-12-16",
       "duration": "0:00:58",
       "minute": "0.97",
       "type": "Shots",
-      "Engagement Rate": "0.09602845287492591",
+      "Engagement Rate": "0.0960203217612193",
       "AVG View Duration": "0.44",
-      "Views to Likes Ratio": "10.478260869565217"
+      "Views to Likes Ratio": "10.479148181011535"
     },
     {
       "No": "278",
