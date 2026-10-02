@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-10-01T05:44:54.068Z",
+  "updatedAt": "2026-10-01T17:44:53.123Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -12,16 +12,16 @@
       "No": "1",
       "Urls": "https://www.youtube.com/watch?v=3ACg9Z_jRoE",
       "Video Name": "ไลฟ์ลอยล่อง เหนือน้ำ ไปเรื่อยๆ",
-      "View": "258",
-      "Like": "24",
+      "View": "315",
+      "Like": "26",
       "Comm": "0",
       "published_date": "2026-09-30",
       "duration": "1:13:39",
       "minute": "73.65",
       "type": "FreeTalk",
-      "Engagement Rate": "0.09302325581395349",
+      "Engagement Rate": "0.08253968253968254",
       "AVG View Duration": "33.14",
-      "Views to Likes Ratio": "10.75"
+      "Views to Likes Ratio": "12.115384615384615"
     },
     {
       "No": "2",
@@ -72,16 +72,16 @@
       "No": "5",
       "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
       "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
-      "View": "312",
+      "View": "315",
       "Like": "16",
       "Comm": "6",
       "published_date": "2026-09-12",
       "duration": "0:04:13",
       "minute": "4.22",
       "type": "FreeTalk",
-      "Engagement Rate": "0.07051282051282051",
+      "Engagement Rate": "0.06984126984126984",
       "AVG View Duration": "1.9",
-      "Views to Likes Ratio": "19.5"
+      "Views to Likes Ratio": "19.6875"
     },
     {
       "No": "6",
@@ -1302,16 +1302,16 @@
       "No": "87",
       "Urls": "https://www.youtube.com/watch?v=AymOSCA-Xqs",
       "Video Name": "นาที ที่โลกหยุดหมุน - Marine Chariot (Official Teaser) | Original Song Valentine 2026",
-      "View": "213",
+      "View": "214",
       "Like": "21",
       "Comm": "4",
       "published_date": "2026-03-31",
       "duration": "0:00:41",
       "minute": "0.68",
       "type": "ร้องเพลง",
-      "Engagement Rate": "0.11737089201877934",
+      "Engagement Rate": "0.11682242990654206",
       "AVG View Duration": "0.31",
-      "Views to Likes Ratio": "10.142857142857142"
+      "Views to Likes Ratio": "10.19047619047619"
     },
     {
       "No": "88",
@@ -2757,16 +2757,16 @@
       "No": "184",
       "Urls": "https://www.youtube.com/watch?v=iF7dCUItgzQ",
       "Video Name": "จะเป็นอะไรดี? ก็เป็นแล้วทุกอย่าง .. #vtuber #shorts",
-      "View": "12472",
+      "View": "12473",
       "Like": "319",
       "Comm": "8",
       "published_date": "2025-07-04",
       "duration": "0:00:06",
       "minute": "0.1",
       "type": "Shots",
-      "Engagement Rate": "0.026218729955099423",
+      "Engagement Rate": "0.026216627916299206",
       "AVG View Duration": "0.05",
-      "Views to Likes Ratio": "39.09717868338558"
+      "Views to Likes Ratio": "39.10031347962382"
     },
     {
       "No": "185",
@@ -4152,16 +4152,16 @@
       "No": "277",
       "Urls": "https://www.youtube.com/watch?v=XpCGTbsbmm0",
       "Video Name": "ประสบการณ์ซื้อแอล 2 .. #vtuber #shorts",
-      "View": "1391",
+      "View": "1392",
       "Like": "161",
       "Comm": "6",
       "published_date": "2024-12-19",
       "duration": "0:00:50",
       "minute": "0.83",
       "type": "Shots",
-      "Engagement Rate": "0.12005751258087707",
+      "Engagement Rate": "0.11997126436781609",
       "AVG View Duration": "0.38",
-      "Views to Likes Ratio": "8.639751552795031"
+      "Views to Likes Ratio": "8.645962732919255"
     },
     {
       "No": "278",
@@ -5187,16 +5187,16 @@
       "No": "346",
       "Urls": "https://www.youtube.com/watch?v=FiBarx6zLno",
       "Video Name": "【DEBUT】Mini Marine Chariot Arrival !  ถึงตัวจะเล็กแต่ หัวก็โต",
-      "View": "324",
+      "View": "325",
       "Like": "26",
       "Comm": "1",
       "published_date": "2024-06-15",
       "duration": "1:03:48",
       "minute": "63.8",
       "type": "ประกาศ/อีเวนต์",
-      "Engagement Rate": "0.08333333333333333",
+      "Engagement Rate": "0.08307692307692308",
       "AVG View Duration": "28.71",
-      "Views to Likes Ratio": "12.461538461538462"
+      "Views to Likes Ratio": "12.5"
     },
     {
       "No": "347",
