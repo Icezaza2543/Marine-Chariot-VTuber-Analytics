@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "google-sheets",
-  "updatedAt": "2026-10-05T05:44:51.394Z",
+  "updatedAt": "2026-10-06T05:44:53.101Z",
   "retention": {
     "source": "estimated",
     "unit": "minutes",
@@ -12,46 +12,46 @@
       "No": "1",
       "Urls": "https://www.youtube.com/watch?v=49b0Oc76npY",
       "Video Name": "ลีออนขับรถ |【 Resident Evil: Requiem 】EP.7",
-      "View": "265",
-      "Like": "25",
+      "View": "262",
+      "Like": "26",
       "Comm": "0",
       "published_date": "2026-10-04",
       "duration": "2:22:13",
       "minute": "142.22",
       "type": "Gaming",
-      "Engagement Rate": "0.09433962264150944",
+      "Engagement Rate": "0.09923664122137404",
       "AVG View Duration": "64",
-      "Views to Likes Ratio": "10.6"
+      "Views to Likes Ratio": "10.076923076923077"
     },
     {
       "No": "2",
       "Urls": "https://www.youtube.com/watch?v=srmsiCI72mc",
       "Video Name": "ยิ้มกระชากใจ กระชากพุง |【 Ghostwire Tokyo 】EP.5 Re - project",
-      "View": "260",
+      "View": "270",
       "Like": "16",
       "Comm": "0",
       "published_date": "2026-10-04",
       "duration": "2:04:18",
       "minute": "124.3",
       "type": "Gaming",
-      "Engagement Rate": "0.06153846153846154",
+      "Engagement Rate": "0.05925925925925926",
       "AVG View Duration": "55.94",
-      "Views to Likes Ratio": "16.25"
+      "Views to Likes Ratio": "16.875"
     },
     {
       "No": "3",
       "Urls": "https://www.youtube.com/watch?v=3ACg9Z_jRoE",
       "Video Name": "ไลฟ์ลอยล่อง เหนือน้ำ ไปเรื่อยๆ",
-      "View": "367",
+      "View": "366",
       "Like": "26",
       "Comm": "0",
       "published_date": "2026-09-30",
       "duration": "1:13:39",
       "minute": "73.65",
       "type": "FreeTalk",
-      "Engagement Rate": "0.07084468664850137",
+      "Engagement Rate": "0.07103825136612021",
       "AVG View Duration": "33.14",
-      "Views to Likes Ratio": "14.115384615384615"
+      "Views to Likes Ratio": "14.076923076923077"
     },
     {
       "No": "4",
@@ -102,16 +102,16 @@
       "No": "7",
       "Urls": "https://www.youtube.com/watch?v=AJXHRaqTfs8",
       "Video Name": "Frozen in time [English version] - Marine Chariot Original Song Valentine 2026",
-      "View": "346",
+      "View": "350",
       "Like": "16",
       "Comm": "6",
       "published_date": "2026-09-12",
       "duration": "0:04:13",
       "minute": "4.22",
       "type": "FreeTalk",
-      "Engagement Rate": "0.06358381502890173",
+      "Engagement Rate": "0.06285714285714286",
       "AVG View Duration": "1.9",
-      "Views to Likes Ratio": "21.625"
+      "Views to Likes Ratio": "21.875"
     },
     {
       "No": "8",
@@ -5352,16 +5352,16 @@
       "No": "357",
       "Urls": "https://www.youtube.com/watch?v=5LkZ-Ypm3PM",
       "Video Name": "【Review】รีวิวอนิเมะขวัญใจคุณหนูมารีน - สรุปความรู้สึกและขยายความหมาย / K-ON Anime",
-      "View": "230",
+      "View": "231",
       "Like": "27",
       "Comm": "2",
       "published_date": "2024-04-27",
       "duration": "1:03:25",
       "minute": "63.42",
       "type": "FreeTalk",
-      "Engagement Rate": "0.12608695652173912",
+      "Engagement Rate": "0.12554112554112554",
       "AVG View Duration": "28.54",
-      "Views to Likes Ratio": "8.518518518518519"
+      "Views to Likes Ratio": "8.555555555555555"
     },
     {
       "No": "358",
